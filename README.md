@@ -1,2 +1,2 @@
 # midnightsolarium
- neocities site
+ source code for my personal website hosted on neocites
