@@ -1,0 +1,127 @@
+/* Page template: https://repth.neocities.org/theme */
+html {
+     scrollbar-color: rosybrown black;
+}
+ body{
+     background-color: #143B3E;
+     background-image: url('img/ditherfinny.png');
+     background-repeat: repeat-x;
+     background-size: auto;
+     font-family:'Roboto Mono';
+	 font-weight:300;
+}
+ h1, h2, h3{
+     font-family: 'TheGoodMonolith';
+}
+ #container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 70%;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid #fdf5e6;
+     padding: 3px;
+}
+ #box{
+     width: auto;
+     background-color: rgba(13, 36, 38, 0.5);
+     color: #000;
+     border: 1px solid #ff91a4;
+     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+     backdrop-filter: blur(5px);
+     -webkit-backdrop-filter: blur(5px);
+     font-size: 20px;
+}
+ #header{
+     margin-bottom: 10px;
+     padding: 10px;
+     border-bottom: 1px solid #ff91a4;
+     background-image: linear-gradient(to right, #Dd4444, #F48080);
+     color: #fff;
+     letter-spacing: 3px;
+}
+ #header h1, h2{
+     margin: 0;
+}
+ #side{
+     float: left;
+	 width: 20%;
+     padding: 0 0 5px 10px;
+     overflow: hidden;
+     min-width: fit-content;
+}
+ .mobileonly{
+     display: none;
+}
+ @media (max-width: 800px) {
+     .mobileonly {
+         display: flex;
+         width: 300px;
+    }
+}
+ .sidebox{
+     border: 1px solid #ff91a4;
+     margin: 0 0 10px 0;
+}
+ .sidecontent{
+     padding: 0 0 0 5px;
+     color: #6e5057;
+     font-size: 17px;
+     letter-spacing: 1px;
+}
+ .sidecontent ul, li{
+     margin: 0;
+     list-style-type: none;
+     padding-left: 0;
+     font-size: 20px;
+}
+ a{
+     text-decoration: none;
+     color: #ffa245;
+}
+ a:visited{
+     color: #ffa245;
+}
+ a:hover{
+     text-shadow: 0 0 2px #fcf17e;
+}
+ #main{
+     float: left;
+     min-width: 320px;
+     max-width: 75%;
+     overflow: hidden;
+     padding: 0 5px 5px 10px;
+}
+ .mainboxes{
+     border: 1px solid #ff91a4;
+     padding: 0;
+     margin: 0 0 5px 0;
+}
+ .subheader{
+     background-image: linear-gradient(to right, #Dd4444, #F48080);
+     border-bottom: 1px solid #ff91a4;
+     padding: 3px;
+     color: #fff;
+     letter-spacing: 3px;
+}
+ .subheader h3{
+     margin: 0;
+}
+ .mainboxescontent{
+     padding: 0 15px 0 15px;
+     color: #fdf5e6;
+     font-size: 22px;
+}
+ #footer{
+     clear: both;
+     padding: 3px;
+     border-top: 1px solid #ff91a4;
+     background-image: linear-gradient(to right, #Dd4444, #F48080);
+     color: #fff;
+     font-size: 16px;
+     text-align: center;
+}
+ #footer p{
+     margin: 0px;
+}
