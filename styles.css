@@ -1,4 +1,5 @@
 /* Page template: https://repth.neocities.org/theme */
+/* Page template: https://repth.neocities.org/theme */
 html {
      scrollbar-color: rosybrown black;
 }
@@ -8,9 +9,13 @@ html {
      background-repeat: repeat-x;
      background-size: auto;
      font-family:'Roboto Mono';
-	 font-weight:300;
+	   font-weight:300;
+
 }
- h1, h2, h3{
+ #header{
+     font-family: 'TheGoodMonolith';
+}
+ .subheader{
      font-family: 'TheGoodMonolith';
 }
  #container{
@@ -24,14 +29,14 @@ html {
      padding: 3px;
 }
  #box{
-     width: auto;
+     width: 100%;
      background-color: rgba(13, 36, 38, 0.5);
      color: #000;
      border: 1px solid #ff91a4;
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
      backdrop-filter: blur(5px);
      -webkit-backdrop-filter: blur(5px);
-     font-size: 20px;
+     font-size: 22px;
 }
  #header{
      margin-bottom: 10px;
@@ -48,7 +53,7 @@ html {
      float: left;
 	 width: 20%;
      padding: 0 0 5px 10px;
-     overflow: hidden;
+     overflow: clip;
      min-width: fit-content;
 }
  .mobileonly{
@@ -78,25 +83,23 @@ html {
 }
  a{
      text-decoration: none;
-     color: #ffa245;
+     color: #f2cf5c;
 }
  a:visited{
      color: #ffa245;
 }
  a:hover{
-     text-shadow: 0 0 2px #fcf17e;
+     text-shadow: 0 0 4px #fcf17e;
 }
  #main{
-     float: left;
-     min-width: 320px;
-     max-width: 75%;
+     flex-grow: 1;
      overflow: hidden;
      padding: 0 5px 5px 10px;
 }
  .mainboxes{
      border: 1px solid #ff91a4;
      padding: 0;
-     margin: 0 0 5px 0;
+     margin: 0 5px 5px 0;
 }
  .subheader{
      background-image: linear-gradient(to right, #Dd4444, #F48080);
@@ -104,6 +107,7 @@ html {
      padding: 3px;
      color: #fff;
      letter-spacing: 3px;
+     font-size: 24px;
 }
  .subheader h3{
      margin: 0;
@@ -111,7 +115,7 @@ html {
  .mainboxescontent{
      padding: 0 15px 0 15px;
      color: #fdf5e6;
-     font-size: 22px;
+     font-size: 20px;
 }
  #footer{
      clear: both;
