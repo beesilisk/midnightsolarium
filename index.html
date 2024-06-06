@@ -6,16 +6,15 @@
     <title>midnight solarium</title>
 
     <link
-      href="https://fonts.cdnfonts.com/css/thegoodmonolith"
-      rel="stylesheet"
-    />
+      href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js"
+      crossorigin="anonymous"></script>
   </head>
   <!-- Page template: https://repth.neocities.org/theme -->
   <body>
@@ -26,52 +25,77 @@
           <img
             class="mobileonly"
             src="img/not_mobile_friendly.png"
-            alt="This site is not mobile-friendly!"
-          />
+            alt="This site is not mobile-friendly!"/>
 
           <!-- NAV BOX -->
           <div class="sidebox">
             <div class="subheader"><h3>navigate</h3></div>
-            <div class="sidecontent">
+            <nav class="sidecontent">
               <ul>
-                <li><a href="index.html">homepage</a></li>
-                <li>about webmaster</li>
-                <li>resources</li>
+                <li>
+                  <a href="index.html"><i class="fa-solid fa-house"></i> homepage</a>
+                </li>
+                <li>
+                  <a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a>
+                </li>
+                <li><i class="fa-solid fa-message"></i> weblog</li>
                 <li>more coming???</li>
               </ul>
-            </div>
+            </nav>
           </div>
-		  <!-- END NAV BOX -->
-                 <!-- NAV BOX -->
+          <!-- END NAV BOX -->
+          <!-- NAV BOX -->
           <div class="sidebox">
-            <div class="subheader"><h3>quick links</h3></div>
+            <div class="subheader"><h3>external links</h3></div>
             <div class="sidecontent">
               <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium">neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium">source code</a></li>
+                <li><a href="https://neocities.org/site/midnightsolarium"
+                    ><i class="fa-solid fa-helmet-safety"></i> neocities page</a>
+                </li>
+                <li><a href="https://github.com/beesilisk/midnightsolarium"
+                    ><i class="fa-brands fa-github"></i> source code</a>
+                </li>
+                <li><a href="https://www.tumblr.com/beesilisk"
+                    ><i class="fa-brands fa-tumblr"></i> tumblr</a>
+                </li>
               </ul>
             </div>
           </div>
-		  <!-- END NAV BOX -->
-	   </div>
+          <!-- END NAV BOX -->
+        </div>
 
-        <div id="main">
+        <main>
           <div class="mainboxes">
             <div class="subheader"><h3>welcome!</h3></div>
             <div class="mainboxescontent">
               <!-- WELCOME BOX -->
-              <p>
-                You've reached a website dedicated to things that grow in the
-                night! Visitors are invited to pop in and unwind, look around,
-                or just take a quick breather before venturing further into the
-                world wide web.
+              <figure style="float:right;">
+                <img class="body_img"
+                  src="img/bug_hotel.png"
+                  title="a bug hotel made of wood, sticks, rocks, and pinecones"
+                  alt="a bug hotel made of wood, sticks, rocks, and pinecones"
+                  style="width:200px;"/>
+                <figcaption style="width:200px;">
+                  WARNING: this website is home to various types of bugs
+                </figcaption>
+              </figure>
+              <p>You&apos;ve reached a website dedicated to all organisms,
+                formations, and concepts that grow in the night. Visitors are
+                invited to look around, unwind, ground themselves in loamy soil,
+                or just take a quick breather before continuing down their own
+                path.</p>
+              <p>This website is the ongoing project of run by an easily
+                overstimulated insect belonging to the
+                <span data-text="contains approx. 5700 distinct bee species!"
+                  class="tooltip">apidae</span>
+                family. The webmaster, Bee, is usually exhausted by the
+                rapid-paced internet as well as the demands of life outside,
+                which is why they decided to create an online space that can
+                nurture the things they love.
               </p>
-              <p>
-                Midnight Solarium is the personal website / ongoing pet project
-                of an easily overstimulated bumblebee. Exhausted by the deluge
-                of discontent that is the modern web, Bee (that's me!) hopes to
-                create a space where they can nurture the things they love.
-              </p>
+              <br />
+              <p>(also in case i don't get the chance to say it anywhere else on
+                this site: Happy Pride Month y'all!!!)</p>
             </div>
           </div>
           <!-- END CONTENT -->
@@ -81,14 +105,16 @@
 
             <div class="mainboxescontent">
               <!-- UPDATE BOX -->
-              <p>
-                <b>24/05/24</b> - official site launch! not much to see yet, but
-                there's a homepage and credit page that i'm fairly happy with
-              </p>
-              <!-- END CONTENT -->
+              <p><b>06/06/24</b> - added an 'about webmaster' page, added new
+                icons and images, added a tooltip even though it doesn't always 
+				work because fuck it, decided to link my tumblr because fuck it, 
+				made lots of css tweaks that nobody will notice but me</p>
+              <p><b>24/05/24</b> - official site launch! not much to see yet, but
+                there's a homepage and credit page that i'm fairly happy with</p>
+                <!-- END CONTENT -->
             </div>
           </div>
-        </div>
+        </main>
         <div id="footer">
           <a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a>
         </div>
