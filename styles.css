@@ -20,7 +20,7 @@ html {
      display: flex;
      justify-content: center;
      align-items: center;
-     width: 70%;
+     max-width: 1400px;
      margin-left: auto;
      margin-right: auto;
      border: 1px solid #fdf5e6;
@@ -36,7 +36,7 @@ html {
      font-size: 22px;
 }
  #header {
-     margin-bottom: 10px;
+	 margin-bottom: 10px;
      padding: 10px;
      border-bottom: 1px solid #ff91a4;
      background-image: linear-gradient(to right, #dd4444, #f48080);
@@ -46,21 +46,13 @@ html {
  #header h1, h2 {
      margin: 0;
 }
+#contentboxes{
+  display:flex;
+}
  #side {
-     float: left;
-     width: 20%;
+     flex:1;
+     max-width:30%;
      padding: 0 0 5px 10px;
-     overflow: clip;
-     min-width: fit-content;
-}
- .mobileonly {
-     display: none;
-}
- @media (max-width: 800px) {
-     .mobileonly {
-         display: flex;
-         width: 300px;
-    }
 }
  .sidebox {
      border: 1px solid #ff91a4;
@@ -79,23 +71,27 @@ html {
      margin: 0;
      list-style-type: none;
      padding-left: 0;
-     font-size: 20px;
+     font-size: 17px;
 }
- a {
+.icon{
+	vertical-align:middle;
+	width:20px;
+}
+ a, .icon {
      text-decoration: none;
      color: #f2cf5c;
      vertical-align: middle;
 }
- a:visited {
+ a:visited, .icon:visited {
      color: #ffa245;
 }
- a:hover {
+ a:hover, .icon:hover {
      text-shadow: 0 0 4px #fcf17e;
 }
  main {
+     flex:5;
      overflow: auto;
      padding: 0 5px 0px 10px;
-     box-sizing: border-box;
 }
  .mainboxes {
      border: 1px solid #ff91a4;
@@ -110,7 +106,7 @@ html {
      padding: 3px;
      color: #fff;
      letter-spacing: 3px;
-     font-size: 24px;
+     font-size: 20px;
 }
  .subheader h3 {
      margin: 0;
@@ -118,16 +114,22 @@ html {
  .mainboxescontent {
      padding: 0 15px 0 15px;
      color: #fdf5e6;
-     font-size: 19px;
+     font-size: 17px;
      overflow: auto;
 }
+.twoboxes{
+	display:flex;
+	gap:5px;
+	}
  figure {
+	 max-width:100%;
      margin: 15px 0px 15px 0px;
      border: 1px solid #ff91a4;
      background-color: rgba(13, 36, 38, 0.6);
      backdrop-filter: blur(2px);
 }
  figcaption {
+	 max-width:100%;
      font-size: 14px;
      text-align: center;
      height: auto;
@@ -135,6 +137,7 @@ html {
      word-wrap: break-word;
 }
  .body_img {
+	 max-width:100%;
      padding: 5px 5px 0 5px;
 }
  .tooltip{
@@ -175,4 +178,3 @@ html {
  #footer p {
      margin: 0px;
 }
- 

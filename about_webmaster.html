@@ -6,39 +6,31 @@
     <title>midnight solarium</title>
 
     <link
-      href="https://fonts.cdnfonts.com/css/thegoodmonolith"
-      rel="stylesheet"/>
+      href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script
-      src="https://kit.fontawesome.com/85bfb0bd19.js"
-      crossorigin="anonymous">
-	</script>
   </head>
   <!-- Page template: https://repth.neocities.org/theme -->
   <body>
     <div id="container">
       <div id="box">
         <div id="header"><h1>midnight solarium</h1></div>
+        <div id="contentboxes">
         <div id="side">
-          <img
-            class="mobileonly"
-            src="img/not_mobile_friendly.png"
-            alt="This site is not mobile-friendly!"/>
 
           <!-- NAV BOX -->
           <div class="sidebox">
             <div class="subheader"><h3>navigate</h3></div>
             <nav class="sidecontent">
               <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
-                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a></li>
-                <li><i class="fa-solid fa-message"></i> weblog</li>
-                <li>more coming???</li>
+                <li><a href="index.html"><img class="icon" src="img/favicon/icons8-home-32.png"></img> homepage</a></li>
+                <li><a href="about_webmaster.html"><img class="icon" src="img/favicon/icons8-queen-bee-32.png"></img> about webmaster</a> </li>
+                <li>weblog</li>
+				<li>more coming???</li>
               </ul>
             </nav>
           </div>
@@ -48,12 +40,9 @@
             <div class="subheader"><h3>external links</h3></div>
             <div class="sidecontent">
               <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium"
-                    ><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium"
-                    ><i class="fa-brands fa-github"></i> source code</a></li>
-                <li><a href="https://www.tumblr.com/beesilisk"
-                    ><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
+                <li><a href="https://neocities.org/site/midnightsolarium"><img class="icon" src="img/favicon/icons8-hard-hat-32.png"></img> neocities page</a></li>
+                <li><a href="https://github.com/beesilisk/midnightsolarium"><img class="icon" src="img/favicon/icons8-github-32.png"></img> source code</a></li>
+                <li><a href="https://www.tumblr.com/beesilisk"><img class="icon" src="img/favicon/icons8-tumblr-32.png"></img> tumblr</a></li>
               </ul>
             </div>
           </div>
@@ -106,8 +95,8 @@
             </div>
           </div>
           <!-- END CONTENT -->
-
-          <div class="mainboxes" style="width:48%; float:left;">
+          <div class="twoboxes">
+          <div class="mainboxes" style="flex:1;max-width:50%">
             <div class="subheader"><h3>likes</h3></div>
             <div class="mainboxescontent">
               <!-- UPDATE BOX -->
@@ -125,7 +114,7 @@
               <!-- END CONTENT -->
             </div>
           </div>
-          <div class="mainboxes" style="width:48%; float:right;">
+          <div class="mainboxes" style="flex:1;max-width:50%;">
             <div class="subheader"><h3>dislikes</h3></div>
             <div class="mainboxescontent">
               <!-- UPDATE BOX -->
@@ -141,7 +130,9 @@
               <!-- END CONTENT -->
             </div>
           </div>
+		  </div>
         </main>
+		</div>
         <div id="footer">
           <a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a>
         </div>
