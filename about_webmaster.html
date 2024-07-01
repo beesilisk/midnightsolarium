@@ -13,6 +13,27 @@
       href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+	
+	<style>
+#statuscafe {
+    padding: .5em;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+script{
+color:white;}
+	</style>
+<script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.core.js"></script>
+<script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.dynamic.js"></script>
+<script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.tooltips.js"></script>
+<script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.effects.js"></script>
+<script src="RGraph6.18-stable/RGraph/libraries/RGraph.radar.js"></script>
+	<script src="https://kit.fontawesome.com/85bfb0bd19.js"
+      crossorigin="anonymous"></script>
   </head>
   <!-- Page template: https://repth.neocities.org/theme -->
   <body>
@@ -27,9 +48,9 @@
             <div class="subheader"><h3>navigate</h3></div>
             <nav class="sidecontent">
               <ul>
-                <li><a href="index.html"><img class="icon" src="img/favicon/icons8-home-32.png"></img> homepage</a></li>
-                <li><a href="about_webmaster.html"><img class="icon" src="img/favicon/icons8-queen-bee-32.png"></img> about webmaster</a> </li>
-                <li>weblog</li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
+                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
+                <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
 				<li>more coming???</li>
               </ul>
             </nav>
@@ -40,9 +61,9 @@
             <div class="subheader"><h3>external links</h3></div>
             <div class="sidecontent">
               <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium"><img class="icon" src="img/favicon/icons8-hard-hat-32.png"></img> neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium"><img class="icon" src="img/favicon/icons8-github-32.png"></img> source code</a></li>
-                <li><a href="https://www.tumblr.com/beesilisk"><img class="icon" src="img/favicon/icons8-tumblr-32.png"></img> tumblr</a></li>
+                <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
+                <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code</a></li>
+                <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
               </ul>
             </div>
           </div>
@@ -50,11 +71,12 @@
         </div>
 
         <main>
-          <div class="mainboxes">
+		<div class="twoboxes">
+          <div class="mainboxes" style="flex:4;">
             <div class="subheader"><h3>about the webmaster</h3></div>
             <div class="mainboxescontent">
-              <!-- WELCOME BOX -->
-              <figure style="float:left;">
+              <!-- ABOUT BOX -->
+              <figure style="float:left; margin-right:10px;">
                 <a href="https://picrew.me/en/image_maker/644129">
 				<img
                     class="body_img"
@@ -67,39 +89,58 @@
                   creator
                 </figcaption>
               </figure>
-              <div style="float:left;object-fit:cover;margin-left:5%;">
-                <p><b>name:</b> Bee (aka beesilisk)</p>
-                <p><b>pronouns:</b> any</p>
-                <p><b>age:</b> 20s</p>
-                <p><b>species: </b>
-				  <span data-text="the yellow-banded bumblebee" class="tooltip"><i>Bombus terricola</i></span>
-                </p>
-                <p><b>sexuality:</b>
-				<span style="background-image: linear-gradient(to right, #fcaedb,#d2aefc,#aec6fc);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;">bi &lt;3</span>
-                </p>
-                <p>
-                  <b>neurotype:</b> divergent
-                  <span style="color: gold">&infin;</span>
-                </p>
-              </div>
-              <div style="float:right;object-fit:cover;margin-right:5%;">
-                <p><b>occupation:</b> IT cert chaser</p>
-                <p><b>biome:</b> temperate grassland</p>
-                <p><b>tarot card:</b> the hanged man</p>
-                <p><b>humour:</b> black bile</p>
-                <p><b>time of birth:</b> 06:21</p>
-                <p><b>time of death:</b> TBD</p>
-              </div>
+			  <ul>
+                <li><b>name:</b> Bee (aka beesilisk)</li>
+                <li><b>pronouns:</b> any</li>
+                <li><b>age:</b> 20s</li>
+                <li><b>species: </b><span data-text="yellow-banded bumblebee" class="tooltip"><i>Bombus terricola</i></span></li>
+                <li><b>sexuality:</b><span style="background-image: linear-gradient(to right, #fcaedb,#d2aefc,#aec6fc);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;"> bi &lt;3</span></li>
+                <li><b>neurotype:</b> divergent<span style="color: gold"> &infin;</span></li>
+                <li><b>occupation:</b> IT cert chaser</li>
+                <li><b>biome:</b> temperate grassland</li>
+                <li><b>tarot card:</b> the hanged man</li>
+                <li><b>humour:</b> black bile</li>
+                <li><b>time of birth:</b> 06:21</li>
+                <li><b>time of death:</b> TBD</li>
+				</ul>
             </div>
           </div>
+		  
+		  <div class="mainboxes" style="flex:3; margin:50px;">
+            <div class="subheader"><h3>status</h3></div>
+            <div class="mainboxescontent" style="margin:50px 0 50px 0;">
+              <!-- STATUS BOX -->
+<div id="statuscafe">
+    <div id="statuscafe-username"></div>
+    <div id="statuscafe-content"></div>
+</div>
+<script>
+fetch("https://status.cafe/users/beesilisk/status.json")
+  .then( r => r.json() )
+  .then( r => {
+    if (!r.content.length) {
+      document.getElementById("statuscafe-content").innerHTML = "No status yet."
+      return
+}
+    document.getElementById("statuscafe-username").innerHTML = '<a href="https://status.cafe/users/beesilisk" target="_blank">' + r.author + '</a> ' + r.face + ' ' + r.timeAgo
+    document.getElementById("statuscafe-content").innerHTML = r.content
+  })
+</script>
+
+<p style="margin: 0 1em 0.5em 1.5em;"><b>CURRENTLY FEELING:</b><a href="https://www.imood.com/users/beesilisk">
+ <img src="https://moods.imood.com/display/uname-beesilisk/trans-1/imood.gif" style="height:24px;background-color:rgba(110,186,196,0.7);border:1px solid #ff91a4;"alt="The current mood of beesilisk at www.imood.com"></a></p>
+
+            </div>
+          </div>
+		  </div>
           <!-- END CONTENT -->
           <div class="twoboxes">
-          <div class="mainboxes" style="flex:1;max-width:50%">
+          <div class="mainboxes" style="flex:1;">
             <div class="subheader"><h3>likes</h3></div>
             <div class="mainboxescontent">
-              <!-- UPDATE BOX -->
+              <!-- LIKE BOX -->
               <ul>
                 <li>- knitting</li>
                 <li>- writing simple ugly code</li>
@@ -114,10 +155,10 @@
               <!-- END CONTENT -->
             </div>
           </div>
-          <div class="mainboxes" style="flex:1;max-width:50%;">
+          <div class="mainboxes" style="flex:1;">
             <div class="subheader"><h3>dislikes</h3></div>
             <div class="mainboxescontent">
-              <!-- UPDATE BOX -->
+              <!-- DISLIKE BOX -->
               <ul>
                 <li>- loud sudden noises</li>
                 <li>- shrill persistent noises</li>
@@ -131,6 +172,62 @@
             </div>
           </div>
 		  </div>
+		  <div class="twoboxes">
+          <div class="mainboxes" style="flex:3;">
+            <div class="subheader"><h3>favourites</h3></div>
+            <div class="mainboxescontent">
+              <!-- FAVE BOX -->
+              <ul>
+    <li><b>colour:</b> orange</li>
+    <li><b>animal:</b> dog</li>
+    <li><b>video game:</b> yoshi&apos;s island</li>
+    <li><b>video game series:</b> legend of zelda</li>
+	<li><b>console:</b> gamecube</li>
+    <li><b>movie:</b> hausu</li>
+    <li><b>yarn fibre:</b> alpaca wool</li>
+    <li><b>book:</b> le comte de monte-cristo</li>
+	<li><b>tv show:</b> the twilight zone (1959-1964)</li>
+    <li><b>podcast:</b> sawbones</li>
+    <li><b>fiction podcast:</b> the magnus archives</li>
+	<li><b>flower:</b> sunflower</li>
+    <li><b>youtube channel:</b> drawfee</li>
+	<li><b>video essay youtube channel:</b> jacob geller</li>
+	<li><b>analog horror web series:</b> gemini home entertainment</li>
+    <li><b>pastry:</b> chocolate chip muffin</li>
+    <li><b>landform:</b> cirque</li>
+    <li><b>ao3 tag:</b> canon-typical worms</li>
+    <li><b>windows OS:</b> XP</li>
+</ul>
+            </div>
+          </div>
+		    <div class="mainboxes" style="flex:2; height:40%;margin:30px;background-color:rgba(110,186,196,0.6);">
+            <div class="subheader"><h3>attributes</h3></div>
+            <div class="mainboxescontent">
+              <!-- STAT BOX -->
+<div style="float: right">
+<canvas id="cvs" width="450" height="400" style="cursor: default;">[No canvas support]</canvas>
+	
+</div>
+            </div>
+			<script>
+			    labels = ['HP', 'MP', 'STR','DEX','INT','BLOOD'];
+    new RGraph.Radar({
+        id: 'cvs',
+        data: [46,26,30,18,32,40],
+        options: {
+		    labels: labels,
+            tooltips: RGraph.arrayLinearize(labels, labels), //  Adds the two arrays together
+            backgroundGridPoly: true, //  Default now
+            colors: ['rgba(171,39,79,0.7)'],
+            axesColor: 'transparent',
+            highlights: true,
+            colorsStroke: ['#dd4444']
+        }
+    }).grow();
+</script>
+          </div>
+		  </div>
+          <!-- END CONTENT -->
         </main>
 		</div>
         <div id="footer">
@@ -138,5 +235,6 @@
         </div>
       </div>
     </div>
+
   </body>
 </html>

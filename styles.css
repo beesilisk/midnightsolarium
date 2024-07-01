@@ -10,9 +10,6 @@ html {
      font-family: "Roboto Mono";
      font-weight: 300;
 }
- #header {
-     font-family: "TheGoodMonolith";
-}
  .subheader {
      font-family: "TheGoodMonolith";
 }
@@ -42,17 +39,19 @@ html {
      background-image: linear-gradient(to right, #dd4444, #f48080);
      color: #fff;
      letter-spacing: 3px;
+	 font-family: "TheGoodMonolith";
 }
  #header h1, h2 {
      margin: 0;
 }
 #contentboxes{
   display:flex;
+       color: #fdf5e6;
+     font-size: 17px;
 }
  #side {
      flex:1;
-     max-width:30%;
-     padding: 0 0 5px 10px;
+     padding: 0 0 5px 10px; 
 }
  .sidebox {
      border: 1px solid #ff91a4;
@@ -64,7 +63,6 @@ html {
      padding: 0 0 0 5px;
      margin: 3px;
      color: #6e5057;
-     font-size: 17px;
      letter-spacing: 1px;
 }
  .sidecontent ul, li {
@@ -82,10 +80,10 @@ html {
      color: #f2cf5c;
      vertical-align: middle;
 }
- a:visited, .icon:visited {
+ a:visited {
      color: #ffa245;
 }
- a:hover, .icon:hover {
+ a:hover {
      text-shadow: 0 0 4px #fcf17e;
 }
  main {
@@ -112,18 +110,29 @@ html {
      margin: 0;
 }
  .mainboxescontent {
-     padding: 0 15px 0 15px;
-     color: #fdf5e6;
-     font-size: 17px;
+     padding: 5px 15px 5px 15px;
      overflow: auto;
+}
+.mainboxescontent h2 {
+	font-size:20px;
+	color:#a7d5e8;
+}
+.mainboxescontent b, .mainboxes strong{
+	color:#b6a7e8;
+}
+.mainboxescontent i, .mainboxescontent em{
+	color:#f29acc;
 }
 .twoboxes{
 	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 	gap:5px;
 	}
  figure {
 	 max-width:100%;
-     margin: 15px 0px 15px 0px;
+     margin: 10px 0px 10px 0px;
      border: 1px solid #ff91a4;
      background-color: rgba(13, 36, 38, 0.6);
      backdrop-filter: blur(2px);
@@ -134,13 +143,12 @@ html {
      text-align: center;
      height: auto;
      padding: 0 5px 5px 5px;
-     word-wrap: break-word;
 }
  .body_img {
 	 max-width:100%;
      padding: 5px 5px 0 5px;
 }
- .tooltip{
+ .tooltip, .tooltip i{
      position:relative;
      border-bottom:1px dashed;
      color: #c8e8a7;
@@ -148,23 +156,17 @@ html {
 }
  .tooltip:before {
      content: attr(data-text);
-     position:absolute;
-     bottom: 110%;
-     left: 50%;
-     margin-left: -100px;
-     width:200px;
-     padding:10px;
-     border-radius:8px;
      border: 1px solid #ff91a4;
      background:#6b1f35;
+	 opacity:0.9;
      color: #d7e8c5;
      font-weight: bold;
-     font-size:17px;
+     font-size:15px;
      text-align:center;
      display:none;
 }
  .tooltip:hover:before {
-     display:block;
+     display:inline-block;
 }
  #footer {
      clear: both;

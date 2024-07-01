@@ -13,6 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="https://kit.fontawesome.com/85bfb0bd19.js"
+      crossorigin="anonymous"></script>
+
   </head>
   <!-- Page template: https://repth.neocities.org/theme -->
   <body>
@@ -27,9 +30,9 @@
             <div class="subheader"><h3>navigate</h3></div>
             <nav class="sidecontent">
               <ul>
-                <li><a href="index.html"><img class="icon" src="img/favicon/icons8-home-32.png"></img> homepage</a></li>
-                <li><a href="about_webmaster.html"><img class="icon" src="img/favicon/icons8-queen-bee-32.png"></img> about webmaster</a> </li>
-                <li>weblog</li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
+                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
+                <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
 				<li>more coming???</li>
               </ul>
             </nav>
@@ -40,13 +43,16 @@
             <div class="subheader"><h3>external links</h3></div>
             <div class="sidecontent">
               <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium"><img class="icon" src="img/favicon/icons8-hard-hat-32.png"></img> neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium"><img class="icon" src="img/favicon/icons8-github-32.png"></img> source code</a></li>
-                <li><a href="https://www.tumblr.com/beesilisk"><img class="icon" src="img/favicon/icons8-tumblr-32.png"></img> tumblr</a></li>
+                <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
+                <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code</a></li>
+                <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
               </ul>
             </div>
           </div>
           <!-- END NAV BOX -->
+		  
+<!-- © wdisseny --><div id="contain_moon" title="current moon phase"style="text-align:center;padding-top:5px;padding-bottom:5px;"><div style="font-weight:bold;font-family:thegoodmonolith;">the view outside:</div><div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 20px hsl(50,40%,90%,0.4))"></div><div>.</div><div style="font-size:small">.</div></div>
+<script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(210,200,200)&shadeColor=rgb(17,35,35)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
         </div>
 
         <main>
@@ -63,8 +69,9 @@
                   WARNING: this website is home to various types of bugs
                 </figcaption>
               </figure>
-              <p>You&apos;ve reached a website dedicated to all organisms,
-                formations, and concepts that grow in the night. Visitors are
+			  <h2>&#10027;&#10027;&#10027; a brief introduction &#10027;&#10027;&#10027;</h2>
+              <p>You&apos;ve reached a website dedicated to all <i>organisms</i>,
+                <i>formations</i>, and <i>concepts</i> that grow in the night. Visitors are
                 invited to look around, unwind, ground themselves in loamy soil,
                 or just take a quick breather before continuing down their own
                 path.</p>
@@ -72,14 +79,20 @@
                 overstimulated insect belonging to the
                 <span data-text="contains approx. 5700 distinct bee species!"
                   class="tooltip">apidae</span>
-                family. The webmaster, Bee, is usually exhausted by the
-                rapid-paced internet as well as the demands of life outside,
+                family. The webmaster is usually exhausted by the
+                rapid-paced internet as well as the demands of life outside the net,
                 which is why they decided to create an online space that can
                 nurture the things they love.
               </p>
               <br />
-              <p>(also in case i don't get the chance to say it anywhere else on
-                this site: Happy Pride Month y'all!!!)</p>
+			  <h2>&#9734;&#9734;&#9734; getting the most out of your visit &#9734;&#9734;&#9734;</h2>
+              <p>This site is best viewed on <b>desktop</b>. If you're on your <i>phone</i>, 
+			  you'll have a better time if you flip your phone from vertical &#x25AF; to 
+			  <b>horizontal &#x25AD;</b> orientation.</p>
+			  <p>If you're on a <i>tablet</i>, either way should be fine!</p>
+			  <p>If something appears <i>weird</i> or <i>missing</i>, make sure you 
+			  have <b>javascript enabled</b>. If the problem persists, the webmaster 
+			  probably left something broken or unfinished. My bad! (&#62;_&lt;")&#62;</p>
             </div>
           </div>
           <!-- END CONTENT -->
@@ -89,7 +102,12 @@
 
             <div class="mainboxescontent">
               <!-- UPDATE BOX -->
-			  <p><b>06/06/24</b> - turns out neocities doesn't let you use CORS</p>
+			  <p><b>30/06/24</b> - site now has a weblog! also made layout 
+			  more flexbox-centric, added <i>colour emphasis</i> to text for improved 
+			  readability, got CORS working properly, added a moon phase widget to 
+			  homepage because i thought it was cute, added advice for viewing to homepage, 
+			  revealed more personal info in 'about webmaster' page, somehow made tooltip
+			   both better and worse</p>
               <p><b>06/06/24</b> - added an 'about webmaster' page, added new
                 icons and images, added a tooltip even though it doesn't always 
 				work because fuck it, decided to link my tumblr because fuck it, 
