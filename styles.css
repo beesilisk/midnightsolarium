@@ -36,7 +36,7 @@ html {
 	 margin-bottom: 10px;
      padding: 10px;
      border-bottom: 1px solid #ff91a4;
-     background-image: linear-gradient(to right, #dd4444, #f48080);
+     background-image: linear-gradient(to top, #dd4444, #f48080);
      color: #fff;
      letter-spacing: 3px;
 	 font-family: "TheGoodMonolith";
@@ -99,7 +99,7 @@ html {
      backdrop-filter: blur(3px);
 }
  .subheader {
-     background-image: linear-gradient(to right, #dd4444, #f48080);
+     background-image: linear-gradient(to top, #dd4444, #f48080);
      border-bottom: 1px solid #ff91a4;
      padding: 3px;
      color: #fff;
@@ -172,7 +172,7 @@ html {
      clear: both;
      padding: 3px;
      border-top: 1px solid #ff91a4;
-     background-image: linear-gradient(to right, #dd4444, #f48080);
+     background-image: linear-gradient(to bottom, #dd4444, #f48080);
      color: #fff;
      font-size: 16px;
      text-align: center;

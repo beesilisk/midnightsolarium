@@ -14,19 +14,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 	
-	<style>
-#statuscafe {
-    padding: .5em;
-}
-#statuscafe-username {
-    margin-bottom: .5em;
-}
-#statuscafe-content {
-    margin: 0 1em 0.5em 1em;
-}
-script{
-color:white;}
-	</style>
+
 <script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.core.js"></script>
 <script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.dynamic.js"></script>
 <script src="RGraph6.18-stable/RGraph/libraries/RGraph.common.tooltips.js"></script>
@@ -90,7 +78,7 @@ color:white;}
                 </figcaption>
               </figure>
 			  <ul>
-                <li><b>name:</b> Bee (aka beesilisk)</li>
+                <li><b>name:</b> Bee</li>
                 <li><b>pronouns:</b> any</li>
                 <li><b>age:</b> 20s</li>
                 <li><b>species: </b><span data-text="yellow-banded bumblebee" class="tooltip"><i>Bombus terricola</i></span></li>
@@ -108,30 +96,35 @@ color:white;}
             </div>
           </div>
 		  
-		  <div class="mainboxes" style="flex:3; margin:50px;">
-            <div class="subheader"><h3>status</h3></div>
-            <div class="mainboxescontent" style="margin:50px 0 50px 0;">
+		  <div class="mainboxes" style="flex:3; margin:50px; height:320px;">
+            <div class="subheader"><a href="https://status.cafe/users/beesilisk"><img src="https://status.cafe/users/beesilisk/badge.png" alt="Status" title="Status"style="height:20px;"/></a></div>
+            <div class="mainboxescontent" style="max-height:275px;overflow:scroll;overflow-x:hidden;">
               <!-- STATUS BOX -->
-<div id="statuscafe">
-    <div id="statuscafe-username"></div>
-    <div id="statuscafe-content"></div>
-</div>
+<p style="text-align:center;"><b>CURRENTLY FEELING:</b><a href="https://www.imood.com/users/beesilisk">
+ <img src="https://moods.imood.com/display/uname-beesilisk/trans-1/imood.gif" style="height:20px;background-color:rgba(110,186,196,0.8);border:1px solid #ff91a4;padding:2px;"alt="The current mood of beesilisk at www.imood.com"></a></p>
+<div id='feed-reader' style="text-align:center;font-size:15px;"></div>
 <script>
-fetch("https://status.cafe/users/beesilisk/status.json")
-  .then( r => r.json() )
-  .then( r => {
-    if (!r.content.length) {
-      document.getElementById("statuscafe-content").innerHTML = "No status yet."
-      return
-}
-    document.getElementById("statuscafe-username").innerHTML = '<a href="https://status.cafe/users/beesilisk" target="_blank">' + r.author + '</a> ' + r.face + ' ' + r.timeAgo
-    document.getElementById("statuscafe-content").innerHTML = r.content
-  })
-</script>
+      const feedURL = 'https://status.cafe/users/beesilisk.atom';
 
-<p style="margin: 0 1em 0.5em 1.5em;"><b>CURRENTLY FEELING:</b><a href="https://www.imood.com/users/beesilisk">
- <img src="https://moods.imood.com/display/uname-beesilisk/trans-1/imood.gif" style="height:24px;background-color:rgba(110,186,196,0.7);border:1px solid #ff91a4;"alt="The current mood of beesilisk at www.imood.com"></a></p>
+      fetch(feedURL)
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+          const entries = data.querySelectorAll("entry");
+          let html = ``;
 
+          entries.forEach(el => {
+            let title = el.querySelector("title").innerHTML.slice(0, 12).trim();
+            let content = el.querySelector("content").textContent.trim();
+            let dateString = el.querySelector("published").innerHTML.slice(0,10);
+            html += `
+              <p>${title} - ${dateString}</p>
+              <p>${content}</p>
+            `;
+          })
+          document.getElementById("feed-reader").innerHTML = html;
+        })
+  </script>
             </div>
           </div>
 		  </div>
@@ -173,7 +166,7 @@ fetch("https://status.cafe/users/beesilisk/status.json")
           </div>
 		  </div>
 		  <div class="twoboxes">
-          <div class="mainboxes" style="flex:3;">
+          <div class="mainboxes" style="flex:3;margin-left:25%;margin-right:25%;"">
             <div class="subheader"><h3>favourites</h3></div>
             <div class="mainboxescontent">
               <!-- FAVE BOX -->
@@ -199,32 +192,6 @@ fetch("https://status.cafe/users/beesilisk/status.json")
     <li><b>windows OS:</b> XP</li>
 </ul>
             </div>
-          </div>
-		    <div class="mainboxes" style="flex:2; height:40%;margin:30px;background-color:rgba(110,186,196,0.6);">
-            <div class="subheader"><h3>attributes</h3></div>
-            <div class="mainboxescontent">
-              <!-- STAT BOX -->
-<div style="float: right">
-<canvas id="cvs" width="450" height="400" style="cursor: default;">[No canvas support]</canvas>
-	
-</div>
-            </div>
-			<script>
-			    labels = ['HP', 'MP', 'STR','DEX','INT','BLOOD'];
-    new RGraph.Radar({
-        id: 'cvs',
-        data: [46,26,30,18,32,40],
-        options: {
-		    labels: labels,
-            tooltips: RGraph.arrayLinearize(labels, labels), //  Adds the two arrays together
-            backgroundGridPoly: true, //  Default now
-            colors: ['rgba(171,39,79,0.7)'],
-            axesColor: 'transparent',
-            highlights: true,
-            colorsStroke: ['#dd4444']
-        }
-    }).grow();
-</script>
           </div>
 		  </div>
           <!-- END CONTENT -->
