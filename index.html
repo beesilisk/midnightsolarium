@@ -33,6 +33,7 @@
                 <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
                 <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
                 <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
+				<li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog</a> </li></li>
 				<li>more coming???</li>
               </ul>
             </nav>
@@ -53,17 +54,6 @@
 		  
 <!-- © wdisseny --><div id="contain_moon" title="current moon phase"style="text-align:center;padding-top:5px;padding-bottom:5px;"><div style="font-weight:bold;font-family:thegoodmonolith;">the view outside:</div><div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 20px hsl(50,40%,90%,0.4))"></div><div>.</div><div style="font-size:small">.</div></div>
 <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(210,200,200)&shadeColor=rgb(17,35,35)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
-        <br>
-		
-		<div class="sidebox"style="display:flex;justify-content:center;flex-wrap:wrap;">
-		<a style="padding:5px;"href="https://archive.org/"> <img src="img/internetarchive.gif" alt="Internet Archive"title="Internet Archive"> </a>
-		<a style="padding:5px;"href="https://neocities.org/"> <img src="img/neocities-pink.gif" alt="neocities"title="make a your own website!"> </a>
-		<a style="padding:5px;"href=""> <img src="img/transnow2.gif" alt="neocities"title="make a your own website!"> </a>
-		<a style="padding:5px;"href=""> <img src="img/right2repair.png" alt="neocities"title="somthing broken? fix it!"></a>
-		<a style="padding:5px;"href="https://decolonizepalestine.com/"> <img src="img/standwith.png" alt="STAND WITH PALESTINE"title="STAND WITH PALESTINE"> </a>
-		<p style="text-align: center;font-size:12px;">wanna see more buttons? click <a href="">here</a></p>
-		</div>
-		
 		</div>
 
         <main>
@@ -88,7 +78,7 @@
                 path.</p>
               <p>This website is the ongoing project of run by an easily
                 overstimulated insect belonging to the
-                <span data-text="contains approx. 5700 distinct bee species!"
+                <span data-text="contains approx. 5700 distinct bee species! "
                   class="tooltip">apidae</span>
                 family. The webmaster is usually exhausted by the
                 rapid-paced internet as well as the demands of life outside the net,
@@ -113,7 +103,8 @@
 
             <div class="mainboxescontent">
               <!-- UPDATE BOX -->
-			  <p><b>04/07/24</b> - changed status.cafe section to show full feed, more tiny 
+			  <p><b>04/07/24</b> - added a section for sharing my craft projects (and in the 
+			  process learned how to make an accordianchanged status.cafe section to show full feed, more tiny 
 			  layout tweaks 'cuz im never satisfied</p>
 			  <p><b>30/06/24</b> - site now has a weblog! also made layout 
 			  more flexbox-centric, added <i>colour emphasis</i> to text for improved 

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>midnight solarium</title>
+
+    <link
+      href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+	<style>
+#craftbox {
+  background-color: #143b3e;
+  background-image: url("img/william-morris-violet.png");
+  background-repeat: repeat;
+  background-size: 600px;
+}
+	 
+.tab{
+  margin:10px 20px 10px 20px;
+  box-shadow: 0 2px 30px rgba(244, 192, 221, 0.25);
+}
+.tab input {
+  position: absolute;
+  z-index: -1;
+}
+.tab_content {
+  max-height: 0;
+  overflow: hidden;
+}
+.tab input:checked ~ .tab_content {
+  max-height: 1200px;
+}
+.tab_label, .tab_close {
+  display: flex;
+  font-family: "TheGoodMonolith";
+  font-weight: 700;
+  font-size: 18px;
+  color: #180c0e;
+  background: #f9aa03; 
+  cursor: pointer;
+}
+.tab_label {
+  justify-content: space-between;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 20px 10px 20px;
+}
+.tab_label:hover, .tab input:checked ~ .tab_label{
+  color: #f9aa03;
+  background-color:#180c0e;
+}
+.tab_label::after {
+  content: "\2B";
+  width: 10px;
+  height: 10px;
+  text-align: center;
+}
+.tab input:checked + .tab_label::after {
+  content: "\2193";
+}
+.tab_content:hover, .tab input:checked ~ .tab_content{
+  border-left: 1px dashed #ff91a4;
+  border-bottom: 1px dashed #ff91a4;
+  border-right: 1px dashed #ff91a4;
+  padding: 0 10px 0 10px;
+  overflow: hidden;
+  background-color: rgba(13, 36, 38, 0.7);
+  backdrop-filter: blur(3px);
+
+}
+.tab_content input:before {
+  padding:0;
+}
+</style>
+
+	<script src="https://kit.fontawesome.com/85bfb0bd19.js"
+      crossorigin="anonymous"></script>
+
+  </head>
+  <!-- Page template: https://repth.neocities.org/theme -->
+  <body  >
+    <div id="container" >
+      <div id="box">
+        <div id="header"><h1>midnight solarium</h1></div>
+        <div id="contentboxes">
+        <div id="side" style="max-width:300px;">
+
+          <!-- NAV BOX -->
+          <div class="sidebox">
+            <div class="subheader"><h3>navigate</h3></div>
+            <nav class="sidecontent">
+              <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
+                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
+                <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
+				<li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog</a> </li></li>
+				<li>more coming???</li>
+              </ul>
+            </nav>
+          </div>
+          <!-- END NAV BOX -->
+          <!-- NAV BOX -->
+          <div class="sidebox">
+            <div class="subheader"><h3>external links</h3></div>
+            <div class="sidecontent">
+              <ul>
+                <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
+                <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code</a></li>
+                <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- END NAV BOX -->
+		</div>
+
+        <main>
+          <div class="mainboxes" id="craftbox">
+            <div class="subheader"><h3>craft catalog</h3></div>
+            <div class="mainboxescontent">
+              <!-- PROJECTS GO HERE -->
+			  
+<section>
+  <div class="tab">
+    <input type="radio" name="accordion-2" id="rd1" checked="checked">
+    <label for="rd1" class="tab_label">dithered toque &amp; mittens </label>
+    <div class="tab_content">
+	  <figure style="float:left;margin:10px 10px 10px 0;">
+        <img class="body_img"
+        src="img/bug_hotel.png"
+        title="a bug hotel made of wood, sticks, rocks, and pinecones"
+        alt="a bug hotel made of wood, sticks, rocks, and pinecones">
+      </figure>
+      <ul>
+	    <li>craft: knitting</li>
+		<li>pattern / reference:</li>
+	  </ul>
+	  <hr />
+	  <p>herlo</p>
+    </div>
+  </div>
+  
+  <div class="tab">
+    <input type="radio" name="accordion-2" id="rd2">
+    <label for="rd2" class="tab_label">test post please ignore</label>
+    <div class="tab_content">
+      <p>(im probably gonna delete this once i complete my next project. in the 
+	  meantime, enjoy this placeholder)</p>
+	  <p>do you like how i've set up this gallery? i assume this webpage will 
+	  become more and more image-heavy as i add onto it, which may in turn cause 
+	  long load times and screen flickering in the long run. i figured a simple way 
+	  to keep this page easy to look at would be to use an accordion-style radio checkbox</p>
+	  <p>i wouldn't use an accordion like this for a professional portfolio, since 
+	  it defeats the purpose of having your work on a single easily accessible 
+	  page. but i think it works well for a personal log</p>
+    </div>
+  </div>
+</section>
+            </div>
+          </div>
+          <!-- END CONTENT -->
+
+        </main>
+        </div>
+        <div id="footer">
+          <a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

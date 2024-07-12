@@ -156,9 +156,7 @@ html {
 }
  .tooltip:before {
      content: attr(data-text);
-     border: 1px solid #ff91a4;
-     background:#6b1f35;
-	 opacity:0.9;
+	 margin-right:7px;
      color: #d7e8c5;
      font-weight: bold;
      font-size:15px;
