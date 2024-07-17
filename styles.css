@@ -2,6 +2,15 @@
 html {
      scrollbar-color:#bc8f8f #000;
 }
+html:before {
+  content: " ";
+  display: block; position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(26,67,84,0) 50%, rgba(26,67,84,0.18) 50%);
+  z-index: 2;
+  background-size: 100% 2px, 4px 100%;
+  pointer-events: none;
+}
  body {
      background-color: #143b3e;
      background-image: url("img/ditherfinny.png");

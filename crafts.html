@@ -16,15 +16,25 @@
 
 	<style>
 #craftbox {
-  background-color: #143b3e;
+  position: relative;
+  z-index: 1; 
+}
+#craftbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("img/william-morris-violet.png");
   background-repeat: repeat;
   background-size: 600px;
+  opacity: 0.8;
+  z-index: -1;
 }
-	 
 .tab{
-  margin:10px 20px 10px 20px;
-  box-shadow: 0 2px 30px rgba(244, 192, 221, 0.25);
+  margin:10px 30px 10px 30px;
+
 }
 .tab input {
   position: absolute;
@@ -48,12 +58,15 @@
 }
 .tab_label {
   justify-content: space-between;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   padding: 10px 20px 10px 20px;
 }
 .tab_label:hover, .tab input:checked ~ .tab_label{
   color: #f9aa03;
   background-color:#180c0e;
+}
+.tab input:checked ~ .tab_label{
+  border-radius: 8px 8px 0 0;
 }
 .tab_label::after {
   content: "\2B";
@@ -68,7 +81,7 @@
   border-left: 1px dashed #ff91a4;
   border-bottom: 1px dashed #ff91a4;
   border-right: 1px dashed #ff91a4;
-  padding: 0 10px 0 10px;
+  padding: 0 20px 0 20px;
   overflow: hidden;
   background-color: rgba(13, 36, 38, 0.7);
   backdrop-filter: blur(3px);
@@ -128,20 +141,27 @@
 <section>
   <div class="tab">
     <input type="radio" name="accordion-2" id="rd1" checked="checked">
-    <label for="rd1" class="tab_label">dithered toque &amp; mittens </label>
+    <label for="rd1" class="tab_label">07.24 - dithered toque &amp; mittens </label>
     <div class="tab_content">
-	  <figure style="float:left;margin:10px 10px 10px 0;">
+	  <figure style="float:left;margin:20px 20px 10px 0;">
         <img class="body_img"
-        src="img/bug_hotel.png"
-        title="a bug hotel made of wood, sticks, rocks, and pinecones"
-        alt="a bug hotel made of wood, sticks, rocks, and pinecones">
+		style="max-width:400px;min-width:0%"
+        src="craft_img/ditherknits.jpg"
+        title="a knit hat and mittens with a 2-toned light blue and dark blue gradient"
+        alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient">
       </figure>
       <ul>
-	    <li>craft: knitting</li>
-		<li>pattern / reference:</li>
+	    <li><b>craft:</b> knitting</li>
+		<li><b>pattern/reference:</b> <a href="https://www.ravelry.com/patterns/library/quick-ombre-hat">Quick Ombré Hat</a> (free on Ravelry)</li>
+	    <li><b>yarn:</b> Phentex Merit (worsted acrylic)</li>
 	  </ul>
 	  <hr />
-	  <p>herlo</p>
+	  <p>a quick out-of-season project to get back into knitting after a short break</p>
+	  <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. 
+	  the colour ratios arent the same but whatever its fine</p>
+	  <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
+	  <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. 
+	  these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
     </div>
   </div>
   
@@ -149,7 +169,7 @@
     <input type="radio" name="accordion-2" id="rd2">
     <label for="rd2" class="tab_label">test post please ignore</label>
     <div class="tab_content">
-      <p>(im probably gonna delete this once i complete my next project. in the 
+      <p>(im probably gonna delete this tab once i complete my next project. in the 
 	  meantime, enjoy this placeholder)</p>
 	  <p>do you like how i've set up this gallery? i assume this webpage will 
 	  become more and more image-heavy as i add onto it, which may in turn cause 

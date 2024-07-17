@@ -63,8 +63,8 @@
 				<img
                     class="body_img"
                     src="img/makowka_picrew.png"
-                    alt="A Picrew of a person with short blond hair, pale skin, brown eyes, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, gold earrings, and a choker."
-                    title="A Picrew of a person with short blond hair, pale skin, brown eyes, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, gold earrings, and a choker."
+                    alt="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker."
+                    title="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker."
                     style="width:250px;"/></a>
                 <figcaption style="width:250px;">
                   an actual real-life photo of Bee, this site's indomitable
@@ -107,17 +107,18 @@
           const entries = data.querySelectorAll("entry");
           let html = ``;
 
-          entries.forEach(el => {
-            let title = el.querySelector("title").innerHTML.slice(0, 12).trim();
-            let content = el.querySelector("content").textContent.trim();
-            let dateString = el.querySelector("published").innerHTML.slice(0,10);
-            html += `
-              <p>${title} - ${dateString}</p>
-              <p>${content}</p>
-            `;
-          })
-          document.getElementById("feed-reader").innerHTML = html;
-        })
+		for(i = 0; i < 10; i++) {
+			let title =  entries[i].querySelector("title").innerHTML.slice(0, 12).trim();
+			let content =  entries[i].querySelector("content").textContent.trim();
+			let dateString =  entries[i].querySelector("published").innerHTML.slice(0,10);
+			 html += `
+				<p>${title} - ${dateString}</p>
+				<p>${content}</p>
+				`;
+		}
+		html += `<p><a href='https://status.cafe/users/beesilisk'>(see more)</a></p>`;
+		  document.getElementById("feed-reader").innerHTML = html;
+		})
   </script>
             </div>
           </div>
@@ -177,10 +178,9 @@
     <li><b>podcast:</b> sawbones</li>
     <li><b>fiction podcast:</b> the magnus archives</li>
 	<li><b>flower:</b> sunflower</li>
-    <li><b>youtube channel:</b> drawfee</li>
-	<li><b>video essay youtube channel:</b> jacob geller</li>
+	<li><b>youtube channel:</b> jacob geller</li>
 	<li><b>analog horror web series:</b> gemini home entertainment</li>
-    <li><b>pastry:</b> chocolate chip muffin</li>
+    <li><b>pastry:</b> chocolate chip banana muffin</li>
     <li><b>landform:</b> cirque</li>
     <li><b>ao3 tag:</b> canon-typical worms</li>
     <li><b>windows OS:</b> XP</li>
