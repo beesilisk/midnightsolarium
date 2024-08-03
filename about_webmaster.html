@@ -1,201 +1,203 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>midnight solarium</title>
-
-    <link
-      href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-	<script src="https://kit.fontawesome.com/85bfb0bd19.js"
-      crossorigin="anonymous"></script>
-  </head>
-  <!-- Page template: https://repth.neocities.org/theme -->
-  <body>
-    <div id="container">
-      <div id="box">
-        <div id="header"><h1>midnight solarium</h1></div>
-        <div id="contentboxes">
-        <div id="side">
-
-          <!-- NAV BOX -->
-          <div class="sidebox">
-            <div class="subheader"><h3>navigate</h3></div>
-            <nav class="sidecontent">
-              <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
-                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
-                <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
-				<li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog</a> </li></li>
-				<li>more coming???</li>
-              </ul>
-            </nav>
-          </div>
-          <!-- END NAV BOX -->
-          <!-- NAV BOX -->
-          <div class="sidebox">
-            <div class="subheader"><h3>external links</h3></div>
-            <div class="sidecontent">
-              <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code</a></li>
-                <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- END NAV BOX -->
-        </div>
-
-        <main>
-		<div class="twoboxes">
-          <div class="mainboxes" style="flex:4;">
-            <div class="subheader"><h3>about the webmaster</h3></div>
-            <div class="mainboxescontent">
-              <!-- ABOUT BOX -->
-              <figure style="float:left; margin-right:10px;">
-                <a href="https://picrew.me/en/image_maker/644129">
-				<img
-                    class="body_img"
-                    src="img/makowka_picrew.png"
-                    alt="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker."
-                    title="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker."
-                    style="width:250px;"/></a>
-                <figcaption style="width:250px;">
-                  an actual real-life photo of Bee, this site's indomitable
-                  creator
-                </figcaption>
-              </figure>
-			  <ul>
-                <li><b>name:</b> Bug</li>
-                <li><b>pronouns:</b> any</li>
-                <li><b>age:</b> 20s</li>
-                <li><b>species: </b><span data-text="yellow-banded bumblebee " class="tooltip"><i>Bombus terricola</i></span></li>
-                <li><b>sexuality:</b><span style="background-image: linear-gradient(to right, #fcaedb,#d2aefc,#aec6fc);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;"> bi &lt;3</span></li>
-                <li><b>neurotype:</b> divergent<span style="color: gold"> &infin;</span></li>
-                <li><b>occupation:</b> IT cert chaser</li>
-                <li><b>biome:</b> temperate grassland</li>
-                <li><b>tarot card:</b> the hanged man</li>
-                <li><b>humour:</b> black bile</li>
-                <li><b>time of birth:</b> 06:21</li>
-                <li><b>time of death:</b> TBD</li>
-				</ul>
-            </div>
-          </div>
-		  
-		  <div class="mainboxes" style="flex:3; margin:50px; height:320px;">
-            <div class="subheader"><a href="https://status.cafe/users/beesilisk"><img src="https://status.cafe/users/beesilisk/badge.png" alt="Status" title="Status"style="height:20px;"/></a></div>
-            <div class="mainboxescontent" style="max-height:275px;overflow:scroll;overflow-x:hidden;">
-              <!-- STATUS BOX -->
-<p style="text-align:center;"><b>CURRENTLY FEELING:</b><a href="https://www.imood.com/users/beesilisk">
- <img src="https://moods.imood.com/display/uname-beesilisk/trans-1/imood.gif" style="height:20px;background-color:rgba(110,186,196,0.8);border:1px solid #ff91a4;padding:2px;"alt="The current mood of beesilisk at www.imood.com"></a></p>
-<div id='feed-reader' style="text-align:center;font-size:15px;"></div>
-<script>
-      const feedURL = 'https://status.cafe/users/beesilisk.atom';
-
-      fetch(feedURL)
-        .then(response => response.text())
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-          const entries = data.querySelectorAll("entry");
-          let html = ``;
-
-		for(i = 0; i < 10; i++) {
-			let title =  entries[i].querySelector("title").innerHTML.slice(0, 12).trim();
-			let content =  entries[i].querySelector("content").textContent.trim();
-			let dateString =  entries[i].querySelector("published").innerHTML.slice(0,10);
-			 html += `
-				<p>${title} - ${dateString}</p>
-				<p>${content}</p>
-				`;
-		}
-		html += `<p><a href='https://status.cafe/users/beesilisk'>(see more)</a></p>`;
-		  document.getElementById("feed-reader").innerHTML = html;
-		})
-  </script>
-            </div>
-          </div>
-		  </div>
-          <!-- END CONTENT -->
-          <div class="twoboxes">
-          <div class="mainboxes" style="flex:1;margin:0 0 10px 40px;">
-            <div class="subheader"><h3>likes</h3></div>
-            <div class="mainboxescontent">
-              <!-- LIKE BOX -->
-              <ul>
-                <li>- knitting</li>
-                <li>- writing simple ugly code</li>
-                <li>- sustainabile development</li>
-                <li>- soft springy moss</li>
-                <li>- watching normie anime</li>
-                <li>- visible mending</li>
-                <li>- psychological horror films</li>
-                <li>- fixating on random topics</li>
-                <li>- technology</li>
-              </ul>
-              <!-- END CONTENT -->
-            </div>
-          </div>
-          <div class="mainboxes" style="flex:1;margin:0 40px 10px 10px;">
-            <div class="subheader"><h3>dislikes</h3></div>
-            <div class="mainboxescontent">
-              <!-- DISLIKE BOX -->
-              <ul>
-                <li>- loud sudden noises</li>
-                <li>- shrill persistent noises</li>
-                <li>- waking up early in the morning</li>
-                <li>- cringe culture</li>
-                <li>- extreme competitiveness</li>
-                <li>- the rising cost of living</li>
-                <li>- technology</li>
-              </ul>
-              <!-- END CONTENT -->
-            </div>
-          </div>
-		  </div>
-		  <div class="twoboxes">
-          <div class="mainboxes" style="flex:3;margin-left:25%;margin-right:25%;"">
-            <div class="subheader"><h3>favourites</h3></div>
-            <div class="mainboxescontent">
-              <!-- FAVE BOX -->
-              <ul>
-    <li><b>colour:</b> orange</li>
-    <li><b>animal:</b> dog</li>
-    <li><b>video game:</b> yoshi&apos;s island</li>
-    <li><b>video game series:</b> legend of zelda</li>
-	<li><b>console:</b> gamecube</li>
-    <li><b>movie:</b> hausu</li>
-    <li><b>yarn fibre:</b> alpaca wool</li>
-    <li><b>book:</b> le comte de monte-cristo</li>
-	<li><b>tv show:</b> the twilight zone (1959-1964)</li>
-    <li><b>podcast:</b> sawbones</li>
-    <li><b>fiction podcast:</b> the magnus archives</li>
-	<li><b>flower:</b> sunflower</li>
-	<li><b>youtube channel:</b> jacob geller</li>
-	<li><b>analog horror web series:</b> gemini home entertainment</li>
-    <li><b>pastry:</b> chocolate chip banana muffin</li>
-    <li><b>landform:</b> cirque</li>
-    <li><b>ao3 tag:</b> canon-typical worms</li>
-    <li><b>windows OS:</b> XP</li>
-</ul>
-            </div>
-          </div>
-		  </div>
-          <!-- END CONTENT -->
-        </main>
-		</div>
-        <div id="footer">
-          <a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a>
-        </div>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>midnight solarium</title>
+  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+ </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+ <body>
+  <div id="container">
+   <div id="box">
+    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><span style="vertical-align:bottom;">&nbsp;midnight solarium</span></h1></div>
+    <div id="contentboxes">
+     <div id="side" style="max-width:300px;">
+      <!-- NAV BOX -->
+      <div class="sidebox">
+       <div class="subheader"><h3>navigate</h3></div>
+       <nav class="sidecontent">
+        <ul>
+         <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage </a></li>
+         <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster </a></li>
+         <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog </a></li>
+         <li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog </a></li><li>more coming???</li>
+        </ul>
+       </nav>
       </div>
+      <!-- END NAV BOX -->
+      <!-- NAV BOX -->
+      <div class="sidebox">
+       <div class="subheader"><h3>external links</h3></div>
+       <div class="sidecontent">
+        <ul>
+		  <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page </a></li>
+          <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code </a></li>
+         <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr </a></li>
+        </ul>
+       </div>
+      </div>
+      <!-- END NAV BOX -->
+     </div>
+     <main>
+      <div class="twoboxes">
+       <div class="mainboxes" style="flex:6;height:fit-content;z-index:-1;">
+        <div class="subheader">
+         <h3>about the webmaster</h3>
+        </div>
+        <div class="mainboxescontent">
+         <!-- ABOUT BOX -->
+         <figure style="float:left; margin-right:20px;">
+          <a href="https://picrew.me/en/image_maker/644129">
+           <img class="body_img" src="img/makowka_picrew.png" alt="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker." title="A Picrew of a person with short blond hair, pale skin, thick straight brows, and horns. They are wearing a black shirt, a tan jacket, and a choker." style="width:250px;" />
+          </a>
+          <figcaption style="width:250px;"> an actual real-life photo of Bee, this site's indomitable creator </figcaption>
+         </figure>
+         <ul>
+          <li><b>name:</b>&nbsp;Bee</li>
+          <li><b>pronouns:</b>&nbsp;any</li>
+          <li><b>age:</b>&nbsp;20s</li>
+          <li><b>species:&nbsp;</b><span data-text="yellow-banded bumblebee " class="tooltip"><i>Bombus terricola</i></span></li>
+          <li><b>sexuality:</b><span style="background-image: linear-gradient(to right, #fcaedb,#d2aefc,#aec6fc);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">&nbsp;bi&nbsp;&lt;3</span></li>
+          <li><b>neurotype:</b>&nbsp;divergent <span style="color: gold">&nbsp;&infin;</span></li>
+          <li><b>occupation:</b>&nbsp;IT&nbsp;cert&nbsp;chaser</li>
+          <li><b>biome:</b>&nbsp;temperate&nbsp;grassland</li>
+          <li><b>tarot card:</b>&nbsp;the&nbsp;hanged&nbsp;man</li>
+          <li><b>humour:</b>&nbsp;black&nbsp;bile</li>
+          <li><b>time&nbsp;of&nbsp;birth:</b>&nbsp;06:21</li>
+          <li><b>time&nbsp;of&nbsp;death:</b>&nbsp;TBD</li>
+         </ul>
+        </div>
+       </div>
+       <div style="flex:5;flex-direction:column;">
+        <div class="twoboxes" style="flex-direction:row;flex:1">
+		<!-- IMOOD BOX -->
+         <div class="mainboxes" style="flex:4;background-color:rgb(110,186,196);margin:0 30px 5px 15px;     
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABGklEQVRYR+1YwQ0CMQyj+7AGkzAXk7DG7QOvIBRU1TZJ2wj4ITUX20nj3LXr5fw4Ffi1ckBv96MxwhrB7DjL81I0O6GJwBLsAvUP6v23xEYwO+5D0eyEKsFu6VHAvmWi44xYXaCoImoJ1bh/j6LToDe2vBH9To8ybvZ+FlU8bOBPB8omZC3X9yKbT96elgFFE7NLhVeOjZe3JzZRGlDUmdAKoEBHW5rsTMuBok4RBRStIO1MfqlgxwwKzBtC3dKzjL9VFG21uqVHGS6/TGVKvz1Q9lLMPi9vT8uAspdDXU7YOHl7Ur8hqXFDoOylQs+HvdeP5ij7UubPhwFVlVEJjuK6357KAB0x3Kb0ZYCWKf32QGdbIpuvjNc/AWaR3PY9cE36AAAAAElFTkSuQmCC') 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid; ">
+          <div class="mainboxescontent">
+           <p style="text-align:center;margin:0;"><b style="color:black;font-weight:700;">CURRENTLY FEELING:</b>
+            <a href="https://www.imood.com/users/beesilisk" class="hiddenlink">
+             <img src="https://moods.imood.com/display/uname-beesilisk/trans-1/imood.gif" style="height:22px;" alt="The current mood of beesilisk at www.imood.com"></img>
+            </a>
+           </p>
+          </div>
+         </div>
+		 <!-- END CONTENT -->
+         <div><a href="etc/ch_datamining.html" class="hiddenlink"><img src="img/hive.gif" alt="a gif of a beehive" title="a gif of a beehive" style="width:100px;margin:0 10px 0 -20px;" /></a></div>
+        </div>
+        <div class="mainboxes" style="flex:3; margin:10px 20px 10px 25px; height:280px;">
+         <div class="subheader"><a href="https://status.cafe/users/beesilisk" class="hiddenlink"><img src="https://status.cafe/users/beesilisk/badge.png" alt="Status" title="Status" style="height:20px;" /></a></div>
+         <div class="mainboxescontent" style="max-height:232px;overflow:scroll;overflow-x:hidden;">
+          <!-- STATUS BOX -->
+          <div id='feed-reader' style="text-align:center;font-size:15px;line-height:1.4;"></div>
+          <script>
+           const feedURL = 'https://status.cafe/users/beesilisk.atom';
+           fetch(feedURL).then(response => response.text()).then(str => new window.DOMParser().parseFromString(str, "text/xml")).then(data => {
+            const entries = data.querySelectorAll("entry");
+            let html = ``;
+            for (i = 0; i < 10; i++) {
+             let title = entries[i].querySelector("title").innerHTML.slice(0, 12).trim();
+             let content = entries[i].querySelector("content").textContent.trim();
+             let dateString = entries[i].querySelector("published").innerHTML.slice(0, 10);
+             html += `
+				
+												<p>${title} - ${dateString}</p>
+												<p>${content}</p>
+				`;
+            }
+            html += `
+												<p>
+													<a href='https://status.cafe/users/beesilisk'>(see more)</a>
+												</p>`;
+            document.getElementById("feed-reader").innerHTML = html;
+           })
+          </script>
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- END CONTENT -->
+      <div class="twoboxes">
+       <div class="mainboxes" style="flex:3;margin:0 0 10px 15px;height:fit-content;">
+        <div class="subheader"><h3>likes</h3></div>
+        <div class="mainboxescontent">
+         <!-- LIKE BOX -->
+         <ul>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;knitting</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;writing simple ugly code</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;sustainabile development</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;soft springy moss</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;watching normie anime</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;visible mending</li>
+		  <li><span style="color:springgreen;">&#8743;</span>&nbsp;coffee</li>
+		  <li><span style="color:springgreen;">&#8743;</span>&nbsp;tea</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;psychological horror films</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;coelacanths</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;fixating on random topics</li>
+          <li><span style="color:springgreen;">&#8743;</span>&nbsp;technology</li>
+         </ul>
+         <!-- END CONTENT -->
+        </div>
+       </div>
+       <div class="twoboxes" style="flex-direction:column;height:fit-content;">
+        <div><img class="body_img" src="img/bee 46.gif" alt="a gif of a bee" title="a gif of a bee" style="width:170px;margin-left:25%;margin-top:-30px;z-index:3;" /></div>
+        <div class="mainboxes" style="flex:3;margin:0 20px 0 10px;">
+         <div class="subheader"><h3>dislikes</h3></div>
+         <div class="mainboxescontent">
+          <!-- DISLIKE BOX -->
+          <ul>
+           <li><span style="color:red;">&#8744;</span>&nbsp;loud sudden noises</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;shrill persistent noises</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;waking up early in the morning</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;cringe culture</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;extreme competitiveness</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;the rising cost of living</li>
+           <li><span style="color:red;">&#8744;</span>&nbsp;technology</li>
+          </ul>
+          <!-- END CONTENT -->
+         </div>
+        </div>
+       </div>
+       <div class="mainboxes" style="flex:4; margin-right:10px;">
+        <div class="subheader"><h3>favourites</h3></div>
+        <div class="mainboxescontent">
+         <!-- FAVE BOX -->
+         <ul>
+          <li><b>colour:</b> orange</li>
+          <li><b>animal:</b> dog</li>
+          <li><b>video game:</b> yoshi&apos;s island</li>
+          <li><b>video game series:</b> legend of zelda</li>
+          <li><b>console:</b> gamecube</li>
+          <li><b>movie:</b> hausu</li>
+          <li><b>yarn fibre:</b> alpaca wool</li>
+          <li><b>book:</b> le comte de monte-cristo</li>
+          <li><b>tv show:</b> the twilight zone (1959-1964)</li>
+          <li><b>podcast:</b> sawbones</li>
+          <li><b>fiction podcast:</b> the magnus archives</li>
+          <li><b>flower:</b> sunflower</li>
+          <li><b>youtube channel:</b> jacob geller</li>
+          <li><b>analog horror web series:</b> gemini home entertainment</li>
+          <li><b>pastry:</b> chocolate chip banana muffin</li>
+          <li><b>landform:</b> cirque</li>
+          <li><b>ao3 tag:</b> canon-typical worms</li>
+          <li><b>windows OS:</b> XP</li>
+         </ul>
+        </div>
+       </div>
+      </div>
+      <!-- END CONTENT -->
+     </main>
     </div>
-
-  </body>
+    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
+   </div>
+  </div>
+ </body>
 </html>

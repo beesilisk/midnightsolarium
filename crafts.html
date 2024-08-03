@@ -1,196 +1,197 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>midnight solarium</title>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>midnight solarium</title>
+  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+   #craftbox {
+    position: relative;
+    z-index: 1;
+   }
 
-    <link
-      href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+   #craftbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/william-morris-violet.png");
+    background-repeat: repeat;
+    background-size: 600px;
+    opacity: 0.8;
+    z-index: -1;
+   }
 
-	<style>
-#craftbox {
-  position: relative;
-  z-index: 1; 
-}
-#craftbox::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("img/william-morris-violet.png");
-  background-repeat: repeat;
-  background-size: 600px;
-  opacity: 0.8;
-  z-index: -1;
-}
-.tab{
-  margin:10px 30px 10px 30px;
+   .tab {
+    margin: 10px 30px 10px 30px;
+   }
 
-}
-.tab input {
-  position: absolute;
-  z-index: -1;
-}
-.tab_content {
-  max-height: 0;
-  overflow: hidden;
-}
-.tab input:checked ~ .tab_content {
-  max-height: 1200px;
-}
-.tab_label, .tab_close {
-  display: flex;
-  font-family: "TheGoodMonolith";
-  font-weight: 700;
-  font-size: 18px;
-  color: #180c0e;
-  background: #f9aa03; 
-  cursor: pointer;
-}
-.tab_label {
-  justify-content: space-between;
-  border-radius: 8px;
-  padding: 10px 20px 10px 20px;
-}
-.tab_label:hover, .tab input:checked ~ .tab_label{
-  color: #f9aa03;
-  background-color:#180c0e;
-}
-.tab input:checked ~ .tab_label{
-  border-radius: 8px 8px 0 0;
-}
-.tab_label::after {
-  content: "\2B";
-  width: 10px;
-  height: 10px;
-  text-align: center;
-}
-.tab input:checked + .tab_label::after {
-  content: "\2193";
-}
-.tab_content:hover, .tab input:checked ~ .tab_content{
-  border-left: 1px dashed #ff91a4;
-  border-bottom: 1px dashed #ff91a4;
-  border-right: 1px dashed #ff91a4;
-  padding: 0 20px 0 20px;
-  overflow: hidden;
-  background-color: rgba(13, 36, 38, 0.7);
-  backdrop-filter: blur(3px);
+   .tab input {
+    position: absolute;
+    z-index: -1;
+   }
 
-}
-.tab_content input:before {
-  padding:0;
-}
-</style>
+   .tab_content {
+    max-height: 0;
+    overflow: hidden;
+   }
 
-	<script src="https://kit.fontawesome.com/85bfb0bd19.js"
-      crossorigin="anonymous"></script>
+   .tab input:checked~.tab_content {
+    max-height: 1200px;
+   }
 
-  </head>
-  <!-- Page template: https://repth.neocities.org/theme -->
-  <body  >
-    <div id="container" >
-      <div id="box">
-        <div id="header"><h1>midnight solarium</h1></div>
-        <div id="contentboxes">
-        <div id="side" style="max-width:300px;">
+   .tab_label,
+   .tab_close {
+    display: flex;
+    font-family: "TheGoodMonolith";
+    font-weight: 700;
+    font-size: 18px;
+    color: #180c0e;
+    background: #f9aa03;
+    cursor: pointer;
+   }
 
-          <!-- NAV BOX -->
-          <div class="sidebox">
-            <div class="subheader"><h3>navigate</h3></div>
-            <nav class="sidecontent">
-              <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage</a></li>
-                <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster</a> </li>
-                <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog</a> </li></li>
-				<li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog</a> </li></li>
-				<li>more coming???</li>
-              </ul>
-            </nav>
-          </div>
-          <!-- END NAV BOX -->
-          <!-- NAV BOX -->
-          <div class="sidebox">
-            <div class="subheader"><h3>external links</h3></div>
-            <div class="sidecontent">
-              <ul>
-                <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page</a></li>
-                <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code</a></li>
-                <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- END NAV BOX -->
-		</div>
+   .tab_label {
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+   }
 
-        <main>
-          <div class="mainboxes" id="craftbox">
-            <div class="subheader"><h3>craft catalog</h3></div>
-            <div class="mainboxescontent">
-              <!-- PROJECTS GO HERE -->
-			  
-<section>
-  <div class="tab">
-    <input type="radio" name="accordion-2" id="rd1" checked="checked">
-    <label for="rd1" class="tab_label">07.24 - dithered toque &amp; mittens </label>
-    <div class="tab_content">
-	  <figure style="float:left;margin:20px 20px 10px 0;">
-        <img class="body_img"
-		style="max-width:400px;min-width:0%"
-        src="craft_img/ditherknits.jpg"
-        title="a knit hat and mittens with a 2-toned light blue and dark blue gradient"
-        alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient">
-      </figure>
-      <ul>
-	    <li><b>craft:</b> knitting</li>
-		<li><b>pattern/reference:</b> <a href="https://www.ravelry.com/patterns/library/quick-ombre-hat">Quick Ombré Hat</a> (free on Ravelry)</li>
-	    <li><b>yarn:</b> Phentex Merit (worsted acrylic)</li>
-	  </ul>
-	  <hr />
-	  <p>a quick out-of-season project to get back into knitting after a short break</p>
-	  <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. 
-	  the colour ratios arent the same but whatever its fine</p>
-	  <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
-	  <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. 
-	  these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
+   .tab_label:hover,
+   .tab input:checked~.tab_label {
+    color: #f9aa03;
+    background-color: #180c0e;
+   }
+
+   .tab input:checked~.tab_label {
+    border-radius: 8px 8px 0 0;
+   }
+
+   .tab_label::after {
+    content: "\2B";
+    width: 10px;
+    height: 10px;
+    text-align: center;
+   }
+
+   .tab input:checked+.tab_label::after {
+    content: "\2193";
+   }
+
+   .tab_content:hover,
+   .tab input:checked~.tab_content {
+    border-left: 1px dashed #ff91a4;
+    border-bottom: 1px dashed #ff91a4;
+    border-right: 1px dashed #ff91a4;
+    padding: 0 20px 0 20px;
+    overflow: hidden;
+    background-color: rgba(13, 36, 38, 0.7);
+    backdrop-filter: blur(3px);
+   }
+
+   .tab_content input:before {
+    padding: 0;
+   }
+  </style>
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+ </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+ <body>
+  <div id="container">
+   <div id="box">
+    <div id="header">
+     <h1>
+      <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+      <span style="vertical-align:bottom;">&nbsp;midnight solarium</span>
+     </h1>
     </div>
-  </div>
-  
-  <div class="tab">
-    <input type="radio" name="accordion-2" id="rd2">
-    <label for="rd2" class="tab_label">test post please ignore</label>
-    <div class="tab_content">
-      <p>(im probably gonna delete this tab once i complete my next project. in the 
-	  meantime, enjoy this placeholder)</p>
-	  <p>do you like how i've set up this gallery? i assume this webpage will 
-	  become more and more image-heavy as i add onto it, which may in turn cause 
-	  long load times and screen flickering in the long run. i figured a simple way 
-	  to keep this page easy to look at would be to use an accordion-style radio checkbox</p>
-	  <p>i wouldn't use an accordion like this for a professional portfolio, since 
-	  it defeats the purpose of having your work on a single easily accessible 
-	  page. but i think it works well for a personal log</p>
-    </div>
-  </div>
-</section>
-            </div>
-          </div>
-          <!-- END CONTENT -->
-
-        </main>
-        </div>
-        <div id="footer">
-          <a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a>
-        </div>
+    <div id="contentboxes">
+     <div id="side" style="max-width:300px;">
+      <!-- NAV BOX -->
+      <div class="sidebox">
+       <div class="subheader"><h3>navigate</h3></div>
+       <nav class="sidecontent">
+        <ul>
+         <li><a href="index.html"><i class="fa-solid fa-house"></i> homepage </a></li>
+         <li><a href="about_webmaster.html"><i class="fa-solid fa-bug"></i> about webmaster </a></li>
+         <li><a href="weblog_directory.html"><i class="fa-solid fa-pen"></i> weblog </a></li>
+         <li><a href="crafts.html"><i class="fa-solid fa-scissors"></i> craft catalog </a></li><li>more coming???</li>
+        </ul>
+       </nav>
       </div>
+      <!-- END NAV BOX -->
+      <!-- NAV BOX -->
+      <div class="sidebox">
+       <div class="subheader"><h3>external links</h3></div>
+       <div class="sidecontent">
+        <ul>
+		  <li><a href="https://neocities.org/site/midnightsolarium"><i class="fa-solid fa-helmet-safety"></i> neocities page </a></li>
+          <li><a href="https://github.com/beesilisk/midnightsolarium"><i class="fa-brands fa-github"></i> source code </a></li>
+         <li><a href="https://www.tumblr.com/beesilisk"><i class="fa-brands fa-tumblr"></i> tumblr </a></li>
+        </ul>
+       </div>
+      </div>
+      <!-- END NAV BOX -->
+     </div>
+     <main>
+      <div class="mainboxes" id="craftbox">
+       <div class="subheader">
+        <h3>craft catalog</h3>
+       </div>
+       <div class="mainboxescontent">
+        <!-- PROJECTS GO HERE -->
+        <section>
+         <div class="tab">
+          <input type="radio" name="accordion-2" id="rd1" checked="checked">
+          <label for="rd1" class="tab_label">07.24 - dithered toque &amp; mittens </label>
+          <div class="tab_content">
+           <figure style="float:left;margin:20px 20px 10px 0;">
+            <img class="body_img" style="max-width:400px;min-width:0%" src="craft_img/ditherknits.jpg" title="a knit hat and mittens with a 2-toned light blue and dark blue gradient" alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient">
+           </figure>
+           <ul>
+            <li>
+             <b>craft:</b> knitting
+            </li>
+            <li>
+             <b>pattern/reference:</b>
+             <a href="https://www.ravelry.com/patterns/library/quick-ombre-hat">Quick Ombré Hat</a> (free on Ravelry)
+            </li>
+            <li>
+             <b>yarn:</b> Phentex Merit (worsted acrylic)
+            </li>
+           </ul>
+           <hr />
+           <p>a quick out-of-season project to get back into knitting after a short break</p>
+           <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. the colour ratios arent the same but whatever its fine</p>
+           <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
+           <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
+          </div>
+         </div>
+         <div class="tab">
+          <input type="radio" name="accordion-2" id="rd2">
+          <label for="rd2" class="tab_label">test post please ignore</label>
+          <div class="tab_content">
+           <p>(im probably gonna delete this tab once i complete my next project. in the meantime, enjoy this placeholder)</p>
+           <p>do you like how i've set up this gallery? i assume this webpage will become more and more image-heavy as i add onto it, which may in turn cause long load times and screen flickering in the long run. i figured a simple way to keep this page easy to look at would be to use an accordion-style radio checkbox</p>
+           <p>i wouldn't use an accordion like this for a professional portfolio, since it defeats the purpose of having your work on a single easily accessible page. but i think it works well for a personal log</p>
+          </div>
+         </div>
+        </section>
+       </div>
+      </div>
+      <!-- END CONTENT -->
+     </main>
     </div>
-  </body>
+    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
+   </div>
+  </div>
+ </body>
 </html>
