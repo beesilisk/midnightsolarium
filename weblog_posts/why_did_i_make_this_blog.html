@@ -10,31 +10,78 @@
   <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="../styles.css" />
   <style>
-   #container {
+#container {
     max-width: 900px;
     margin-top: 20px;
    }
-   .blogdetail {
-    font-size: 13px;
+#box {
+    color: #000;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: unset;
+    margin-bottom:20px;
+    &::before,
+    &::after {
+        content: '';
+		position: absolute;
+		left: -3px;
+		top: -3px;
+		width: calc(100% + 6px);
+		height: calc(100% + 6px);
+		background: #333;
+		background-image: linear-gradient(45deg, rgb(203,87,155), rgb(168,215,101), rgb(103,208,177));
+        background-size: 300%;
+		animation: position 20s linear infinite alternate;
+		z-index: -1;
+    }
+    &::after {
+        filter: blur(20px);
+    }
+}
+
+@keyframes position {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.blogdetail {
+    font-size: 80%;
+    position: relative; 
+	top: -0.8em; 
    }
-   main {
+#contentboxes{
+	background-color: rgb(13, 36, 38);
+   }
+#gridbg{
+	background-image: url("blog_img/transparent-grid-overlay.png");
+    background-size: 300px;
+	z-index:1;
+}
+main {
     flex: 100%;
-    padding: 30px;
+    padding: 20px 50px 30px 50px;
    }
-   h2 {
+h2 {
     font-size: 32px;
     font-family: "TheGoodMonolith";
+	line-height:1.2;
    }
-   h3 {
+h3 {
     font-size: 22px;
     color: #c4e57e;
     text-shadow: 0 0 10px rgba(243, 247, 118, 0.4);
    }
-   b, strong {
+b, strong {
     color: #b6a7e8;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
    }
-   i, em {
+i, em {
     color: #f29acc;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
    }
@@ -46,13 +93,15 @@
   <div id="container">
    <div id="box">
     <div id="contentboxes">
+	<div id="gridbg">
      <main>
       <!-- WEBLOG BOX -->
       <div>
        <h2>why did i make this blog</h2>
        <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
        <a href="../weblog_directory.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
-       <article>
+       <hr style="margin-top:15px;"/>
+	   <article>
         <p>Hey there visitor! I see you&rsquo;ve stumbled upon my website, despite the fact that there&rsquo;s not much here to look at yet. Or maybe you&rsquo;re from the distant future, and you&rsquo;re only reading this inaugural post out of curiosity. Either way, <b>welcome!</b></p>
         <p>Seeing how this is my first blog post, I figure it makes sense to talk about why I created this weblog section in the first place. I promise my explanation will be very straightforward and not a meandering diatribe. Haha.</p>
         <h3>a meandering diatribe: part 1</h3>
@@ -128,13 +177,17 @@
         <p>I don&rsquo;t know if you should make a blog. Maybe it&rsquo;s for you, maybe it isn&rsquo;t. But don&rsquo;t let yourself be limited by the current state of the web. The internet exists for us. <em>If it doesn&rsquo;t suit our needs, we can create a version that does.</em>
         </p>
        </article>
+	   	   <hr />
        <a href="../weblog_directory.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2)"></i> go back </a>
       </div>
       <!-- END CONTENT -->
      </main>
+	 </div>
     </div>
-    <div id="footer"><a href="../credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
    </div>
   </div>
+      <div id="xpfooter" style="width:100%;height:30px;">
+	 <img src="../img/xpstar.png"><div style="margin-top:-26px"><a href="../credits.html" style="color: #fdf5e6; margin-left:48%;background-color:rgba(58, 15, 28, 0.3);">Credits</a></div>
+	</div>
  </body>
 </html>

@@ -12,18 +12,32 @@
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <style>
    .blogpost {
-    line-height: 0.5;
-    margin-top: 15px;
+   	background-image: url("weblog_posts/blog_img/transparent-grid-overlay.png");
+    background-size: 300px;
+   	border: 2px solid rgba(168,215,101,0.8);
+	box-shadow: 0 0px 10px rgba(200,224,166,0.4);
+	padding: 20px 15px 0 15px;
+    margin: 10px 0 10px 0;
+	background-color: rgba(13, 36, 38, 0.6);
+	background-image: ur
+    backdrop-filter: blur(3px);
    }
-
+   .blogpost a:hover {
+    transform: none;
+   }
    .blogdetail {
     font-size: 13px;
    }
-
    .mainboxescontent a {
     font-size: 20px;
     font-weight: bold;
    }
+   p {
+   line-height: 1.0;
+    position: relative; 
+	top: -0.8em; 
+   }
+
   </style>
   <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
  </head>
@@ -70,6 +84,12 @@
        <div class="subheader"><h3>weblog directory</h3></div>
        <div class="mainboxescontent">
         <!-- WEBLOG BOX -->
+		<div class="blogpost">
+         <a href="weblog_posts/malwaretypes.html">this is literally just a list of different types of malware</a>
+         <p class="blogdetail"><time datetime="2024-08-08">aug 08, 2024</time><span> &#x2022; word count: 890</span></p>
+         <p>it says it right there in the title. i made this for myself but you can look too ig</p>
+        </div>
+		
         <div class="blogpost">
          <a href="weblog_posts/why_did_i_make_this_blog.html">why did i make this blog</a>
          <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
