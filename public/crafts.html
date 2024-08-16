@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>midnight solarium</title>
+  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+   #craftbox {
+    position: relative;
+    z-index: 1;
+   }
+
+   #craftbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/william-morris-violet.png");
+    background-repeat: repeat;
+    background-size: 600px;
+	border-radius: 7px 7px 0 0;
+    opacity: 0.8;
+    z-index: -1;
+   }
+
+   .tab {
+    margin: 10px 30px 10px 30px;
+   }
+
+   .tab input {
+    position: absolute;
+    z-index: -1;
+   }
+
+   .tab_content {
+    max-height: 0;
+    overflow: hidden;
+   }
+
+   .tab input:checked~.tab_content {
+    max-height: 1200px;
+   }
+
+   .tab_label,
+   .tab_close {
+    display: flex;
+    font-family: "TheGoodMonolith";
+    font-weight: 700;
+    font-size: 18px;
+    color: #180c0e;
+    background: #f9aa03;
+    cursor: pointer;
+   }
+
+   .tab_label {
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+   }
+
+   .tab_label:hover,
+   .tab input:checked~.tab_label {
+    color: #f9aa03;
+    background-color: #180c0e;
+   }
+
+   .tab input:checked~.tab_label {
+    border-radius: 8px 8px 0 0;
+   }
+
+   .tab_label::after {
+    content: "\2B";
+    width: 10px;
+    height: 10px;
+    text-align: center;
+   }
+
+   .tab input:checked+.tab_label::after {
+    content: "\2193";
+   }
+
+   .tab_content:hover,
+   .tab input:checked~.tab_content {
+    border-left: 1px dashed #ff91a4;
+    border-bottom: 1px dashed #ff91a4;
+    border-right: 1px dashed #ff91a4;
+    padding: 0 20px 0 20px;
+    overflow: hidden;
+    background-color: rgba(13, 36, 38, 0.7);
+    backdrop-filter: blur(3px);
+   }
+
+   .tab_content input:before {
+    padding: 0;
+   }
+  </style>
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+ </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+ <body>
+  <div id="container">
+   <div id="box">
+    <div id="header">
+     <h1>
+      <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+      <span style="vertical-align:bottom;">&nbsp;midnight solarium</span>
+     </h1>
+    </div>
+    <div id="contentboxes">
+     <div id="side" style="max-width:300px;">
+
+      <!-- Font Changer -->
+   <select id="input" class="input" onchange="changingFontStyle (this);">
+      <option value="Roboto Mono" elected="selected">
+         Roboto Mono
+      </option>
+      <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+   </select>
+   <script>
+      var changingFontStyle = function (fontstyle) {
+         document.getElementById("box").style.fontFamily = fontstyle.value;
+      }
+   </script>
+      <!--  NAV BOX -->
+	  	  <div class="sidebox">
+       <div class="subheader"><h3>navigate</h3></div>
+      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
+      </div>
+
+	  <div class="sidebox">
+       <div class="subheader"><h3>external links</h3></div>
+      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="min-height:100px;"></iframe>
+      </div>
+      <!-- END NAV BOX -->
+     </div>
+     <main>
+      <div class="mainboxes" id="craftbox">
+       <div class="subheader">
+        <h3>craft catalog</h3>
+       </div>
+       <div class="mainboxescontent">
+        <!-- PROJECTS GO HERE -->
+        <section>
+		 <div class="tab">
+          <input type="radio" name="accordion-2" id="rd1" checked="checked">
+          <label for="rd1" class="tab_label">08.24 - aster's camping scarf </label>
+          <div class="tab_content">
+           <figure style="float:left;margin:20px 20px 10px 0;">
+            <img class="body_img" style="max-width:250px;min-width:0" src="craft_img/dogscarrf.png" title="a dog outside wearing a collar, leash, and fuzzy blue scarf" alt="a dog outside wearing a collar, leash, and fuzzy blue scarf">
+           </figure>
+           <ul>
+            <li><b>craft:</b> knitting</li>
+            <li><b>pattern/reference:</b> n/a</li>
+            <li><b>yarn:</b> Loops &amp; Threads Chenille Home Slim (super bulky acrylic)</li>
+           </ul>
+           <hr />
+           <p>i made this for my sisters dog during the brief time it rained during a camping trip. not to brag but <i>she loved it!</i> and i got rid of some of this chenille yarn thats been haunting my stash, so ultimately the rain was a win for both of us</p>
+		   <p>i cant give an accurate description of how i made it, but it went something like this:</p>
+		   <ol>
+		    <li><b>1.</b> CO 44 sts on US 10 / 6mm needles (or adjust size as needed). join in round</li>
+			<li><b>2.</b> 2x2 rib for a while. measure with your heart</li>
+			<li><b>3.</b> BO 22 sts</li>
+			<li><b>4.</b> from this point on, repeat:
+			 <ol>
+			  <li><i>i.</i> k1, k2tog, k to last 3 sts, ssk, k1</li>
+			  <li><i>ii.</i> knit across</li>
+			 </ol>
+			</li>
+			<li><b>5.</b> BO once there arent enough sts left to repeat</li>
+			<li><b>6.</b> give to dog. wait for rain to end</li>
+		   </ol>
+          </div>
+         </div>
+         <div class="tab">
+          <input type="radio" name="accordion-2" id="rd2">
+          <label for="rd2" class="tab_label">07.24 - dithered toque &amp; mittens </label>
+          <div class="tab_content">
+           <figure style="float:left;margin:20px 20px 10px 0;">
+            <img class="body_img" style="max-width:400px;min-width:0%" src="craft_img/ditherknits.jpg" title="a knit hat and mittens with a 2-toned light blue and dark blue gradient" alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient">
+           </figure>
+           <ul>
+            <li><b>craft:</b> knitting</li>
+            <li><b>pattern/reference:</b><a href="https://www.ravelry.com/patterns/library/quick-ombre-hat">Quick Ombré Hat</a> (free on Ravelry)</li>
+            <li><b>yarn:</b> Phentex Merit (worsted acrylic)</li>
+           </ul>
+           <hr />
+           <p>a quick out-of-season project to get back into knitting after a short break</p>
+           <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. the colour ratios arent the same but whatever its fine</p>
+           <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
+           <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
+          </div>
+         </div>
+        </section>
+       </div>
+      </div>
+      <!-- END CONTENT -->
+     </main>
+    </div>
+    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
+   </div>
+  </div>
+ </body>
+</html>

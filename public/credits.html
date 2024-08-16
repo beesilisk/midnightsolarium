@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>midnight solarium</title>
+  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+  h2 {
+   text-align:center;
+  }
+  </style>
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+ </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+ <body>
+  <div id="container">
+   <div id="box">
+    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><span style="vertical-align:bottom;">&nbsp;midnight solarium</span></h1></div>
+    <div id="contentboxes">
+     <div id="side" style="max-width:300px;">
+
+      <!-- Font Changer -->
+	<div class="selectdiv" style="padding-bottom:10px;">
+   <select id="input" class="input" onchange="changingFontStyle (this);">
+      <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+      <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+   </select>
+   </div>
+   <script>
+      var changingFontStyle = function (fontstyle) {
+         document.getElementById("box").style.fontFamily = fontstyle.value;
+      }
+   </script>
+      <!--  NAV BOX -->
+	  	  <div class="sidebox">
+       <div class="subheader"><h3>navigate</h3></div>
+      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
+      </div>
+
+	  <div class="sidebox">
+       <div class="subheader"><h3>external links</h3></div>
+      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="min-height:100px;"></iframe>
+      </div>
+      <!-- END NAV BOX -->
+     </div>
+     <main>
+      <div class="mainboxes">
+       <div class="subheader">
+        <h3>credits</h3>
+       </div>
+       <div class="mainboxescontent">
+        <!-- RESOURCE BOX -->
+        <p>here are the resources i used while building this website. maybe they'll be useful for you as well?</p>
+        <hr />
+		<figure style="float:left;margin-right:20px;">
+         <img class="body_img" src="img/repth12.png" title="the template used for this site" alt="the template used for this site">
+         <figcaption style="max-width:369px;">repth's layout #12</figcaption>
+        </figure>
+        <h2>Layout</h2>
+        <p><a href="https://repth.neocities.org/theme">repth.neocities.org/theme</a> - i used Theme 12 as a template</p>
+        <h2>Fonts</strong></h2>
+        <p><a href="https://www.cufonfonts.com/font/thegoodmonolith">TheGoodMonolith</a> - the font used in the headers</p>
+        <p><a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a> - pretty much everything else</p>
+        <h2>Icons</strong></h2>
+        <p><a href="https://fontawesome.com/">Font Awesome</a> - has lots of icons (some free, some paid) such as the ones in the nav bar</p>
+        <h2>Status Feed</h2>
+        <p><a href="https://bechnokid.neocities.org/resources/tut_statuscafefeed">Bechno Kid</a> - as seen on 'about webmaster' page; pretty much followed her tutorial to the letter 'cause i havent learned js (￢_￢;)</p>
+        <h2>Misc</strong></h2>
+        <p><a href="https://lunarlabs.itch.io/dither-machine">Dither Machine</a> - name-your-own-price software that I use to make dithered gradients (like the one in the background)</p>
+        <p><a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt</a> - <a href="https://coryd.dev/">Cory Dransfeldt</a>'s list of AI web crawlers. this is the base for my <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt</a> file</p>
+        <h2>Text Editors</strong></h2>
+        <p><a href="https://notepad-plus-plus.org/">Notepad++</a> - the text editor where I do the bulk of my frontend coding (that might have to change once I finally switch to Linux)</p>
+        <p><a href="https://codepen.io">CodePen</a> - an online HTML/CSS/JavaScript IDE with a real-time preview; it's handy for experimenting and making small adjustments</p>
+       
+	   <hr />
+	   
+	   <p>if you wanna see even more resources &amp; cool links, head over to the <a href="links.html">links</a> page</p>
+	   </div>
+      </div>
+      <!-- END CONTENT -->
+     </main>
+    </div>
+    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
+   </div>
+  </div>
+ </body>
+</html>
