@@ -1,112 +1,738 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>midnight solarium</title>
-  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <style>
-  #neighbourbtn img{
-    display:inline;
-	margin-left:auto; 
-	margin-right:auto;"
-  }
-  </style>
-  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
- </head>
- <!-- Page template: https://repth.neocities.org/theme -->
- <body>
-  <div id="container">
-   <div id="box">
-    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><span style="vertical-align:bottom;">&nbsp;midnight solarium</span></h1></div>
-    <div id="contentboxes">
-     <div id="side" style="max-width:300px;">
-
-      <!-- Font Changer -->
-	<div class="selectdiv" style="padding-bottom:10px;">
-   <select id="input" class="input" onchange="changingFontStyle (this);">
-      <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-      <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-   </select>
-   </div>
-   <script>
-      var changingFontStyle = function (fontstyle) {
-         document.getElementById("box").style.fontFamily = fontstyle.value;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>midnight solarium</title>
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+      a:hover {
+        transform: scale(1);
       }
-   </script>
-      <!--  NAV BOX -->
-	  	  <div class="sidebox">
-       <div class="subheader"><h3>navigate</h3></div>
-      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
-      </div>
+      a img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.15);
+      }
 
-	  <div class="sidebox">
-       <div class="subheader"><h3>external links</h3></div>
-      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="min-height:100px;"></iframe>
-      </div>
-      <!-- END NAV BOX -->
-     </div>
-     <main style="image-rendering: auto;">
-      <div class="mainboxes">
-       <div class="subheader">
-        <h3>links</h3>
-       </div>
-      <div class="twoboxes">
-       <div class="mainboxes" style="margin:10px 0 10px 15px;max-width:33%;">
-        <div class="subheader"><h3>neighbours</h3></div>
-        <div class="mainboxescontent" id="neighbourbtn" style="text-align:center;font-size:15px;padding-top:15px;">
-         <!-- NEIGHBOURS -->
-		 <a href="https://ajazz.neocities.org/"><img src="img/othersitebtn/ajazz.png" /></a>
-         <a href="https://alphacentauri.neocities.org/"><img src="img/othersitebtn/alphacentauri.gif" /></a>
-		 <a href="https://babywormcore.baby/"><img src="img/othersitebtn/babywormcore.png" /></a>
-		 <a href="https://coborski.neocities.org/"><img src="img/othersitebtn/coborski.gif" /></a>
-		 <a href="https://doqmeat.com/"><img src="img/othersitebtn/doqmeat.png" /></a>
-         <a href="https://foggybear42.neocities.org/"><img src="img/othersitebtn/foggybear42.gif" /></a>
-		 <a href="https://galissia.neocities.org/"><img src="img/othersitebtn/galissia.gif" /></a>
-		 <a href="https://garblegarden.neocities.org/"><img src="img/othersitebtn/garblegarden.png" /></a>
-		 <a href="https://gremlin.neocities.org/"><img src="img/othersitebtn/gremlin.png" /></a>
-         <a href="https://indubitablyjacksin.neocities.org/"><img src="img/othersitebtn/indubitablyjacksin.gif" /></a>
-		 <a href="https://mycozone.neocities.org/"><img src="img/othersitebtn/mycozone.png" /></a>
-		 <a href="https://owthehedge.neocities.org/"><img src="img/othersitebtn/owthehedge.gif" /></a>
-		 <a href="https://philia995.neocities.org/"><img src="img/othersitebtn/philia995.gif" /></a>
-		 <a href="https://symphony.surgery/"><img src="img/othersitebtn/symphonysurgery.png" /></a>
-		 <a href="https://velvetblue.neocities.org/"><img src="img/othersitebtn/velvetblue.png" /></a>
-		 <p style="line-height:1.3">(if anyone wants their button removed or added, feel free to contact me via <a href="mailto:basilbeeisk@proton.me?subject=site buttons">email</a> or <a href="https://neocities.org/site/midnightsolarium">neocities profile</a>)</p>
-		  <div class="mainboxes" style="   	border: 2px solid rgba(168,215,101,0.8);border-radius:7px;    image-rendering: auto;
+      #neighbourbtn img {
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #neighbourbtn a {
+        padding: 0;
+      }
+
+      /* net neighbours */
+      #mainboxes1 {
+        padding: 0;
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(180deg, rgba(20, 109, 102, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper1 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        border-radius: 4px;
+      }
+      #subheader1 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper1:hover>#subheader1 {
+        background-image: linear-gradient(180deg, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper1:hover~#mainboxes1 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper1:active>#subheader1 {
+        background-image: linear-gradient(180deg, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper1:active~#mainboxes1 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+      /* graphics */
+      #mainboxes2 {
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(rgba(20, 81, 109, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper2 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        filter: hue-rotate(30deg);
+        border-radius: 4px;
+      }
+      #subheader2 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper2:hover>#subheader2 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper2:hover~#mainboxes2 {
+        background-image: linear-gradient(rgba(20, 81, 109, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper2:active>#subheader2 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper2:active~#mainboxes2 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+      /* fun stuff */
+      #mainboxes3 {
+        padding: 0;
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(rgba(20, 91, 109, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper3 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        filter: hue-rotate(15deg);
+        border-radius: 4px;
+      }
+      #subheader3 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper3:hover>#subheader3 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper3:hover~#mainboxes3 {
+        background-image: linear-gradient(rgba(20, 91, 109, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper3:active>#subheader3 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper3:active~#mainboxes3 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+      /* learn 2 code */
+      #mainboxes4 {
+        padding: 0;
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(rgba(20, 91, 109, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper4 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        filter: hue-rotate(15deg);
+        border-radius: 4px;
+      }
+      #subheader4 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper4:hover>#subheader4 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper4:hover~#mainboxes4 {
+        background-image: linear-gradient(rgba(20, 91, 109, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper4:active>#subheader4 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper4:active~#mainboxes4 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+      /* webmaster tools */
+      #mainboxes5 {
+        padding: 0;
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(rgba(20, 109, 102, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper5 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        border-radius: 4px;
+      }
+      #subheader5 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper5:hover>#subheader5 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper5:hover~#mainboxes5 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper5:active>#subheader5 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper5:active~#mainboxes5 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+      /* hall of fame */
+      #mainboxes6 {
+        padding: 0;
+        margin: 5px 5px 10px 5px;
+        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
+        background-image: linear-gradient(rgba(20, 81, 109, 0.6), rgba(13, 86, 88, 0.0));
+        backdrop-filter: blur(2px);
+        font-size: 15px;
+      }
+      #sh_wrapper6 {
+        padding: 3px;
+        background-color: #0b0d0f;
+        filter: hue-rotate(30deg);
+        border-radius: 4px;
+      }
+      #subheader6 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
+        font-family: "TheGoodMonolith";
+        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
+        padding: 3px;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #fff;
+        letter-spacing: 3px;
+        font-size: 20px;
+        text-align: center;
+        transition: 0.5s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      #sh_wrapper6:hover>#subheader6 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
+        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
+      }
+      #sh_wrapper6:hover~#mainboxes6 {
+        background-image: linear-gradient(rgba(20, 81, 109, 0.25), rgba(13, 86, 88, 0));
+      }
+      #sh_wrapper6:active>#subheader6 {
+        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
+        filter: drop-shadow(none);
+      }
+      #sh_wrapper6:active~#mainboxes6 {
+        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
+      }
+
+      .mainboxescontent2 {
+        padding: 5px 35px 5px 35px;
+        overflow: auto;
+        font-size: 15px;
+      }
+      .mainboxescontent2 b,
+      .mainboxes strong {
+        color: #c2b6ea;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      .mainboxescontent2 i,
+      .mainboxescontent em {
+        color: #e8a4d0;
+        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      td {
+        border-bottom: 1px dashed #d87d8c;
+        padding: 5px 5px 5px 10px;
+        line-height: 1.35;
+        vertical-align: middle;
+      }
+      td:nth-last-child(2) {
+        border-right: 1px dashed #d87d8c;
+        text-align: center;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+    <script>
+      function freezegifs() {
+        var x = document.querySelectorAll('.freeze img, img.freeze');
+        for (var i = 0; i < x.length; i++) {
+          x[i].src = x[i].src.slice(0, -3) + 'png';
+        }
+      }
+      function resumegifs() {
+        var x = document.querySelectorAll('.freeze img, img.freeze');
+        for (var i = 0; i < x.length; i++) {
+          x[i].src = x[i].src.slice(0, -3) + 'gif';
+        }
+      }
+    </script>
+  </head>
+  <!-- Page template: https://repth.neocities.org/theme -->
+  <body>
+    <div id="container">
+      <div id="box">
+    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><div style="display:inline;position:absolute;top:30px;">&nbsp;midnight solarium</div></h1></div>
+        <div id="contentboxes">
+          <div id="side" style="max-width:300px;">
+            <!-- Font Changer -->
+            <div class="selectdiv" style="padding-bottom:10px;">
+              <select id="input" class="input" onchange="changingFontStyle (this);">
+                <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+                <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+              </select>
+            </div>
+            <script>
+              var changingFontStyle = function(fontstyle) {
+                document.getElementById("box").style.fontFamily = fontstyle.value;
+              }
+            </script>
+            <!--  NAV BOX -->
+            <div class="sidebox">
+              <div class="subheader"><h3>navigate</h3></div>
+              <iframe class="navframe" src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0"></iframe>
+            </div>
+            <div class="sidebox">
+              <div class="subheader"><h3>external links</h3></div>
+      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="height:130px;width:100%;border:none;overflow:hidden;"></iframe>
+            </div>
+            <!-- END NAV BOX -->
+          </div>
+          <main style="image-rendering: auto;">
+            <div class="mainboxes">
+              <div class="subheader"><h3>link hoard</h3></div>
+              <div class="twoboxes" style="flex-direction:row;">
+                <div class="twoboxes" style="flex-direction:column;flex:1;margin:10px 5px 15px 15px;">
+                  <div id="sh_wrapper1">
+                    <div id="subheader1"><h3>net neighbours</h3></div>
+                  </div>
+                  <div id="mainboxes1" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2" id="neighbourbtn" style="text-align:center;padding:10px 10px 0 10px;">
+                      <!-- NEIGHBOURS -->
+                      <button onclick="freezegifs()" style="margin-bottom:15px;margin-right:5px;">pause gifs</button>
+                      <button onclick="resumegifs()" style="margin-bottom:15px;margin-right:5px;">play gifs</button>
+                      <div class="freeze">
+                        <a href="https://ajazz.neocities.org/" class="sitebtn"><img src="img/othersitebtn/ajazz.png" /></a>
+                        <a href="https://alphacentauri.neocities.org/"><img src="img/othersitebtn/alphacentauri.gif" /></a>
+						            <a href="https://babywormcore.baby/"><img src="img/othersitebtn/babywormcore.png" /></a>
+                        <a href="https://coborski.neocities.org/"><img src="img/othersitebtn/coborski.gif" /></a>
+                        <a href="https://doqmeat.com/"><img src="img/othersitebtn/doqmeat.png" /></a>
+                        <a href="https://ectobeing.neocities.org/"><img src="img/othersitebtn/ectobeing.png" /></a>
+                        <a href="https://foggybear42.neocities.org/"><img src="img/othersitebtn/foggybear42.gif" /></a>
+                        <a href="https://galissia.neocities.org/"><img src="img/othersitebtn/galissia.gif" /></a>
+                        <a href="https://garblegarden.neocities.org/"><img src="img/othersitebtn/garblegarden.png" /></a>
+                        <a href="https://gremlin.neocities.org/"><img src="img/othersitebtn/gremlin.png" /></a>
+                        <a href="https://indubitablyjacksin.neocities.org/"><img src="img/othersitebtn/indubitablyjacksin.gif" /></a>
+                        <a href="https://mycozone.neocities.org/"><img src="img/othersitebtn/mycozone.png" /></a>
+                        <a href="https://owthehedge.neocities.org/"><img src="img/othersitebtn/owthehedge.gif" /></a>
+                        <a href="https://philia995.neocities.org/"><img src="img/othersitebtn/philia995.gif" /></a>
+                        <a href="https://symphony.surgery/"><img src="img/othersitebtn/symphonysurgery.png" /></a>
+                        <a href="https://velvetblue.neocities.org/"><img src="img/othersitebtn/velvetblue.png" /></a>
+                      </div>
+                      <div style="padding-left:25px;padding-right:25px;"><p style="line-height:1.3,">(if anyone wants their button removed or added, feel free to contact me via <a href="mailto:basilbeeisk@proton.me?subject=site buttons">email</a> or <a href="https://neocities.org/site/midnightsolarium">neocities profile<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>) </p></div>
+                      <div class="mainboxes" style="border: 2px solid rgba(168,215,101,0.8);border-radius:7px; image-rendering: auto;
    	background-image: url(weblog_posts/blog_img/transparent-grid-overlay.png);
     background-size: 300px;	box-shadow: 0 0px 10px rgba(200,224,166,0.4);
-	background-color: rgba(13, 36, 38, 0.6)margin-left: auto;
-  margin-right:auto;
-    backdrop-filter: blur(3px);">
-		   <div class="mainboxescontent" >
-			<img src="img/misobuttons/misobutton.gif" style=" display:block; margin-top:15px;margin-left: auto;
-  margin-right: auto; width: 88px; filter: drop-shadow(0 0 10px rgba(9,7,25,0.8));"/>
-		    <p>midnight solarium now has its own button!</p>
-		   </div>
-		  </div>
-         
-         <!-- END CONTENT -->
+	background-color: rgba(13, 36, 38, 0.6);margin-left: auto;
+    margin-right:auto;
+    backdrop-filter: blur(3px);
+	width:75%;">
+                        <div class="mainboxescontent">
+                          <div class="freeze">
+                            <img src="img/misobuttons/misobutton.gif" style=" display:block; margin-top:15px;margin-left: auto;
+  margin-right: auto; width: 88px; filter: drop-shadow(0 0 10px rgba(7, 13, 25, 0.8));" />
+                          </div>
+                          <p>midnight solarium now has its own button! take it if you wanna! no pressure tho!</p>
+                        </div>
+                      </div>
+                      <!-- END CONTENT -->
+                    </div>
+                    <div style="display:flex">
+                      <img src="img/flw19.gif" style="display:inline-block;width:100px;padding-left:5%;image-rendering: pixelated;">
+                    </div>
+                  </div>
+                  <div id="sh_wrapper2">
+                    <div id="subheader2">
+                      <h3>graphics</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes2" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+					              <tr>
+                          <td><a href="https://gifcities.org/">GifCities<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>the Internet Archive's gif library</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://www.stickpng.com/">StickPNG<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>transparent PNGs that are actually transparent</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://app.dithermark.com/">Dithermark<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>image dithering tool</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://hekate2.github.io/buttonmaker/">Button Maker<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>hekate's 88 x 31 button making tool</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://blinkies.cafe/">Blinkie Maker<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>build a blinkie</td>
+                        </tr>
+						            <tr>
+                          <td><a href="http://www.dsg4.com/04/extra/bitmap/index.html">Bitmap Fonts<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>great fonts for making pixel graphics</td>
+                        </tr>
+						            <tr>
+                          <td style="border-bottom:0px"><a href="https://tinypng.com/">TinyPNG<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td style="border-bottom:0px">compresses images</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div style="display:flex">
+                      <img src="img/glassjarplant.png" style="height:60px;width:fit-content;padding-left:40%;image-rendering: pixelated;">
+                    </div>
+                  </div>
+                  <div id="sh_wrapper3">
+                    <div id="subheader3">
+                      <h3>fun stuff</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes3" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+					              <tr>
+                          <td><a href="https://www.windows93.net/#!flash">windows93<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a Windows 98-style website with loads of hidden goodies</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://sites.pitt.edu/~dash/folktexts.html#b">Folktexts<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a giant repository of folklore and mythology</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://archive.org/details/discworld_202007">Discworld<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>discworld audiobooks <img src="img/turt.png" style="image-rendering: pixelated;vertical-align: middle;opacity:0.1""></td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://whatthefuckshouldilistentorightnow.com/">music recs<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>tells you what the fuck you should listen to right now</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://littlealchemy2.com/">Little Alchemy 2<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>Doodle God-like browser game</td>
+                        </tr>
+                        <td><a href="https://thisissand.com/">thisissand<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td>a relaxing game with falling sand</td>
+                      </tr>
+                          <td><a href="https://www.howmanypeopleareinspacerightnow.com/">how many people are in space<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>tells you exactly what is says</td>
+                        </tr>
+						            <tr>
+                          <td style="border-bottom:0px"><a href="https://kaomoji.ru/en/">kaomoji<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td style="border-bottom:0px">japanese emoticon collection</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div id="sh_wrapper5">
+                    <div id="subheader5">
+                      <h3>craft supplies</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes5" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+                        <tr>
+                          <td><a href="https://www.antiquepatternlibrary.org/">Antique Pattern Library<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>antique patterns for a wide range of crafts &amp; hobbies</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://rsnstitchbank.org/">RSN Stitch Bank<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>giant database of hand embroidery stitches</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://www.stitchfiddle.com/en">Stitch Fiddle<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>helps you design charts for knitting, cross-stitch, and more</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://calliope-violet.neocities.org/Web%20Toys/Cable%20Patterns/">Cable Pattern tool<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>Riley Shipman's tool for making written &amp; chart cable patterns</td>
+                        </tr>
+                        <tr>
+                          <td style="border-bottom:0px"><a href="https://artisans.coop/">Artisans Cooperative<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td style="border-bottom:0px">a creator-friendly co-op alternative to Etsy</td>
+                        </tr>
+                      </table>
+                    </div>
+					        </div>
+                </div>
+                <div class="twoboxes" style="flex-direction:column;flex:1;margin:10px 10px 5px 10px;">
+                  <div id="sh_wrapper4">
+                    <div id="subheader4">
+                      <h3>learn 2 code</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes4" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+                        <tr>
+                          <td><a href="https://www.w3schools.com/"><img src="img/genbuttons/w3schools.gif" alt="w3schools" /></a></td>
+                          <td>a great starting point for learning html &amp; css</td>
+                        </tr>
+                        <tr>
+						              <td><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">freecodecamp<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>has a great responsive web design course</td>
+						            </tr>
+                        <tr>
+                          <td><a href="https://goblin-heart.net/sadgrl/learn/">sadgrl's webmaster guides<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>includes code snippets and neocities-specific guides</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://www.dragonflycave.com/html-guide">HTML Guide<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>Dragonfly's step-by-step guide covering basic html</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://css-tricks.com/">CSS-Tricks<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>tons of guides &amp; articles on css</td>
+                        </tr>
+						            <tr>
+                          <td style="border-bottom:0px"><a href="https://flexboxfroggy.com/">Flexbox Froggy<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td style="border-bottom:0px">a cute game that teaches you flexbox</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div style="display:flex">
+                      <img src="img/cactus.png" style="height:60px;padding-left:75%;image-rendering: pixelated;">
+                    </div>
+                  </div>
+                  <div id="sh_wrapper5">
+                    <div id="subheader5">
+                      <h3>webmaster tools</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes5" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+                        <tr>
+						              <td><a href="https://vscodium.com/">VSCodium<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>VSCode, but without Miscrosoft</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://htmlcheatsheet.com">htmlcheatsheet<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>has loads of useful little tools for generating html and css</td>
+                        </tr>
+                        <tr>
+                          <td><a href="https://webcode.tools/">webcode.tools<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>code generators for front-end devs</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://codebeautify.org/">Code Beautify<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>clean your messy code</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://tinytools.directory/">tinytools<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a collection of experimental open-source dev tools</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://www.a11yproject.com/checklist/">The A11Y Checklist<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a checklist for web accessibility</td>
+                        </tr>
+					              <tr>
+                          <td style="border-bottom:0px"><a href="https://forum.melonland.net/"><img src="img/genbuttons/melonland.png" alt="Melonland forum" /></a></td>
+                          <td style="border-bottom:0px">a forum for web revivalists and small web creators</td>
+                        </tr>
+                      </table>
+                    </div>
+					        </div>
+                  <div id="sh_wrapper6">
+                    <div id="subheader6">
+                      <h3>hall of fame</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes6" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+					              <tr>
+                          <td><a href="https://www.tumblr.com/palipunk/698216767541133313/palestine-masterlist-introduction-to-palestine"><img src="img/genbuttons/standwith.png" alt="Palestine masterlist" /></a></td>
+                          <td>the Palestine Masterlist</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://onlinebooks.library.upenn.edu/banned-books.html">Banned Books Online<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>an exhibit of banned books, with links to the full texts</td>
+                        </tr>
+						            <tr>
+                          <tr>
+                            <td><a href="https://ublockorigin.com/"><img src="img/genbuttons/ublock-now.png" alt="Ublock Origin" /></a></td>
+                            <td>you should be using adblock, or at least a tracker blocker</td>
+                          </tr>
+                        </tr>
+						            <tr>
+                          <td style="border-bottom:0px"><a href="https://archive.org/"><img src="img/genbuttons/internetarchive.png" alt="Internet Archive" /></a></td>
+                          <td style="border-bottom:0px">Internet Archive my beloved &lt;3</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div id="sh_wrapper3">
+                    <div id="subheader3">
+                      <h3>useful stuff</h3>
+                    </div>
+                  </div>
+                  <div id="mainboxes3" style="margin:-5px 0 0 0;">
+                    <div class="mainboxescontent2">
+                      <table>
+						            <tr>
+                          <td><a href="https://catbox.moe/">Catbox<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a free file hosting service</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://cobalt.tools/">cobalt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a tool for downloading pics, music &amp; videos from various websites</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://search.marginalia.nu/">Marginalia<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a search engine for finding obscure websites</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://switching.software/">switching software<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>suggests open source alternatives to popular software</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://www.photopea.com/">photopea<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>a free in-browser replica of adobe products</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://pretendo.network/">Pretendo<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>FOSS replacements for Nintendo's defunct servers</td>
+                        </tr>
+					              <tr>
+                          <td><a href="https://bugguide.net/node/view/15740">BugGuide<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>Canada &amp; US bug guide (cw:bugs)</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://www.springhole.net/index.html">springhole.net<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>kinda dead now, but still full of great creative writing tips</td>
+                        </tr>
+						            <tr>
+                          <td><a href="https://myfridgefood.com/">myfridgefood<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td>find recipes based on food you already have</td>
+                        </tr>
+						            <tr>
+                          <td style="border-bottom:0px"><a href="https://raddle.me/wiki/black_metal#s">black metal band list<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                          <td style="border-bottom:0px">a list black metal bands - and whether or not they're nazis</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div style="display:flex">
+                      <img src="img/cacti.png" style="height:fit-content;width:90%;margin-left:auto;margin-right:auto;image-rendering: pixelated;">
+                    </div>
+                  </div>
+
+                  </div>
+                </div>
+                  <!-- END CONTENT -->
+          </main>
         </div>
-       </div>
-       <div class="mainboxes" style="margin:10px 0 10px 0;max-width:33%;">
-        <div class="subheader"><h3>coding tools</h3></div>
-        <div class="mainboxescontent">
-         <!-- FAVE BOX -->
-<p>(WIP)</p>
+        <div id="footer">
+          <a href="credits.html" style="color: #fdf5e6">
+            <u>Credits</u>
+          </a>
         </div>
-       </div>
       </div>
-      </div>
-      <!-- END CONTENT -->
-     </main>
     </div>
-    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
-   </div>
-  </div>
- </body>
+  </body>
 </html>
