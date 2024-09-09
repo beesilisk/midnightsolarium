@@ -19,34 +19,34 @@
         background-size: cover;
         image-rendering: auto;
       }
-
       #container {
       max-width: 75em;
         image-rendering: pixelated;
       }
-
       #box {
         background-color: rgba(13, 36, 38, 0.4);
         backdrop-filter: blur(2.5px);
       }
-
       main {
         padding-left: 10px;
       }
-
       .mainboxes {
         background-color: rgb(27, 31, 34);
         backdrop-filter: blur(4px);
       }
-
       .mainboxes:first-of-type {
         background-color: rgba(13, 36, 38, 0.4);
-      }
 
+      }
+      .mainboxescontent h3 {
+        color:white;
+        font-size:180%;
+      }
       /* tab buttons CSS stuff */
       .tab button {
          color:white;
         display: block;
+        
         box-sizing: border-box;
      border: 1px solid #003c74;
      background: none;
@@ -68,7 +68,6 @@
 .tab button:hover {
    border: 1px dashed white;
 }
-
       /* so pages stay hidden */
       .tabcontent {
         display: none;
@@ -96,27 +95,39 @@
                   <h3>topics</h3>
                 </div>
                 <div class="mainboxescontent">
+                        <!-- Font Changer -->
+	<div class="selectdiv" style="padding-bottom:10px;">
+    <select id="input" class="input" onchange="changingFontStyle (this);">
+       <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+       <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+    </select>
+    </div>
+    <script>
+       var changingFontStyle = function (fontstyle) {
+          document.getElementById("box").style.fontFamily = fontstyle.value;
+       }
+    </script>
                   <div class="tab">
                     <button class="tablinks" onclick="openTab('tab1-wrapper')" id="defaultOpen">cover</button>
                     <button class="tablinks" onclick="openTab('tab3-wrapper')">threats</button>
-                    <button class="tablinks" onclick="openTab('tab2-wrapper')">this is literally just a list of different types of malware</button>
+                    <button class="tablinks" onclick="openTab('tab2-wrapper')">types of malware</button>
                   </div>
-                  <!-- WEBLOG BOX -->
                 </div>
               </div>
+              <!-- BOX -->
               <div class="mainboxes" style="flex:5;">
                 <div class="subheader">
-                  <h3>notes</h3>
+                  <h2>notes</h2>
                 </div>
                 <div class="mainboxescontent">
-                  <!-- WEBLOG BOX -->
                   <!-- 	TAB 1 wrapper -->
                   <div id="tab1-wrapper" class="tabcontent">
                     <div id="tab1">
-                      <h2>here are my notes. feel free to copy</h2>
-
-                      <p>you can have up to 8 tabs (or more if you're experienced with coding) in the page! but you can easily remove them if it isn't needed</p>
-                      <p>heavily encouraged to edit and customize to your liking :) there's comments in the code with pointers and resources to help out if needed! if there's any questions feel free to send them my way</p>
+                      <h3>here are my notes. feel free to copy</h3>
+                      <p>while studying for my IT certification exams, i had the idea to put my notes up on my website. this way i can study while also sharing information with others</p>
+                      <p>ive done my best to translate my notes into something that's (hopefully) <i>accessible to anyone</i> who has a basic understanding of technology and is curious enough to learn more</p>
+                      <p>(if you're also studying IT, my notes mainly follow the current CompTIA A+ exam objectives & official study material. i may also include info that's not on the exam if i consider it important. if you want a cheat sheet, you'll need to look <a href="https://ptgmedia.pearsoncmg.com/imprint_downloads/pearsonitcertification/bookreg/9780137637546/9780137637546_CramSheet.pdf">elsewhere<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>)</p>
+                      <p>IMPORTANT! please be aware that i am still in the process of learning. while i do my best to be accurate, it is inevitable that i will get things wrong.</p>
 
                     </div>
                   </div>
@@ -124,35 +135,36 @@
                   <div id="tab2-wrapper" class="tabcontent">
                     <div id="tab2">
                      <article>
+                        <h3>this is literally just a list of different types of malware</h3>
                         <aside><b>01/09/24</b> - this was originally posted in the weblog section of this site, but the webmaster decided to move it to its own </aside>
                         <hr />
                         <p>lately ive been studying for my comptia a+ cert, and i decided to infodump on my website as a form of studying because i can do whatever i want here</p>
                         <p>im kicking off with a simple list of malware types because i figure it will make a good starting point as i decide how to translate the material into an <em>easily digestible, beginner-friendly</em> blog post. also i just find this stuff interesting</p>
                         <p>since this is effectively a summarization of my notes, i wont be going into too much detail, and i might make some generalizations. at most, you should consider this your own jumping off point and <b>do your own research</b></p>
-                        <h3>Trojan</h3>
+                        <h4>Trojan</h4>
                         <p>Trojans <em>hide inside the installer packages</em> for legitimate-looking programs. Once installed, it&rsquo;s granted the same privileges as the program and executable. A trojan may be able to achieve persistence – meaning it hides inside startup folders or scheduled tasks so it can retrigger whenever the computer restarts, even if the system&rsquor;s credentials are changed.</p>
-                        <h3>Rootkit</h3>
+                        <h4>Rootkit</h4>
                         <p>Rootkits take advantage of operating system functions in order to <em>elevate their privileges</em>. They like to plant themselves within the operating system, sometimes even fusing with the kernel itself (as well as bootloaders, firmware, hypervisors, memory, or applications). This makes them very hard to identify using your typical troubleshooting software. You&rsquo;ll need to find a <strong>3rd-party remover software</strong> specific to whichever rootkit you&rsquo;re dealing with.</p>
-                        <h3>Virus</h3>
+                        <h4>Virus</h4>
                         <p>The word &OpenCurlyDoubleQuote;virus&rdquor; a broad term used to describe <em>malware that can self-replicate</em>. The initial infection <strong>always requires some form of human interaction</strong> (e.g. clicking on a malicious download link), but once executed the virus will be granted the same privileges as the infected process. From there it may be able to infect other files, drives, and even spread to other systems via the network or removable drives.</p>
-                        <h3>Spyware</h3>
+                        <h4>Spyware</h4>
                         <p>After tricking the user into installing it, spyware will <em>covertly collect data</em> on their victim. Its goal is usually either to steal confidential data, or collect data for advertising. While most remain covert, some may make changes to the browser configuration such as allowing tracking cookies or changing the default search engine. Some might even take screenshots or turn on recording devices.</p>
-                        <h3>Ransomware</h3>
+                        <h4>Ransomware</h4>
                         <p>Ransomware is a malware attack that makes some or all of computer&rsquo;s data / functions inaccessible as a means of extortion. Cryptocurrency is often demanded as payment to release the system, making the attackers hard to track down after the transaction. These attacks sound scarier than they actually are – <em>assuming you make regular external backups</em> (^ω~)☆</p>
-                        <h3>Crypto-Ransomware</h3>
+                        <h4>Crypto-Ransomware</h4>
                         <p>This is a form of ransomware that <em>encrypts all or part of a user&rsquo;s data</em>. The victim won&rsquo;t be able to access those files until the attacker gives them access to an encryption key. The key is actually kept on the computer from the very start, but it&rsquo;s also encrypted.</p>
                         <p><b>NOTE:</b> I&rsquo;ve seen some people use this term synonymously with ransomware in general, cryptojacking, or any ransomware that demands cryptocurrency as payment. The definition I gave is the one CompTIA uses, and I find it&rsquo;s the most commonly used definition in general.</p>
-                        <h3>Keyloggers</h3>
+                        <h4>Keyloggers</h4>
                         <p>Keyloggers are a form of spyware that <em>tracks every keystroke and mouse click</em> made on the computer. The info is then sent to the attacker for them analyze. This essentially circumvents whichever encryption methods you&rsquor;re using. These can be used to steal private data, passwords, or credit card numbers. Keyloggers can be implemented using software, 3rd-party websites, and modified USB adapters.</p>
-                        <h3>Boot Sector Virus </h3>
+                        <h4>Boot Sector Virus </h4>
                         <p>These are viruses that <em>infect the boot sector or Master Boot Record (MBR)</em> of a disk drive. Once infecting the boot sector, it will then spread to other disks on the computer. By attaching to the code used to start the operating system, the computer will essentially be <strong>reinfected each time it restart</strong>s – before the antivirus software has a chance to launch. From an outside perspective, it&rsquor;ll look like the virus keeps coming back each time the computer starts, even after you think its been removed. Luckily, Secure Boot is good at preventing these viruses.</p>
-                        <h3>Cryptojacking</h3>
+                        <h4>Cryptojacking</h4>
                         <p>Cryptominers perform cryptographic computations to create cryptocurrency &ndash; in other words, they mine crypto. Cryptojackers can infect other computers and <em>use their processing power to mine crypto</em>.</p>
                         <p><b>NOTE:</b> while some resources like the CompTIA A+ Student Guide (220-1101 & 220-1102) use the terms “cryptomining” and “cryptojacking” interchangeably, i find most people distinguish between the two. <strong>Cryptomining</strong> refers broadly to the act of mining crypto, while <strong>cryptojacking</strong> is the act of using malware to mine crypto using another system&rsquor;s resources.</p>
                         <p><span style="font-size:14">(dont get me wrong, i have very little love for cryptominers, but i feel using specificity in language is important </span><span style="font-size:11;">especially in the age of misinformation </span><span style="font-size:8;">but thats just my opinion)</span></p>
-                        <h3>Worms</h3>
+                        <h4>Worms</h4>
                         <p>Unlike a typical virus, worms <strong>don&rsquo;t need to wait for a human victim to unknowingly activate them</strong>. They are self-operating, self-replicating, self-activating programs that can wriggle their way into an operating system by exploiting known security vulnerabilities. They often spread between hosts in a network and slow down system resources.</p>
-                        <h3>Fileless Malware</h3>
+                        <h4>Fileless Malware</h4>
                         <p>While most malware comes in the form of an executable file, fileless malware disguises itself as a legitimate script or document while <em>residing in the computer&rsquor;s memory</em>. From there it infects and exploits useful system processes such as scripting environments (especially Powershell). This malware hard to detect using regular antimalware software.</p>
                      </article>
                     </div>

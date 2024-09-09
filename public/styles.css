@@ -72,7 +72,7 @@
      image-rendering: pixelated;
      background-attachment: fixed;
      font-family: "Roboto Mono";
-     font-weight: 330;
+     font-weight:400;
      margin:0;
      padding:0 
 }
@@ -125,7 +125,7 @@
  #contentboxes {
      display: flex;
      color: #fdf5e6;
-     font-size: 16px;
+     font-size: 15.5px;
      line-height: 1.5em;
 }
  #side {
@@ -182,6 +182,7 @@
      margin: 0 5px 10px 0;
      background-color: rgba(13, 36, 38, 0.5);
      backdrop-filter: blur(2px);
+     z-index:3
 }
  .mainboxescontent ul, ol, li {
      list-style-type: none;
@@ -194,43 +195,41 @@
      letter-spacing: 3px;
      font-size: 20px;
 }
- .subheader h3 {
+ .subheader h3, .subheader h2 {
      margin-left: 3px;
 }
  .mainboxescontent {
      padding: 10px 25px 10px 25px;
      overflow: auto;
 }
-section p {
-text-align:justify;
-}
- p, ul, ol {
+
+ p, ul, ol, aside {
      padding-top:7px;
      padding-bottom:7px;
 }
  h1 {
      font-size:48px;
 }
- h1, h2, h3 {
+ h1, h2, h3, h4 {
     font-family: TheGoodMonolith;
      font-weight:bold;
 }
- .mainboxescontent h2, .mainboxescontent h3, article h2, article h3 {
-     font-size: 20px;
-     color: #c4e57e;
+ .mainboxescontent h2, .mainboxescontent h3, .mainboxescontent h4, article h2, article h3 {
+     font-size: 22px;
+     color: #d2e57e;
      text-shadow: 0 0 10px rgba(243, 247, 118, 0.3);
-     padding-top:12px;
+     padding: 16px 0 10px 0;
 }
  .mainboxescontent b, .mainboxes strong {
-     color: #c2b6ea;
+     color: #52d392;
      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
 }
  .mainboxescontent i, .mainboxescontent em {
-     color: #e8a4d0;
+     color: #a4e0e8;
      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
 }
 b, strong {
-	 font-weight:bold;	
+	 font-weight:bolder;	
 }
 i, em {
 	 font-style:italic;	
@@ -332,24 +331,33 @@ i, em {
     }
 }
 /* i hate this tooltip so much */
- .tooltip, .tooltip i {
-     position: relative;
-     border-bottom: 1px dashed;
-     color: #c8e8a7;
-     cursor: pointer;
+.tooltip, .tooltip i {
+    display: inline-block;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    color: #ecc0d5;
+    cursor: pointer;
 }
- .tooltip:before {
-     content: attr(data-text);
-     margin-right: 7px;
-     color: #d7e8c5;
-     font-weight: bold;
-     font-size: 15px;
-     text-align: center;
-     display: none;
+.tooltiptext {
+    display: none;
+    visibility: visible;
+    background: #691544;
+    border-radius: 6px;
+    max-width:fit-content;
+    padding: 5px;
+    left: 10px;
+    right: 10px;
+    border: 2px solid rgb(26, 180, 134);
+    line-height:1.2;
+    font-size:13px;
+    font-weight: 400;
+    position: absolute;
+    z-index: 10;
 }
- .tooltip:hover:before {
-     display: inline-block;
+.tooltip:hover + span {
+    display: block;
 }
+
  #footer {
      clear: both;
      padding: 3px;
