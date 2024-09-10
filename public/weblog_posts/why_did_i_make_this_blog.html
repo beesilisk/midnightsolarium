@@ -21,8 +21,22 @@
      <main>
       <!-- WEBLOG BOX -->
       <div>
+        <div style="display:flex;justify-content: space-between;">
        <h2>why did i make this blog</h2>
+       <div class="selectdiv" style="padding-bottom:10px;width:200px;">
+        <select id="input" class="input" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+        </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+        </div>
        <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
+
        <a href="../weblog_directory.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
        <hr style="margin-top:15px;"/>
 	   <article>
@@ -83,7 +97,7 @@
         <p>But even without all the business brainrot built on nothing but marketing schemes, does the web really need another person <strong>oversharing</strong> their life? Do I really need to expose myself to strangers? Maybe blogging was just the early stage of the social media panopticon that churns people into boxed-in broadly appealing versions of themselves until they&rsquo;re fit for human consumption. </p>
         <p>Then again, I&rsquo;m sure it would be hard to imagine any website existing outside of these constraints if I hadn&rsquo;t <em>seen it with my own eyes</em> &ndash; once as a child, and again now. </p>
         <h3>i tricked you! this post is actually web revival propaganda!</h3>
-        <p>The enshittification of the web is far-reaching, but not universal. You can find countless websites that exist as a labour of love if you know where to look &ndash; and if you&rsquo;ve found this website, you&rsquo;ve definitely found websites like mine but better. I&rsquo;m not gonna bore you by preaching about the Indie Web / Small Web / Web Revival / etcetera movement as a whole. But know that I <strong>adore </strong>that it exists. Not only are there professional developers who take the craft seriously, but also people slapping code together without restraint or apology. I might have a crush on a couple <span data-text="the sites, not the devs" class="tooltip">websites</span>. </p>
+        <p>The enshittification of the web is far-reaching, but not universal. You can find countless websites that exist as a labour of love if you know where to look &ndash; and if you&rsquo;ve found this website, you&rsquo;ve definitely found websites like mine but better. I&rsquo;m not gonna bore you by preaching about the Indie Web / Small Web / Web Revival / etcetera movement as a whole. But know that I <strong>adore </strong>that it exists. Not only are there professional developers who take the craft seriously, but also people slapping code together without restraint or apology. I might have a crush on a couple <span class="tooltip">websites</span><span class="tooltiptext">the sites, not the devs</span>.</p>
         <p>And so many of these websites have blogs! Blogs that look entirely different from one another, because it turns out <strong>a blog doesn&rsquo;t have to be any one thing.</strong></p>
         <p>My favourites are the ones that feel cohesive with the website as a whole. Fun personal sites might have little updates on the webmaster&rsquo;s experiences, more formal sites might have informative articles, sites themed around media would write reviews, students would share their recent projects &amp; assignments, experimental websites would make their blogs interactive in unexpected ways.</p>
         <p>But a blog doesn&rsquo;t have to adhere to some grander purpose for the entire site. A blog can stand entirely on its own, either as a distinct section of a larger website or as the site&rsquo;s sole feature. You can use it to share your journeys, share your creations, share information. It can be as <em>weird </em>or <em>typical </em>as you want. Your posts don&rsquo;t even need to be text-based or presented in any straightforward fashion. The only limits are the ones you choose to impose on it. </p>
