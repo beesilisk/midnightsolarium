@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; notebook &#10028;</title>
+    <style>
+      html {
+        background-color: rgb(13, 44, 47);
+        background-image: url("img/wothstudyf.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        image-rendering: auto;
+      }
+      #container {
+        image-rendering: pixelated;
+      }
+      #box {
+        background-color: rgba(13, 36, 38, 0.4);
+        backdrop-filter: blur(2.5px);
+        
+      }
+      .grid {
+    grid-template-columns: 0.4fr 1.6fr; 
+    max-width:950px;
+      }
+      #side {
+        align-items:center;
+      }
+      select {
+        display: block;
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .backlink {
+        margin-top:5px;
+        margin-bottom:5px;
+        text-align:center;
+      }
+      .backlink a {
+        font-size:16px;
+        color:#e9e752;
+
+      }
+      .backlink a:hover {
+        filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+    }
+      .backlink a:active {
+        color:rgb(241, 160, 38)
+}
+      .backlink a:focus {
+        border-bottom:1px dotted #e9e752;
+}
+      main {
+        padding-left: 10px;
+      }
+      .mainbox {
+        background-color: rgb(27, 31, 34);
+        backdrop-filter: blur(4px);
+        padding-bottom: 10px;
+      }
+      
+      .mainbox:first-of-type {
+        background-color: rgba(13, 36, 38, 0.4);
+      }
+      .maincontent{
+    background-color: rgba(29, 72, 73, 0);
+    margin:10px;
+
+}
+      .maincontent h2 {
+        color: rgb(67, 235, 198);
+        text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
+        font-weight: 700;
+        font-family:'TheGoodMonolith';
+        font-size: 24px;
+        text-align: center;
+        line-height: 1.0;
+        margin-bottom:20px;
+      }
+      .maincontent h3 {
+        text-align:left;
+        font-size:18px;
+      }
+      .maincontent p {
+        margin-bottom:12px;
+      }
+      /* tab buttons CSS stuff */
+      .tab {
+        width:100%;
+      }
+      .tab button {
+        color: white;
+        display: block;
+        box-sizing: border-box;
+        padding: 5px;
+        background: none;
+        background-color: rgba(133, 204, 216, 0.4);
+        backdrop-filter: blur(2.5px);
+        box-shadow: none;
+        border: 2px solid #53b6bd;
+        border-radius: 5px;
+        &:not(:disabled) {
+          &:active,
+          &.active {
+            box-shadow: none;
+            background: rgba(143, 56, 99, 0.4);
+          }
+        }
+        &:focus,
+        &.focused {
+          box-shadow: none;
+          border: 2px solid rgb(158, 61, 85);
+        }
+        &::-moz-focus-inner {
+          border: 0;
+        }
+      }
+      .tablinks {
+        margin-top: 7px;
+        padding: 3px;
+        width: 100%;
+      }
+      button {
+     &:not(:disabled) {
+         &:active, &.active {
+             box-shadow: none;
+             background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(151, 186, 145, 1) 100% );
+        }
+        &:hover {
+            box-shadow: none;
+       }
+   }
+     &:focus, &.focused {
+         box-shadow: none;
+    }
+     &::-moz-focus-inner {
+         border: 0;
+    }
+}
+      .btntype {
+        margin-bottom: 8px;
+      }
+      .tablinks:hover {
+        border: 2px solid rgb(230, 138, 161);
+        cursor: pointer;
+      }
+      /* so pages stay hidden */
+      .tabcontent {
+        display: none;
+      }
+      .new {
+        vertical-align: top;
+        font-size: 10px;
+        margin-left: 4px;
+        font-weight: 500;
+        color: rgb(231, 201, 103);
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
+
+          <div style="display:flex;flex-direction:column;margin-top:10px;">
+          <div class="backlink">
+            <a href="index.html">
+              <i class="fa-solid fa-circle-arrow-left" style="font-size:18px;"></i> back to<br />main site! </a>
+          </div>
+
+      <!-- Font Changer -->
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+      </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+        </div>
+
+
+          <div class="tab">
+            <div class="btntype">
+              <button class="tablinks" onclick="openTab('tab1-wrapper')" id="defaultOpen" style="margin-bottom:30px;filter: hue-rotate(-25deg);">landing page</button>
+            </div>
+            <div class="btntype">
+              <button class="tablinks" onclick="openTab('tab3-wrapper')">types of threats</button>
+              <button class="tablinks" onclick="openTab('tab2-wrapper')">types of malware</button>
+            </div>
+            <div class="btntype">
+              <button class="tablinks" onclick="openTab('tab4-wrapper')" style="display:inline;float:center;">backups<sup class="new">NEW!</sup></button>
+            </div>
+          </div>
+
+
+      </div>
+
+      <main>
+        <div class="mborder">
+
+          <div class="maincontent">
+            <!-- 	landing page -->
+            <div id="tab1-wrapper" class="tabcontent">
+                <h2>here are my notes. feel free to look at 'em</h2>
+                <p>ive decided to share my IT certification exam notes with the world wide web! this way i can study while also sharing information with others <span style="color:lightpink">&#9825;</span>＼(￣▽￣)／<span style="color:lightpink">&#9825;</span></p>
+                <p>ive done my best to translate my notes into something that can hopefully serve as an <em>introduction to IT concepts</em> for anyone who has a basic understanding of technology and is curious enough to learn more </p>
+                <p style="font-size:11.5px;line-height:1.5;">(if you're also studying IT, my notes mainly follow the current CompTIA A+ exam objectives & official study material. i may also include info that's not on the exam if i consider it important. if you want a cheat sheet, you'll need to look <a href="https://ptgmedia.pearsoncmg.com/imprint_downloads/pearsonitcertification/bookreg/9780137637546/9780137637546_CramSheet.pdf">elsewhere<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>)</p>
+                <p><strong>IMPORTANT NOTE!</strong> please keep in mind that <em>i am still in the process of learning</em>. although i have some experience and i make an effort to avoid spreading misinformation, i suggest viewing my notebook as nothing more than a <strong>jumping off point</strong> for your own learning<span class="tooltip" style="text-decoration-line: none;">.</span>
+                  <span class="tooltiptext">(((still a better resource than chatgpt tho)))</span>
+                </p>
+            </div>
+            <!-- 	threats-->
+            <div id="tab3-wrapper" class="tabcontent">
+                <article>
+                  <h2>cybersecurity threats</h2>
+                  <p>im back with more IT study notes because nobody has tried to stop me yet. also i made a new webpage for 'em! cool, right?</p>
+                  <h3>What Are Threats?</h3>
+                  <p>Okay, the word “ <strong>threat</strong>” might seem overly vague. But when you’re talking about cybersecurity, a threat is generally considered to be any action that could exploit vulnerabilities in the system or network. If someone takes advantage of that vulnerability, the threat will result in missing, stolen, or damaged data. </p>
+                  <p>Another term I’m gonna be using is “ <b>threat actor</b>”. This refers to whoever is responsible for the threat. They can be a single person or a large group, come from any background, and act under a wide range of motivations. </p>
+                  <h3>Insider Threat</h3>
+                  <p>An insider threat can come from anyone who’s granted permissions on the system. These threat actors are hard to protect against because the attacker is <i>someone who’s expected to be on the network</i>. </p>
+                  <p>Sometimes insider threat actors will spend years within an organization for the purpose of collecting data and finding vulnerabilities. Other times the threat actor could be a normally trustworthy person who was bribed or blackmailed. The threat actor could also be a hired contractor or 3rd party vendor with a secret agenda.</p>
+                  <p>Or sometimes the reasons are less interesting. Got an employee who keeps falling for phishing emails? That’s an insider threat too.</p>
+                  <p>The motivations behind insider threats are infinitely varied, but we can put them into 2 categories:</p>
+                  <ul>
+                    <li><strong>&#10027; malicious</strong> (e.g. an employee at Evil Inc. realizes that they’re the baddies and decides to leak confidential data to a team of plucky rebels), and</li>
+                    <li><strong>&#10027; non-malicious</strong> (e.g. your idiot child tries to download My Sim Aquarium from a sketchy website and infects the family computer with malware (sorry dad))</li>
+                  </ul>
+                  <p>What I’m saying is that, like all threat actors, an insider threat can can come from anyone with any skillset for any reason.</p>
+                  <h3>Zero-Day Attack</h3>
+                  <p>This describes any sort of threat that <em>exploits an unpatched vulnerability</em> within a system or piece of software – particularly, vulnerabilities that have been present since launch. </p>
+                  <p>These vulnerabilities exist either because they are undiscovered, or because a patch hasn’t been made (maybe a patch is still in the works, maybe the flaw is impossible to fully patch, or maybe the vulnerability is being ignored out of negligence). Sometimes zero-day vulnerabilities go years and years without being fixed or even discovered until a threat actor decides to exploit it.</p>
+                  <p>These threats aren&apos;t as common as you might expect. Usually software is heavily researched and tested before launch to make sure there aren’t any catastrophic security vulnerabilities. That said, a serious design flaw slipping through the cracks could end in catastrophe.</p>
+                  <h3>Footprinting</h3>
+                  <p>Footprinting is when the threat actor tries to gather information and <strong>discover vulnerabilities</strong>. The attacker researches their target using a wide range of methods, including collecting publicly available info, scanning network ports, and using social engineering (aka tricking people) to extract information. </p>
+                  <p>Once the attacker has gathered information on their target, they will analyze their data and strategically plan their attack.</p>
+                  <p>While footprinting can be a threat, it’s also done by penetration testers in order assess security.</p>
+                  <h3>Spoofing</h3>
+                  <p>Spoofing happens when the threat actor pretends to be something trustworthy.</p>
+                  <p>Most people think of spoofing as an attacker pretending to be a trustworthy person or from a trustworthy organization, but spoofing can also be:</p>
+                  <ul>
+                    <li><strong>&#10027;</strong> cloning a valid IP or MAC address</li>
+                    <li><strong>&#10027;</strong> using a fake digital certificate</li>
+                    <li><strong>&#10027;</strong> stealing authentication tokens (such as web cookies)</li>
+                  </ul>
+                  <p>Essentially, spoofing is a general term that describes <em>impersonation</em>. </p>
+                  <h3>On-Path Attack</h3>
+                  <p>This is form of spoofing where the threat actor secretly sits in the middle of a 2-way conversation between two devices. The attacker is able to capture the packets of data being sent, analyze their contents, and send them to their destination without anyone else noticing. This threat is also known as a <b>man-in-the-middle</b> attack. </p>
+                  <p>Sometimes the attacker can even modify the packets before sending them to their destination, or prevent the transmission from reaching its destination at all. But usually on-path attacks are trying to <i>steal password hashes</i>. When trying to steal information, it’s in the attacker’s best interest to do as little tampering as possible. </p>
+                  <h3>ARP Poisoning</h3>
+                  <p>This is a specific type of on-path attack that exploits a weakness in the Address Resolution Protocol (ARP). This is the protocol that identifies each device’s unique MAC via the device’s known IP address. This allows packets of data to be delivered across a network to the correct machine.</p>
+                  <p>Using ARP spoofing, an attacker can trick a machine into associating a MAC address with the attacker’s device instead of the correct one. This lets the attacker <i>assume another device’s identity</i> and use it for spying or spoofing &ndash; all without having to steal a username or password. </p>
+                  <h3>Brute-Force Attack</h3>
+                  <p>Earlier on I mentioned <em>password hashes</em>. These are the way a password is represented in data. There are many different algorithms used for password hashing, they all encrypt the password into a different string of text. </p>
+                  <p>For example, if the password “ <em>password123</em>” using the SHA-1 algorithm, that password will be stored in a database as “ <i style="word-break: break-all;">cbfdac6008f9cab4083784cbd1874f76618d2a97</i>”. If that database is breached, the attacker would find the hash but not the original password. </p>
+                  <p>A brute-force attack is a threat based around decrypting hashes back into their original passwords. The attacker would use a script that <b>converts random character strings into their hashed form</b>. If they can recreate a known hash, that means the attacker has found the actual password. </p>
+                  <h3>Dictionary Attack</h3>
+                  <p>This is another method of decrypting password hashes. Unlike brute-force attacks that generate random character strings to convert into hashes, dictionary attacks generate passwords based on <b>words and phrases</b>. After all, people are more likely to use words in their passwords than a random keysmash. </p>
+                  <p>Some dictionary attack scripts might generate hashes by going through every possible word, but others will favour words and phrases that are known to be common in passwords, such as‘<i>12345</i>’, ‘<i>iloveyou</i>’, ‘<i>P@55w0rd</i>’, or words related to the organization being targeted.</p>
+                  <h3>DoS Attacks</h3>
+                  <p>A denial of service attack is any attack that <strong>makes a service inaccessible</strong>. You could do this by exploiting a design failure that causes software to crash, downloading an overly large file, or physically cutting a computer’s power cable. </p>
+                  <p>That said, when most people talk about DoS attack, they’re specifically referring to an attack that involves services being overloaded by an onslaught of spoofed traffic. The coordinated influx of network traffic brings the system down under the weight of too many requests.</p>
+                  <p>It’s worth noting that sometimes cutting off a service is not the attacker’s end goal. DoS attacks are very disruptive and obvious, which makes them great distractions for subtler threats.</p>
+                  <h3>DDoS Attacks</h3>
+                  <p>A <i>distributed</i> denial of service attack is designed is much harder to stop than a regular DoS attack, which is why you hear about them more often. These attack from <b>multiple locations</b> in order to bring down their target. Attacking from many different sources at once makes them hard to block. </p>
+                  <p>DDoS attacks come in many different varieties, but pretty much all of them work by overwhelming a server with traffic. This is typically done using botnets, which are devices connected to the internet that are under the control of a 3rd party. These devices are often infected with malware, transforming them into remotely controlled attacking machines.</p>
+                  <h3>SQL Injections</h3>
+                  <p>When an uninvited 3rd party is able to alter an application’s code, this considered to be an <em>injection</em>. There are many injection techniques made for altering different types of code, but SQL injections are probably the most well-known. </p>
+                  <p>The SQL programming language is what allows the data in databases to be manipulate. An injection works by <strong>tampering with the SQL queries</strong> as they’re being sent to or from the server. This allows the attacker to covertly steal and even modify data stored on the server. Sometimes a SQL injection can create backdoor to the server itself, which provides an opportunity for further attacks on the backend infrastructure. </p>
+                  <h3>Cross-Site Scripting (XSS)</h3>
+                  <p>When a user clicks a link to a website or enters the site’s URL, that person’s web browsers will generally trust the scripts running on that site. Threat actors can take advantage of this by using a website’s user submission feature &ndash; this includes things forums, comment sections, and guestbooks.</p>
+                  <p>Without proper safeguards, features like these allow threat actors to <strong>inject malicious scripts onto a trusted site’s code</strong>. </p>
+                  <p>In action, cross-site scripting will often look like a comment with a link to another website. If you click that link, the attacker’s malicious code will activate. This could result in stolen data, cookie hijacking and malware infection, just to name a few examples.</p>
+                  <p><b>NOTE:</b> This is only a very general overview, but amateur webmasters like myself might wanna <a href="https://patchthenet.com/blog/introduction-to-cross-site-scripting-xss">read more<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;">
+                    </a> about <a href="https://www.matuzo.at/blog/2022/web-security-basics-xss/">XSS<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;">
+                    </a> and how to <a href="https://portswigger.net/web-security/cross-site-scripting/preventing">prevent it<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>.</p>
+                </article>
+            </div>
+            <!-- malware -->
+            <div id="tab2-wrapper" class="tabcontent">
+                <article>
+                  <h2>this is literally just a list of different types of malware</h2>
+                  <aside><b>01/09/24</b> - this was originally posted in the weblog section of this site, but the webmaster decided to move it to its own</aside>
+                  <hr />
+                  <p>lately ive been studying for my comptia a+ cert, and i decided to infodump on my website as a form of studying because i can do whatever i want here</p>
+                  <p>im kicking off with a simple list of malware types because i figure it will make a good starting point as i decide how to translate the material into an <em>easily digestible, beginner-friendly</em> blog post. also i just find this stuff interesting </p>
+                  <p>since this is effectively a summarization of my notes, i wont be going into too much detail, and i might make some generalizations. at most, you should consider this your own jumping off point and <b>do your own research</b>
+                  </p>
+                  <h3>Trojan</h3>
+                  <p>Trojans <em>hide inside the installer packages</em> for legitimate-looking programs. Once installed, it&rsquo;s granted the same privileges as the program and executable. A trojan may be able to achieve persistence – meaning it hides inside startup folders or scheduled tasks so it can retrigger whenever the computer restarts, even if the system&rsquor;s credentials are changed. </p>
+                  <h3>Rootkit</h3>
+                  <p>Rootkits take advantage of operating system functions in order to <em>elevate their privileges</em>. They like to plant themselves within the operating system, sometimes even fusing with the kernel itself (as well as bootloaders, firmware, hypervisors, memory, or applications). This makes them very hard to identify using your typical troubleshooting software. You&rsquo;ll need to find a <strong>3rd-party remover software</strong> specific to whichever rootkit you&rsquo;re dealing with. </p>
+                  <h3>Virus</h3>
+                  <p>The word &OpenCurlyDoubleQuote;virus&rdquor; a broad term used to describe <em>malware that can self-replicate</em>. The initial infection <strong>always requires some form of human interaction</strong> (e.g. clicking on a malicious download link), but once executed the virus will be granted the same privileges as the infected process. From there it may be able to infect other files, drives, and even spread to other systems via the network or removable drives. </p>
+                  <h3>Spyware</h3>
+                  <p>After tricking the user into installing it, spyware will <em>covertly collect data</em> on their victim. Its goal is usually either to steal confidential data, or collect data for advertising. While most remain covert, some may make changes to the browser configuration such as allowing tracking cookies or changing the default search engine. Some might even take screenshots or turn on recording devices. </p>
+                  <h3>Ransomware</h3>
+                  <p>Ransomware is a malware attack that makes some or all of computer&rsquo;s data / functions inaccessible as a means of extortion. Cryptocurrency is often demanded as payment to release the system, making the attackers hard to track down after the transaction. These attacks sound scarier than they actually are – <em>assuming you make regular external backups</em> (^ω~)☆ </p>
+                  <h3>Crypto-Ransomware</h3>
+                  <p>This is a form of ransomware that <em>encrypts all or part of a user&rsquo;s data</em>. The victim won&rsquo;t be able to access those files until the attacker gives them access to an encryption key. The key is actually kept on the computer from the very start, but it&rsquo;s also encrypted. </p>
+                  <p><b>NOTE:</b> I&rsquo;ve seen some people use this term synonymously with ransomware in general, cryptojacking, or any ransomware that demands cryptocurrency as payment. The definition I gave is the one CompTIA uses, and I find it&rsquo;s the most commonly used definition in general.</p>
+                  <h3>Keyloggers</h3>
+                  <p>Keyloggers are a form of spyware that <em>tracks every keystroke and mouse click</em> made on the computer. The info is then sent to the attacker for them analyze. This essentially circumvents whichever encryption methods you&rsquor;re using. These can be used to steal private data, passwords, or credit card numbers. Keyloggers can be implemented using software, 3rd-party websites, and modified USB adapters. </p>
+                  <h3>Boot Sector Virus </h3>
+                  <p>These are viruses that <em>infect the boot sector or Master Boot Record (MBR)</em> of a disk drive. Once infecting the boot sector, it will then spread to other disks on the computer. By attaching to the code used to start the operating system, the computer will essentially be <strong>reinfected each time it restart</strong>s – before the antivirus software has a chance to launch. From an outside perspective, it&rsquor;ll look like the virus keeps coming back each time the computer starts, even after you think its been removed. Luckily, Secure Boot is good at preventing these viruses. </p>
+                  <h3>Cryptojacking</h3>
+                  <p>Cryptominers perform cryptographic computations to create cryptocurrency &ndash; in other words, they mine crypto. Cryptojackers can infect other computers and <em>use their processing power to mine crypto</em>. </p>
+                  <p><b>NOTE:</b> while some resources like the CompTIA A+ Student Guide (220-1101 & 220-1102) use the terms “cryptomining” and “cryptojacking” interchangeably, i find most people distinguish between the two. <strong>Cryptomining</strong> refers broadly to the act of mining crypto, while <strong>cryptojacking</strong> is the act of using malware to mine crypto using another system&rsquor;s resources.</p>
+                  <p><span style="font-size:14">(dont get me wrong, i have very little love for cryptominers, but i feel using specificity in language is important </span><span style="font-size:11;">especially in the age of misinformation </span><span style="font-size:8;">but thats just my opinion)</span></p>
+                  <h3>Worms</h3>
+                  <p>Unlike a typical virus, worms <strong>don&rsquo;t need to wait for a human victim to unknowingly activate them</strong>. They are self-operating, self-replicating, self-activating programs that can wriggle their way into an operating system by exploiting known security vulnerabilities. They often spread between hosts in a network and slow down system resources. </p>
+                  <h3>Fileless Malware</h3>
+                  <p>While most malware comes in the form of an executable file, fileless malware disguises itself as a legitimate script or document while <em>residing in the computer&rsquor;s memory</em>. From there it infects and exploits useful system processes such as scripting environments (especially Powershell). This malware hard to detect using regular antimalware software. </p>
+                </article>
+            </div>
+            <div id="tab4-wrapper" class="tabcontent">
+                <article>
+                  <h2>backups</h2>
+                  <p>Have you you remembered to back up your data recently? Yes, I’m speaking to you specifically. Go back up your data.</p>
+                  <h3>Full Backups</h3>
+                  <p>There are multiple types of backups for you to choose based on your needs and the technology you have at your disposal.</p>
+                  <p>A full backup <em>creates a copy</em> of everything on the file system. The exact definition of “everything” might vary depending on who you ask, but it can include the operating system, settings, and files. The copy is gonna be more or less the same size as the original.</p>
+                  <p>A full backup can completely restore the dataset on its own, but the drawback is that it’s <strong>time-consuming</strong> and <strong>eats up storage space</strong>. This is probably fine if you’re just backing up your personal files, but anything large-scale is probably gonna want a backup system that’s less resource intensive.</p>
+                  <h3>Incremental Backups</h3>
+                  <p>An incremental backup actually requires 2 types of backups: first, a full backup of the data is created. After that, an incremental backups will only <em>copy the data that’s changed</em> since the full backup. Each subsequent incremental backup will store the data that’s changed since the previous full or incremental backup. The end result is that you have a full backup as well as several smaller increments.</p>
+                  <p>This is a great backup system if you want to store data quickly and take up the least storage space, which is why it’s used a lot in cloud storage. The one downside is that it <strong>takes a while to recover</strong> all the data, since the process requires combining several backup in order to rebuild the dataset. It’s probably not the best solution if you want the recovery process to be quick and easy.</p>
+                    <img class="body_img" style="float:left;padding-right:15px;"src="img/full-differential-incremental.png" title="a diagram showing full, differential, and incremental backups" alt="a diagram showing full, differential, and incremental backups">
+                  <h3>Differential Backups</h3>
+                  <p>This is a lot like an incremental backup, but with one major difference: the backup containing the changed data <em>doesn’t reset each time</em>. Instead of creating several small increments, every change made from the full backup is copied onto a single differential backup. Over time, the differential backup grows bigger and bigger. </p>
+                  <p>To recover the full dataset, you would only need the last full backup and the most recent differential backup. This is still more complex than creating a single full backup, merging two backups is a lot easier than merging several increments. Differential backups are also a <strong>good compromise</strong> when it comes to backup speed and storage requirements. </p>
+                  <h3>Onsite vs. Offsite</h3>
+                  <p>An onsite backup is kept in the same physical location as the original data. This may be more convenient and save on bandwidth, but it also means that every version of the data could be lost in the event of a disaster.</p>
+                  <p>In a work environment, it’s generally considered best practice to <em>keep at least one offsite backup</em>. In larger organizations, backups might be sent to a server in another company branch in another part of the world. If you wanna do this for personal files, the best way to do this would probably be through a cloud service.</p>
+                  <h3>Backup Frequency</h3>
+                  <p>There isn’t any golden rule dictating how often backups should be made. For my own personal files, I have everything automatically backed up at the end of each week. This is probably the most infrequent you’ll ever see data backed up in a work environment. Most businesses prefer to keep daily backups, though depending on their priorities you might also have backups made every few hours or minutes.</p>
+                  <p>The amount of time you keep each backup around also varies. Depending on the data, <strong>there might be regulations</strong> dictating how long the data should be stored, so it’s best to be aware of company guidelines.</p>
+                  <p>You should regularly test your backup system to make sure everything is being stored properly. The industry standard is to test the backup system once a month at minimum. Highly sensitive data should be checked even more often.</p>
+                  <h3>3-2-1 Rule</h3>
+                  <p>This is a best practice guideline for businesses.  The rule states that 3 copies of a backup should be taken: <em>2 copies onsite</em>, and <em>1 kept offsite</em>. This you have 2 versions of the dataset at your immediate disposal, while also keeping it preserved elsewhere.</p>
+                  <h3>Grandfather-Father-Son</h3>
+                  <p>Also called a “first-in, first-out” rotation schedule, this is a best practice guideline where new backup is made every day. At the end of the week, the most recent daily backup becomes the new weekly backup. The last weekly backup of the month becomes the new monthly backup.</p>
+                  <p>The end result is that you have 3 backups at all times: a daily backup, a weekly backup, and a monthly backup. As time goes on, the <strong>most recent of each gets promoted</strong> into the next category.</p>
+                  <p>To be clear, this isn’t mutually exclusive to the 3-2-1 backup rule, though you might see businesses using one backup scheme being used but not the other, or they could have their own system that suits their specific needs. But these are considered best practice for a reason: they keep backups available and well-archived.</p>
+                </article>
+            </div>
+            <script>
+              function openTab(tabName) {
+                var i;
+                var tabcontent = document.getElementById(tabName);
+                var otherContent = document.getElementsByClassName("tabcontent");
+                var defaultOpen = document.getElementById("defaultOpen");
+                for (i = 0; i < otherContent.length; i++) {
+                  otherContent[i].style.display = "none";
+                }
+                tabcontent.style.display = "block";
+              }
+              document.getElementById("defaultOpen").click();
+            </script>
+          </div>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>

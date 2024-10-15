@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; weblog &#10028;</title>
+    <style>
+        .mincontent {
+            padding:0;
+            margin:0 0 5px 0;
+        }
+.mincontent a {
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+    color: #e9e752;
+}
+.mincontent a:hover {
+    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+}
+.mincontent a:active {
+    color:rgb(241, 160, 38)
+}
+.mincontent a:focus {
+    border-bottom:1px dotted #e9e752;
+}
+    .mincontent .blogdetail {
+    font-size: 12px;
+   }
+   .mincontent p {
+    margin-bottom:5px;
+   }
+   .new {
+        vertical-align: top;
+        font-size: 10px;
+        margin-left: 4px;
+        font-weight: 500;
+        color: rgb(231, 201, 103);
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
+
+      <!-- Font Changer -->
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+      </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+
+      <div class="sidebox" style="margin-top:0;">
+        <h2 class="subheader">navigate</h2>
+        <nav class="sidecontent">
+          <script src="nav.js"></script>
+        </nav>
+      </div>
+
+      <div class="sidebox">
+        <h2 class="subheader">external links</h2>
+        <nav class="sidecontent">
+          <script src="nav_ext.js"></script>
+        </nav>
+      </div>
+      </div>
+
+      <main>
+        <div class="mborder">
+
+            <div class="mainbox" >
+                <h2 class="subheader">weblog</h2>
+                  <div class="maincontent" >
+                    <div class="mincontent">
+                        <h3><a href="weblog_posts/backups.html">my quick & dirty backup automation</a><sup class="new">NEW!</sup></h3>
+                        <section>
+                            <p class="blogdetail"><time datetime="2024-09-28">sep 28, 2024</time><span> &#x2022; word count: 1180</span></p>
+                            <p>microsoft onedrive doesn't want you to know about this one easy trick (task scheduler)</p>
+                      </section>
+                    </div>
+                    <div class="mincontent">
+                        <h3><a href="weblog_posts/why_did_i_make_this_blog.html">why did i make this blog</a></h3>
+                        <section>
+                          <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
+                          <p>i put a blog on my website and i have mixed feelings about it</p>
+                        </section>
+                      </div>
+                  </div>
+            </div>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>

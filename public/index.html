@@ -1,172 +1,202 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>midnight solarium</title>
-  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <style>
-  #more {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; midnight solarium &#10028;</title>
+    <style>
+        #more {
   display: none;
   }
-  #myBtn {
-  position: relative;
-  left: 45%;
-}
-  </style>
-  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
- </head>
- <!-- Page template: https://repth.neocities.org/theme -->
- <body>
-  <div id="container">
-   <div id="box">
-    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><div style="display:inline;position:absolute;top:30px;">&nbsp;midnight solarium</div></h1></div>
-    <div id="contentboxes">
-     <div id="side">
+    </style>
+    
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
 
       <!-- Font Changer -->
-	<div class="selectdiv" style="padding-bottom:10px;">
-   <select id="input" class="input" onchange="changingFontStyle (this);">
-      <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-      <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-   </select>
-   </div>
-   <script>
-      var changingFontStyle = function (fontstyle) {
-         document.getElementById("box").style.fontFamily = fontstyle.value;
-      }
-   </script>
-      <!--  NAV BOX -->
-	  	  <div class="sidebox">
-       <div class="subheader"><h3>navigate</h3></div>
-      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
-	  </div>
-
-	  <div class="sidebox">
-       <div class="subheader"><h3>external links</h3></div>
-      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="height:130px;width:100%;border:none;overflow:hidden;"></iframe>
-	  </div>
-
-	  <!-- wdisseny moon phase -->
-	  <div id="contain_moon" style="text-align:center;padding-top:5px;padding-bottom:5px;">
-	  <div style="font-weight:bold">the view outside:</div>
-	  <div style="margin-top:-7px;margin-bottom:-15px;padding:30px;filter:drop-shadow(0 0 20px hsl(207,51%,95%,0.5))"></div>
-	  <div>.</div><div style="font-size:small">.</div>
-	  </div>
-	  <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(210,200,200)&shadeColor=rgb(17,35,35)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
-     <!-- END wdisseny moon phase -->
-	 </div>
-	 
-     <main>
-      <div class="mainboxes">
-       <div class="subheader">
-        <h3>welcome!</h3>
-       </div>
-       <div class="mainboxescontent">
-        <!-- WELCOME BOX -->
-        <figure style="float:right;margin-left:20px;">
-         <img class="body_img" src="img/bug_hotel.png" title="a bug hotel made of wood, sticks, rocks, and pinecones" alt="a bug hotel made of wood, sticks, rocks, and pinecones">
-         <figcaption style="max-width:200px;"><strong>WARNING:</strong> this website is home to various types of <em>bugs</em></figcaption>
-        </figure>
-		<section>
-        <h2>&#10027;&#10027;&#10027; a brief introduction &#10027;&#10027;&#10027;</h2>
-        <p>You&apos;ve reached a website dedicated to all <i>organisms</i>, <i>formations</i>, and <i>concepts</i> that grow in the night. Visitors are invited to look around, unwind, ground themselves in loamy soil, or just take a quick breather before continuing down their own path. </p>
-        <p>This website is the ongoing project of run by an easily overstimulated insect. The webmaster is usually exhausted by the rapid-paced internet as well as the demands of life outside the net, which is why they decided to create an online space dedicated to 
-        chilling out, sharing interests, and learning new things (such how to make a website).</p>
-        </section>
-		<br />
-		<section>
-        <h2>&#9734;&#9734;&#9734; getting the most out of your visit &#9734;&#9734;&#9734;</h2>
-        <p>This site is best viewed on <b>desktop</b>. If you're on your <i>phone</i>, you'll have a better time if you flip your phone from vertical &#x25AF; to <b>horizontal &#x25AD;</b> orientation. </p>
-        <p>If you're on a <i>tablet</i>, either way should be fine! </p>
-        <p>If something appears <i>weird</i> or <i>missing</i>, make sure you have <b>javascript enabled</b>. If the problem persists, the webmaster probably left something broken or unfinished. My bad! (&#62;_&lt;")&#62; </p>
-       </section>
-
-	   </div>
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
       </div>
-      <!-- END CONTENT -->
-	  <div class="twoboxes">
-	   <div class="mainboxes" style="flex:1;height:fit-content;">
-       <div class="subheader"><h3>featured img</h3></div>
-       <div class="mainboxescontent"style="image-rendering: auto;padding:5px 3px 0 3px;">
-        <!-- IMG BOX -->
-        <a href="https://piclog.blue/profile.php?id=636" class="hiddenlink"><img src="https://piclog.blue/latest.php?id=636" style="max-width:300px;"></a>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
 
-        <!-- END CONTENT -->
-       </div>
+      <div class="sidebox" style="margin-top:0;">
+        <h2 class="subheader">navigate</h2>
+        <nav class="sidecontent">
+          <script src="nav.js"></script>
+        </nav>
       </div>
-      <div class="mainboxes" style="flex:4;">
-       <div class="subheader"><h3>recent updates</h3></div>
-       <div class="mainboxescontent">
-        <!-- UPDATE BOX -->
-		<section>
-        <p>
-        <time datetime="2024-09-10"><b>10.09.24</b></time>
-    - created <a href="study.html">notebook</a> page for my IT study notes, moved old weblog about malware to the new webpage, added font changer to weblog post, created a new and improved <span class="tooltip">tooltip</span><span class="tooltiptext">look! the text doesn't awkwardly cut off!</span>, changed <b>&lt;b&gt;</b> and <i>&lt;i&gt;</i> colours yet again
-        </p>
-        <p>
-         <time datetime="2024-08-26"><b>26.08.24</b></time>
-		 - created a <a href="links.html">links</a> page, made a <i>site button</i> (also on links page), put nav bars in iframes (i dont love how it looks but it should be easier for me to edit sitewide), hopefully got the <span style="font-family:OpenDyslexic-Regular;color:#e8a4d0">font changer</span> working fr this time, included piclog widget, fixed inaccurate changelog dates, finally reset my css, reconstructed layout after reset changed everything (*/ω＼) 
-        </p>
-		    <p>
-         <time datetime="2024-08-08"><b>08.08.24</b></time>
-		 - new weblog: "this is literally just a list of different types of malware"; also changed the weblog layout 'cause im still not happy with it
-        </p>
 
-        <span id="dots"><br /></span><span id="more">
-
-		    <p>
-         <time datetime="2024-08-02"><b>02.08.24</b></time>
-		 - included more lore, made lots of tiny QoL improvements, better colours + mood lighting + different spacing, added flowers (yay!) + bees (sorry entomophobes), created <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> file
-        </p>
-        <p>
-         <time datetime="2024-07-16"><b>16.07.24</b></time>
-		 - added a section for sharing my craft projects (and in the process learned how to make a pure css accordian menu), changed status.cafe section to show full feed, altered the tooltip yet again, made more tiny layout tweaks 'cuz im never satisfied
-        </p>
-        <p>
-		 <time datetime="2024-06-30"><b>30.06.24</b></time>
-		- site now has a weblog! also made layout more flexbox-centric, added <i>colour emphasis</i> to text for improved readability, got CORS working properly, added a moon phase widget to homepage because i thought it was cute, added advice for viewing to homepage, revealed more personal info in 'about webmaster' page, somehow made tooltip both better and worse
-        </p>
-        <p><time datetime="2024-06-06"><b>06.06.24</b></time>
-		- added an 'about webmaster' page, added new icons and images, added a tooltip even though it doesn't always work because fuck it, decided to link my tumblr because fuck it, made lots of css tweaks that nobody will notice but me
-        </p>
-        <p>
-         <time datetime="2024-05-24"><b>24.05.24</b></time>
-		 - official site launch! not much to see yet, but there's a homepage and credit page that i'm fairly happy with
-        </p>
-		</section>
-		</span>
-		<button onclick="myFunction()"id="myBtn">show more</button>
-		<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "show more"; 
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "nevermind"; 
-    moreText.style.display = "inline";
-  }
-}
-</script>
-        <!-- END CONTENT -->
-       </div>
+      <div class="sidebox">
+        <h2 class="subheader">external links</h2>
+        <nav class="sidecontent">
+          <script src="nav_ext.js"></script>
+        </nav>
       </div>
-	  </div>
-     </main>
+
+      <div id="contain_moon" style="text-align:center;padding-top:10px;padding-bottom:10px;">
+        <div style="font-weight:bold">the view outside:</div>
+        <div style="margin-top:-21px;margin-bottom:36px;padding:30px;filter:drop-shadow(0 0 20px hsl(207,51%,95%,0.5))"></div>
+        <div>.</div><div style="font-size:12px;">.</div>
+        </div>
+        <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(210,200,200)&shadeColor=rgb(13, 26, 29)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+      </div>
+
+      <main>
+        <div class="mborder">
+
+          <div class="flexrow">
+            <div class="mainbox" style="flex:2">
+              <h2 class="subheader">welcome!</h2>
+                <div class="maincontent" >
+                  <h3>&#10027;&#10027;&#10027; a brief introduction &#10027;&#10027;&#10027;</h3>
+                  <section>
+                    <p>You&apos;ve reached a website dedicated to all <em>organisms</em>, <em>formations</em>, and <em>concepts</em> that grow in the night. Visitors are invited to look around, unwind, ground themselves in loamy soil, or just take a quick breather before continuing down their own path. </p>
+                    <p>This website is the ongoing project of run by an easily overstimulated insect. In the face of an increasingly rapid-paced landscape both within the web and beyond, the solarium exists as a space for chilling out, sharing interests, and learning new things.</p>
+                  </section>
+                  <div class="mincontent">
+                    <h3>getting the most out of your visit</h3>
+                    <section>
+                      <ul>
+                        <li>As of October 2024, midnight solarium has adopted a <strong>mobile-friendly layout</strong>! Thank you for your continued support as the site continues to evolve and improve &lt;3 </li>
+                        <li>If something appears <em>weird</em> or <em>missing</em>, make sure you have <strong>javascript enabled</strong>. If the problem persists, the webmaster probably left something broken or unfinished. My bad! (&#62;_&lt;")&#62; </li>
+                      </ul>
+                    </section>
+                  </div>
+                </div>
+            </div>
+
+            <div class="pic" style="width:204px;">
+              <h2 class="subheader">WARNING.png</h2>
+              <figure><img src="img/bug_hotel.png" title="a bug hotel" alt="a bug hotel made of wood, sticks, rocks, and pinecones"></figure>
+              <figcaption style="width:200px;">this website is home to various types of <em>bugs</em></figcaption>
+            </div>
+          </div>
+
+          <div class="flexrow">
+            <div class="pic">
+              <h2 class="subheader">piclog_new.jpg</h2>
+              <figure><a href="https://piclog.blue/profile.php?id=636" class="hiddenlink"><img src="https://piclog.blue/latest.php?id=636" alt="most recent picture from piclog.blue" title="check out midnight solarium's piclog!" style="min-width: 250px;max-width:300px;"></a></figure>
+            </div>
+
+            <div class="mainbox" style="flex:2">
+              <h2 class="subheader">changelog</h2>
+                <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                  <section>
+                      <p>
+                      <time datetime="2024-10-09"><strong>09.10.24</strong></time>
+                  - new(ish) layout! now the site's usable on mobile, uses more javascript, uses proper grid and flexbox, and just generally sucks less
+                      </p>
+                      <p>
+                      <time datetime="2024-09-28"><strong>28.09.24</strong></time>
+                  - added notes on backups to notebook, included weblog on my backup process, fixed broken links on about webmaster page, added more buttons to links page, polished up layout (new page titles, more element titles, fixed header order, etc)
+                      </p>
+                      <p>
+                      <time datetime="2024-09-10"><strong>10.09.24</strong></time>
+                  - created <a href="study.html">notebook</a> page for my IT study notes, moved old weblog about malware to the new webpage, added font changer to weblog post, created a new and improved <span class="tooltip">tooltip</span><span class="tooltiptext">it's still far from perfect, but it gets the job done</span>, changed <strong>&lt;b&gt;</strong> and <em>&lt;i&gt;</em> colours yet again
+                      </p>
+                      <span id="dots"><br /></span><span id="more">
+                      <p>
+                       <time datetime="2024-08-26"><strong>26.08.24</strong></time>
+                   - created a <a href="links.html">links</a> page, made a <em>site button</em> (also on links page), put nav bars in iframes (i dont love how it looks but it should be easier for me to edit sitewide), hopefully got the <span style="font-family:OpenDyslexic-Regular;color:#e8a4d0">font changer</span> working fr this time, included piclog widget, fixed inaccurate changelog dates, finally reset my css, reconstructed layout after reset changed everything (*/ω＼) 
+                      </p>
+                      <p>
+                       <time datetime="2024-08-08"><strong>08.08.24</strong></time>
+                   - new weblog: "this is literally just a list of different types of malware"; also changed the weblog layout 'cause im still not happy with it
+                      </p>
+                      <p>
+                       <time datetime="2024-08-02"><strong>02.08.24</strong></time>
+                   - included more lore, made lots of tiny QoL improvements, better colours + mood lighting + different spacing, added flowers (yay!) + bees (sorry entomophobes), created <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> file
+                      </p>
+                      <p>
+                       <time datetime="2024-07-16"><strong>16.07.24</strong></time>
+                   - added a section for sharing my craft projects (and in the process learned how to make a pure css accordian menu), changed status.cafe section to show full feed, altered the tooltip yet again, made more tiny layout tweaks 'cuz im never satisfied
+                      </p>
+                      <p>
+                   <time datetime="2024-06-30"><strong>30.06.24</strong></time>
+                  - site now has a weblog! also made layout more flexbox-centric, added <em>colour emphasis</em> to text for improved readability, got CORS working properly, added a moon phase widget to homepage because i thought it was cute, added advice for viewing to homepage, revealed more personal info in 'about webmaster' page, somehow made tooltip both better and worse
+                      </p>
+                      <p><time datetime="2024-06-06"><strong>06.06.24</strong></time>
+                  - added an 'about webmaster' page, added new icons and images, added a tooltip even though it doesn't always work because fuck it, decided to link my tumblr because fuck it, made lots of css tweaks that nobody will notice but me
+                      </p>
+                      <p>
+                       <time datetime="2024-05-24"><strong>24.05.24</strong></time>
+                   - official site launch! not much to see yet, but there's a homepage and credit page that i'm fairly happy with
+                      </p>
+                    </span>
+                  </section>
+                  <button title="see all updates" onclick="myFunction()"id="myBtn">show more</button>
+                  <script>
+              function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+              
+                if (dots.style.display === "none") {
+                  dots.style.display = "inline";
+                  btnText.innerHTML = "show more"; 
+                  moreText.style.display = "none";
+                } else {
+                  dots.style.display = "none";
+                  btnText.innerHTML = "nevermind"; 
+                  moreText.style.display = "inline";
+                }
+              }
+              </script>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
     </div>
-    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
-   </div>
   </div>
- </body>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
 </html>

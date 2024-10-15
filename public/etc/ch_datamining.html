@@ -1,15 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>midnight solarium</title>
   <link rel="icon" type="image/x-icon" href="../img/flowcan2.png">
   <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="../styles.css" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <title>&#10028; questionnaire &#10028;</title>
   <style>
+	/* Scrollbar CSS ---> https://codepen.io/stephenpaton-tech/full/JjRvGmY/ */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #97ba91 #000;
+    box-sizing: border-box;
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+*::-webkit-scrollbar-track {
+    background: #000;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #97ba91;
+    border-radius: 0;
+    border: 0 ridge #fff;
+}
+html {
+	background-image: url("etc_img/honeycomb.png");
+	background-repeat: repeat;
+  -webkit-animation: bg-scrolling-reverse 8s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 8s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 8s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 8s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background-size: auto;
+  background-attachment: fixed;
+}
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 200px -200px;
@@ -51,30 +90,16 @@
   }
 }
   body{
-    background-image: url("etc_img/honeycomb.png");
-	background-repeat: repeat;
-  -webkit-animation: bg-scrolling-reverse 8s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 8s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 8s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 8s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
-  background-size: auto;
-  background-attachment: fixed;
+
   font-family: "Roboto Mono";
   }
    #container {
     max-width: 800px;
     margin-top: 20px;
+	margin-left:auto;
+	margin-right:auto;
    }
    #box{
-    background-color: rgba(61, 29, 13, 0.9);
     backdrop-filter: blur(8px);
 	border: 20px solid transparent;
     border-image: url("etc_img/honeytexture.jpg");
@@ -85,19 +110,31 @@
    main {
     flex: 100%;
     padding: 30px;
+
+	background-color: rgba(61, 29, 13, 0.9);
+	border:none;
    }
    h2 {
     font-size: 32px;
     font-family: "TheGoodMonolith";
+	padding-top:20px;
    }
    h3 {
     font-size: 22px;
     color: #c4e57e;
     text-shadow: 0 0 10px rgba(243, 247, 118, 0.4);
    }
+   p {
+	font-size:14px;
+   }
    a, .icon{
    color:#fc85c1;
+   text-decoration: none;
    }
+   a:hover {
+	filter: brightness(1.2);
+}
+
    b, strong {
     color: #84edb0;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
@@ -113,37 +150,42 @@
    .hoverme{
    padding-left: 10px;
    padding-right: 10px;
-   padding-top:7px;
-   padding-bottom:7px
+padding-top:5px;
+padding-bottom:5px;
    }
    .hoverme:hover{
    background-color: rgba(153, 102, 41, 0.4);
    backdrop-filter: blur(4px);
    border:3px dashed rgba(234, 28, 151, 0.8);
    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+   transform:scale(1.04)
    }
+
+
+
   </style>
   <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
  </head>
  <!-- Page template: https://repth.neocities.org/theme -->
  <body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div id="container">
 
    <div id="box">
-    <div id="contentboxes">
+    <div id="grid">
      <main>
       <!-- WEBLOG BOX -->
       <div>
 
        <h2 style="line-height: 1.25em;">revealing even more personal information to strangers online bcuz its fun</h2>
 
-       <a href="../about_webmaster.html" style="font-size:20px;"><i class="fa-solid fa-circle-arrow-left" style="text-shadow:0 0 10px rgba(243, 247, 118, 0.2);margin:20px 0 10px 0;"></i> go back </a>
+       <a href="../about.html" style="font-size:20px;"><i class="fa-solid fa-circle-arrow-left" style="text-shadow:0 0 10px rgba(243, 247, 118, 0.2);margin:20px 0 20px 0;"></i> go back </a>
        <article>
 
-<p>i am shamelessly stealing this idea after seeing <a href="https://macaque.moe/index?link=/articles/questionnaire">Azure</a> do doing the questionnaire, but these questions originally come from <a href="https://burypink.neocities.org/gifts">clam hanson.</a> you should check out both their sites if you haven't already!</p>
+<p>i am shamelessly stealing this idea after seeing <a href="https://macaque.moe/index?link=/articles/questionnaire">Azure<img src="../img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> do doing the questionnaire, but these questions originally come from <a href="https://burypink.neocities.org/gifts">clam hanson<img src="../img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>. you should check out both their sites if you haven't already!</p>
 			<hr/>
 			<div class="hoverme">
-<b>1) time and date u started this?</b></p>
+<p><b>1) time and date u started this?</b></p>
 <p>22:32:28 UTC on Sunday July 28 2024</p>
 			</div>
 			<br/>
@@ -631,7 +673,7 @@
 <hr />
 <p>(weirdly, i think working on this questionnaire during my downtime actually helped ease me out of a low productivity rut. if only i were always so lucky!)</p>
        </article>
-       <a href="../about_webmaster.html" style="font-size:20px;"><i class="fa-solid fa-circle-arrow-left" style="text-shadow:0 0 10px rgba(243, 247, 118, 0.2)"></i> go back </a>
+       <a href="../about.html" style="font-size:20px;"><i class="fa-solid fa-circle-arrow-left" style="text-shadow:0 0 10px rgba(243, 247, 118, 0.2);margin:20px 0 20px 0;"></i> go back </a>
       </div>
       <!-- END CONTENT -->
      </main>
@@ -639,5 +681,26 @@
 
    </div>
   </div>
+  <script>
+	// Get the button
+	let mybutton = document.getElementById("to_top");
+	
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+	
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	  } else {
+		mybutton.style.display = "none";
+	  }
+	}
+	
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+	</script>
  </body>
 </html>

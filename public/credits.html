@@ -1,96 +1,166 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>credits</title>
-  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <style>
-  h2 {
-   text-align:center;
-  }
-  </style>
-  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
- </head>
- <!-- Page template: https://repth.neocities.org/theme -->
- <body>
-  <div id="container">
-   <div id="box">
-    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><div style="display:inline;position:absolute;top:30px;">&nbsp;midnight solarium</div></h1></div>
-    <div id="contentboxes">
-     <div id="side" style="max-width:300px;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; credits &#10028;</title>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
 
       <!-- Font Changer -->
-	<div class="selectdiv" style="padding-bottom:10px;">
-   <select id="input" class="input" onchange="changingFontStyle (this);">
-      <option value="Roboto Mono" selected="selected">Roboto Mono</option>
-      <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-   </select>
-   </div>
-   <script>
-      var changingFontStyle = function (fontstyle) {
-         document.getElementById("box").style.fontFamily = fontstyle.value;
-      }
-   </script>
-      <!--  NAV BOX -->
-	  	  <div class="sidebox">
-       <div class="subheader"><h3>navigate</h3></div>
-      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+      </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+
+      <div class="sidebox" style="margin-top:0;">
+        <h2 class="subheader">navigate</h2>
+        <nav class="sidecontent">
+          <script src="nav.js"></script>
+        </nav>
       </div>
 
-	  <div class="sidebox">
-       <div class="subheader"><h3>external links</h3></div>
-      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="height:130px;width:100%;border:none;overflow:hidden;"></iframe>
+      <div class="sidebox">
+        <h2 class="subheader">external links</h2>
+        <nav class="sidecontent">
+          <script src="nav_ext.js"></script>
+        </nav>
       </div>
-      <!-- END NAV BOX -->
-     </div>
-     <main>
-      <div class="mainboxes">
-       <div class="subheader">
-        <h3>credits</h3>
-       </div>
-       <div class="mainboxescontent">
-        <!-- RESOURCE BOX -->
-        <p>here are the resources i used while building this website. maybe they'll be useful for you as well?</p>
-        <hr />
-		<figure style="float:left;margin-right:20px;">
-         <img class="body_img" src="img/repth12.png" title="the template used for this site" alt="the template used for this site">
-         <figcaption style="max-width:369px;">repth's layout #12</figcaption>
-        </figure>
-        <h2>Layout</h2>
-        <p><a href="https://repth.neocities.org/theme">repth.neocities.org/theme<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - i used Theme 12 as a template</p>
-        <p><a href="https://github.com/botoxparty/XP.css/tree/main">XP.css<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - a recreation of the Windows XP GUI</p>
-        <p><a href="https://doqmeat.com/notebook/F2U/codes#notebook">doqmeat's notebook template<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - my notebook page is a heavily edited version of this</p>
-        <h2>Fonts</strong></h2>
-        <p><a href="https://www.cufonfonts.com/font/thegoodmonolith">TheGoodMonolith<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - the font used in the headers</p>
-        <p><a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - pretty much everything else</p>
-		<p><a href="https://opendyslexic.org/">OpenDyslexic<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - dyslexia-friendly alt font</p>
-        <h2>Icons</strong></h2>
-        <p><a href="https://fontawesome.com/">Font Awesome<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - has lots of icons (some free, some paid) such as the ones in the nav bar</p>
-        <h2>Status Feed</h2>
-        <p><a href="https://bechnokid.neocities.org/resources/tut_statuscafefeed">Bechno Kid<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - as seen on 'about webmaster' page; pretty much followed her tutorial to the letter 'cause i havent learned js (￢_￢;)</p>
-        <h2>Misc</strong></h2>
-        <p><a href="https://lunarlabs.itch.io/dither-machine">Dither Machine<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - name-your-own-price software that I use to make dithered gradients (like the one in the background)</p>
-        <p><a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - <a href="https://coryd.dev/">Cory Dransfeldt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>'s list of AI web crawlers. this is the base for my <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> file</p>
-        <h2>Text Editors</strong></h2>
-        <p><a href="https://notepad-plus-plus.org/">Notepad++<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - the text editor where I do the bulk of my frontend coding (that might have to change once I finally switch to Linux)</p>
-        <p><a href="https://codepen.io">CodePen<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - an online HTML/CSS/JavaScript IDE with a real-time preview; it's handy for experimenting and making small adjustments</p>
-       
-	   <hr />
-	   
-	   <p>if you wanna see even more resources &amp; cool links, head over to the <a href="links.html">links</a> page</p>
-	   </div>
       </div>
-      <!-- END CONTENT -->
-     </main>
+
+      <main>
+        <div class="mborder">
+
+          <div class="flexrow">
+            <div class="pic" style="width:324px;">
+                <h2 class="subheader">repth12.png</h2>
+                <figure><img src="img/repth12.png" title="the template used for this site" alt="the template used for this site" style="width:320px"></figure>
+                <figcaption style="width:320px;">repth's layout #12</figcaption>
+            </div>
+
+            <div style="flex:2">
+                <div class="mincontent">
+                    <h3>credits</h3>
+                    <section>
+                      <ul>
+                        <li>here are some the resources used while building this website. maybe they'll be useful for you as well?</li>
+                        <li>if you want even more resources, check out the <a href="links.html">links</a> page!</li>
+                      </ul>
+                    </section>
+                </div>
+            <div class="mainbox">
+              <h2 class="subheader">layout</h2>
+                <div class="maincontent" >
+                  <section>
+                    <p><a href="https://repth.neocities.org/theme">repth.neocities.org/theme<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - this site was built using repth's Theme 12 template. midnight solarium has recently been reworked from the ground up, but many of the design elements have remained consistent</p>
+                    <p><a href="https://github.com/botoxparty/XP.css/tree/main">XP.css<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - a recreation of the Windows XP GUI. the framework itself wasn't used to build this site, but the css for certain elements (e.g. buttons) were lifted directly from the repo</p>
+                    <p><a href="https://doqmeat.com/notebook/F2U/codes#notebook">doqmeat's notebook template<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - midnight solarium's notebook page is a heavily edited version of doqmeat's. if you can't see the resemblance, that's because</p>
+                  </section>
+                </div>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="flexrow">
+
+            <div class="mainbox" >
+                <h2 class="subheader">fonts</h2>
+                  <div class="maincontent" >
+                    <section>
+                      <p><a href="https://www.cufonfonts.com/font/thegoodmonolith">TheGoodMonolith<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - the font used in the headers</p>
+                      <p><a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - pretty much everything else</p>
+                      <p><a href="https://opendyslexic.org/">OpenDyslexic<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - dyslexia-friendly alt font</p>
+                    </section>
+                  </div>
+            </div>
+
+            <div class="mainbox" style="flex:2">
+              <h2 class="subheader">icons</h2>
+                <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                  <section>
+                    <p><a href="https://fontawesome.com/">Font Awesome<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - has lots of icons (some free, some paid) such as the ones in the nav bar</p>
+                  </section>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="flexrow">
+
+            <div class="mainbox" style="flex:1">
+                <h2 class="subheader">status feed</h2>
+                  <div class="maincontent" >
+                    <section>
+                        <p><a href="https://status.cafe/">status.cafe<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - a neat site for posting statuses</p>
+                        <p><a href="https://bechnokid.neocities.org/resources/tut_statuscafefeed">Bechno Kid<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - followed her tutorial for displaying multiple statuses at once</p>
+                    </section>
+                  </div>
+            </div>
+
+            <div class="mainbox" style="flex:1">
+              <h2 class="subheader">misc</h2>
+                <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                  <section>
+                    <p><a href="https://lunarlabs.itch.io/dither-machine">Dither Machine<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - name-your-own-price software that I use to make dithered gradients (like the one in the background)</p>
+                    <p><a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - <a href="https://coryd.dev/">Cory Dransfeldt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>'s list of AI web crawlers. usec as the base for midnight solarium's <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> file</p>
+                  </section>
+
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
     </div>
-    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
-   </div>
   </div>
- </body>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
 </html>

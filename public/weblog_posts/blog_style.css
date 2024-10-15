@@ -3,7 +3,7 @@
     margin-top: 20px;
    }
 #box {
-    color: #000;
+    color: #fdf5e6;
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: unset;
@@ -39,15 +39,16 @@
     }
 }
 .blogdetail {
-    font-size: 80%;
+    font-size: 12px;
     position: relative; 
-	top: -0.8em; 
    }
-#contentboxes{
-    font-size:16.5px;
+#container{
+    font-size:14px;
     line-height:1.55;
 	background-color: rgb(13, 36, 38);
 	z-index:-1;
+    margin-left: auto;
+    margin-right: auto;
    }
 #gridbg{
 	background-image: url("blog_img/transparent-grid-overlay.png");
@@ -58,14 +59,18 @@
 main {
     flex: 100%;
     padding: 30px 50px 30px 50px;
+    border:0;
    }
 h2 {
-    font-size: 32px;
-    font-family: "TheGoodMonolith";
-	line-height:1.2;
+    color: rgb(67, 235, 198);
+        text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
+        font-weight: 700;
+        font-family:'TheGoodMonolith';
+        font-size: 24px;
+	padding:10px 0 10px 0;
    }
 h3 {
-    font-size: 22px;
+    font-size: 18px;
     color: #c4e57e;
     text-shadow: 0 0 10px rgba(243, 247, 118, 0.4);
    }
@@ -77,3 +82,20 @@ i, em {
     color: #a4e0e8;
     text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
    }
+a {
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+    color: #e9e752;
+}
+a:hover {
+    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+}
+a:active {
+    color:rgb(241, 160, 38)
+}
+a:focus {
+    border-bottom:1px dotted #e9e752;
+}
+p, ul, h3 {
+    margin-bottom:10px;
+}

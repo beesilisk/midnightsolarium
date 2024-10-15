@@ -1,0 +1,136 @@
+<html lang="en"></html>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>backups</title>
+  <link rel="icon" type="image/x-icon" href="../img/flowcan2.png">
+  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+  <link rel="stylesheet" type="text/css" href="blog_style.css" />
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+ </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+ <body>
+   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div id="container">
+   <div id="box">
+    <div id="contentboxes">
+	<div id="gridbg">
+     <main>
+      <!-- WEBLOG BOX -->
+      <div>
+       <h2>my quick & dirty DIY backup automation</h2>
+       <p class="blogdetail"><time datetime="2024-09-28">sep 28, 2024</time><span> &#x2022; word count: 1180</span></p>
+
+
+       <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
+       <div class="selectdiv" style="display:inline;padding-bottom:10px;width:200px;">
+         <select title="font changer" onchange="changingFontStyle (this);">
+            <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+            <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+         </select>
+         </div>
+         <script>
+            var changingFontStyle = function (fontstyle) {
+               document.getElementById("box").style.fontFamily = fontstyle.value;
+            }
+         </script>
+         
+       <hr style="margin-top:15px;"/>
+	   <article>
+        <p>While I was putting together my <a href="https://midnightsolarium.neocities.org/study">notes</a> on backups, I thought it might be interesting to share my own method for backing up my personal data.  Unfortunately I am <strong>very tired</strong> so my explanation is gonna come off as somewhat delirious due to my recent lack of consistent sleep, but whatever. </p>
+        <p>This is meant to be more of an aside to my notes. You don’t need to read my notes on backups before reading this, but I would recommend it to anyone looking for something more informational.</p>
+        <h3>please for the love of god do not use this as a how-to guide</h3>
+        <p>I wanna say upfront that <em>I’m not recommending that you back up your files the way I do</em>. My setup is tailored to my specific needs, my love for writing ugly scripts, and my childish avoidance of cloud services and unfamiliar software.</p>
+        <p>If you’re uninterested and/or inexperienced with when it comes to command line scripting, a <strong>free cloud service</strong> will probably be your best option. Sadly I can’t give any recommendations, since I only know my own bullshit process. If you use Windows and have an external drive, you’ll probably wanna use <strong>Windows Backup</strong>. If you use macOS or Linux, you probably know more about it than me sorry.</p>
+        <h3>fuck wait a second i have multiple operating systems</h3>
+        <p>I have 2 daily drive computers because I’m a greedy bastard. First there’s my laptop, which which I recently upgraded from Manjaro to <strong>EndeavourOS</strong> (excellent choice, would recommend). And then there’s my desktop which runs on <strong>Windows 11</strong>. In order to automate both their backups, I need to write both a batch file and a shell script that’ll perform the same task.</p>
+        <p>Or something close to the same task. More or less. I’m a lot more comfortable working with Windows, so I didn’t bother making a 1:1 recreation. Both scripts do what they need to and that’s good enough for me </p>
+        <h3>avoiding microsoft's cloud sevice by using windows tools</h3>
+        <p>Microsoft wants to you use OneDrive. They want you so bad. Their desperation is almost pitiful enough to make you consider humouring them. But of course, if you start using OneDrive and fill up your 5GB of cloud storage space, you’ll get popups begging you to buy a paid subscription every time you boot up your PC. As is expected.</p>
+        <p>Luckily I had an old external drive kicking around, which is all you need to give OneDrive the middle finger. Mine is a bit old, so it’s kinda noisy and operates on USB 2.0 speed, but it works and has plenty of space. Definitely worth the <span class="tooltip">price I paid</span><span class="tooltiptext">which wasn’t much; I love second-hand hardware</span> for it.</p>
+        <p>If I were a smart person, I would have just used Windows Backup. Hell, that’s literally what I suggested ~248 words ago. I did not do this. Because I am not a smart person. So I wrote a <strong>batch file</strong>.</p>
+        <p>I don’t bother backing up my entire operating system and all my programs and settings, but I like to keep a copy of a few folders. So my batch file looks something like:</p>
+        <div class="code">
+        <code>
+@ECHO OFF<br />
+ECHO Backup completed!<br />
+xcopy /f /s /h /d /y C:\Users\beesilisk\Desktop\* Y:\<br />
+xcopy /f /s /h /d /y C:\Users\beesilisk\Documents\* Y:\<br />
+xcopy /f /s /h /d /y C:\Users\beesilisk\Pictures\* Y:\<br />
+xcopy /f /s /h /d /y C:\Users\beesilisk\Music\* Y:\<br />
+PAUSE<br />
+</code>
+</div>
+        <p>Simple, right? Maybe a bit too simple. The folders are incrementally backed up to my <span class="tooltip">external drive</span><span class="tooltiptext">aka my Y: drive</span>, but I would still need to manually run the executable. I could write a Powershell script to further automate the process, but I’m on a self-imposed mission to get this done with the simplest script possible. It’s probably some sort of ego thing at this point.</p>
+        <div class="pic" style="width:324px;float:left;margin-right:10px;">
+         <h2 class="subheader">taskschd.msc</h2>
+         <figure><img src="blog_img/tsched.png" title="the template used for this site" alt="the template used for this site" style="width:320px"></figure>
+         <figcaption style="width:320px;">open image in new tab if ur nozy abt my desktop</figcaption>
+     </div>
+        <p>Therefore: <strong>Task Scheduler</strong>! Not only does this simplify my script, but I can change the timing and frequency of the backups without having to create an entirely new executable. Currently I have it set to back up at the end of every week, but I can change that whenever the need arises<span class="tooltip">.</span><span class="tooltiptext">I would schedule my backups more frequently if I were worried about losing the files for this website, but I’m already using Github as a glorified code backup service. Apparently my hesitance toward the cloud can be overcome as long as it’s given a FOSS coat of paint</span></p>
+        <p>I’ll admit, making a script that’s this bare-bones does limit the amount of control I have over the process. But for the purposes of backing up my personal files, I don’t see any need to layer on complexity. I never said my method would be polished; only that it gets the job done.</p>
+        <h3>okay but what about linux?</h3>
+        <p>I’m a lot less knowledgeable when it comes to Linux, so I have even less to say about my backup process. I basically just followed <a href="https://www.squash.io/creating-incremental-backups-with-bash-scripts-in-linux/">this guide<img src="blog_img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> (CW: ugly AI image) on backing up directories and scheduling it using chrontab. </p>
+        <p>I’m not gonna go into detail here like I did for my Windows backup because I’d basically just be plagiarizing the article followed, but for posterity’s sake I’ll say my <em>shell script</em> looks something like this:</p>
+        <div class="code">
+        <code>
+#!/bin/bash<br />
+source_dir="/home/Documents"<br />
+backup_dir="/media/beesilisk/USB_Drive"<br />
+timestamp=$(date +"%Y%m%d%H%M%S")<br />
+new_backup_dir="$backup_dir/$timestamp"<br />
+mkdir -p "$new_backup_dir"<br />
+rsync -a --link-dest="$backup_dir/latest" "$source_dir/" "$new_backup_dir"<br />
+ln -sfn "$new_backup_dir" "$backup_dir/latest"<br />
+</code>
+</div>
+        <p>And the crontab:</p>
+        <div class="code">
+        <code>
+         1 5 * * * /path/to/backup_script.sh<br />
+</code>
+</div>
+        <p>It’s worth noting that my laptop’s backup system is, uh, <em>worse</em> than my desktop backups. I don’t like keeping my backups on internal drives, but I don’t want a clunky external drive hooked up to my laptop. Therefore I demonstrate my ability to compromise by keeping a thumb drive stuck to my laptop when I’m at home. This system works well enough for now, but maybe someday I’ll slap together a cheap NAS or something??? idk don’t hold me to that<span class="tooltip">.</span><span class="tooltiptext">anyway if you decide to do something similar to me but for a dual boot Windows + Linux system, don’t make the same dumb mistake I once did by letting rsync auto encrypt a partition you’re sharing with Windows. That probably sounds obvious but uhhhh im a dumbass who shouldnt play sysadmin after bedtime</span></p>
+        <h3>why should anyone care?</h3>
+        <p>You shouldn't care. Not about my own backup system. But you should care about your own! I know so many people who don’t back up their data because they always forget, or they assume they don’t have anything important enough to keep, or they’re worried about not knowing the “correct” way to do it. But <strong>there is no correct way to create backups!</strong> I am literally just fucking around with me backup system and it hasn’t failed me yet. Do whatever the hell you want as long as it works.</p>
+        <hr />
+        <p><strong>Also</strong>: While I was writing this, <em>one of my drive partitions got corrupted</em> (entirely my own fault; serves me right for fucking around) and nearly lost a bunch of files – including this weblog post and everything else in this most recent site update. I managed to recover everything because I made a backup beforehand. My life has turned into a PSA.</p>
+       </article>
+	   	   <hr />
+       <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);padding-bottom:30px;"></i> go back </a>
+      </div>
+      <!-- END CONTENT -->
+     </main>
+	 </div>
+    </div>
+   </div>
+   <script>
+      // Get the button
+      let mybutton = document.getElementById("to_top");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+ </body>
+</html>

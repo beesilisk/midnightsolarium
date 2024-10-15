@@ -1,206 +1,247 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>midnight solarium</title>
-  <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <style>
-   #craftbox {
-    position: relative;
-    z-index: 1;
-   }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; craft catalog &#10028;</title>
+    <style>
+        .tab {
+         margin: 10px 50px 10px 50px;
+        }
+     
+        .tab input {
+         position: absolute;
+         z-index: -1;
+        }
+     
+        .tab_content {
+         max-height: 0;
+         overflow: hidden;
+        }
+     
+        .tab input:checked~.tab_content {
+         max-height: 1200px;
+        }
+     
+        .tab_label,
+        .tab_close {
+         display: flex;
+         font-family: "TheGoodMonolith";
+         font-weight: 700;
+         font-size: 18px;
+         color: #180c0e;
+         background-image: linear-gradient(to top,rgb(85, 151, 155), rgb(72, 138, 141));
+         
+         cursor: pointer;
+        }
+     
+        .tab_label {
+         justify-content: space-between;
+         border-radius: 4px;
+         padding: 10px 20px 10px 20px;
+         border:2px solid rgba(255, 255, 0, 0);
+        }
+     
+        .tab_label:hover {
+         border-top:2px solid rgba(255, 153, 0, 0.8);
+         background-image: linear-gradient(to top,rgb(68, 122, 124), rgb(58, 110, 112));
+        }
+        .tab input:checked~.tab_label {
+         color: white;
+         background-image: linear-gradient(to top,rgb(54, 97, 99), rgb(42, 81, 82));
+         border-radius: 8px 8px 0 0;
+         border-top:2px solid rgba(255, 208, 0, 0.8);
+        }
+     
+        .tab input:checked~.tab_label {
+         border-radius: 4px 4px 0 0;
+        }
+     
+        .tab_label::after {
+         content: "\2B";
+         width: 10px;
+         height: 10px;
+         text-align: center;
+        }
+     
+        .tab input:checked+.tab_label::after {
+         content: "\2193";
+        }
+     
+        .tab_content:hover,
+        .tab input:checked~.tab_content {
+         border-left: 1px dashed rgba(255, 208, 0, 0.8);
+         border-bottom: 1px dashed rgba(255, 208, 0, 0.8);
+         border-right: 1px dashed rgba(255, 208, 0, 0.8);
+         padding: 10px 20px 10px 20px;
+         overflow: hidden;
+         background-color: rgba(25, 106, 116, 0.6);
+         background-image:url("img/black-linen.png");
+         font-size: 14px;
+        }
+        .tab_content p {
+          margin-bottom:4px;
+        }
+        .tab_content a {
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+    color: #e9e752;
+}
+.tab_content a:hover {
+    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+}
+.tab_content a:active {
+    color:rgb(241, 160, 38)
+}
+.tab_content a:focus {
+    border-bottom:1px dotted #e9e752;
+}
+     
+        .tab_content input:before {
+         padding: 0;
+        }
+        .pic {
+            float:left;
+            margin-right: 30px;
+        }
+        @media only screen and (max-width: 700px) {
+          .tab {
+         margin: 10px 0 10px 0;
+        }
+        }
+       </style>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
 
-   #craftbox::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("img/william-morris-violet.png");
-    background-repeat: repeat;
-    background-size: 600px;
-	border-radius: 7px 7px 0 0;
-    opacity: 0.8;
-    z-index: -1;
-   }
-
-   .tab {
-    margin: 10px 30px 10px 30px;
-   }
-
-   .tab input {
-    position: absolute;
-    z-index: -1;
-   }
-
-   .tab_content {
-    max-height: 0;
-    overflow: hidden;
-   }
-
-   .tab input:checked~.tab_content {
-    max-height: 1200px;
-   }
-
-   .tab_label,
-   .tab_close {
-    display: flex;
-    font-family: "TheGoodMonolith";
-    font-weight: 700;
-    font-size: 18px;
-    color: #180c0e;
-    background: #f9aa03;
-    cursor: pointer;
-   }
-
-   .tab_label {
-    justify-content: space-between;
-    border-radius: 8px;
-    padding: 10px 20px 10px 20px;
-   }
-
-   .tab_label:hover,
-   .tab input:checked~.tab_label {
-    color: #f9aa03;
-    background-color: #180c0e;
-   }
-
-   .tab input:checked~.tab_label {
-    border-radius: 8px 8px 0 0;
-   }
-
-   .tab_label::after {
-    content: "\2B";
-    width: 10px;
-    height: 10px;
-    text-align: center;
-   }
-
-   .tab input:checked+.tab_label::after {
-    content: "\2193";
-   }
-
-   .tab_content:hover,
-   .tab input:checked~.tab_content {
-    border-left: 1px dashed #ff91a4;
-    border-bottom: 1px dashed #ff91a4;
-    border-right: 1px dashed #ff91a4;
-    padding: 0 20px 0 20px;
-    overflow: hidden;
-    background-color: rgba(13, 36, 38, 0.7);
-    backdrop-filter: blur(3px);
-   }
-
-   .tab_content input:before {
-    padding: 0;
-   }
-  </style>
-  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
- </head>
- <!-- Page template: https://repth.neocities.org/theme -->
- <body>
-  <div id="container">
-   <div id="box">
-    <div id="header"><h1><img src="img/flowcan2.png" title="a white flower" alt="a white flower" /><div style="display:inline;position:absolute;top:30px;">&nbsp;midnight solarium</div></h1></div>
-    <div id="contentboxes">
-     <div id="side" style="max-width:300px;">
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
 
       <!-- Font Changer -->
-            <div class="selectdiv" style="padding-bottom:10px;">
-              <select id="input" class="input" onchange="changingFontStyle (this);">
-                <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-                <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-              </select>
-            </div>
-   <script>
-      var changingFontStyle = function (fontstyle) {
-         document.getElementById("box").style.fontFamily = fontstyle.value;
-      }
-   </script>
-      <!--  NAV BOX -->
-	  	  <div class="sidebox">
-       <div class="subheader"><h3>navigate</h3></div>
-      <iframe class="navframe"src="testframe.html" scrolling="yes" style="height:200px;width:100%;border:none;overflow:hidden;" frameborder="0" ></iframe>
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+      </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+
+      <div class="sidebox" style="margin-top:0;">
+        <h2 class="subheader">navigate</h2>
+        <nav class="sidecontent">
+          <script src="nav.js"></script>
+        </nav>
       </div>
 
-	  <div class="sidebox">
-       <div class="subheader"><h3>external links</h3></div>
-      <iframe class="navframe"src="xlinkframe.html" scrolling="yes" frameborder="0" style="height:130px;width:100%;border:none;overflow:hidden;"></iframe>
+      <div class="sidebox">
+        <h2 class="subheader">external links</h2>
+        <nav class="sidecontent">
+          <script src="nav_ext.js"></script>
+        </nav>
       </div>
-      <!-- END NAV BOX -->
-     </div>
-     <main>
-      <div class="mainboxes" id="craftbox">
-       <div class="subheader">
-        <h3>craft catalog</h3>
-       </div>
-       <div class="mainboxescontent">
-        <!-- PROJECTS GO HERE -->
-        <section>
-		 <div class="tab">
-          <input type="radio" name="accordion-2" id="rd1" checked="checked">
-          <label for="rd1" class="tab_label">08.24 - aster's camping scarf </label>
-          <div class="tab_content">
-           <figure style="float:left;margin:20px 20px 10px 0;">
-            <img class="body_img" style="max-width:250px;min-width:0" src="craft_img/dogscarrf.png" title="a dog outside wearing a collar, leash, and fuzzy blue scarf" alt="a dog outside wearing a collar, leash, and fuzzy blue scarf">
-           </figure>
-           <ul>
-            <li><b>craft:</b> knitting</li>
-            <li><b>pattern/reference:</b> n/a</li>
-            <li><b>yarn:</b> Loops &amp; Threads Chenille Home Slim (super bulky acrylic)</li>
-           </ul>
-           <hr />
-           <p>i made this for my sisters dog during the brief time it rained during a camping trip. not to brag but <i>she loved it!</i> and i got rid of some of this chenille yarn thats been haunting my stash, so ultimately the rain was a win for both of us</p>
-		   <p>i cant give an accurate description of how i made it, but it went something like this:</p>
-		   <ol>
-		    <li><b>1.</b> CO 44 sts on US 10 / 6mm needles (or adjust size as needed). join in round</li>
-			<li><b>2.</b> 2x2 rib for a while. measure with your heart</li>
-			<li><b>3.</b> BO 22 sts</li>
-			<li><b>4.</b> from this point on, repeat:
-			 <ol>
-			  <li><i>i.</i> k1, k2tog, k to last 3 sts, ssk, k1</li>
-			  <li><i>ii.</i> knit across</li>
-			 </ol>
-			</li>
-			<li><b>5.</b> BO once there arent enough sts left to repeat</li>
-			<li><b>6.</b> give to dog. wait for rain to end</li>
-		   </ol>
-          </div>
-         </div>
-         <div class="tab">
-          <input type="radio" name="accordion-2" id="rd2">
-          <label for="rd2" class="tab_label">07.24 - dithered toque &amp; mittens </label>
-          <div class="tab_content">
-           <figure style="float:left;margin:20px 20px 10px 0;">
-            <img class="body_img" style="max-width:400px;min-width:0%" src="craft_img/ditherknits.jpg" title="a knit hat and mittens with a 2-toned light blue and dark blue gradient" alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient">
-           </figure>
-           <ul>
-            <li><b>craft:</b> knitting</li>
-            <li><b>pattern/reference:</b><a href="https://www.ravelry.com/patterns/library/quick-ombre-hat">Quick Ombré Hat</a> (free on Ravelry)</li>
-            <li><b>yarn:</b> Phentex Merit (worsted acrylic)</li>
-           </ul>
-           <hr />
-           <p>a quick out-of-season project to get back into knitting after a short break</p>
-           <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. the colour ratios arent the same but whatever its fine</p>
-           <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
-           <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
-          </div>
-         </div>
-        </section>
-       </div>
       </div>
-      <!-- END CONTENT -->
-     </main>
+
+      <main>
+        <div class="mborder">
+                 <!-- PROJECTS GO HERE -->
+                 <section>
+                  <div class="tab">
+                   <input type="radio" name="accordion-2" id="rd1" checked="checked">
+                   <label for="rd1" class="tab_label">08.24 - aster's camping scarf </label>
+                   <div class="tab_content">
+                    <div class="pic" style="width:234px;float:left;">
+                        <h2 class="subheader">dogscarrf.png</h2>
+                        <figure><img src="craft_img/dogscarrf.png" title="a dog outside wearing a collar, leash, and fuzzy blue scarf" alt="a dog outside wearing a collar, leash, and fuzzy blue scarf" style="width:230px"></figure>
+                    </div>
+                    <ul>
+                     <li><strong>craft:</strong> knitting</li>
+                     <li><strong>pattern/reference:</strong> n/a</li>
+                     <li><strong>yarn:</strong> Loops &amp; Threads Chenille Home Slim (super bulky acrylic)</li>
+                    </ul>
+                    <hr />
+                    <p>i made this for my sisters dog during the brief time it rained during a camping trip. not to brag but <em>she loved it!</em> and i got rid of some of this chenille yarn thats been haunting my stash, so ultimately the rain was a win for both of us</p>
+                    <p>i cant give an accurate description of how i made it, but it went something like this:</p>
+                    <ol>
+                     <li><strong>1.</strong> CO 44 sts on US 10 / 6mm needles (or adjust size as needed). join in round</li>
+                     <li><strong>2.</strong> 2x2 rib for a while. measure with your heart</li>
+                     <li><strong>3.</strong> BO 22 sts</li>
+                     <li><strong>4.</strong> from this point on, repeat:
+                      <ol>
+                       <li><em>i.</em> k1, k2tog, k to last 3 sts, ssk, k1</li>
+                       <li><em>ii.</em> knit across</li>
+                      </ol>
+                     </li>
+                     <li><strong>5.</strong> BO once there arent enough sts left to repeat</li>
+                     <li><strong>6.</strong> give to dog. wait for rain to end</li>
+                    </ol>
+                   </div>
+                  </div>
+                  <div class="tab">
+                   <input type="radio" name="accordion-2" id="rd2">
+                   <label for="rd2" class="tab_label">07.24 - dithered toque &amp; mittens </label>
+                   <div class="tab_content">
+                    <div class="pic" style="width:324px;float:left;">
+                        <h2 class="subheader">ditherknit.png</h2>
+                        <figure><img src="craft_img/ditherknits.jpg" title="a knit hat and mittens with a 2-toned light blue and dark blue gradient" alt="a knit hat and mittens with a 2-toned light blue and dark blue gradient" style="width:320px"></figure>
+                    </div>
+                    <ul>
+                     <li><strong>craft:</strong> knitting</li>
+                     <li><strong>pattern/reference:</strong><a href="https://www.ravelry.com/patterns/library/quick-ombre-hat"> Quick Ombré Hat</a> (free on Ravelry)</li>
+                     <li><strong>yarn:</strong> Phentex Merit (worsted acrylic)</li>
+                    </ul>
+                    <hr />
+                    <p>a quick out-of-season project to get back into knitting after a short break</p>
+                    <p>the pattern i used is only for the hat but it was simple enough to transplant onto mittens. the colour ratios arent the same but whatever its fine</p>
+                    <p>i also got lazy at the increases and made the thumb gusset a bit eyelet-y. i will not be fixing it</p>
+                    <p>i know the stranded colorwork is nothing special, but i have a soft spot for ordered dithering. these remind me of the colors of the sky in some half-remembered childhood SNES game</p>
+                   </div>
+                  </div>
+                 </section>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
     </div>
-    <div id="footer"><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></div>
-   </div>
   </div>
- </body>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
 </html>
