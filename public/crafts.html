@@ -11,69 +11,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; craft catalog &#10028;</title>
     <style>
-        .tab {
-         margin: 10px 50px 10px 50px;
-        }
-     
-        .tab input {
-         position: absolute;
-         z-index: -1;
-        }
-     
-        .tab_content {
-         max-height: 0;
-         overflow: hidden;
-        }
-     
-        .tab input:checked~.tab_content {
-         max-height: 1200px;
-        }
-     
-        .tab_label,
-        .tab_close {
-         display: flex;
-         font-family: "TheGoodMonolith";
-         font-weight: 700;
-         font-size: 18px;
-         color: #180c0e;
-         background-image: linear-gradient(to top,rgb(85, 151, 155), rgb(72, 138, 141));
-         
-         cursor: pointer;
-        }
-     
-        .tab_label {
-         justify-content: space-between;
-         border-radius: 4px;
-         padding: 10px 20px 10px 20px;
-         border:2px solid rgba(255, 255, 0, 0);
-        }
-     
-        .tab_label:hover {
-         border-top:2px solid rgba(255, 153, 0, 0.8);
-         background-image: linear-gradient(to top,rgb(68, 122, 124), rgb(58, 110, 112));
-        }
-        .tab input:checked~.tab_label {
-         color: white;
-         background-image: linear-gradient(to top,rgb(54, 97, 99), rgb(42, 81, 82));
-         border-radius: 8px 8px 0 0;
-         border-top:2px solid rgba(255, 208, 0, 0.8);
-        }
-     
-        .tab input:checked~.tab_label {
-         border-radius: 4px 4px 0 0;
-        }
-     
-        .tab_label::after {
-         content: "\2B";
-         width: 10px;
-         height: 10px;
-         text-align: center;
-        }
-     
-        .tab input:checked+.tab_label::after {
-         content: "\2193";
-        }
-     
         .tab_content:hover,
         .tab input:checked~.tab_content {
          border-left: 1px dashed rgba(255, 208, 0, 0.8);
@@ -85,27 +22,7 @@
          background-image:url("img/black-linen.png");
          font-size: 14px;
         }
-        .tab_content p {
-          margin-bottom:4px;
-        }
-        .tab_content a {
-    text-decoration: none;
-    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-    color: #e9e752;
-}
-.tab_content a:hover {
-    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
-}
-.tab_content a:active {
-    color:rgb(241, 160, 38)
-}
-.tab_content a:focus {
-    border-bottom:1px dotted #e9e752;
-}
-     
-        .tab_content input:before {
-         padding: 0;
-        }
+
         .pic {
             float:left;
             margin-right: 30px;
@@ -162,9 +79,36 @@
         <div class="mborder">
                  <!-- PROJECTS GO HERE -->
                  <section>
+
                   <div class="tab">
-                   <input type="radio" name="accordion-2" id="rd1" checked="checked">
-                   <label for="rd1" class="tab_label">08.24 - aster's camping scarf </label>
+                    <input type="radio" name="accordion" id="rd1" checked="checked">
+                    <label for="rd1" class="tab_label">10.31 - autumn mittens</label>
+                    <div class="tab_content">
+                     <div class="pic" style="width:234px;float:left;">
+                         <h2 class="subheader">orangemitts.jpg</h2>
+                         <figure><img src="craft_img/orangemitts.jpg" title="a dog outside wearing a collar, leash, and fuzzy blue scarf" alt="a dog outside wearing a collar, leash, and fuzzy blue scarf" style="width:230px"></figure>
+                     </div>
+                     <ul>
+                      <li><strong>craft:</strong> knitting</li>
+                      <li><strong>pattern/reference:</strong><a href="https://www.garnstudio.com/pattern.php?id=7302&cid=17"> Miss Fox</a> (free on DROPS Design)</li>
+                      <li><strong>yarn:</strong> DROPS Alpaca (sport weight alpaca wool)</li>
+                     </ul>
+                     <hr />
+                     <p>i don't wanna be too hard on myself, but for the sake of transparency i must admit that these arent up to my usual standard. i must have messed up the math <em>somewhere</em>, but i'm not sure where. i tried my best to correct it, but they still came out pretty mismatched</p>
+                     <p>i also kept making small annoying mistakes that forced me to frog it repeatedly. overall i did not find making these to be a fun experience</p>
+                     <p>on the bright side, this pattern did teach me a new method for avoiding gaps on the gusset increases, which I'll include here for reference:</p>
+                     <ol>
+                      <li><strong>Row 1: </strong> increase via <em>yo</em> on each side of thumb</li>
+                      <li><strong>Row 2: </strong> as you knit around, <em>twist</em> yo st before knitting it</li> 
+                     </ol>
+                     <p>i've already started knitting a new pair of mittens. hopefully i will redeem myself</p>
+
+                    </div>
+                   </div>
+
+                  <div class="tab">
+                   <input type="radio" name="accordion" id="rd2"">
+                   <label for="rd2" class="tab_label">08.24 - aster's camping scarf</label>
                    <div class="tab_content">
                     <div class="pic" style="width:234px;float:left;">
                         <h2 class="subheader">dogscarrf.png</h2>
@@ -193,9 +137,10 @@
                     </ol>
                    </div>
                   </div>
+
                   <div class="tab">
-                   <input type="radio" name="accordion-2" id="rd2">
-                   <label for="rd2" class="tab_label">07.24 - dithered toque &amp; mittens </label>
+                   <input type="radio" name="accordion" id="rd3">
+                   <label for="rd3" class="tab_label">07.24 - dithered toque &amp; mittens</label>
                    <div class="tab_content">
                     <div class="pic" style="width:324px;float:left;">
                         <h2 class="subheader">ditherknit.png</h2>

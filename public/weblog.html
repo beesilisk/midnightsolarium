@@ -11,37 +11,38 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; weblog &#10028;</title>
     <style>
-        .mincontent {
-            padding:0;
-            margin:0 0 5px 0;
-        }
-.mincontent a {
-    text-decoration: none;
-    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-    color: #e9e752;
-}
-.mincontent a:hover {
-    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
-}
-.mincontent a:active {
-    color:rgb(241, 160, 38)
-}
-.mincontent a:focus {
-    border-bottom:1px dotted #e9e752;
-}
+    .mincontent {
+      padding:0;
+      margin:0 0 5px 0;
+    }
+    .mincontent a {
+      text-decoration: none;
+      text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+      color: #f0ee75;
+    }
+    .mincontent a:hover {
+      filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+    }
+    .mincontent a:active {
+      color:rgb(241, 160, 38)
+    }
+    .mincontent a:focus {
+      border-bottom:1px dotted #e9e752;
+    }
     .mincontent .blogdetail {
-    font-size: 12px;
-   }
-   .mincontent p {
-    margin-bottom:5px;
-   }
-   .new {
-        vertical-align: top;
-        font-size: 10px;
-        margin-left: 4px;
-        font-weight: 500;
-        color: rgb(231, 201, 103);
-      }
+      font-size: 12px;
+      margin-top:-6px;
+    }
+    .mincontent p {
+      margin-bottom:5px;
+    }
+    .new {
+      vertical-align: top;
+      font-size: 10px;
+      margin-left: 4px;
+      font-weight: 500;
+      color: rgb(231, 201, 103);
+    }
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
@@ -89,23 +90,30 @@
         <div class="mborder">
 
             <div class="mainbox" >
-                <h2 class="subheader">weblog</h2>
-                  <div class="maincontent" >
-                    <div class="mincontent">
-                        <h3><a href="weblog_posts/backups.html">my quick & dirty backup automation</a><sup class="new">NEW!</sup></h3>
-                        <section>
-                            <p class="blogdetail"><time datetime="2024-09-28">sep 28, 2024</time><span> &#x2022; word count: 1180</span></p>
-                            <p>microsoft onedrive doesn't want you to know about this one easy trick (task scheduler)</p>
-                      </section>
-                    </div>
-                    <div class="mincontent">
-                        <h3><a href="weblog_posts/why_did_i_make_this_blog.html">why did i make this blog</a></h3>
-                        <section>
-                          <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
-                          <p>i put a blog on my website and i have mixed feelings about it</p>
-                        </section>
-                      </div>
-                  </div>
+              <h2 class="subheader">weblog</h2>
+              <div class="maincontent" >
+                <div class="mincontent">
+                  <h3><a href="weblog_posts/cpinterest.html">i find old creepypastas fascinating</a><sup class="new">NEW!</sup></h3>
+                  <section>
+                    <p class="blogdetail"><time datetime="2024-10-31">oct 31, 2024</time><span> &#x2022; word count: 2535</span></p>
+                    <p>i decided to reread some old creepypastas. here are 6 of them.</p>
+                  </section>
+                </div>
+                <div class="mincontent">
+                  <h3><a href="weblog_posts/backups.html">my quick & dirty backup automation</a></h3>
+                  <section>
+                    <p class="blogdetail"><time datetime="2024-09-28">sep 28, 2024</time><span> &#x2022; word count: 1180</span></p>
+                    <p>microsoft onedrive doesn't want you to know about this one easy trick (task scheduler)</p>
+                  </section>
+                </div>
+                <div class="mincontent">
+                  <h3><a href="weblog_posts/why_did_i_make_this_blog.html">why did i make this blog</a></h3>
+                  <section>
+                    <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time><span> &#x2022; word count: 2618</span></p>
+                    <p>i put a blog on my website and i have mixed feelings about it</p>
+                  </section>
+                </div>
+              </div>
             </div>
 
         </div>
@@ -135,6 +143,6 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    </script>
+  </script>
 </body>
 </html>

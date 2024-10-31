@@ -65,8 +65,6 @@ html:before {
     pointer-events: none;
 }
 html {
-
-    image-rendering: pixelated;
     background-color: rgb(13, 44, 47);
     background-image: url("img/ditherfinny2.png");
     background-repeat: repeat-x;
@@ -256,9 +254,9 @@ main:last-of-type {
     text-shadow: 0 0 10px rgba(243, 247, 118, 0.6);
     margin-bottom:5px;
 }
-.maincontent p, .maincontent ul, .mincontent p, .mincontent ul, .mincontent li{
+.maincontent p, .maincontent ul, .maincontent details, .mincontent p, .mincontent ul, .mincontent li{
     font-size:14px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     line-height:1.4;
 }
 .maincontent li {
@@ -311,14 +309,20 @@ ul li{
 mark {
     background-color:rgba(197, 238, 47, 0.5);
 }
+details summary{
+    cursor: pointer;
+}
+details, details p, details ul, details h3 {
+    margin-left: 1rem;
+}
 .code {
     border: 2px solid rgba(168,215,101,0.8);border-radius:7px;
      box-shadow: 0 0px 10px rgba(200,224,166,0.4);
      background-color: rgba(4, 11, 12, 0.76);margin-left: auto;
      margin-right:auto;
      padding:10px;
-     margin-top:10px;
-     margin-bottom:10px;
+     margin-top:20px;
+     margin-bottom:20px;
      width:fit-content;
      backdrop-filter: blur(3px);
 }
@@ -375,7 +379,102 @@ mark {
 .mincontent b, .mincontent strong {
     color: rgb(131, 22, 49);
 }
+.tab {
+    margin: 10px 50px 10px 50px;
+   }
 
+   .tab input {
+    position: absolute;
+    z-index: -1;
+   }
+
+   .tab_content {
+    max-height: 0;
+    overflow: hidden;
+   }
+
+   .tab input:checked~.tab_content {
+    max-height: 1200px;
+   }
+
+   .tab_label,
+   .tab_close {
+    display: flex;
+    font-family: "TheGoodMonolith";
+    font-weight: 700;
+    font-size: 18px;
+    color: #ffffff;
+    background-image: linear-gradient(to top,rgb(85, 151, 155), rgb(72, 138, 141));
+    
+    cursor: pointer;
+   }
+
+   .tab_label {
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px;
+    border:2px solid rgba(255, 255, 0, 0);
+   }
+
+   .tab_label:hover {
+    border-top:2px solid rgba(255, 153, 0, 0.8);
+    background-image: linear-gradient(to top,rgb(68, 122, 124), rgb(58, 110, 112));
+   }
+   .tab input:checked~.tab_label {
+    color: white;
+    background-image: linear-gradient(to top,rgb(54, 97, 99), rgb(42, 81, 82));
+    border-radius: 8px 8px 0 0;
+    border-top:2px solid rgba(255, 208, 0, 0.8);
+   }
+
+   .tab input:checked~.tab_label {
+    border-radius: 4px 4px 0 0;
+   }
+
+   .tab_label::after {
+    content: "\2B";
+    width: 10px;
+    height: 10px;
+    text-align: center;
+   }
+
+   .tab input:checked+.tab_label::after {
+    content: "\2193";
+   }
+
+   .tab_content:hover,
+   .tab input:checked~.tab_content {
+    border-left: 1px dashed rgba(255, 208, 0, 0.8);
+    border-bottom: 1px dashed rgba(255, 208, 0, 0.8);
+    border-right: 1px dashed rgba(255, 208, 0, 0.8);
+    padding: 10px 20px 10px 20px;
+    overflow: hidden;
+    background-color: rgba(25, 106, 116, 0.6);
+    font-size: 14px;
+   }
+   .tab_content p, .tab_content ol {
+     font-size:14px;
+     margin-bottom:10px;
+     line-height:1.4;
+   }
+   .tab_content a {
+text-decoration: none;
+text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+color: #e9e752;
+}
+.tab_content a:hover {
+filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+}
+.tab_content a:active {
+color:rgb(241, 160, 38)
+}
+.tab_content a:focus {
+border-bottom:1px dotted #e9e752;
+}
+
+   .tab_content input:before {
+    padding: 0;
+   }
 .pic {
     border:2px ridge #f5e8ea;
     border-radius: 6px 6px 0 0;

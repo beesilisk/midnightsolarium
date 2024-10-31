@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
+    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>&#10028; recipes &#10028;</title>
+    <style>
+      .rectype {
+    color: #d1e967;
+    text-shadow: 0 0 10px rgba(243, 247, 118, 0.6);
+    margin-bottom:5px;
+}
+.recname {
+    color: #eed85b;
+    text-shadow: 0 0 10px rgba(247, 223, 118, 0.6);
+}
+.recipe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ingredients {
+    flex:2;
+    margin-top:4px;
+    margin-bottom:4px;
+}
+.ingredients aside {
+    font-size: 12px;
+    margin-left: 2.5rem;
+    margin-top:4px;
+}
+.instructions {
+    flex:3;
+    margin-right:6rem;
+    margin-left:2rem;
+}
+
+.maincontent li{
+    list-style-type: "- ";
+    margin-left:2.5rem;
+    margin-bottom:3px;;
+}
+@media only screen and (max-width: 700px) {
+    .recipe {
+    flex-direction: column;
+}
+}
+
+    </style>
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+
+    <div id="box">
+      <div class="grid">
+        
+        <div id="header"class="header" style="z-index:2;"><h1>
+          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+          &nbsp;midnight solarium</h1></div>
+        <div id="side">
+
+      <!-- Font Changer -->
+      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
+        <select title="font changer" onchange="changingFontStyle (this);">
+           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
+           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+        </select>
+      </div>
+        <script>
+           var changingFontStyle = function (fontstyle) {
+              document.getElementById("box").style.fontFamily = fontstyle.value;
+           }
+        </script>
+
+      <div class="sidebox" style="margin-top:0;">
+        <h2 class="subheader">navigate</h2>
+        <nav class="sidecontent">
+          <script src="nav.js"></script>
+        </nav>
+      </div>
+
+      <div class="sidebox">
+        <h2 class="subheader">external links</h2>
+        <nav class="sidecontent">
+          <script src="nav_ext.js"></script>
+        </nav>
+      </div>
+
+      </div>
+
+      <main>
+        <div class="mborder">
+
+          <div class="flexrow">
+            <div class="mainbox" style="flex:2">
+              <h2 class="subheader">recipes</h2>
+                <div class="maincontent">
+                  <p>this is a digital copy of my recipe collection. A nice warm laptop for me to sit on eat and than sleep on your face. If human is on laptop sit on the keyboard peer out window, chatter at birds, lure them to mouth, or look at dog hiiiiiisssss so dream about hunting birds stand in doorway, unwilling to chose whether to stay in or go out or plop down in the middle where everybody walks. Sit on human meow meow we are 3 small kittens sleeping most of our time, we are around 15 weeks old i think, i donâ€™t know i canâ€™t count or milk the cow throwup on your pillow.</p>
+
+                    <details><summary class="rectype">snacks & appetizers</summary>
+                      <details><summary class="recname">HERB MARINATED MOZZARELLA</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <ul>
+                              <li>1/2 cup olive oil</li>
+                              <li>1/2 red onion, finely diced</li>
+                              <li>1 tbsp chopped fresh basil</li>
+                              <li>2 tbsp chopped fresh chives</li>
+                              <li>1 tbsp chopped fresh thyme</li>
+                              <li>1 tbsp chopped fresh parsley</li>
+                              <li>salt & pepper</li>
+                              <aside>(if using dried herbs, reduce amounts to teaspoonfuls)</aside>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <p>Stir together herbs, oil and onion along with salt and pepper. Add cheese and stir to coat. Cover and let stand at room temperature 1-3 hours. Place on serving tray and serve with crackers or breads.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details><summary class="recname">PEACH SALSA</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <ul>
+                              <li>8 ripe peaches, coarsely chopped</li>
+                              <li>1 small red pepper, cut into 1/4" diced pieces</li>
+                              <li>2 green onions, chopped</li>
+                              <li>1/4 cup peach or apricot jam</li>
+                              <li>2 tbsp balsamic vinegar</li>
+                              <li>2 tbsp olive oil</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <p>In a large bowl, toss ingredients until combined. Cover and refrigerate until ready to serve up, or 2 days in fridge.</p>
+                          </div>
+                        </div>
+                      </details>
+                    </details>
+
+                    <details><summary class="rectype">food type</summary>
+                      <details><summary class="recname">recipe name</summary>
+                        <p>recipe desc</p>
+                      </details>
+                    </details>
+
+                    <details><summary class="rectype">food type</summary>
+                      <details><summary class="recname">recipe name</summary>
+                        <p>recipe desc</p>
+                      </details>
+                    </details>
+  
+                    <details><summary class="rectype">food type</summary>
+                      <details><summary class="recname">recipe name</summary>
+                        <p>recipe desc</p>
+                      </details>
+                    </details>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+      </main>
+        
+      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>
