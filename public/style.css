@@ -312,8 +312,9 @@ mark {
 details summary{
     cursor: pointer;
 }
-details, details p, details ul, details h3 {
+details details, details p, details ul, details h3 {
     margin-left: 1rem;
+    margin-top:8px;
 }
 .code {
     border: 2px solid rgba(168,215,101,0.8);border-radius:7px;

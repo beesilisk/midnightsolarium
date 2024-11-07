@@ -106,7 +106,8 @@
         background-color: rgba(133, 204, 216, 0.4);
         backdrop-filter: blur(2.5px);
         box-shadow: none;
-        border: 2px solid #53b6bd;
+        border-top: 2px solid #53b6bd;
+        border-bottom: 2px solid #53b6bd;
         border-radius: 5px;
         &:not(:disabled) {
           &:active,
@@ -118,7 +119,8 @@
         &:focus,
         &.focused {
           box-shadow: none;
-          border: 2px solid rgb(158, 61, 85);
+          border-top: 2px solid rgb(158, 61, 85);
+          border-bottom: 2px solid rgb(158, 61, 85);
         }
         &::-moz-focus-inner {
           border: 0;
@@ -147,10 +149,11 @@
     }
 }
       .btntype {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
       .tablinks:hover {
-        border: 2px solid rgb(230, 138, 161);
+        border-top: 2px solid rgb(230, 138, 161);
+        border-bottom: 2px solid rgb(230, 138, 161);
         cursor: pointer;
       }
       /* so pages stay hidden */
@@ -205,11 +208,14 @@
               <button class="tablinks" onclick="openTab('tab1-wrapper')" id="defaultOpen" style="margin-bottom:30px;filter: hue-rotate(-25deg);">landing page</button>
             </div>
             <div class="btntype">
+              <button class="tablinks" onclick="openTab('tab5-wrapper')" style="display:inline;float:center;">cmd cheat sheet<sup class="new">NEW!</sup></button>
+            </div>
+            <div class="btntype">
               <button class="tablinks" onclick="openTab('tab3-wrapper')">types of threats</button>
               <button class="tablinks" onclick="openTab('tab2-wrapper')">types of malware</button>
             </div>
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('tab4-wrapper')" style="display:inline;float:center;">backups<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('tab4-wrapper')">backups</button>
             </div>
           </div>
 
@@ -230,6 +236,85 @@
                   <span class="tooltiptext">(((still a better resource than chatgpt tho)))</span>
                 </p>
             </div>
+            <!-- 	command line -->
+            <div id="tab5-wrapper" class="tabcontent">
+              <h2>windows command line cheat sheet</h2>
+              <p>the internet is not lacking in exhaustive lists of cmd commands, but none of them are succinct in the way <em>i</em> need them to be. so i made my own cheat sheet</p>
+              <h3>General Usage</h3>
+              <p><strong><em>[command]</em> /?</strong> – shows info about a specific command</p>
+              <p><strong>cls</strong> – clear screen</p>
+              <p><strong>exit</strong> / <strong>quit</strong> – exit interactive mode of a particular program</p>
+              <h3>Navigation</h3>
+              <details>
+                <summary><strong>cd</strong> / <strong>chdir</strong> – change working directory</summary>
+                <p><strong>\</strong> – move to root directory</p>
+                <p><strong>. .</strong> – move up to parent directory</p>
+              </details>
+              <p><strong>D:</strong> – move to D: drive</p>
+              <h3>File Management</h3>
+              <p><strong>copy</strong> – duplicate individual files</p>
+              <p><strong>xcopy</strong> – duplicates files & subdirectories (depreciated)</p>
+              <p><strong>robocopy</strong> – robust copy; keeps permissions of original directory</p>
+              <p><strong>move</strong> – transfer file to another location</p>
+              <p><strong>md</strong> / <strong>mkdir</strong> – make a directory</p>
+              <p><strong>rd</strong> / <strong>rmdir</strong> – delete directory</p>
+              <h3>Disk Management</h3>
+              <details>
+                <summary><strong>diskpart</strong> – Disk Management CLI tool</summary>
+                <p><strong>list disk</strong> – lists disks</p>
+                <p><strong>list volume</strong> – list volumes in a disk</p>
+                <p><strong>select</strong> – focus on selected disk/partition/volume</p>
+                <p><strong>format</strong> – format disk</p>
+                <p><strong>delete</strong> – delete partition/volume</p>
+                <p><strong>remove</strong> – remove drive letter from volume</p>
+                <p><strong>clean</strong> – remove partition/volume formatting from disk</p>
+                <p><strong>create</strong> – create partition/volume</p>
+                <p><strong>shrink</strong> – reduce size of volume</p>
+                <p><strong>extend</strong> – add unallocated disk space to partition/volume</p>
+              </details>
+              <p><strong>chkdsk</strong> – show info on hard disk</p>
+              <p><strong>defrag</strong> – defragment partition</p>
+              <h3>System & Process</h3>
+              <p><strong>systeminfo</strong> – list system information</p>
+              <p><strong>winver</strong> – displays GUI showing OS version</p>
+              <p><strong>hostname</strong> – show name of computer that the command prompt is open on</p>
+              <details>
+                <summary><strong>shutdown</strong> – shut down or restart system</summary>
+                <p><strong>/s</strong> – shut down</p>
+                <p><strong>/h</strong> – hibernate</p>
+                <p><strong>/l</strong> – log off</p>
+                <p><strong>/r</strong> – restart</p>
+              </details>
+              <details>
+                <summary><strong>sfc</strong> – system file checker</summary>
+                <p><strong>/scannow</strong> – run scan immediately</p>
+                <p><strong>/scanonce</strong> – scan when computer restarts</p>
+                <p><strong>/scanboot</strong> – scan each time system boots</p>
+              </details>
+              <p><strong>taskkill</strong> – end task</p>
+              <h3>Networking</h3>
+              <details>
+                <summary><strong>ipconfig</strong> – display IP network configuration</summary>
+                <p><strong>/release</strong> – release current local IP address</p>
+                <p><strong>/renew</strong> – request new local IP address</p>
+                <p><strong>/flushdns</strong> – reset DNS cache</p>
+              </details>
+              <p><strong>ping</strong> – sends ICMP packet to specified address</p>
+              <p><strong>tracert</strong> – shows path taken by packet to arrive at destination</p>
+              <p><strong>pathping</strong> – ping & tracert combo; used to troubleshoot latency</p>
+              <p><strong>nslookup</strong> – verify DNS address</p>
+              <details>
+                <summary><strong>net use</strong> – manage network drives</summary>
+                <p><strong><em>[device name]</em></strong> – specify name of device being connected to resource</p>
+                <p><strong><em>[domain name]</em></strong> – specify domain if you’re not changing the current one</p>
+                <p><strong>\\<em>[computer name]</em>\<em>[share name]</em></strong> – specify the computer and the shared resource</p>
+                <p><strong>/user</strong> – specify the user being connected to resource</p>
+                <p><strong>/persistent:<em>[yes</em></strong>/<strong><em>no]</em></strong> – choose whether connection will remain after next login</p>
+              </details>
+              <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
+              <p><strong>gpupdate</strong> – update group policies</p>
+              <p><strong>gpresult</strong> – view RsoP info for remote user’s computer</p>
+          </div>
             <!-- 	threats-->
             <div id="tab3-wrapper" class="tabcontent">
                 <article>

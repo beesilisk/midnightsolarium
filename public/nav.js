@@ -4,5 +4,6 @@ document.write('\
 <a href="weblog.html" target="_top"><i class="fa-solid fa-pen"></i> weblog </a>\
 <a href="notebook.html" target="_top"><i class="fa-solid fa-laptop-file"></i> notebook </a>\
 <a href="crafts.html" target="_top"><i class="fa-solid fa-scissors"></i> craft catalog </a>\
+<a href="recipes.html" target="_top"><i class="fa-solid fa-bowl-rice"></i> recipe cards </a>\
 <a href="links.html" target="_top"><i class="fa-solid fa-link"></i> links </a>\
 ');
