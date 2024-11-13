@@ -1,3 +1,8 @@
+html {
+    background-image: url("blog_img/ditherfinnydark.png");
+    background-color: rgb(4, 17, 19);
+}
+
 #container {
     max-width: 850px;
     margin-top: 20px;
@@ -10,7 +15,7 @@
 
 #box {
     color: #fdf5e6;
-    box-shadow: none;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.0);
     position: relative;
     overflow: unset;
     margin-bottom:20px;
@@ -18,17 +23,19 @@
     &::after {
         content: '';
 		position: absolute;
-		left: -6px;
-		top: -6px;
-		width: calc(100% + 12px);
-		height: calc(100% + 12px);
+		left: -3px;
+		top: -3px;
+		width: calc(100% + 6px);
+		height: calc(100% + 6px);
 		background: #333;
 		background-image: linear-gradient(45deg, rgb(187, 95, 149), rgb(160, 201, 103), rgb(117, 201, 176));
         background-size: 300%;
 		animation: position 20s linear infinite alternate;
 		z-index: -1;
     }
-
+    &::after {
+        filter: blur(20px);
+    }
 }
 @keyframes position {
     0% {
@@ -42,6 +49,7 @@
     }
 }
 main {
+    background-color: rgb(19, 45, 49);
     background-image: url("blog_img/transparent-grid-overlay.png");
 	image-rendering: auto;
     background-size: 300px;

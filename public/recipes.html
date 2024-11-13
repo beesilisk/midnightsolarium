@@ -21,21 +21,22 @@
     text-shadow: 0 0 10px rgba(247, 223, 118, 0.6);
 }
 .recipe {
-  position: relative;
+    position: relative;
     padding:10px;
     margin-right:50px;
     margin-left:30px;
     margin-top:10px;
-    color:rgb(255, 255, 255);
+    color: #f8f5ee;
     background: #0b110f;
     background-image: url("img/lined-paper-3.png");
     border-radius: 10px;
-
+    
     box-shadow: 0 2px 8px rgba(0,0,0,.5);
     overflow: hidden;
 }
 .recipe p, .recipe li, .recipe aside {
   font-size:13px;
+
 }
 .recipe:before {
     content: '';
@@ -44,16 +45,20 @@
     width: 60px;
     background: radial-gradient(rgb(25, 58, 59) 6px, transparent 7px) repeat-y;
     background-size: 30px 30px;
-    border-right: 2px solid rgba(212, 65, 71, 0.5);
+    border-right: 2px solid rgba(212, 65, 71, 0.3);
     box-sizing: border-box;
 }
 .recipe p, .recipe aside, .recipe h4{
-  margin-left:56px;;
+  margin-left:56px;
+  vertical-align: center;
 }
 .ingredients {
     margin:0 22px 8px 16px;
     float:left;
     max-width:40%;
+    border-right:2px dashed rgba(215, 216, 136, 0.6);
+    padding-right:10px;
+    min-width:170px;
 }
 .recipe aside {
     font-size: 11px;
@@ -90,6 +95,13 @@ br {
 @media only screen and (max-width: 700px) {
     .recipe {
     flex-direction: column;
+    margin-right:0;
+    margin-left:0;
+}
+.ingredients {
+  min-width:calc(100% - 10px);
+  border-right:none;
+  border-bottom:2px dashed rgba(215, 216, 136, 0.6);
 }
     .instructions {
       margin-left:55px;
@@ -157,7 +169,7 @@ br {
 
                       <details class="recname"><summary>BAKED BRIE</summary>
                         <div class="recipe">
-                            <p>Top whole brie with crushed garlic, then chopped, drained sun-dried tomatoes (in oil). Bake 350&deg;F til cheese starts to melt. Garnish with parsley. Serve with crackers.</p>
+                            <p>Top whole brie with crushed garlic, then chopped, drained sun-dried tomatoes (in oil). Bake <em>350&deg;F</em> til cheese starts to melt. Garnish with parsley. Serve with crackers.</p>
                         </div>
                       </details>
 
@@ -209,7 +221,7 @@ br {
                           </div>
                             <h4>INSTRUCTIONS</h4>
                             <p>Put zucchini, onion, red & green pepper, jalapeno, and salt in dutch oven. Mix together and leave in refrigerator overnight.</p>
-                            <p>Next morning, DON'T DRAIN! Add the rest of the ingredients and mix well. Boil for 10 minutes, then simmer for an hour. Chill. Makes about 1 litre.</p>
+                            <p>Next morning, DON'T DRAIN! Add the rest of the ingredients and mix well. Boil for <em>10 minutes</em>, then simmer for <em>an hour</em>. Chill. Makes about 1 litre.</p>
                             <br /><br />
                             <aside>If you want to make enough for multiple jars (and you know how to jar food safely), quadruple the recipe.</aside>
                         </div>
@@ -276,6 +288,51 @@ br {
                           <aside>Makes about 3 ice cream pails full.</aside>
                         </div>
                       </details>
+                      
+                      <details class="recname"><summary>SWEET CHILI POPCORN <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>2 tbsp brown sugar</li>
+                              <li>1 tbsp butter</li>
+                              <li>1/2 tsp chili powder</li>
+                              <li>popcorn, to taste</li>
+                            </ul>
+                          </div>
+                          <h4>INSTRUCTIONS</h4>
+                          <p>Melt butter in microwave. Immediately add chili & brown sugar and mix until sugar dissolves. Drizzle over popcorn and toss until evenly coated.</p>
+                        </div>
+                      </details>
+
+                    </details>
+
+                    <details><summary class="rectype">breakfast</summary>
+
+                      <details class="recname"><summary>CHEESE & BACON MUFFINS</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>2 cups flour</li>
+                              <li>2 tbsp sugar</li>
+                              <li>1 tbsp baking powder</li>
+                              <li>1/4 tsp salt</li>
+                              <li>1/2 cup grated cheddar</li>
+                              <li>4-5 bacon slices, cooked & crumbled</li>
+                              <br /><br />
+                              <li>1 egg, lightly beaten</li>
+                              <li>1 cup milk</li>
+                              <li>1/4 cup cooking oil</li>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Measure first 6 ingredients into a large bowl. Make a well in the centre.</p>
+                            <p>Combine lightly beaten egg, milk, and oil. Pour into well. Stir only to moisten – batter will be lumpy.</p>
+                            <p>Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>. Let stand 5 minutes, then remove from pan.</p>
+                            <aside>makes about 1 dozen muffins</aside>
+                        </div>
+                      </details>
 
                     </details>
 
@@ -299,7 +356,7 @@ br {
                             </ul>
                           </div>
                             <h4>INSTRUCTIONS</h4>
-                            <p>Combine first 6 ingredients. Cover and cook for 30 minutes. Then add the rest of ingredients. Cover and simmer slowly for 1 hour.</p>
+                            <p>Combine first 6 ingredients. Cover and cook for <em>30 minutes</em>. Then add the rest of ingredients. Cover and simmer slowly for <em>1 hour</em>.</p>
                         </div>
                       </details>
 
@@ -330,7 +387,7 @@ br {
                           <aside>(bread dumplings)</aside>
                           <p>Combine flour, salt & pepper, and enough water to make hard dough. Mix well.</p>
                           <p>Flatten pieces of dough. They should be about as wide as a loonie (approx. 1") and about 1/8" thick.</p>
-                          <p>When potato soup is ready, "pluck" knadle dough into soup. Cook 10-15 minutes. Add cheddar and yogurt. Eat! Enjoy!</p>
+                          <p>When potato soup is ready, "pluck" knadle dough into soup. Cook <em>10-15 minutes</em>. Add cheddar and yogurt. Eat! Enjoy!</p>
                         </div>
                       </details>
 
@@ -362,6 +419,33 @@ br {
 
                     <details><summary class="rectype">dessert & baking</summary>
 
+                      <details class="recname"><summary>APPLE CRISP <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>10 cups apples, peeled cored & sliced (about 10-12 apples)</li>
+                              <li>1 cup granulated sugar</li>
+                              <li>1 tbsp flour</li>
+                              <li>1 tsp ground cinnamon</li>
+                              <li>1/2 cup water</li>
+                              <br /><br />
+                              <li>1 cup quick-cooking oats</li>
+                              <li>1 cup flour</li>
+                              <li>1 cup brown sugar</li>
+                              <li>1/4 tsp baking powder</li>
+                              <li>1/4 tsp baking soda</li>
+                              <li>1/2 cup butter, melted</li>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Place apple slices in <em>9"×13"</em> pan. In a bowl, mix the granulated sugar, 1 tbsp flour, and ground cinnamon together, and sprinkle over the apples. Then pour water evenly over the apples.</p>
+                            <p>In a bowl, combine oats, 1 cup flour, brown sugar, baking soda, baking powder, and butter together into a crumbly mixture. Evenly layer on top of apples.</p>
+                            <p>Bake at <em>350&deg;F</em> for about <em>45 minutes</em>.</p>
+                            <aside>(the size of the apple slices is up to personal taste. large slices mean less work. i prefer to cut them thinner - but any piece under 1/4" thick risks turning to mush)</aside>
+                        </div>
+                      </details>
+
                       <details class="recname"><summary>BANANA CHOCOLATE CHIP MUFFINS <span class="star">&#9733;</span> <span class="heart">&#9829;</span></summary>
                         <div class="recipe">
                           <div class="ingredients">
@@ -381,8 +465,42 @@ br {
                           </div>
                             <h4>INSTRUCTIONS</h4>
                             <p>Combine first 5 dry ingredients into large bowl. Mix and make a well in the center.</p>
-                            <p>Beat egg until frothy. Mix in oil, milk and bananas. Pour into well. Stir only until moist - batter will still be lumpy. Fill muffin cups 3/4 full. Bake at 400&deg;F for 20-25 minutes.</p>
+                            <p>Beat egg until frothy. Mix in oil, milk and bananas. Pour into well. Stir only until moist - batter will still be lumpy. Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>.</p>
                             <aside>makes about 1 dozen muffins</aside>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>BANANA SCONES</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1/2 cup butter</li>
+                              <li>1 banana, ripe or overripe</li>
+                              <li>1 egg</li>
+                              <li>1/3 cup heavy cream (i usually cheat and use half&half)</li>
+                              <li>1 tsp vanilla</li>
+                              <li>2 cups flour</li>
+                              <li>1/2 cup brown sugar</li>
+                              <li>2 1/2 tsp baking powder</li>
+                              <li>1/2 tsp salt</li>
+                              <li>1/4 cup walnuts</li>
+                              <li>sugar for sprinkling</li>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Preheat oven to <em>400&deg;F</em>.</p>
+                            <p>Mash banana until fairly smooth. Add mashed banana (should be around 1/2 cup) to a 2 cup measuring cup. Add the egg to the cup and whisk together until well combined.</p>
+                            <p>Add enough cream to reach the 1 cup measuring line. Add vanilla and stir. Place cup in freezer for 10 minutes.</p>
+                            <p>Place butter in a bowl and microwave for 50-60 seconds, or until just barely melted. Set aside to cool.</p>
+                            <p>In another bowl, combine flour, brown sugar, baking powder, salt and walnuts. Make well in center.</p>
+                            <p>Remove cream from freezer and add butter, stirring until mixture is lumpy.</p>
+                            <p>Pour banana mixture into the well in the flour bowl. Stir from the bottom up with a sturdy spatula or large spoon until flour is mixed in. The dough should be a bit crumbly and stiff.</p>
+                            <p>IT'S KNEADING TIME! Place the dough on a lightly floured surface. And knead 2-3 times. Then pat it into a circle that's about 6" diameter.</p>
+                            <p>Using a knife, cut the circle into 8 equal wedges.</p>
+                            <aside>(if you like, this is a good time to wrap and freeze the scone if you'd rather bake later)</aside>
+                            <p>Place wedges on pan lined with parchment paper. Brush tops with cream and sprinkle with sugar.</p>
+                            <p>Place scones in oven and <strong>immediately</strong> reduce heat to <em>375&deg;F</em>. Bake for <em>20-25 minutes</em>, until scones are golden brown. A toothpick inserted in the center should come out clean.</p>
                         </div>
                       </details>
 
@@ -407,8 +525,38 @@ br {
                             <h4>INSTRUCTIONS</h4>
                             <p>Add baking soda to sour cream; let foam while making rest of cake</p>
                             <p>Cream sugar & butter. Add eggs & bananas. Beat. Add sour cream. Mix salt, cocoa, and water. Mix in flour. Add vanilla. Mix.</p>
-                            <p>Pour into greased 9" x 13" pan, or bundt pan. Bake at 350&deg;F for about 1 hour.</p>
+                            <p>Pour into greased <em>9" x 13"</em> pan, or bundt pan. Bake at <em>350&deg;F</em> for about <em>1 hour</em>.</p>
                             <aside>goes well with cream cheese icing</aside>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>COFFEE CAKE</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1/4 cup flour</li>
+                              <li>2/3 cup granulated sugar</li>
+                              <li>1 tsp ground cinnamon</li>
+                              <li>1/4 cup butter</li>
+                              <br /><br />
+                              <li>2 cups flour</li>
+                              <li>3/4 cup granulated sugar</li>
+                              <li>2 tsp baking powder</li>
+                              <li>1/2 tsp salt</li>
+                              <li>1/2 cup butter</li>
+                              <li>1 egg</li>
+                              <li>approx. 3/4 cup milk</li>
+                              <li>1 1/2 tsp vanilla extract</li>
+                            </ul>
+                          </div>
+                            <h4>STREUSEL TOPPING</h4>
+                            <p>In a medium bowl, combine 1/4 cup flour, 2/3 cup granulated sugar, and cinnamon. Cut in the 1/4 cup butter until crumbly mixture is formed.</p>
+                            <h4>CAKE</h4>
+                            <p>Preheat oven to <em>350&deg;F</em> and grease <em>9"×13"</em> pan.</p>
+                            <p>In large bowl, combine 2 cups flour, 3/4 cups sugar, baking powder, and salt. Cut in 1/2 cup butter. The mixture should look crumbly.</p>
+                            <p>Crack the egg into your measuring cup. Then use milk to fill it to 1 cup. Stir in vanilla. Pour all this into the large bowl and mix only until moistened.</p>
+                            <p>Spread cake batter into pan. Sprinkle streusel overtop. Bake for <em>20-25 minutes</em>, or until a toothpick inserted at the center comes out clean.</p>
                         </div>
                       </details>
 
@@ -433,11 +581,76 @@ br {
                             <p>Beat butter and both sugars together until creamy (approx. 2 minutes). Beat in egg and vanilla.</p>
                             <p>In separate bowl whisk flour, cornstarch, baking soda, and salt. Add to wet ingredients, beating until combined. Fold in the chocolate chips.</p>
                             <p><u>CHILL THE DOUGH</u>!!! For at least 1 hour in the fridge, but preferably 3 or more. You can leave it to chill for up to 72 hours, but make sure the dough is covered.</p>
-                            <p>Preheat oven 350&deg;F. Line baking sheets with parchment paper.</p>
+                            <p>Preheat oven <em>350&deg;F</em>. Line baking sheets with parchment paper.</p>
                             <p>Roll dough into 1 heaping tablespoon balls. Place each 3" apart on baking sheets.</p>
-                            <p>Bake for 11-12 minutes, until <em>barely</em> golden on edges. They will look underbaked on top. This is normal.</p>
+                            <p>Bake for <em>11-12 minutes</em>, until <em>barely</em> golden on edges. They will look underbaked on top. This is normal.</p>
                             <p>Cool cookies on baking sheet for 5 minutes, then transfer to cooling rack. </p>
                             <aside>makes about 30 cookies. stays fresh for about a week if kept covered at room temp</aside>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>PEANUT BUTTER COOKIES</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 cup unsalted butter</li>
+                              <li>1 cup peanut butter (smooth or crunchy)</li>
+                              <li>1 cup granulated sugar</li>
+                              <li>1 cup brown sugar</li>
+                              <li>2 eggs</li>
+                              <br /><br />
+                              <li>2 1/2 cups flour</li>
+                              <li>1 1/2 tsp baking soda</li>
+                              <li>1 tsp baking powder</li>
+                              <li>1/2 tsp salt</li>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Beat butter, peanut butter, and both sugars until creamy. Then beat in eggs.</p>
+                            <p>In separate bowl, combine last 4 ingredients. Stir into wet ingredients. Put dough in fridge for at least 1 hour.</p>
+                            <p>Roll dough into 1" balls and place on baking sheets. Flatten each ball criss-cross with a fork.</p>
+                            <p>Bake at <em>375&deg;F</em> for about <em>10 minutes</em>, until edges begin to brown.</p>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>PUMPKIN SPICE SNICKERDOODLES <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>COOKIE INGREDIENTS</h4>
+                            <ul>
+                              <li>1 cup butter</li>
+                              <li>1 cup brown sugar</li>
+                              <li>1/2 cup granulated sugar</li>
+                              <li>2 whole eggs + 1 yolk</li>
+                              <li>2 tsp vanilla</li>
+                              <li>3 tsp pumpkin spice*</li>
+                              <li>1 tsp baking powder</li>
+                              <li>3/4 tsp salt</li>
+                              <li>3 cups flour</li>
+                            </ul>
+                            <h4>COATING</h4>
+                            <ul>
+                              <li>1/4 cup brown sugar</li>
+                              <li>1 1/2 tsp pumpkin spice*</li>
+                            </ul>
+                            <h4>*PUMPKIN SPICE</h4>
+                            <ul>
+                              <li>4 tsp ground cinnamon</li>
+                              <li>1 tsp ground nutmeg</li>
+                              <li>1 tsp ground ginger</li>
+                              <li>1/2 tsp ground cloves</li>
+                              <aside>(you may need to make more if you run out of coating)</aside>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Cream butter and both sugars together for 2 minutes until light and fluffy. Add both eggs and additional yolk into butter along with vanilla and beat until smooth.</p>
+                            <p>Mix in 3 tsp pumpkin spice, baking powder, and salt. Reduce speed on mixer to low and mix in flour.</p>
+                            <p>Chill dough for at least an hour.</p>
+                            <p>Line baking sheet with parchment paper and preheat oven to <em>375&deg;F</em>.</p>
+                            <p>Mix coating ingredients together in a bowl. Roll dough into large balls, approx. 1 1/2" diameter. Then roll the balls in coating, covering completely.</p>
+                            <p>Bake for <em>7-8 minutes</em> until cookies are lightly browned at the bottom. They will look very puffy. Remove from oven and transfer to cooling rack.</p>
+                            <aside>Makes about 30 cookies.</aside>
                         </div>
                       </details>
 
@@ -467,9 +680,30 @@ br {
                             <p>In large bowl, combine cereals and boiling water. Let stand.</p>
                             <p>In separate bowl cream butter and sugars. Beat in eggs one at a time. Mix in buttermilk. Stir in cereal mix.</p>
                             <p>In another bowl combine flour, soda, powder, salt, and raisins. Mix well. Add to batter, and stir to combine. Store in fridge.</p>
-                            <p>Fill muffin cups 3/4 full. Bake at 400&deg;F for 20-25 minutes. Remove from pan after 5 minutes.</p>
+                            <p>Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>. Remove from pan after 5 minutes.</p>
                             <aside>Makes a LOT of muffins. I'm not kidding. You might wanna keep the batter covered in the fridge and bake in small batches. The batter should keep for about 6 weeks.</aside>
                             <aside>If you choose to bake them all at once, be prepared to gift some to your friends and loved ones. Or at least put some in the freezer.</aside>
+                        </div>
+                      </details>
+
+                    </details>
+
+                    <details><summary class="rectype">beverages</summary>
+
+                      <details class="recname"><summary>DANDELION TEA</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>8 oz. boiling water</li>
+                              <li>1/2 cup fresh dandelion petals</li>
+                              <aside>(pull the petals out by hand, or cut them off the head. it's fine to leave some green bits, but leaving the head will make the tea too bitter)</aside>
+                            </ul>
+                          </div>
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Rinse the petals off before making the tea.</p>
+                            <p>Place the petals in tea ball and steep for 10 minutes. The tea will taste mild and light.</p>
+                            <p>Goes well with honey. You can also add lemon, mint, raspberry leaves, and/or chamomile.</p>
                         </div>
                       </details>
 

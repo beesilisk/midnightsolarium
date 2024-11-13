@@ -41,23 +41,20 @@
         margin-right: auto;
       }
       .backlink {
-        margin-top:5px;
-        margin-bottom:5px;
         text-align:center;
       }
       .backlink a {
         font-size:16px;
         color:#e9e752;
-
       }
       .backlink a:hover {
-        filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+        filter: drop-shadow(0 0 5px rgba(171, 241, 243, 0.4)) brightness(1.2);
     }
-      .backlink a:active {
-        color:rgb(241, 160, 38)
-}
       .backlink a:focus {
-        border-bottom:1px dotted #e9e752;
+        border-bottom:none;
+}
+      .backlink a:active {
+        filter:brightness(50%)
 }
       main {
         padding-left: 10px;
@@ -77,7 +74,7 @@
 
 }
       .maincontent h2 {
-        color: rgb(67, 235, 198);
+        color: rgb(120, 236, 211);
         text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
         font-weight: 700;
         font-family:'TheGoodMonolith';
@@ -108,12 +105,12 @@
         box-shadow: none;
         border-top: 2px solid #53b6bd;
         border-bottom: 2px solid #53b6bd;
-        border-radius: 5px;
+        border-radius: 0;
         &:not(:disabled) {
           &:active,
           &.active {
             box-shadow: none;
-            background: rgba(143, 56, 99, 0.4);
+            background: rgba(201, 137, 169, 0.6);
           }
         }
         &:focus,
@@ -121,13 +118,14 @@
           box-shadow: none;
           border-top: 2px solid rgb(158, 61, 85);
           border-bottom: 2px solid rgb(158, 61, 85);
+          background: rgba(143, 56, 99, 0.4);
         }
         &::-moz-focus-inner {
           border: 0;
         }
       }
       .tablinks {
-        margin-top: 7px;
+        margin-bottom: 7px;
         padding: 3px;
         width: 100%;
       }
@@ -138,7 +136,11 @@
              background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(151, 186, 145, 1) 100% );
         }
         &:hover {
-            box-shadow: none;
+          box-shadow: none;
+          border-top: 2px solid rgb(230, 138, 161);
+          border-bottom: 2px solid rgb(230, 138, 161);
+          background: rgba(180, 106, 143, 0.4);
+          cursor: pointer;
        }
    }
      &:focus, &.focused {
@@ -149,12 +151,8 @@
     }
 }
       .btntype {
-        margin-bottom: 16px;
-      }
-      .tablinks:hover {
-        border-top: 2px solid rgb(230, 138, 161);
-        border-bottom: 2px solid rgb(230, 138, 161);
-        cursor: pointer;
+        margin-bottom: 21px;
+
       }
       /* so pages stay hidden */
       .tabcontent {
@@ -183,10 +181,8 @@
         <div id="side">
 
           <div style="display:flex;flex-direction:column;margin-top:10px;">
-          <div class="backlink">
-            <a href="index.html">
-              <i class="fa-solid fa-circle-arrow-left" style="font-size:18px;"></i> back to<br />main site! </a>
-          </div>
+            
+          <div class="backlink"><a href="index.html"><img src="img/backteal.png" style="width:50px;" title="Go Back"></a></div>
 
       <!-- Font Changer -->
       <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
@@ -205,17 +201,19 @@
 
           <div class="tab">
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('tab1-wrapper')" id="defaultOpen" style="margin-bottom:30px;filter: hue-rotate(-25deg);">landing page</button>
+              <button class="tablinks" onclick="openTab('landing-wrapper')" id="defaultOpen" style="margin-bottom:30px;filter: hue-rotate(-25deg);">landing page</button>
             </div>
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('tab5-wrapper')" style="display:inline;float:center;">cmd cheat sheet<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('cmd-wrapper')">cmd cheat sheet</button>
+              <button class="tablinks" onclick="openTab('terminal-wrapper')" style="display:inline;float:center;">terminal cheat sheet<sup class="new">NEW!</sup></button>
             </div>
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('tab3-wrapper')">types of threats</button>
-              <button class="tablinks" onclick="openTab('tab2-wrapper')">types of malware</button>
+              <button class="tablinks" onclick="openTab('logicsec-wrapper')" style="display:inline;float:center;">logical security<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('threats-wrapper')">types of threats</button>
+              <button class="tablinks" onclick="openTab('malware-wrapper')">types of malware</button>
             </div>
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('tab4-wrapper')">backups</button>
+              <button class="tablinks" onclick="openTab('backups-wrapper')">backups</button>
             </div>
           </div>
 
@@ -227,7 +225,7 @@
 
           <div class="maincontent">
             <!-- 	landing page -->
-            <div id="tab1-wrapper" class="tabcontent">
+            <div id="landing-wrapper" class="tabcontent">
                 <h2>here are my notes. feel free to look at 'em</h2>
                 <p>ive decided to share my IT certification exam notes with the world wide web! this way i can study while also sharing information with others <span style="color:lightpink">&#9825;</span>＼(￣▽￣)／<span style="color:lightpink">&#9825;</span></p>
                 <p>ive done my best to translate my notes into something that can hopefully serve as an <em>introduction to IT concepts</em> for anyone who has a basic understanding of technology and is curious enough to learn more </p>
@@ -237,7 +235,7 @@
                 </p>
             </div>
             <!-- 	command line -->
-            <div id="tab5-wrapper" class="tabcontent">
+            <div id="cmd-wrapper" class="tabcontent">
               <h2>windows command line cheat sheet</h2>
               <p>the internet is not lacking in exhaustive lists of cmd commands, but none of them are succinct in the way <em>i</em> need them to be. so i made my own cheat sheet</p>
               <h3>General Usage</h3>
@@ -310,37 +308,154 @@
                 <p><strong>\\<em>[computer name]</em>\<em>[share name]</em></strong> – specify the computer and the shared resource</p>
                 <p><strong>/user</strong> – specify the user being connected to resource</p>
                 <p><strong>/persistent:<em>[yes</em></strong>/<strong><em>no]</em></strong> – choose whether connection will remain after next login</p>
+                <p>mapping a network drive for a specific user would look something like:<br /><strong>net use D: \\server\"File Name" /user:username P@ssw0rd /persistent:yes</strong></p>
               </details>
               <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
               <p><strong>gpupdate</strong> – update group policies</p>
               <p><strong>gpresult</strong> – view RsoP info for remote user’s computer</p>
           </div>
+                      <!-- 	command line -->
+                      <div id="terminal-wrapper" class="tabcontent">
+                        <h2>UNIX terminal cheat sheet</h2>
+                        <p>These commands are very common amongst UNIX-based systems. That said, there can be slight variations between different shells, coreutils, and proprietary programs.  This generally isn’t much of a problem. If one of these commands doesn’t work, try looking up the commands that usually come with your OS and/or distro.</p>
+                        <h3>General Usage</h3>
+                        <p><strong><em>[command]</em> --help</strong> – shows info about a specific command</p>
+                        <p><strong>man <em>[command]</em></strong> – more detailed info on command</p>
+                        <p><strong>clear</strong> – clear screen</p>
+                        <p><strong>|</strong> – pipe; redirects the results of one command into another command</p>
+                        <p><strong>;</strong> – issue another command on a single line</p>
+                        <h3>Navigation</h3>
+                        <p><strong>pwd</strong> – present working directory; shows full path of current working directory</p>
+                        <details>
+                          <summary><strong>ls</strong> – list files and subdirectories</summary>
+                          <p><strong>-l</strong> – show detailed list</p>
+                          <p><strong>-a</strong> – show hidden files & system files</p>
+                        </details>
+                        <details>
+                          <summary><strong>cd</strong> / <strong>chdir</strong> – change working directory</summary>
+                          <p><strong>/</strong> – move to root directory</p>
+                          <p><strong>~</strong> – move to home directory</p>
+                          <p><strong>. .</strong> – move up to parent directory</p>
+                        </details>
+                        <h3>Search Tools</h3>
+                        <p><strong>find</strong> – search for files and directories</p>
+                        <details>
+                          <summary><strong>grep</strong> – search for a string of characters within a file or text output</summary>
+                          <p><strong>-i</strong> – search without case sensitivity</p>
+                          <p><strong>-l</strong> – lists name of files that match character string</p>
+                          <p><strong>-r</strong> – search through directory and its subdirectories</p>
+                        </details>
+                        <h3>File Management</h3>
+                        <p><strong>cp</strong> – creates copy of file (original is not moved or modified)</p>
+                        <p><strong>mv</strong> – moves files to another directory. also used to rename files</p>
+                        <p><strong>rm</strong> – remove file</p>
+                        <p><strong>mkdir</strong> – create a new directory</p>
+                        <p><strong>rmdir</strong> – delete empty directories</p>
+                        <details>
+                          <summary><strong>chmod</strong> – modify file permissions</summary>
+                          <p><strong>r</strong> – read permission</p>
+                          <p><strong>w</strong> – write permission</p>
+                          <p><strong>x</strong> – execute permission</p>
+                          <p><strong>-</strong> – permission not granted</p>
+                        </details>
+                        <p><strong>chown</strong> – change ownership of file / directory</p>
+                        <details>
+                          <summary><strong>cat</strong> – retrieves contents of a file</summary>
+                          <p><strong><em>[file 1]</em> > <em>[file 2]</em></strong> – takes contents of file 1 and overwrites onto file 2</p>
+                          <p><strong><em>[file 1]</em> >> <em>[file 2]</em></strong> – appends contents of file 1 at end of file 2</p>
+                          <p><strong><em>[file 1]</em> | more</strong> – breaks text into pages</p>
+                          <p><strong><em>[file 1]</em> | less</strong> – breaks text into pages, which you can move up and down</p>
+                        </details>
+                        <p><strong>nano</strong> – a command-line text editor</p>
+                        <h3>Disk Management</h3>
+                        <p><strong>df</strong> – disk free; shows info on disk space</p>
+                        <p><strong>du</strong> – disk usage; shows info on the disk usage of files and directories</p>
+                        <h3>Package Managers</h3>
+                        <p><strong>apt-get</strong> – Debian package manager; used to update & install packages</p>
+                        <p><strong>yum</strong> – Red Hat package manager; used to update & install packages</p>
+                        <p><strong>pacman</strong> – Arch package manager; used to update & install packages</p>
+                        <p><strong>zypper</strong> – openSUSE package manager; used to update & install packages</p>
+                        <h3>System & Process</h3>
+                        <p><strong>sudo</strong> – grants superuser privileges for a single line</p>
+                        <details>
+                          <summary><strong>su</strong> – run commands with another user's privileges</summary>
+                          <p><strong><em>[username]</em></strong> –  switches to that account</p>
+                          <p><strong>-</strong> – switch to root user and launch shell with root access</p>
+                        </details>
+                        <p><strong>passwd</strong> – change a user’s password</p>
+                        <p><strong>ps</strong> – process status; display snapshot of currently running processes</p>
+                        <p><strong>top</strong> – shows live feed of running processes</p>
+                        <p><strong>kill</strong> – terminate a process</p>
+                        <h3>Networking</h3>
+                        <details>
+                          <summary><strong>ip</strong> – used to show and manage network connections</summary>
+                          <p><strong>-addr</strong> – view and manage IP addresses</p>
+                          <p><strong>-link</strong> – view and manage network interfaces</p>
+                          <p><strong>-route</strong> – view and manage path taken by packet to arrive at destination</p>
+                        </details>
+                        <p><strong>ifconfig</strong> – show and manage network connections (depreciated; replaced by ip)</p>
+                        <p><strong>nmcli</strong> – NetworkManager command-line tool</p>
+                        <p><strong>ping</strong> – sends ICMP packet to specified address</p>
+                        <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
+                    </div>
+                                <!-- 	threats-->
+            <div id="logicsec-wrapper" class="tabcontent">
+              <article>
+                <h2>some logical security measures</h2>
+                <h3>What Do You Mean by "Logical Security"?</h3>
+                <p>Logical security refers to the digital security measures taken to protect computers and the data within them. You can think of it as the equal opposite of <em>physical security</em>, i.e. making sure nobody can just walk up and steal your laptop.</p>
+                <h3>Principle of Least Privilege</h3>
+                <p>This principle states that users should be given <strong>only what they absolutely need</strong> in order to perform their tasks. Everything else should be restricted.</p>
+                <p>Usually this term is used in reference to user account privileges. After all, not everyone needs to be an administrator. Granting every user high-level access would increase the risk of accidents and security breaches. By restricting a user's privileges, you also restrict the privileges of any malware that infects the system.</p>
+                <p>This principle may seem straightforward, but its importance should not be overlooked. Make sure all users are assigned to the correct group, don't give users the ability to modify newly installed programs, and don't start granting higher privileges out of laziness.</p>
+                <h3>ACLs</h3>
+                <p>Access Control Lists outline the <em>permissions</em> and <em>restrictions</em> set for a user or system. They dictate which accounts are allowed to particular files, folders, programs, or network resources.</p>
+                <p>As well as being built into the OS, ACLs can also be configured on routers, firewalls, and switches for traffic filtering.</p>
+                <h3>MFA</h3>
+                <p>Multifactor authentication verifies the identity of a user by having them use at least 2 different methods of gaining access. Verification methods are split into 3 categories:</p>
+                <ul>
+                  <li>something you <strong>know</strong> (e.g. passwords & PINs)</li>
+                  <li>something you <strong>have</strong> (e.g. phones & keyboards)</li>
+                  <li>something you <strong>are</strong> (e.g. figerprints & voice recognition)</li>
+                </ul>
+                <p>Unlike 2-factor authentication, MFA must incorporate different authentication methods from different categories, such as a password + fingerprint combo. MFA can also incorporate more than 2 steps.</p>
+                <h3>Email Filtering</h3>
+                <p>Email is one of the most frequently exploited security vulnerabilities, so it's important to filter unwanted and malicious emails. In organizations, this is usually done through an <em>email gateway</em>. These are able to scan emails to look for malicious attachments and block unwanted emails before they can reach a user's inbox. The email gateway can be implemented by using either an onsite server or cloud service.</p>
+                <h3>Hard Tokens</h3>
+                <p>A hard token is a <strong>physical object</strong> that's required to gain access to network resources. If a person doesn't have the USB, smart card, or key fob on hand, they cannot gain access. This sounds like an elegantly simple security system, but it falls apart if the hard token is lost or stolen.</p>
+                <h3>Soft Tokens</h3>
+                <p>Also known as a <strong>one-time password</strong>, a soft token is a form of authentication data that's generated for a single use only. This data usually comes in the form of a temporary PIN, often delivered via email, SMS, or voice call. It's used a lot on 2FA and MFA because of its relative convenience and cost-effectiveness compated to hard tokens, but they are more susceptible to hacking.</p>
+                <h3>Authenticator Apps</h3>
+                <p>Authenticator apps let people access resources <em>without a password</em>. Instead, the service or network is registered with the software, making it inaccessible to anyone without an account on the app. If someone with an account tries to gain access (usually done by scanning a QR code, copying an alphanumeric key, or a biometric scan), the app will send them a soft token.</p>
+                <p>Unlike soft tokens sent over SMS, these apps work without cell service or internet access. The keys are also easier to encrypt and sync across devices. But if you lose access to your account, app, or device, the service becomes inaccessible.</p>
+            </article>
+          </div>
             <!-- 	threats-->
-            <div id="tab3-wrapper" class="tabcontent">
+            <div id="threats-wrapper" class="tabcontent">
                 <article>
                   <h2>cybersecurity threats</h2>
                   <p>im back with more IT study notes because nobody has tried to stop me yet. also i made a new webpage for 'em! cool, right?</p>
                   <h3>What Are Threats?</h3>
-                  <p>Okay, the word “ <strong>threat</strong>” might seem overly vague. But when you’re talking about cybersecurity, a threat is generally considered to be any action that could exploit vulnerabilities in the system or network. If someone takes advantage of that vulnerability, the threat will result in missing, stolen, or damaged data. </p>
-                  <p>Another term I’m gonna be using is “ <b>threat actor</b>”. This refers to whoever is responsible for the threat. They can be a single person or a large group, come from any background, and act under a wide range of motivations. </p>
+                  <p>Okay, the word “ <strong>threat</strong>” might seem overly vague. But when you're talking about cybersecurity, a threat is generally considered to be any action that could exploit vulnerabilities in the system or network. If someone takes advantage of that vulnerability, the threat will result in missing, stolen, or damaged data. </p>
+                  <p>Another term I'm gonna be using is “ <b>threat actor</b>”. This refers to whoever is responsible for the threat. They can be a single person or a large group, come from any background, and act under a wide range of motivations. </p>
                   <h3>Insider Threat</h3>
-                  <p>An insider threat can come from anyone who’s granted permissions on the system. These threat actors are hard to protect against because the attacker is <i>someone who’s expected to be on the network</i>. </p>
+                  <p>An insider threat can come from anyone who's granted permissions on the system. These threat actors are hard to protect against because the attacker is <i>someone who's expected to be on the network</i>. </p>
                   <p>Sometimes insider threat actors will spend years within an organization for the purpose of collecting data and finding vulnerabilities. Other times the threat actor could be a normally trustworthy person who was bribed or blackmailed. The threat actor could also be a hired contractor or 3rd party vendor with a secret agenda.</p>
-                  <p>Or sometimes the reasons are less interesting. Got an employee who keeps falling for phishing emails? That’s an insider threat too.</p>
+                  <p>Or sometimes the reasons are less interesting. Got an employee who keeps falling for phishing emails? That's an insider threat too.</p>
                   <p>The motivations behind insider threats are infinitely varied, but we can put them into 2 categories:</p>
                   <ul>
-                    <li><strong>&#10027; malicious</strong> (e.g. an employee at Evil Inc. realizes that they’re the baddies and decides to leak confidential data to a team of plucky rebels), and</li>
+                    <li><strong>&#10027; malicious</strong> (e.g. an employee at Evil Inc. realizes that they're the baddies and decides to leak confidential data to a team of plucky rebels), and</li>
                     <li><strong>&#10027; non-malicious</strong> (e.g. your idiot child tries to download My Sim Aquarium from a sketchy website and infects the family computer with malware (sorry dad))</li>
                   </ul>
-                  <p>What I’m saying is that, like all threat actors, an insider threat can can come from anyone with any skillset for any reason.</p>
+                  <p>What I'm saying is that, like all threat actors, an insider threat can can come from anyone with any skillset for any reason.</p>
                   <h3>Zero-Day Attack</h3>
                   <p>This describes any sort of threat that <em>exploits an unpatched vulnerability</em> within a system or piece of software – particularly, vulnerabilities that have been present since launch. </p>
-                  <p>These vulnerabilities exist either because they are undiscovered, or because a patch hasn’t been made (maybe a patch is still in the works, maybe the flaw is impossible to fully patch, or maybe the vulnerability is being ignored out of negligence). Sometimes zero-day vulnerabilities go years and years without being fixed or even discovered until a threat actor decides to exploit it.</p>
-                  <p>These threats aren&apos;t as common as you might expect. Usually software is heavily researched and tested before launch to make sure there aren’t any catastrophic security vulnerabilities. That said, a serious design flaw slipping through the cracks could end in catastrophe.</p>
+                  <p>These vulnerabilities exist either because they are undiscovered, or because a patch hasn't been made (maybe a patch is still in the works, maybe the flaw is impossible to fully patch, or maybe the vulnerability is being ignored out of negligence). Sometimes zero-day vulnerabilities go years and years without being fixed or even discovered until a threat actor decides to exploit it.</p>
+                  <p>These threats aren&apos;t as common as you might expect. Usually software is heavily researched and tested before launch to make sure there aren't any catastrophic security vulnerabilities. That said, a serious design flaw slipping through the cracks could end in catastrophe.</p>
                   <h3>Footprinting</h3>
                   <p>Footprinting is when the threat actor tries to gather information and <strong>discover vulnerabilities</strong>. The attacker researches their target using a wide range of methods, including collecting publicly available info, scanning network ports, and using social engineering (aka tricking people) to extract information. </p>
                   <p>Once the attacker has gathered information on their target, they will analyze their data and strategically plan their attack.</p>
-                  <p>While footprinting can be a threat, it’s also done by penetration testers in order assess security.</p>
+                  <p>While footprinting can be a threat, it's also done by penetration testers in order assess security.</p>
                   <h3>Spoofing</h3>
                   <p>Spoofing happens when the threat actor pretends to be something trustworthy.</p>
                   <p>Most people think of spoofing as an attacker pretending to be a trustworthy person or from a trustworthy organization, but spoofing can also be:</p>
@@ -365,8 +480,8 @@
                   <p>Some dictionary attack scripts might generate hashes by going through every possible word, but others will favour words and phrases that are known to be common in passwords, such as‘<i>12345</i>’, ‘<i>iloveyou</i>’, ‘<i>P@55w0rd</i>’, or words related to the organization being targeted.</p>
                   <h3>DoS Attacks</h3>
                   <p>A denial of service attack is any attack that <strong>makes a service inaccessible</strong>. You could do this by exploiting a design failure that causes software to crash, downloading an overly large file, or physically cutting a computer’s power cable. </p>
-                  <p>That said, when most people talk about DoS attack, they’re specifically referring to an attack that involves services being overloaded by an onslaught of spoofed traffic. The coordinated influx of network traffic brings the system down under the weight of too many requests.</p>
-                  <p>It’s worth noting that sometimes cutting off a service is not the attacker’s end goal. DoS attacks are very disruptive and obvious, which makes them great distractions for subtler threats.</p>
+                  <p>That said, when most people talk about DoS attack, they're specifically referring to an attack that involves services being overloaded by an onslaught of spoofed traffic. The coordinated influx of network traffic brings the system down under the weight of too many requests.</p>
+                  <p>It's worth noting that sometimes cutting off a service is not the attacker's end goal. DoS attacks are very disruptive and obvious, which makes them great distractions for subtler threats.</p>
                   <h3>DDoS Attacks</h3>
                   <p>A <i>distributed</i> denial of service attack is designed is much harder to stop than a regular DoS attack, which is why you hear about them more often. These attack from <b>multiple locations</b> in order to bring down their target. Attacking from many different sources at once makes them hard to block. </p>
                   <p>DDoS attacks come in many different varieties, but pretty much all of them work by overwhelming a server with traffic. This is typically done using botnets, which are devices connected to the internet that are under the control of a 3rd party. These devices are often infected with malware, transforming them into remotely controlled attacking machines.</p>
@@ -383,7 +498,7 @@
                 </article>
             </div>
             <!-- malware -->
-            <div id="tab2-wrapper" class="tabcontent">
+            <div id="malware-wrapper" class="tabcontent">
                 <article>
                   <h2>this is literally just a list of different types of malware</h2>
                   <aside><b>01/09/24</b> - this was originally posted in the weblog section of this site, but the webmaster decided to move it to its own</aside>
@@ -419,7 +534,8 @@
                   <p>While most malware comes in the form of an executable file, fileless malware disguises itself as a legitimate script or document while <em>residing in the computer&rsquor;s memory</em>. From there it infects and exploits useful system processes such as scripting environments (especially Powershell). This malware hard to detect using regular antimalware software. </p>
                 </article>
             </div>
-            <div id="tab4-wrapper" class="tabcontent">
+            <!-- backups -->
+            <div id="backups-wrapper" class="tabcontent">
                 <article>
                   <h2>backups</h2>
                   <p>Have you you remembered to back up your data recently? Yes, I’m speaking to you specifically. Go back up your data.</p>

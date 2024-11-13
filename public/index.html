@@ -62,7 +62,7 @@
         <div style="margin-top:-21px;margin-bottom:36px;padding:30px;filter:drop-shadow(0 0 20px hsl(207,51%,95%,0.5))"></div>
         <div>.</div><div style="font-size:12px;">.</div>
         </div>
-        <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(210,200,200)&shadeColor=rgb(13, 26, 29)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
+        <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=100&lightColor=rgb(228, 212, 212&shadeColor=rgb(13, 26, 29)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="100px";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget;m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};a.open("GET",url,true);a.send()})()</script>
       </div>
 
       <main>
@@ -86,6 +86,7 @@
                       </ul>
                     </section>
                   </div>
+
                 </div>
             </div>
 
@@ -107,6 +108,10 @@
                 <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                   <section>
                       <p>
+                      <time datetime="2024-11-13"><strong>13.11.24</strong></time>
+                  - added notes on terminal commands & logical security, added more <span class="tooltip">recipes</span><span class="tooltiptext">most of the new recipes are for snacks & baked goods, but i SWEAR i can make actual meals too!!</span>, made recipe cards a bit more readable (esp. on mobile), some general small css tweaks
+                      </p>
+                      <p>
                       <time datetime="2024-11-06"><strong>06.11.24</strong></time>
                   - made a new section for digitizing my <a href="recipes.html">recipes</a>, added notes going over basic cmd.exe commands
                       </p>
@@ -118,11 +123,11 @@
                       <time datetime="2024-10-13"><strong>13.10.24</strong></time>
                   - new(ish) layout! now the site's usable on mobile, uses more javascript, uses proper grid and flexbox, and just generally sucks less
                       </p>
+                      <span id="dots"><br /></span><span id="more">
                       <p>
                       <time datetime="2024-09-28"><strong>28.09.24</strong></time>
                   - added notes on backups to notebook, included weblog on my backup process, fixed broken links on about webmaster page, added more buttons to links page, polished up layout (new page titles, more element titles, fixed header order, etc)
                       </p>
-                      <span id="dots"><br /></span><span id="more">
                       <p>
                       <time datetime="2024-09-10"><strong>10.09.24</strong></time>
                   - created <a href="study.html">notebook</a> page for my IT study notes, moved old weblog about malware to the new webpage, added font changer to weblog post, created a new and improved <span class="tooltip">tooltip</span><span class="tooltiptext">it's still far from perfect, but it gets the job done</span>, changed <strong>&lt;b&gt;</strong> and <em>&lt;i&gt;</em> colours yet again
