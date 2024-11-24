@@ -13,12 +13,22 @@
     <style>
     .mincontent {
       padding:0;
-      margin:0 0 5px 0;
+      margin:0 0 10px 0;
+    }
+    .mincontent h3 {
+    background-image: linear-gradient(to top, rgba(37, 80, 83, 0.5) 40%,  rgba(44, 114, 116, 0.4) 90%);
+    width: 100%;
+    padding: 4px 15px;
+    margin:0px;
+    border-radius: 3px 3px 0px 0px;
+    border-bottom: 2px outset rgba(76, 140, 145, 0.9);
+    font-size: 16px;
     }
     .mincontent a {
       text-decoration: none;
       text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
       color: #f0ee75;
+      margin-left:10px;
     }
     .mincontent a:hover {
       filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
@@ -34,7 +44,7 @@
       margin-top:-6px;
     }
     .mincontent p {
-      margin-bottom:5px;
+      margin-bottom:0;
     }
     .new {
       vertical-align: top;
@@ -88,12 +98,26 @@
 
       <main>
         <div class="mborder">
-
-            <div class="mainbox" >
-              <h2 class="subheader">weblog</h2>
+          <div class="mainbox" >
+            <h2 class="subheader">about the weblog</h2>
               <div class="maincontent" >
+                <section>
+                    <p><em>web·​log</em>: a website that contains online personal reflections, comments, and often hyperlinks, videos, and photographs provided by the writer. it does not necessarily require consistency or thematic cohesion. a weblog can just be a loose collection of writing that didn't fit elsewhere on the site and anyone who says otherwise is wrong and mean</p>
+                </section>
+              </div>
+          </div>
+          <div class="mainbox">
+          <h2 class="subheader">posts</h2>
+          <div class="maincontent">
                 <div class="mincontent">
-                  <h3><a href="weblog_posts/cpinterest.html">i find old creepypastas fascinating</a><sup class="new">NEW!</sup></h3>
+                  <h3><a href="weblog_posts/nekoai.html">to nekoweb, or not to nekoweb, that is the question</a><sup class="new">NEW!</sup></h3>
+                  <section>
+                    <p class="blogdetail"><time datetime="2024-11-23">nov 23, 2024</time><span> &#x2022; word count: 2208</span></p>
+                    <p>some thoughts on web hosting platforms, the AI infestation, and the future of this site</p>
+                  </section>
+                </div>
+                <div class="mincontent">
+                  <h3><a href="weblog_posts/cpinterest.html">i find old creepypastas fascinating</a></h3>
                   <section>
                     <p class="blogdetail"><time datetime="2024-10-31">oct 31, 2024</time><span> &#x2022; word count: 2535</span></p>
                     <p>i decided to reread some old creepypastas. here are 6 of them.</p>
@@ -113,10 +137,9 @@
                     <p>i put a blog on my website and i have mixed feelings about it</p>
                   </section>
                 </div>
+                </div>
               </div>
-            </div>
 
-        </div>
       </main>
         
       <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>

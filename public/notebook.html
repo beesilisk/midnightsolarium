@@ -24,12 +24,11 @@
       }
       #box {
         background-color: rgba(13, 36, 38, 0.4);
-        backdrop-filter: blur(2.5px);
-        
+        backdrop-filter: blur(2.5px); 
       }
       .grid {
-    grid-template-columns: 0.4fr 1.6fr; 
-    max-width:950px;
+    grid-template-columns: 0.5fr 2fr; 
+    max-width:1000px;
       }
       #side {
         align-items:center;
@@ -64,7 +63,6 @@
         backdrop-filter: blur(4px);
         padding-bottom: 10px;
       }
-      
       .mainbox:first-of-type {
         background-color: rgba(13, 36, 38, 0.4);
       }
@@ -74,21 +72,32 @@
 
 }
       .maincontent h2 {
-        color: rgb(120, 236, 211);
-        text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
-        font-weight: 700;
+        color: rgb(194, 251, 253);
+        text-shadow:
+        0 0 5px rgba(120, 236, 211, 0.5), 0 0 10px rgba(120, 236, 211, 0.5),
+        0 0 15px rgba(120, 236, 211, 0.5), 0 0 20px rgba(120, 236, 211, 0.5);
+        font-weight: 600;
         font-family:'TheGoodMonolith';
-        font-size: 24px;
+        font-size: 26px;
         text-align: center;
         line-height: 1.0;
-        margin-bottom:20px;
+        margin-bottom:22px;
+      }
+      .pic h2 {
+        color: rgb(255, 255, 255);
+        text-shadow:none;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom:0;
       }
       .maincontent h3 {
         text-align:left;
         font-size:18px;
       }
-      .maincontent p {
-        margin-bottom:12px;
+      .maincontent p, .maincontent ul{
+        margin-bottom:8px;
       }
       /* tab buttons CSS stuff */
       .tab {
@@ -107,11 +116,14 @@
         border-bottom: 2px solid #53b6bd;
         border-radius: 0;
         &:not(:disabled) {
-          &:active,
-          &.active {
-            box-shadow: none;
-            background: rgba(201, 137, 169, 0.6);
-          }
+
+          &:hover {
+          box-shadow: none;
+          border-top: 2px solid rgb(230, 138, 161);
+          border-bottom: 2px solid rgb(230, 138, 161);
+          background: rgba(180, 106, 143, 0.4);
+          cursor: pointer;
+       }
         }
         &:focus,
         &.focused {
@@ -129,30 +141,15 @@
         padding: 3px;
         width: 100%;
       }
-      button {
-     &:not(:disabled) {
-         &:active, &.active {
-             box-shadow: none;
-             background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(151, 186, 145, 1) 100% );
-        }
-        &:hover {
-          box-shadow: none;
-          border-top: 2px solid rgb(230, 138, 161);
-          border-bottom: 2px solid rgb(230, 138, 161);
-          background: rgba(180, 106, 143, 0.4);
-          cursor: pointer;
-       }
-   }
      &:focus, &.focused {
          box-shadow: none;
     }
      &::-moz-focus-inner {
          border: 0;
     }
-}
+
       .btntype {
         margin-bottom: 21px;
-
       }
       /* so pages stay hidden */
       .tabcontent {
@@ -205,10 +202,11 @@
             </div>
             <div class="btntype">
               <button class="tablinks" onclick="openTab('cmd-wrapper')">cmd cheat sheet</button>
-              <button class="tablinks" onclick="openTab('terminal-wrapper')" style="display:inline;float:center;">terminal cheat sheet<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('winmgmt') "style="display:inline;float:center;">windows mgmt tools<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('terminal-wrapper')" style="display:inline;float:center;">terminal cheat sheet</button>
             </div>
             <div class="btntype">
-              <button class="tablinks" onclick="openTab('logicsec-wrapper')" style="display:inline;float:center;">logical security<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('logicsec-wrapper')">logical security</button>
               <button class="tablinks" onclick="openTab('threats-wrapper')">types of threats</button>
               <button class="tablinks" onclick="openTab('malware-wrapper')">types of malware</button>
             </div>
@@ -314,91 +312,184 @@
               <p><strong>gpupdate</strong> – update group policies</p>
               <p><strong>gpresult</strong> – view RsoP info for remote user’s computer</p>
           </div>
+                                          <!-- logical security -->
+          <div id="winmgmt" class="tabcontent">
+            <article>
+              <h2>windows management & troubleshooting tools</h2>
+              <p>Windows comes prepackaged with a wide range of tools and features, and a handful of them are actually useful! Yes, really. Lets go over some troubleshooting and system management programs that don’t get deleted by those Windows <a href="https://github.com/Sycnex/Windows10Debloater" alt="Windows 10 Debloater" title="Win10 Debloater">10<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> & <a href="https://github.com/Raphire/Win11Debloat" alt="Windows 10 Debloater" title="Win11 Debloater">11<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> debloater scripts.</p>
+              <h3>Task Manager (taskmgr.exe)</h3>
+              <p>If you’re only familiar with one of these tools, you’re familiar with Task Manager. It has a variety of uses, such as managing apps & services, logged-in accounts, and system performance.</p>
+              <p>Also there are an absurd amount of ways to open Task Manager, including but not limited to:</p>
+              <ul>
+                <li>typing “<strong>taskmgr</strong>” in the Run command</li>
+                <li>right-clicking the taskbar</li>
+                <li>CTRL + ALT + DEL</li>
+                <li>Win + X</li>
+                <li>CTRL + Shift + ESC</li>
+              </ul>
+              <h4>Services</h4>
+              <p>A service is a type of system process that doesn’t require user interaction. Your computer will have a list of services running in the background at all times in order to function. The Task Manager Services tab shows you that list of running services as well as their identification information (description, group, status).</p>
+              <h4>Startup</h4>
+              <p>This tab tells you about the services that begin at startup. You can enable or disable the programs, or select <em>startup type</em> to specify how the program launches. It can also show you the impact each program has on boot time.</p>
+              <div class="pic" style="width:284px;float:right;margin-left:10px;">
+                <h2 class="subheader">taskmgr.exe</h2>
+                <figure><img src="img/taskmgr.png" title="task manager's performance tab" alt="task manager's performance tab" style="width:280px"></figure>
+                <figcaption style="width:280px;">yes, i inverted this png's colors instead of switching to light mode</figcaption>
+            </div>
+              <h4>Performance</h4>
+              <p>The Performance tab shows the resource utilization of the CPU, Memory, Disk I/O, and network. It’s especially useful when the computer is running slowly, since it can help quickly identify bottlenecking.</p>
+              <p>When it comes to CPU utilization, occasional high spikes in utilization are normal. But if the utilization is consistently high, consider either upgrading other resources or running fewer processes. </p>
+              <h4>Processes</h4>
+              <p>This tab lists all the processes currently running on the system, and outlines each one’s consumption of various resources. By default it only shows the processes of the user that’s currently logged in, but it can also list the processes of all the accounts on the system. This tab can also be used to <strong>end tasks</strong>.</p>
+              <h4>Users</h4>
+              <p>Shows all the users who are currently logged in, tells you which apps they’re running, and compare the resource utilization of each account. You can also use Task Manager to send messages to users, and sign them out if needed.</p>
+              <div class="pic" style="width:154px;float:left;margin-right:10px;">
+                <h2 class="subheader">resmon.exe</h2>
+                <figure><img src="img/resmonmini.png" title="resource monitor" alt="resource monitor" style="width:150px;"></figure>
+                <figcaption style="width:150px;">resource monitor's titular resource monitors</figcaption>
+            </div>
+              <h3>Resource Monitor (resmon.exe)</h3>
+              <p>Resource Monitor is a lot like the Performance and Processes tabs in Task Manager – it lets you live monitor the system’s resource usage, as well as end processes. The main benefit of using Resource Monitor is that it’s easier to isolate a particular process or service to see its resource usage.</p>
+              <h3>System Information (msinfo32.exe)</h3>
+              <p>System Information shows details about the computer’s hardware and software. You would use it if you need to know about the components, peripherals, drivers, services, and network status. The tool <em>doesn’t let you make changes</em> to the system, but it’s useful for the information gathering stage of the troubleshooting process.</p>
+              <h3>System Configuration (msconfig.exe)</h3>
+              <p>The System Configuration utility lets you change the way Windows behaves when it boots. You would use it if you want to change the default OS, enable or disable Safe boot (aka Safe Mode), or set a timer for how long the boot potions will be displayed.</p>
+              <p>The tool also lets you choose which services will run at startup – but if you want to change which apps run on startup, you’ll want to go to Task Manager.</p>
+              <h3>Registry Editor (regedit.exe)</h3>
+              <p>The registry is a database that stores configuration settings related to the OS, device, and software. You can alter pretty much every aspect of Windows through the Registry Editor. It’s a powerful tool if you know what you’re doing, but it should be approached with caution. Mistakes can cause serious issues, up to and including bricking the entire system.</p>
+              <h3>Disk Cleanup (cleanmgr.exe)</h3>
+              <p>If your storage drive is running low on space, Disk Cleanup can be used to free up room by deleting files. The files it deletes are typically unimportant, like temporary files and the recycle bin, but you can review the files before they’re deleted and specify which types of files you’d like to remove or keep.</p>
+              <h3>Disk Defragment (dfrgui.exe)</h3>
+              <p>Unlike Disk Cleanup, the Disk Defragment tool <strong>does not delete anything</strong> from the system. Instead, it reorganizes the data blocks spread throughout the <span class="tooltip">physical disk</span><span class="tooltiptext">There are technically ways to defragment an SSD too, but doing so is even less necessary – if fact, it’s more likely to damage the drive due to unnecessary wear and tear</span> so that files are kept in the same area, speeding up the disk’s read times. This tool isn’t as necessary as it used to be now that Windows defragments drives automatically, but using it to optimize performance won’t hurt anything.</p>
+              <h3>MMC (mmc.exe)</h3>
+              <p>The Microsoft Management Console is less of a tool on its own and more of a container used to bring numerous tools into a single space. </p>
+              <p>MMC snap-ins are all programs that can be accessed on their own, but the MMC is a convenient space for pulling up whichever tools you need at once. It also lots you save the console setup, so you can quickly pull up whichever assortment of tools you find yourself using most.</p>
+              <h4>Event Viewer (eventvwr.msc)</h4>
+              <p>Event Viewer shows Windows’ log files related to events. It’s typically used to review previous errors, and is especially useful when you want to see old error messages.</p>
+              <p>There are 4 main log files:</p>
+              <ul>
+                <li><strong>System</strong> – log for events related to the core OS</li>
+                <li><strong>Application</strong> – log for 3rd-party software and non-core processes</li>
+                <li><strong>Security</strong> – log for system audit data</li>
+                <li><strong>Setup</strong> – log for events that occur during installation</li>
+              </ul>
+              <p>It’s worth mentioning that even though Event Viewer is often associated with errors, not every “event” will be critical errors. It also records audit logs, occurrences that OS deems noteworthy, and warnings for potential future issues.</p>
+              <h4>Disk Management (diskmgmt.msc)</h4>
+              <p>This shows you information regarding the system’s storage drives, and lets you create and format drives on physical disks. Most of this tool’s functions and more can be done using the command-line tool <strong>diskpart</strong>, but Disk Management wraps it in an easy-to-use GUI. Be careful when using this tool, because it’s very easy to make irreversible changes and lose data. </p>
+              <div class="pic" style="width:304px;float:right;margin-left:10px;">
+                <h2 class="subheader">taskschd.msc</h2>
+                <figure><img src="weblog_posts/blog_img/tsched.png" title="task scheduler" alt="task scheduler" style="width:300px"></figure>
+                <figcaption style="width:300px;">don't talk to me, im busy scheduling my tasks</figcaption>
+            </div>
+              <h4>Task Scheduler (taskschd.msc)</h4>
+              <p>Task Scheduler lets you automate tasks so that they run at specified times. It’s used to launch programs and scripts at a predetermined time, or when certain criteria is met, such as at login or when the computer is idle. You often see it used for simple tasks like turning computers on or off, sending notifications, or <a href="weblog_posts/backups.html">creating backups</a>, but it can also be used to run more advanced scripts.</p>
+              <h4>Device Manager (devmgmt.msc)</h4>
+              <p>Lets you view the status of devices, view their properties, and configure their parameters. It can be used to enable or disable hardware, which can be useful for troubleshooting. But it’s more frequently used to manage <em>drivers</em>, allowing you to enable or disable them, roll back to previous versions of drivers, or identify errors and software conflicts.</p>
+              <h4>Certificate Manager (certmgr.msc)</h4>
+              <p>Certificate Manager is used to see the certificates used by the OS, as well as any web browsers installed on the system. It also lets you install and remove certificates, and allows you to modify its trust lists and revocation lists. When troubleshooting issues related to authentication, it’s good to check the certificates to make sure any software or web applications being used are trustworthy.</p>
+              <h4>Local Users and Groups (lusrmgr.msc)</h4>
+              <p>If you only a Home version of Windows installed, you won’t be able to find this tool.  For those of us with Pro or higher, Local Users and Groups provides an in-depth console for managing accounts on the local network. From here you can create, modify and disable accounts, manage their passwords, assign account permissions, or connect them to shared drives. You can also manage the permissions of individual users, or assign permissions to entire groups.</p>
+              <div class="pic" style="width:294px;float:left;margin-right:10px;">
+                <h2 class="subheader">gpedit.msc</h2>
+                <figure><img src="img/gpedit.png" title="some policies found in group policy editor" alt="policies found witin group policy editor" style="width:290px;"></figure>
+                <figcaption style="width:290px;">i am NOT gonna explain the policies themselves; i value my time</figcaption>
+              </div>
+              <h4>Local Group Policy Editor (gpedit.msc)</h4>
+              <p>The Group Policy Editor provides a GUI for configuring Windows settings. It technically performs a similar function to the Registry Editor, but its GUI is a lot more user-friendly, so it’s a shame it’s not available on Home versions of Windows. But I suppose it makes sense – this tool is more useful for modifying <strong>broader system settings</strong> within an Active Directory domain, as opposed to managing managing local accounts via lusrmgr.msc.</p>
+              <p>As well as letting you configure OS settings, vendors can also write administrative templates that make third-party software configurable through the Group Policy Editor.</p>
+              <h4>Performance Monitor (perfmon.msc)</h4>
+              <p>I know some confuse Performance Monitor with Resource Monitor, which makes sense. Both tools are used to monitor system resource utilization. But once you actually use these tools, it’s clear that these are two very different pieces of software.</p>
+              <p>When you first open up Performance Monitor, you won’t be shown any monitors or live feeds. You need to <em>manually select</em> which resource you want it to monitor – and the list of resources it provides is far more exhaustive than most other monitoring tools. Once selected, Performance Monitor will start generating a counter or trace log.</p>
+              <p>It’s considered best practice to use Performance Monitor to measure resource utilization at different times of the day, or at regular intervals throughout the year. This gives you a thorough understanding of the system’s typical performance, and gives you a frame of reference when troubleshooting specific issues.</p>
+            </article>
+          </div>
                       <!-- 	command line -->
-                      <div id="terminal-wrapper" class="tabcontent">
-                        <h2>UNIX terminal cheat sheet</h2>
-                        <p>These commands are very common amongst UNIX-based systems. That said, there can be slight variations between different shells, coreutils, and proprietary programs.  This generally isn’t much of a problem. If one of these commands doesn’t work, try looking up the commands that usually come with your OS and/or distro.</p>
-                        <h3>General Usage</h3>
-                        <p><strong><em>[command]</em> --help</strong> – shows info about a specific command</p>
-                        <p><strong>man <em>[command]</em></strong> – more detailed info on command</p>
-                        <p><strong>clear</strong> – clear screen</p>
-                        <p><strong>|</strong> – pipe; redirects the results of one command into another command</p>
-                        <p><strong>;</strong> – issue another command on a single line</p>
-                        <h3>Navigation</h3>
-                        <p><strong>pwd</strong> – present working directory; shows full path of current working directory</p>
-                        <details>
-                          <summary><strong>ls</strong> – list files and subdirectories</summary>
-                          <p><strong>-l</strong> – show detailed list</p>
-                          <p><strong>-a</strong> – show hidden files & system files</p>
-                        </details>
-                        <details>
-                          <summary><strong>cd</strong> / <strong>chdir</strong> – change working directory</summary>
-                          <p><strong>/</strong> – move to root directory</p>
-                          <p><strong>~</strong> – move to home directory</p>
-                          <p><strong>. .</strong> – move up to parent directory</p>
-                        </details>
-                        <h3>Search Tools</h3>
-                        <p><strong>find</strong> – search for files and directories</p>
-                        <details>
-                          <summary><strong>grep</strong> – search for a string of characters within a file or text output</summary>
-                          <p><strong>-i</strong> – search without case sensitivity</p>
-                          <p><strong>-l</strong> – lists name of files that match character string</p>
-                          <p><strong>-r</strong> – search through directory and its subdirectories</p>
-                        </details>
-                        <h3>File Management</h3>
-                        <p><strong>cp</strong> – creates copy of file (original is not moved or modified)</p>
-                        <p><strong>mv</strong> – moves files to another directory. also used to rename files</p>
-                        <p><strong>rm</strong> – remove file</p>
-                        <p><strong>mkdir</strong> – create a new directory</p>
-                        <p><strong>rmdir</strong> – delete empty directories</p>
-                        <details>
-                          <summary><strong>chmod</strong> – modify file permissions</summary>
-                          <p><strong>r</strong> – read permission</p>
-                          <p><strong>w</strong> – write permission</p>
-                          <p><strong>x</strong> – execute permission</p>
-                          <p><strong>-</strong> – permission not granted</p>
-                        </details>
-                        <p><strong>chown</strong> – change ownership of file / directory</p>
-                        <details>
-                          <summary><strong>cat</strong> – retrieves contents of a file</summary>
-                          <p><strong><em>[file 1]</em> > <em>[file 2]</em></strong> – takes contents of file 1 and overwrites onto file 2</p>
-                          <p><strong><em>[file 1]</em> >> <em>[file 2]</em></strong> – appends contents of file 1 at end of file 2</p>
-                          <p><strong><em>[file 1]</em> | more</strong> – breaks text into pages</p>
-                          <p><strong><em>[file 1]</em> | less</strong> – breaks text into pages, which you can move up and down</p>
-                        </details>
-                        <p><strong>nano</strong> – a command-line text editor</p>
-                        <h3>Disk Management</h3>
-                        <p><strong>df</strong> – disk free; shows info on disk space</p>
-                        <p><strong>du</strong> – disk usage; shows info on the disk usage of files and directories</p>
-                        <h3>Package Managers</h3>
-                        <p><strong>apt-get</strong> – Debian package manager; used to update & install packages</p>
-                        <p><strong>yum</strong> – Red Hat package manager; used to update & install packages</p>
-                        <p><strong>pacman</strong> – Arch package manager; used to update & install packages</p>
-                        <p><strong>zypper</strong> – openSUSE package manager; used to update & install packages</p>
-                        <h3>System & Process</h3>
-                        <p><strong>sudo</strong> – grants superuser privileges for a single line</p>
-                        <details>
-                          <summary><strong>su</strong> – run commands with another user's privileges</summary>
-                          <p><strong><em>[username]</em></strong> –  switches to that account</p>
-                          <p><strong>-</strong> – switch to root user and launch shell with root access</p>
-                        </details>
-                        <p><strong>passwd</strong> – change a user’s password</p>
-                        <p><strong>ps</strong> – process status; display snapshot of currently running processes</p>
-                        <p><strong>top</strong> – shows live feed of running processes</p>
-                        <p><strong>kill</strong> – terminate a process</p>
-                        <h3>Networking</h3>
-                        <details>
-                          <summary><strong>ip</strong> – used to show and manage network connections</summary>
-                          <p><strong>-addr</strong> – view and manage IP addresses</p>
-                          <p><strong>-link</strong> – view and manage network interfaces</p>
-                          <p><strong>-route</strong> – view and manage path taken by packet to arrive at destination</p>
-                        </details>
-                        <p><strong>ifconfig</strong> – show and manage network connections (depreciated; replaced by ip)</p>
-                        <p><strong>nmcli</strong> – NetworkManager command-line tool</p>
-                        <p><strong>ping</strong> – sends ICMP packet to specified address</p>
-                        <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
-                    </div>
-                                <!-- 	threats-->
+          <div id="terminal-wrapper" class="tabcontent">
+            <article>
+              <h2>UNIX terminal cheat sheet</h2>
+              <p>These commands are very common amongst UNIX-based systems. That said, there can be slight variations between different shells, coreutils, and proprietary programs.  This generally isn’t much of a problem. If one of these commands doesn’t work, try looking up the commands that usually come with your OS and/or distro.</p>
+              <h3>General Usage</h3>
+              <p><strong><em>[command]</em> --help</strong> – shows info about a specific command</p>
+              <p><strong>man <em>[command]</em></strong> – more detailed info on command</p>
+              <p><strong>clear</strong> – clear screen</p>
+              <p><strong>|</strong> – pipe; redirects the results of one command into another command</p>
+              <p><strong>;</strong> – issue another command on a single line</p>
+              <h3>Navigation</h3>
+              <p><strong>pwd</strong> – present working directory; shows full path of current working directory</p>
+              <details>
+                <summary><strong>ls</strong> – list files and subdirectories</summary>
+                <p><strong>-l</strong> – show detailed list</p>
+                <p><strong>-a</strong> – show hidden files & system files</p>
+              </details>
+              <details>
+                <summary><strong>cd</strong> / <strong>chdir</strong> – change working directory</summary>
+                <p><strong>/</strong> – move to root directory</p>
+                <p><strong>~</strong> – move to home directory</p>
+                <p><strong>. .</strong> – move up to parent directory</p>
+              </details>
+              <h3>Search Tools</h3>
+              <p><strong>find</strong> – search for files and directories</p>
+              <details>
+                <summary><strong>grep</strong> – search for a string of characters within a file or text output</summary>
+                <p><strong>-i</strong> – search without case sensitivity</p>
+                <p><strong>-l</strong> – lists name of files that match character string</p>
+                <p><strong>-r</strong> – search through directory and its subdirectories</p>
+              </details>
+              <h3>File Management</h3>
+              <p><strong>cp</strong> – creates copy of file (original is not moved or modified)</p>
+              <p><strong>mv</strong> – moves files to another directory. also used to rename files</p>
+              <p><strong>rm</strong> – remove file</p>
+              <p><strong>mkdir</strong> – create a new directory</p>
+              <p><strong>rmdir</strong> – delete empty directories</p>
+              <details>
+                <summary><strong>chmod</strong> – modify file permissions</summary>
+                <p><strong>r</strong> – read permission</p>
+                <p><strong>w</strong> – write permission</p>
+                <p><strong>x</strong> – execute permission</p>
+                <p><strong>-</strong> – permission not granted</p>
+              </details>
+              <p><strong>chown</strong> – change ownership of file / directory</p>
+              <details>
+                <summary><strong>cat</strong> – retrieves contents of a file</summary>
+                <p><strong><em>[file 1]</em> > <em>[file 2]</em></strong> – takes contents of file 1 and overwrites onto file 2</p>
+                <p><strong><em>[file 1]</em> >> <em>[file 2]</em></strong> – appends contents of file 1 at end of file 2</p>
+                <p><strong><em>[file 1]</em> | more</strong> – breaks text into pages</p>
+                <p><strong><em>[file 1]</em> | less</strong> – breaks text into pages, which you can move up and down</p>
+              </details>
+                <p><strong>nano</strong> – a command-line text editor</p>
+                <h3>Disk Management</h3>
+                <p><strong>df</strong> – disk free; shows info on disk space</p>
+                <p><strong>du</strong> – disk usage; shows info on the disk usage of files and directories</p>
+                <h3>Package Managers</h3>
+                <p><strong>apt-get</strong> – Debian package manager; used to update & install packages</p>
+                <p><strong>yum</strong> – Red Hat package manager; used to update & install packages</p>
+                <p><strong>pacman</strong> – Arch package manager; used to update & install packages</p>
+                <p><strong>zypper</strong> – openSUSE package manager; used to update & install packages</p>
+                <h3>System & Process</h3>
+                <p><strong>sudo</strong> – grants superuser privileges for a single line</p>
+                <details>
+                  <summary><strong>su</strong> – run commands with another user's privileges</summary>
+                  <p><strong><em>[username]</em></strong> –  switches to that account</p>
+                  <p><strong>-</strong> – switch to root user and launch shell with root access</p>
+                </details>
+                <p><strong>passwd</strong> – change a user’s password</p>
+                <p><strong>ps</strong> – process status; display snapshot of currently running processes</p>
+                <p><strong>top</strong> – shows live feed of running processes</p>
+                <p><strong>kill</strong> – terminate a process</p>
+                <h3>Networking</h3>
+                <details>
+                <summary><strong>ip</strong> – used to show and manage network connections</summary>
+                  <p><strong>-addr</strong> – view and manage IP addresses</p>
+                  <p><strong>-link</strong> – view and manage network interfaces</p>
+                  <p><strong>-route</strong> – view and manage path taken by packet to arrive at destination</p>
+                </details>
+                <p><strong>ifconfig</strong> – show and manage network connections (depreciated; replaced by ip)</p>
+                <p><strong>nmcli</strong> – NetworkManager command-line tool</p>
+                <p><strong>ping</strong> – sends ICMP packet to specified address</p>
+                <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
+            </article>
+          </div>
+                                <!-- logical security -->
             <div id="logicsec-wrapper" class="tabcontent">
               <article>
                 <h2>some logical security measures</h2>
@@ -428,7 +519,7 @@
                 <h3>Authenticator Apps</h3>
                 <p>Authenticator apps let people access resources <em>without a password</em>. Instead, the service or network is registered with the software, making it inaccessible to anyone without an account on the app. If someone with an account tries to gain access (usually done by scanning a QR code, copying an alphanumeric key, or a biometric scan), the app will send them a soft token.</p>
                 <p>Unlike soft tokens sent over SMS, these apps work without cell service or internet access. The keys are also easier to encrypt and sync across devices. But if you lose access to your account, app, or device, the service becomes inaccessible.</p>
-            </article>
+              </article>
           </div>
             <!-- 	threats-->
             <div id="threats-wrapper" class="tabcontent">
@@ -444,8 +535,8 @@
                   <p>Or sometimes the reasons are less interesting. Got an employee who keeps falling for phishing emails? That's an insider threat too.</p>
                   <p>The motivations behind insider threats are infinitely varied, but we can put them into 2 categories:</p>
                   <ul>
-                    <li><strong>&#10027; malicious</strong> (e.g. an employee at Evil Inc. realizes that they're the baddies and decides to leak confidential data to a team of plucky rebels), and</li>
-                    <li><strong>&#10027; non-malicious</strong> (e.g. your idiot child tries to download My Sim Aquarium from a sketchy website and infects the family computer with malware (sorry dad))</li>
+                    <li><strong>malicious</strong> (e.g. an employee at Evil Inc. realizes that they're the baddies and decides to leak confidential data to a team of plucky rebels), and</li>
+                    <li><strong>non-malicious</strong> (e.g. your idiot child tries to download My Sim Aquarium from a sketchy website and infects the family computer with malware (sorry dad))</li>
                   </ul>
                   <p>What I'm saying is that, like all threat actors, an insider threat can can come from anyone with any skillset for any reason.</p>
                   <h3>Zero-Day Attack</h3>
@@ -460,9 +551,9 @@
                   <p>Spoofing happens when the threat actor pretends to be something trustworthy.</p>
                   <p>Most people think of spoofing as an attacker pretending to be a trustworthy person or from a trustworthy organization, but spoofing can also be:</p>
                   <ul>
-                    <li><strong>&#10027;</strong> cloning a valid IP or MAC address</li>
-                    <li><strong>&#10027;</strong> using a fake digital certificate</li>
-                    <li><strong>&#10027;</strong> stealing authentication tokens (such as web cookies)</li>
+                    <li>cloning a valid IP or MAC address</li>
+                    <li>using a fake digital certificate</li>
+                    <li>stealing authentication tokens (such as web cookies)</li>
                   </ul>
                   <p>Essentially, spoofing is a general term that describes <em>impersonation</em>. </p>
                   <h3>On-Path Attack</h3>

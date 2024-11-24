@@ -66,9 +66,9 @@ html:before {
 }
 html {
     background-color: rgb(13, 44, 47);
-    background-image: url("img/ditherfinny2.png");
-    background-repeat: repeat-x;
-    background-size: 800px;
+    background-image: url("img/forestdithbg.png");
+    background-repeat: repeat;
+    background-size: cover;
     image-rendering: pixelated;
     background-attachment: fixed;
 }
@@ -150,11 +150,11 @@ body {
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
 }
 .subheader {
-    background-image: linear-gradient(to right,rgb(48, 87, 88), rgb(42, 81, 82));
+    background-image: linear-gradient(to right,rgb(27, 90, 92), rgb(28, 77, 78));
     width: 100%;
     padding: 4px 10px;
     border-radius: 2px 2px 0px 0px;
-    border-bottom: 2px outset rgba(15, 32, 29, 0.4);
+    border-bottom: 2px outset rgba(4, 29, 24, 0.4);
     font-family: "TheGoodMonolith";
     font-size: 18px;
     font-weight:500;
@@ -163,7 +163,7 @@ body {
 }
 .sidecontent {
     padding: 0 0 5px 5px;
-    background-image: linear-gradient(to right, rgb(130, 190, 185),  rgba(109, 172, 168, 0.9));
+    background-image: linear-gradient(to right, rgb(125, 202, 196),  rgba(104, 179, 174, 0.9));
     backdrop-filter: blur(2.5px);
     line-height:1.5;
 }
@@ -179,7 +179,7 @@ body {
     text-decoration:none;
 }
 .sidecontent a:hover {
-    background-color:rgba(149, 216, 219, 0.6);
+    background-color:rgba(150, 240, 245, 0.6);
     color:rgb(73, 38, 201);
     font-size:14px;
     font-weight:600px;
@@ -210,7 +210,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: rgb(16, 29, 27);
+    background-color: rgb(19, 27, 27);
 
     backdrop-filter: blur(2.6px);
     border-right:3px ridge #f5e8ea;
@@ -224,7 +224,7 @@ main:last-of-type {
     padding-bottom:5px;
 }
 .mainbox {
-    border: 2px outset rgba(55, 97, 89, 0.4);
+    border: 2px outset rgba(21, 90, 77, 0.4);
     border-radius: 4px 4px 0 0;
     margin:10px 20px 10px 20px;
     height:fit-content;
@@ -244,15 +244,26 @@ main:last-of-type {
 .maincontent{
     margin: 0;
     padding: 10px 20px 10px 20px;
-    background-color: rgb(29, 72, 73);
+    background-color: rgb(14, 66, 66);
     
 }
 .maincontent h3 {
     text-align: center;
-    color: #c4e57e;
-    text-shadow: 0 0 10px rgba(243, 247, 118, 0.6);
+    color: rgb(234, 240, 161);
+
+    text-shadow:
+    0 0 5px rgba(183, 231, 80, 0.5), 0 0 10px rgba(183, 231, 80, 0.5),
+  0 0 15px rgba(183, 231, 80, 0.5), 0 0 20px rgba(183, 231, 80, 0.5);
     margin-bottom:5px;
 }
+.maincontent h4 {
+    color: #f1c6d8;
+    text-shadow:
+    0 0 5px rgba(231, 68, 90, 0.8), 0 0 10px rgba(231, 68, 90, 0.8),
+  0 0 15px rgba(231, 68, 90, 0.8), 0 0 20px rgba(231, 68, 90, 0.8);
+    margin-bottom:5px;
+    font-size:16px;
+      }
 .maincontent p, .maincontent ul, .maincontent details, .mincontent p, .mincontent ul, .mincontent li{
     font-size:14px;
     margin-bottom:5px;
@@ -264,7 +275,7 @@ main:last-of-type {
     line-height:1.4;
 }
 ul li{
-    list-style-type: "> ";
+    list-style-type: "❯❯ ";
     margin-left:10px;
 }
 .maincontent b, strong {
@@ -328,9 +339,9 @@ details details, details p, details ul, details h3 {
 }
 
 .mincontent {
-    background-image: linear-gradient(to right, rgba(162, 223, 226, 0.9),  rgba(153, 220, 223, 0.8));
+    background-image: linear-gradient(to right, rgba(157, 227, 230, 0.9),  rgba(154, 231, 227, 0.8));
     border-radius: 6px;
-    border: 2px outset rgba(81, 145, 150, 0.9);
+    border: 2px outset rgba(93, 163, 168, 0.9);
     margin:20px 10% 10px 10%;
     color:black;
 
@@ -343,12 +354,12 @@ details details, details p, details ul, details h3 {
 }
 
 .mincontent h3 {
-    background-image: linear-gradient(to top, rgba(37, 62, 83, 0.5) 40%,  rgba(44, 95, 116, 0.4) 90%);
+    background-image: linear-gradient(to top, rgba(37, 80, 83, 0.5) 40%,  rgba(44, 114, 116, 0.4) 90%);
     width: 100%;
     padding: 8px 15px;
     margin:0px;
     border-radius: 3px 3px 0px 0px;
-    border-bottom: 2px outset rgba(76, 140, 145, 0.9);
+    border-bottom: 2px outset rgba(91, 184, 190, 0.9);
     font-family: "TheGoodMonolith";
     font-size: 20px;
     font-weight:500;
@@ -373,10 +384,10 @@ details details, details p, details ul, details h3 {
 }
 
 .mincontent i, .mincontent em {
-    color: rgb(131, 22, 46);
+    color: rgb(145, 27, 76);
 }
 .mincontent b, .mincontent strong {
-    color: rgb(143, 44, 14);
+    color: rgb(131, 22, 46);
 }
 .tab {
     margin: 10px 50px 10px 50px;
@@ -503,7 +514,7 @@ figcaption {
     text-align: center;
     line-height:1.0;
     color:black;
-    background-image: linear-gradient(to right, rgb(218, 208, 209),  rgba(204, 191, 192, 0.9));
+    background-image: linear-gradient(to right, rgb(238, 229, 230),  rgba(236, 224, 224, 0.9));
 }
 figcaption i, figcaption em {
     color: #851430;
