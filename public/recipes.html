@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; recipe cards &#10028;</title>
     <style>
@@ -22,69 +18,73 @@
 }
 .recipe {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
     padding:10px;
     margin-right:50px;
     margin-left:30px;
     margin-top:10px;
-    color: #f8f5ee;
-    background: #0b110f;
-    background-image: url("img/lined-paper-3.png");
+    color: #190644;
+    background: #cddb7c;
+    background-image: url("img/lined-paper-4.png");
     border-radius: 10px;
-    
-    box-shadow: 0 2px 8px rgba(0,0,0,.5);
-    overflow: hidden;
-}
-.recipe p, .recipe li, .recipe aside {
-  font-size:13px;
+    font-weight: 500;
 
+    box-shadow: 0 4px 12px rgba(20, 27, 33, .8);
+    overflow: hidden;
 }
 .recipe:before {
     content: '';
     position: absolute;
     top: 0; bottom: 0; left: 0;
     width: 60px;
-    background: radial-gradient(rgb(25, 58, 59) 6px, transparent 7px) repeat-y;
+    background: radial-gradient(rgb(20, 46, 54) 6px, transparent 7px) repeat-y;
     background-size: 30px 30px;
     border-right: 2px solid rgba(212, 65, 71, 0.3);
     box-sizing: border-box;
 }
-.recipe p, .recipe aside, .recipe h4{
-  margin-left:56px;
-  vertical-align: center;
+.recipe h4 {
+  text-decoration: underline;
+    color: #190644;
+    text-shadow:none;
+    margin-bottom:5px;
 }
-.ingredients {
-    margin:0 22px 8px 16px;
-    float:left;
-    max-width:40%;
-    border-right:2px dashed rgba(215, 216, 136, 0.6);
-    padding-right:10px;
-    min-width:170px;
+.recipe i, .recipe em {
+    color: rgb(145, 27, 76);
 }
+.recipe p, .recipe li, .recipe h4 {
+  font-size:14px;
+}
+.recipe li{
+    list-style-type: "–  ";
+    margin-left:2.5rem;
+}
+
 .recipe aside {
     font-size: 11px;
     margin-bottom:4px;
-    margin-left:58px;
+}
+.ingredients p, .ingredients aside, .ingredients h4 {
+  margin-left:56px;
+}
+.ingredients {
+    margin:0 22px 8px 16px;
+    width: 40%;
+    min-width: 170px;
+    padding-right:10px;
 }
 .ingredients aside {
     margin-left:38px;
 }
-.ingredients h4, .ingredients p {
-  margin-left: 2.5rem;
+.ingredients p {
+  margin-left: 30px;
 }
-.recipe h4 {
-  margin-bottom:4px;
-  font-size:13px;
-  text-decoration: underline;
-    color: #f8f5ee;
-    text-shadow:
-    none;
-    margin-bottom:5px;
-}
-
-.maincontent li{
-    list-style-type: "–  ";
-    margin-left:2.5rem;
-    margin-bottom:3px;;
+.instructions {
+  text-align: center;
+  margin-right: 20px;;
+  width:60%
 }
 br {
    display: block;
@@ -104,55 +104,41 @@ br {
 }
 .ingredients {
   min-width:calc(100% - 10px);
-  border-right:none;
-  border-bottom:2px dashed rgba(215, 216, 136, 0.6);
+  margin-left:46px;
 }
     .instructions {
-      margin-left:55px;
+      margin-right:0;
+      margin-left:36px;
+    }
+    .instructions aside {
+      margin-left:26px;
     }
 }
-
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
+    
 
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" style="z-index:2;"><h1>
-          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
-      <!-- Font Changer -->
-      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-        <select title="font changer" onchange="changingFontStyle (this);">
-           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-        </select>
-      </div>
-        <script>
-           var changingFontStyle = function (fontstyle) {
-              document.getElementById("box").style.fontFamily = fontstyle.value;
-           }
-        </script>
-
-      <div class="sidebox" style="margin-top:0;">
-        <h2 class="subheader">navigate</h2>
-        <nav class="sidecontent">
-          <script src="nav.js"></script>
-        </nav>
-      </div>
-
-      <div class="sidebox">
-        <h2 class="subheader">external links</h2>
-        <nav class="sidecontent">
-          <script src="nav_ext.js"></script>
-        </nav>
-      </div>
+          <div class="sidebox" style="margin-top:20px;">
+            <h2 class="subheader">navigate</h2>
+            <nav class="sidecontent">
+              <script src="nav.js"></script>
+            </nav>
+          </div>
 
       </div>
 
@@ -173,7 +159,9 @@ br {
 
                       <details class="recname"><summary>BAKED BRIE</summary>
                         <div class="recipe">
+                          <div class="instructions">
                             <p>Top whole brie with crushed garlic, then chopped, drained sun-dried tomatoes (in oil). Bake <em>350&deg;F</em> til cheese starts to melt. Garnish with parsley. Serve with crackers.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -192,11 +180,13 @@ br {
                               <li>1/2 cup chopped walnuts</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                           <h4>INSTRUCTIONS</h4>
                           <p>Beat cream cheese, cheddar, and sour cream until smooth. Mix in nuts, onion soup and cracker crumbs.</p>
                           <p>Shape into ball. Roll in chopped walnuts.</p>
                           <aside>Makes about 4 cups</aside>
                           <aside>If too soft to shape into ball, chill it for a while.</aside>
+                        </div>
                         </div>
                       </details>
 
@@ -223,11 +213,13 @@ br {
                               <li>2 tsp cornstarch</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Put zucchini, onion, red & green pepper, jalapeno, and salt in dutch oven. Mix together and leave in refrigerator overnight.</p>
                             <p>Next morning, DON'T DRAIN! Add the rest of the ingredients and mix well. Boil for <em>10 minutes</em>, then simmer for <em>an hour</em>. Chill. Makes about 1 litre.</p>
                             <br /><br />
                             <aside>If you want to make enough for multiple jars (and you know how to jar food safely), quadruple the recipe.</aside>
+                          </div>
                         </div>
                       </details>
                       
@@ -246,8 +238,48 @@ br {
                             </ul>
                             <aside>(if using dried herbs, reduce amounts to teaspoonfuls)</aside>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Stir together herbs, oil and onion along with salt and pepper. Add cheese and stir to coat. Cover and let stand at room temperature 1-3 hours. Place on serving tray and serve with crackers or breads.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>MOM'S ZUCCHINI SALSA <span class="star">&#9733;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>12 cups zucchini, chopped</li>
+                              <li>9 assorted peppers, chopped</li>
+                              <aside>(NOTE: i think Mom specifically meant bell peppers, but im not sure)</aside>
+                              <li>12 jalapeños</li>
+                              <li>4 cups onions, chopped</li>
+                              <li>1/4 cup coarse salt</li>
+                              <br /><br />
+                              <li>20 lbs tomatoes (60-90 romas)</li>
+                              <li>2-3 cans tomato paste</li>
+                              <li>3/4 cup vinegar</li>
+                              <li>1/2 cup brown sugar</li>
+                              <li>3 tbsp garlic</li>
+                              <li>3 ground mustard</li>
+                              <li>3 chili powder</li>
+                              <li>3 cumin</li>
+                              <li>2-4 tbsp cornstarch</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <aside>WARNING: Makes a LOT of salsa! Be prepared to jar most of it.</aside>
+                            <p>Combine first 5 ingredients and let sit overnight.</p>
+                            <p>The next day, drain the juice but don't get rid of it.</p>
+                            <p>Add the rest of the ingredients. Combine the juice with the cornstarch to thicken as needed.</p>
+                            <p>Mix well. Boil for <em>10 minutes</em>, then simmer for <em>1 hour</em>.</p>
+                            <p>Seal in jars.</p>
+                            <br /><br />
+                            <aside>Makes 13-15 quarts.</aside>
+                            <aside>This is a medium salsa. Adjust as desired.</aside>
+                          </div>
                         </div>
                       </details>
 
@@ -264,8 +296,10 @@ br {
                               <li>2 tbsp olive oil</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                           <h4>INSTRUCTIONS</h4>
                           <p>In a large bowl, toss ingredients until combined. Cover and refrigerate until ready to serve up, or 2 days in fridge.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -284,12 +318,14 @@ br {
                               <aside>This recipe is very customizable. Add whatever your heart desires</aside>
                             </ul>
                           </div>
+                          <div class="instructions">
                           <h4>INSTRUCTIONS</h4>
                           <aside>(This is much easier to make with 2 people)</aside>
                           <p>Spray big stainless steel bowl with Pam to avoid sticking. Place popcorn & nuts in bowl.</p>
                           <p>Combine sugar, corn syrup, and margarine in large pan over low heat. Stir well while it melts together, slowly raising the heat until it forms a hard ball. Remove from heat and add vanilla and stir very well.</p>
                           <p>Pour over popcorn and nuts and mix well. Spread over greased baking sheets. Let cool and dry.</p>
                           <aside>Makes about 3 ice cream pails full.</aside>
+                        </div>
                         </div>
                       </details>
                       
@@ -304,8 +340,10 @@ br {
                               <li>popcorn, to taste</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                           <h4>INSTRUCTIONS</h4>
                           <p>Melt butter in microwave. Immediately add chili & brown sugar and mix until sugar dissolves. Drizzle over popcorn and toss until evenly coated.</p>
+                        </div>
                         </div>
                       </details>
 
@@ -330,11 +368,45 @@ br {
                               <li>1/4 cup cooking oil</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Measure first 6 ingredients into a large bowl. Make a well in the centre.</p>
                             <p>Combine lightly beaten egg, milk, and oil. Pour into well. Stir only to moisten – batter will be lumpy.</p>
                             <p>Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>. Let stand 5 minutes, then remove from pan.</p>
                             <aside>makes about 1 dozen muffins</aside>
+                          </div>
+                        </div>
+                      </details>
+
+                    </details>
+
+                    <details><summary class="rectype">salad</summary>
+
+                      <details class="recname"><summary>STRAWBERRY SPINACH SALAD <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>SALAD</h4>
+                            <ul>
+                              <li>1 package spinach</li>
+                              <li>mushrooms</li>
+                              <li>strawberries</li>
+                              <li>2 hard-boiled eggs</li>
+                              <li>slivered almonds</li>
+                            </ul>
+                            <h4>DRESSING</h4>
+                            <ul>
+                              <li>1/4 red wine vinegar</li>
+                              <li>1/3 cup honey</li>
+                              <li>1 tsp poppyseed</li>
+                              <li>1 tsp salt</li>
+                              <li>1 tsp ground mustard</li>
+                              <li>1/2 cup extra virgin olive oil</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Blend dressing. Add olive oil slowly. Pour on salad before serving.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -359,8 +431,37 @@ br {
                               <li>5 tbsp millet</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Combine first 6 ingredients. Cover and cook for <em>30 minutes</em>. Then add the rest of ingredients. Cover and simmer slowly for <em>1 hour</em>.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>FRENCH ONION SOUP</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1/4 cup butter</li>
+                              <li>3 onions, thinly sliced</li>
+                              <li>1 tsp granulated sugar</li>
+                              <li>1 tbsp flour</li>
+                              <li>2 1/2 cups water</li>
+                              <li>1/2 cup red wine</li>
+                              <li>2 10oz cans beef broth</li>
+                              <li>1 French baguette</li>
+                              <li>8oz swiss or mozzarella cheese, sliced</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Melt butter in pot. Stir in sugar and cook onions over medium heat until golden.</p>
+                            <p>Stir in flour. Add water, wine, broth. Boil, then reduce temperature. Simmer for <em>10 minutes</em>.</p>
+                            <p>Cut bread into 4" slices. Toast.</p>
+                            <p>Ladle soup into bowls. Place toasted bread on top. Top with cheese slices.</p>
+                            <p>Bake at <em>425&deg;F</em> for <em>10 minutes</em> or until cheese is melted.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -383,6 +484,7 @@ br {
                               <li>1/2 cup plain yogurt</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                           <h4>IPREN</h4>
                           <aside>(potato soup)</aside>
                           <p>Sauté onions in 2 tablespoons of butter. Sprinkle with paprika, and add enough water to cover potatoes.</p>
@@ -392,6 +494,7 @@ br {
                           <p>Combine flour, salt & pepper, and enough water to make hard dough. Mix well.</p>
                           <p>Flatten pieces of dough. They should be about as wide as a loonie (approx. 1") and about 1/8" thick.</p>
                           <p>When potato soup is ready, "pluck" knadle dough into soup. Cook <em>10-15 minutes</em>. Add cheddar and yogurt. Eat! Enjoy!</p>
+                        </div>
                         </div>
                       </details>
 
@@ -414,9 +517,137 @@ br {
                               <li>(optional) peas, to taste</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Boil first 8 ingredients together for 30 minutes, and then add carrots. Wait another 15 minutes, add rice, and cook for another 15 minutes.</p>
+                          </div>
                         </div>
+                      </details>
+
+                      <details class="recname"><summary>POTATO SOUP</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>6 cups diced potatoes</li>
+                              <li>1/2 cup chopped onion</li>
+                              <li>2 chopped celery stalks, leaves included</li>
+                              <li>1 chopped carrot</li>
+                              <li>2 tsp salt</li>
+                              <li>1 tsp celery salt</li>
+                              <li>1/4 tsp pepper</li>
+                              <li>8 slices bacon</li>
+                              <br /><br />
+                              <li>2 tbsp flour</li>
+                              <li>6 tbsp bacon fat</li>
+                              <li>2 cups milk</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Fry bacon until crisp. Save drippings.</p>
+                            <p>Place veggies in dutch oven and cover with water. Cook over medium heat until tender.</p>
+                            <p>Prepare sauce by combining last 3 ingredients. Mix well. Slowly add to veggies. Do not drain.</p>
+                            <p>Heat and add bacon pieces.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                    </details>
+
+                    <details><summary class="rectype">main dishes</summary>
+
+                      <details class="recname"><summary>CROCKPOT ORANGE CHICKEN</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 onion, sliced</li>
+                              <li>2 large carrots, sliced</li>
+                              <li>2 large red or green peppers</li>
+                              <li>3 cloves of garlic</li>
+                              <li>4 chicken breasts, diced</li>
+                              <li>2 tsp ground ginger</li>
+                              <li>1 tsp salt</li>
+                              <li>1/2 tsp pepper</li>
+                              <li>8oz concentrated orange juice</li>
+                              <br /><br />
+                              <li>2 cups tangerine segments</li>
+                              <li>2 green onions</li>
+                              <br /><br />
+                              <li>cooked white rice</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Put every ingredient - except for the last 3 - into the crockpot.</p>
+                            <p>Cook on Low for <em>4-6 hours</em>.</p>
+                            <p>Serve on rice, topped with tangerine & green onions.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>HAM + CHEESE CASSEROLE <span class="star">&#9733;</span> <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>ham, diced (about 1-2 inches)</li>
+                              <li>1 package hashbrowns</li>
+                              <li>2 cups grated cheddar</li>
+                              <li>1 large container sour cream</li>
+                              <li>1 can cream of chicken soup</li>
+                              <li>3/4 cup melted butter</li>
+                              <li>(optional) green onions</li>
+                              <li>black pepper</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Cube the ham. Mix with hashbrowns and cheese.</p>
+                            <p>Fold in sour cream and soup.</p>
+                            <p>Transfer to casserole dish and pour butter over top.</p>
+                            <p>Sprinkle with chopped onions and pepper.</p>
+                            <p>Bake for <em>60-75 minutes</em> at <em>350&deg;F</em></p>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary>MOM'S SPAGHETTI SAUCE <span class="star">&#9733;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>60 roma tomatoes</li>
+                              <li>2 large zucchinis</li>
+                              <li>12 jalapeños</li>
+                              <li>1 large chili pepper</li>
+                              <li>4 green peppers</li>
+                              <li>5 onions</li>
+                              <li>1/3 coarse salt</li>
+                              <li>2/3 cups vinegar</li>
+                              <li>500 grams garlic</li>
+                              <li>4-6 tbsp cornstarch</li>
+                              <li>4 tbsp ground mustard</li>
+                              <li>4 tbsp cumin</li>
+                              <li>basil and oregano, to taste</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <aside>WARNING: Makes a LOT of sauce! Be prepared to jar most of it.</aside>
+                            <p>Shred zucchini, all peppers, and onions. Combine in large roaster.</p>
+                            <p>Add salt and vinegar. Mix.</p>
+                            <p>The next day, drain the juice but don't get rid of it.</p>
+                            <p>Skin, clean, and squeeze tomatoes into mixture.</p>
+                            <p>Add spices to taste, as well as garlic.</p>
+                            <p>Let low boil for <em>1 hour</em>.</p>
+                            <p>Mix cornstarch into it to thicken sauce as needed.</p>
+                            <p>Seal in hot jars.</p>
+                            <br /><br />
+                            <aside>Makes about 13 jars.</aside>
+                          </div>
+                          </div>
                       </details>
 
                     </details>
@@ -442,12 +673,14 @@ br {
                               <li>1/2 cup butter, melted</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Place apple slices in <em>9"×13"</em> pan. In a bowl, mix the granulated sugar, 1 tbsp flour, and ground cinnamon together, and sprinkle over the apples. Then pour water evenly over the apples.</p>
                             <p>In a bowl, combine oats, 1 cup flour, brown sugar, baking soda, baking powder, and butter together into a crumbly mixture. Evenly layer on top of apples.</p>
                             <p>Bake at <em>350&deg;F</em> for about <em>45 minutes</em>.</p>
                             <aside>(the size of the apple slices is up to personal taste. large slices mean less work. i prefer to cut them thinner - but any piece under 1/4" thick risks turning to mush)</aside>
-                        </div>
+                          </div>
+                          </div>
                       </details>
 
                       <details class="recname"><summary>BANANA CHOCOLATE CHIP MUFFINS <span class="star">&#9733;</span> <span class="heart">&#9829;</span></summary>
@@ -467,10 +700,12 @@ br {
                               <li>3 overripe mashed bananas</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Combine first 5 dry ingredients into large bowl. Mix and make a well in the center.</p>
                             <p>Beat egg until frothy. Mix in oil, milk and bananas. Pour into well. Stir only until moist - batter will still be lumpy. Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>.</p>
                             <aside>makes about 1 dozen muffins</aside>
+                          </div>
                         </div>
                       </details>
 
@@ -492,6 +727,7 @@ br {
                               <li>sugar for sprinkling</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Preheat oven to <em>400&deg;F</em>.</p>
                             <p>Mash banana until fairly smooth. Add mashed banana (should be around 1/2 cup) to a 2 cup measuring cup. Add the egg to the cup and whisk together until well combined.</p>
@@ -505,7 +741,8 @@ br {
                             <aside>(if you like, this is a good time to wrap and freeze the scone if you'd rather bake later)</aside>
                             <p>Place wedges on pan lined with parchment paper. Brush tops with cream and sprinkle with sugar.</p>
                             <p>Place scones in oven and <strong>immediately</strong> reduce heat to <em>375&deg;F</em>. Bake for <em>20-25 minutes</em>, until scones are golden brown. A toothpick inserted in the center should come out clean.</p>
-                        </div>
+                          </div>
+                          </div>
                       </details>
 
                       <details class="recname"><summary>CHOCOLATE BANANA CAKE</summary>
@@ -526,11 +763,13 @@ br {
                               <li>1 cup boiling water</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Add baking soda to sour cream; let foam while making rest of cake</p>
                             <p>Cream sugar & butter. Add eggs & bananas. Beat. Add sour cream. Mix salt, cocoa, and water. Mix in flour. Add vanilla. Mix.</p>
                             <p>Pour into greased <em>9" x 13"</em> pan, or bundt pan. Bake at <em>350&deg;F</em> for about <em>1 hour</em>.</p>
                             <aside>goes well with cream cheese icing</aside>
+                          </div>
                         </div>
                       </details>
 
@@ -554,6 +793,7 @@ br {
                               <li>1 1/2 tsp vanilla extract</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>STREUSEL TOPPING</h4>
                             <p>In a medium bowl, combine 1/4 cup flour, 2/3 cup granulated sugar, and cinnamon. Cut in the 1/4 cup butter until crumbly mixture is formed.</p>
                             <h4>CAKE</h4>
@@ -561,6 +801,30 @@ br {
                             <p>In large bowl, combine 2 cups flour, 3/4 cups sugar, baking powder, and salt. Cut in 1/2 cup butter. The mixture should look crumbly.</p>
                             <p>Crack the egg into your measuring cup. Then use milk to fill it to 1 cup. Stir in vanilla. Pour all this into the large bowl and mix only until moistened.</p>
                             <p>Spread cake batter into pan. Sprinkle streusel overtop. Bake for <em>20-25 minutes</em>, or until a toothpick inserted at the center comes out clean.</p>
+                          </div>
+                          </div>
+                      </details>
+
+                      <details class="recname"><summary>EATMORE BARS <span class="star">&#9733;</span> <span class="heart">&#9829;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>2 cups chocolate chips</li>
+                              <li>1 cup corn syrup</li>
+                              <br /><br />
+                              <li>1/2 cup peanut butter</li>
+                              <li>1 cup oatmeal (quick oats)</li>
+                              <li>2 cups chopped peanuts</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Melt chocolate chips and corn syrup together in microwave.</p>
+                            <p>Add the rest of the ingredients.</p>
+                            <p>Spray cookie sheet for thin bars or <em>9"×13"</em> pan for thick bars.</p>
+                            <p>Press into pan. Refrigerate, then cut into bars.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -581,6 +845,7 @@ br {
                               <li>1 cup chocolate chips (or to taste)</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Beat butter and both sugars together until creamy (approx. 2 minutes). Beat in egg and vanilla.</p>
                             <p>In separate bowl whisk flour, cornstarch, baking soda, and salt. Add to wet ingredients, beating until combined. Fold in the chocolate chips.</p>
@@ -590,6 +855,7 @@ br {
                             <p>Bake for <em>11-12 minutes</em>, until <em>barely</em> golden on edges. They will look underbaked on top. This is normal.</p>
                             <p>Cool cookies on baking sheet for 5 minutes, then transfer to cooling rack. </p>
                             <aside>makes about 30 cookies. stays fresh for about a week if kept covered at room temp</aside>
+                          </div>
                         </div>
                       </details>
 
@@ -610,11 +876,13 @@ br {
                               <li>1/2 tsp salt</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Beat butter, peanut butter, and both sugars until creamy. Then beat in eggs.</p>
                             <p>In separate bowl, combine last 4 ingredients. Stir into wet ingredients. Put dough in fridge for at least 1 hour.</p>
                             <p>Roll dough into 1" balls and place on baking sheets. Flatten each ball criss-cross with a fork.</p>
                             <p>Bake at <em>375&deg;F</em> for about <em>10 minutes</em>, until edges begin to brown.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -647,6 +915,7 @@ br {
                               <aside>(you may need to make more if you run out of coating)</aside>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Cream butter and both sugars together for 2 minutes until light and fluffy. Add both eggs and additional yolk into butter along with vanilla and beat until smooth.</p>
                             <p>Mix in 3 tsp pumpkin spice, baking powder, and salt. Reduce speed on mixer to low and mix in flour.</p>
@@ -655,6 +924,28 @@ br {
                             <p>Mix coating ingredients together in a bowl. Roll dough into large balls, approx. 1 1/2" diameter. Then roll the balls in coating, covering completely.</p>
                             <p>Bake for <em>7-8 minutes</em> until cookies are lightly browned at the bottom. They will look very puffy. Remove from oven and transfer to cooling rack.</p>
                             <aside>Makes about 30 cookies.</aside>
+                          </div>
+                        </div>
+                      </details>
+
+                      <details class="recname"><summary><span style="text-decoration: underline;">THE</span> SHORTBREAD COOKIES <span class="star">&#9733;</span></summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 pound butter</li>
+                              <li>1 cup icing sugar</li>
+                              <li>1/2 cup cornstarch</li>
+                              <li>3 1/2 cups flour</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Whip together butter + sugar.</p>
+                            <p>Add flour + cornstarch.</p>
+                            <p>Roll into loonie-sized balls (a little over 1" diameter). Press slightly.</p>
+                            <p>Bake at <em>375&deg;F</em> for <em>10-12 minutes</em>.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -680,6 +971,7 @@ br {
                               <li>2 cups raisins (optional)</li>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>In large bowl, combine cereals and boiling water. Let stand.</p>
                             <p>In separate bowl cream butter and sugars. Beat in eggs one at a time. Mix in buttermilk. Stir in cereal mix.</p>
@@ -687,6 +979,7 @@ br {
                             <p>Fill muffin cups 3/4 full. Bake at <em>400&deg;F</em> for <em>20-25 minutes</em>. Remove from pan after 5 minutes.</p>
                             <aside>Makes a LOT of muffins. I'm not kidding. You might wanna keep the batter covered in the fridge and bake in small batches. The batter should keep for about 6 weeks.</aside>
                             <aside>If you choose to bake them all at once, be prepared to gift some to your friends and loved ones. Or at least put some in the freezer.</aside>
+                          </div>
                         </div>
                       </details>
 
@@ -704,10 +997,37 @@ br {
                               <aside>(pull the petals out by hand, or cut them off the head. it's fine to leave some green bits, but leaving the head will make the tea too bitter)</aside>
                             </ul>
                           </div>
+                          <div class="instructions">
                             <h4>INSTRUCTIONS</h4>
                             <p>Rinse the petals off before making the tea.</p>
                             <p>Place the petals in tea ball and steep for 10 minutes. The tea will taste mild and light.</p>
                             <p>Goes well with honey. You can also add lemon, mint, raspberry leaves, and/or chamomile.</p>
+                          </div>
+                        </div>
+                      </details>
+
+                    </details>
+
+                    <details><summary class="rectype"><img src="img/mini-caution.gif"/> alcoholic beverages <img src="img/mini-caution.gif"/></summary>
+
+                      <details class="recname"><summary>CITRUS PUNCH</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>2 cans frozen orange juice</li>
+                              <li>2 cans frozen lemonade</li>
+                              <li>8 cans water</li>
+                              <li>2 cups grenadine</li>
+                              <li>juice of 3 fresh lemons</li>
+                              <li>3 quarts pre-chilled ginger ale</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Combine all ingredients</p>
+                            <p>For bonus points, float orange slices and/or cherries on top.</p>
+                          </div>
                         </div>
                       </details>
 
@@ -721,9 +1041,13 @@ br {
         </div>
       </main>
         
-      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      <footer>
+        <p>open since May 14, 2024</p>
+        <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
+      </footer>
       </div>
     </div>
+    <div class="outer"></div>
   </div>
   <script>
     // Get the button

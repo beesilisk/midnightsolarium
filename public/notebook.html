@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; notebook &#10028;</title>
     <style>
@@ -22,29 +18,19 @@
       #container {
         image-rendering: pixelated;
       }
-      #box {
-        background-color: rgba(13, 36, 38, 0.4);
-        backdrop-filter: blur(2.5px); 
+      .outer {
+        width:30%;
       }
       .grid {
     grid-template-columns: 0.5fr 2fr; 
-    max-width:1000px;
       }
       #side {
         align-items:center;
+
       }
       select {
         display: block;
         max-width: 150px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .backlink {
-        text-align:center;
-      }
-      .backlink a {
-        font-size:16px;
-        color:#e9e752;
       }
       .backlink a:hover {
         filter: drop-shadow(0 0 5px rgba(171, 241, 243, 0.4)) brightness(1.2);
@@ -77,7 +63,7 @@
         0 0 5px rgba(120, 236, 211, 0.5), 0 0 10px rgba(120, 236, 211, 0.5),
         0 0 15px rgba(120, 236, 211, 0.5), 0 0 20px rgba(120, 236, 211, 0.5);
         font-weight: 600;
-        font-family:'TheGoodMonolith';
+        font-family:"Cozette";
         font-size: 26px;
         text-align: center;
         line-height: 1.0;
@@ -96,8 +82,9 @@
         text-align:left;
         font-size:18px;
       }
-      .maincontent p, .maincontent ul{
-        margin-bottom:8px;
+      .maincontent p, .maincontent ul, .maincontent details{
+        margin-bottom:12px;
+        line-height:1.6;
       }
       /* tab buttons CSS stuff */
       .tab {
@@ -155,46 +142,42 @@
       .tabcontent {
         display: none;
       }
-      .new {
-        vertical-align: top;
-        font-size: 10px;
-        margin-left: 4px;
-        font-weight: 500;
-        color: rgb(231, 201, 103);
-      }
+
+    .new {
+      vertical-align: top;
+      font-size: 10px;
+      margin-left: 4px;
+      font-weight: 500;
+      color: rgb(231, 201, 103);
+    }
+    @media only screen and (max-width: 1281px) {
+    .outer {
+        margin-left:68%;
+    }
+}
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
 
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" style="z-index:2;"><h1>
-          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
           <div style="display:flex;flex-direction:column;margin-top:10px;">
             
-          <div class="backlink"><a href="index.html"><img src="img/backteal.png" style="width:50px;" title="Go Back"></a></div>
+          <div class="backlink"><a href="home.html"><img src="img/backteal.png" style="width:50px;" title="Go Back"></a></div>
 
-      <!-- Font Changer -->
-      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-        <select title="font changer" onchange="changingFontStyle (this);">
-           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-        </select>
-      </div>
-        <script>
-           var changingFontStyle = function (fontstyle) {
-              document.getElementById("box").style.fontFamily = fontstyle.value;
-           }
-        </script>
         </div>
-
 
           <div class="tab">
             <div class="btntype">
@@ -202,8 +185,9 @@
             </div>
             <div class="btntype">
               <button class="tablinks" onclick="openTab('cmd-wrapper')">cmd cheat sheet</button>
-              <button class="tablinks" onclick="openTab('winmgmt') "style="display:inline;float:center;">windows mgmt tools<sup class="new">NEW!</sup></button>
-              <button class="tablinks" onclick="openTab('terminal-wrapper')" style="display:inline;float:center;">terminal cheat sheet</button>
+              <button class="tablinks" onclick="openTab('winmgmt')">windows mgmt tools</button>
+              <button class="tablinks" onclick="openTab('wincnet') "style="display:inline;float:center;">windows client networking<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('terminal-wrapper')">terminal cheat sheet</button>
             </div>
             <div class="btntype">
               <button class="tablinks" onclick="openTab('logicsec-wrapper')">logical security</button>
@@ -228,9 +212,12 @@
                 <p>ive decided to share my IT certification exam notes with the world wide web! this way i can study while also sharing information with others <span style="color:lightpink">&#9825;</span>＼(￣▽￣)／<span style="color:lightpink">&#9825;</span></p>
                 <p>ive done my best to translate my notes into something that can hopefully serve as an <em>introduction to IT concepts</em> for anyone who has a basic understanding of technology and is curious enough to learn more </p>
                 <p style="font-size:11.5px;line-height:1.5;">(if you're also studying IT, my notes mainly follow the current CompTIA A+ exam objectives & official study material. i may also include info that's not on the exam if i consider it important. if you want a cheat sheet, you'll need to look <a href="https://ptgmedia.pearsoncmg.com/imprint_downloads/pearsonitcertification/bookreg/9780137637546/9780137637546_CramSheet.pdf">elsewhere<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>)</p>
-                <p><strong>IMPORTANT NOTE!</strong> please keep in mind that <em>i am still in the process of learning</em>. although i have some experience and i make an effort to avoid spreading misinformation, i suggest viewing my notebook as nothing more than a <strong>jumping off point</strong> for your own learning<span class="tooltip" style="text-decoration-line: none;">.</span>
-                  <span class="tooltiptext">(((still a better resource than chatgpt tho)))</span>
-                </p>
+                <p><strong>IMPORTANT NOTE!</strong> please keep in mind that i am still in the process of learning. although i have some experience and i make an effort to avoid spreading misinformation, i suggest viewing my notebook as nothing more than a <strong>jumping off point</strong> for your own education<span class="tooltip" style="text-decoration-line: none;">.</span><span class="tooltiptext">(((still a better resource than chatgpt tho)))</span></p>
+                <div class="pic" style="width:304px;margin-left:auto;margin-right:auto;margin-top:20px;">
+                  <h2 class="subheader">syscert.png</h2>
+                  <figure><img src="img/syscert.png" title="a cat in a server cabinet" alt="a cat in a server cabinet. there are arrows pointing to the cat labelled 'literally locked in the server cabinet', 'no anti-static wristband', 'sitting on the switch', 'no laptop/keyboard'. underneath is the text 'HER ASS IS NOT SYSADMIN CERTIFIED!!!'" style="width:300px;"></figure>
+                  <figcaption style="width:300px;">this is me btw</em></figcaption>
+                </div>
             </div>
             <!-- 	command line -->
             <div id="cmd-wrapper" class="tabcontent">
@@ -312,7 +299,7 @@
               <p><strong>gpupdate</strong> – update group policies</p>
               <p><strong>gpresult</strong> – view RsoP info for remote user’s computer</p>
           </div>
-                                          <!-- logical security -->
+          <!-- logical security -->
           <div id="winmgmt" class="tabcontent">
             <article>
               <h2>windows management & troubleshooting tools</h2>
@@ -403,6 +390,102 @@
               <p>It’s considered best practice to use Performance Monitor to measure resource utilization at different times of the day, or at regular intervals throughout the year. This gives you a thorough understanding of the system’s typical performance, and gives you a frame of reference when troubleshooting specific issues.</p>
             </article>
           </div>
+          <!-- windows client networking -->
+          <div id="wincnet" class="tabcontent">
+            <article>
+              <h2>introduction to windows client networking</h2>
+              <p>This goes over the basics of network configuration on a Windows computer, and can work as a general guide for connecting your client computer (aka a computer that uses the resources of another computer or server) to a preexisting network. I also provide some brief explanations on basic networking concepts, don’t expect me to go over setting up an entire home network.</p>
+              <h3>Client Network Configuration</h3>
+              <p>Your network adapter should at least be configured with an <em>IP address</em> and a <em>subnet mask</em>. These are the minimum requirements for creating a functional network.</p>
+              <h4>IP Addressing Scheme</h4>
+              <p>If you want your computer to communicate with a network, it needs to receive an IP address. On Windows, there are 3 ways you can configure the IP address:</p>
+              <ul>
+                <li><strong>Network & Internet</strong> settings</li>
+                <li>the <strong>Network Connections</strong> applet</li>
+                <li>the <strong>Settings</strong> app</li>
+              </ul>
+              <p>By default, your computer’s Ethernet or Wi-Fi adapter will come pre-installed with both IPv4 and IPv6 compatibility. The client’s adapter will automatically use whichever version the network uses, so you usually don’t need to worry about configuring the wrong version on the client side. If both IP versions are available, Windows will usually choose IPv6, but you can also manually configure which one the computer uses. </p>
+              <h4>Static vs. Dynamic</h4>
+              <p>IP addresses can be configured to be dynamic or static.</p>
+              <p>Most clients are configured with <em>dynamic</em> addressing, using the network’s DHCP server (usually built into the router) to change IP addresses periodically as well as each time the device reconnects to the network.</p>
+              <p><em>Static</em> IP addresses are usually used for regularly accessed network resources like printers and servers.</p>
+              <p>If your device doesn’t have a static IP address and can’t connect to a DHCP server, Windows will automatically assign an APIPA address. This lets the computer communicate with the local network, but it won’t be able to connect to the Internet or any other network outside the local subnet.</p>
+              <h4>Subnet Mask</h4>
+              <p>Every computer and network device on the local network needs to have the same subnet mask so that devices within the network can communicate with one another (including the routers and access points that connect you to the Internet). Devices are given a subnet mask by the DHCP server alongside the IP address.</p>
+              <p>Rather than asking for the subnet mask, Windows might ask you for the <em>subnet prefix length</em>. That is... a whole can of worms that I’m not about to get into. For now, all you need to know is:</p>
+              <ul>
+                <li>A subnet prefix is a machine-readable binary representation of your subnet mask</li>
+                <li>Each subnet mask corresponds to a distinct subnet prefix length</li>
+                <li>If you know your subnet mask, you can look up that subnet’s prefix length (or CIDR, which is the same number)</li>
+                <li>Chances are your prefix length is 24 (that’s 255.255.255.0)</li>
+              </ul>
+              <h4>Gateway</h4>
+              <p>A gateway address is an address for the router. Using this, your computer is able to forward network traffic from the local network to other networks such as the Internet. To configure the gateway on Windows, all you really need to do is type in your router’s IP address.</p>
+              <h4>DNS</h4>
+              <p>If you’re using the Internet, a DNS server is needed to resolve IP addresses to their domain names. This server might be within your local network, or you can query from a public DNS server. Windows lets you provide the address for two separate DNS servers so that the OS has a second server to fall back one in case the first becomes unavailable.</p>
+              <h3>Different Network Connections</h3>
+              <p>To join your computer to a network, you’ll need to establishing a connection between the computer and the network adapter located on a switch or access point. The exact process for connecting devices will depend on the specific type of connection you’re trying to establish.</p>
+              <h4>Wired Connections</h4>
+              <p>Wired network connections are almost always Ethernet-based. The link between your computer and the adapter/switch will usually be established as soon as the cable is plugged in. </p>
+              <p>In Windows, each wired adapter is assigned a name. The first one is called Ethernet, the next Ethernet2, and so on. </p>
+              <p>If you need to configure any Ethernet settings manually, there are 2 ways to go about it:</p>
+              <ul>
+                <li>go to <strong>Device Manager</strong>, locate the adapter, right-click on it and select 'Properties', and select the 'Advanced' tab to change the settings</li>
+                <li>go to <strong>Network & Internet</strong> settings, and enter the status page to confgure the adapter</li>
+              </ul>
+              <h4>Wireless Connections</h4>
+              <p>To establish a wireless connection, go to your notification area and select the network status icon. Assuming you’ve set your access point to broadcast the SSID, your network should appear on a list of available networks.</p>
+              <p>To connect, click on your network and enter the password. Once connected, you can choose the <str>Connect automatically</str> option so Windows will connect to the network whenever it’s within range.</p>
+              <p>The adapter is configured using <strong>Device Manager</strong>. The adapter will need to support an 802.11 standard that’s compatible with your device. </p>
+              <h4>WWAN</h4>
+              <p>A Wireless Wide Area Network (WWAN) adapter is an adapter that connects cellular devices to the Internet using the cell provider’s network. The bandwidth will depend on which one is supported by both the adapter and the cell tower.</p>
+              <p>If your network’s SSID isn’t being publicly broadcast, you’ll need to input your WWAN settings manually. To do this, go to <strong>Network & Internet</strong>, select 'Wi-Fi', 'Manage known networks', and then 'Add a new network'.</p>
+              <h4>VPNs</h4>
+              <p>A VPN allows you to connect to another network using an encrypted tunnel.</p>
+              <p>Windows supports several different types of VPNs. If yours is supported (and it probably is), the connection can be configured via <strong>Network & Internet</strong> settings. </p>
+              <p>Once connected, the network connection can be seen on the network status icon. You can right click the icon and select the VPN connection icon to connect, disconnect, or modify the connection.</p>
+              <p>If your VPN isn’t supported by Windows, that doesn’t mean you can’t use it. You’ll just need to install a third-party client software.</p>
+              <h3>Workgroups & Domains</h3>
+              <p>On Windows, there are 3 main network setups:</p>
+              <ul>
+                <li><em>Domain</em> – Used in larger networks. Managed by a domain controller using Active Directory. New clients must be joined to the domain. </li>
+                <li><em>Workgroup</em> – Used in smaller networks (max. 20 inbound sessions per client) and SOHO setups. OS acts as a both a server and client.</li>
+                <li><em>Homegroup</em> – Like a workgroup, but only works on a single private network. Depreciated, but still exists on older versions of Windows 10 and prior.</li>
+              </ul>
+              <h4>Shared Resources</h4>
+              <p>Network shares allow files & folders to be shared by some or all users within a network. For client computers, the network share will look similar to a local disk.</p>
+              <p>The administrator can choose to make a network share invisible to regular users by putting <em>$</em> at the end of the share name. Other users will still be able to access the shared resource if they know the name, but it won’t be displayed on a list of shared resources.</p>
+              <p>Some administrative shares are created automatically by Windows. One example is Admin$, which is used for remote administration. These shares are only visible to admin accounts, and most can only be removed by editing the registry.</p>
+              <h4>Mapped Drives</h4>
+              <p>Shared resources can be mapped to a specific drive letter on a storage device. If a user needs to access a shared resource, they one need to navigate to that specific drive. This makes the resources easy for the network group to access; finding a shared resource isn’t very different than finding a local resource.</p>
+              <p>To map a network drive, open up <strong>File Explorer</strong> and navigate to 'My PC'. Select 'Map network drive'. Using the dialog box that pops up, you’ll then choose a drive letter, enter the folder path, and check “reconnect at sign-in” if you want the connection to be persistent.</p>
+              <h4>Printers</h4>
+              <p>Printer sharing allows computers to print to printers connected to the local network. You can connect your computer to a shared printer using <strong>File Explorer</strong>, or the Printers & scanners section of the <strong>Settings</strong> app.</p>
+              <p>To share a printer that’s connected to your computer, go to <strong>Printers & scanners</strong>, select the printer, and choose 'Manage'. Click 'printer properties', and configure the share using the Sharing tab (from here you can make sure the correct drivers are installed, too). You can also go to the Security tab to specify which users are able to use the printer.</p>
+              <h3>Windows Firewall Settings</h3>
+              <p>Your network connection is controlled by the settings imposed by your firewall. Most versions of Windows comes prepackaged with Windows Defender Firewall. You can use a 3rd-party firewall if you prefer, but the one that comes with Windows is good enough for most people, so that’s what we’ll be focusing on.</p>
+              <h4>Configuration</h4>
+              <p>You can configure Windows Defender Firewall either by going to the Windows Defender Security Center and accessing the <strong>Firewall & network protection</strong> page, or through the Windows Defender Firewall applet within the Control Panel.</p>
+              <p>From there you can turn the firewall on or off, or choose to block all incoming connections (assuming you have administrative permissions). When every connection is blocked, this will include any exceptions outlined in your exception list. This will prevent everyone on the network from accessing a shared resource, which may sometimes be necessary for security.</p>
+              <h4>Application Restrictions and Exceptions</h4>
+              <p>Windows Firewall can see all the applications running on the host system. You can allow or block the listed programs by going to the <strong>Windows Firewall</strong> status page, select ‘Allow an app through the firewall’. You can choose whether the software is available on the private network, public network, neither, or both, as well as configure these settings for specific port numbers. </p>
+              <h3>Proxy Settings</h3>
+              <p>A proxy server works as a type of gateway for the network. The client PC will pass Internet requests to the proxy, which then forwards them to the Internet. </p>
+              <p>Proxy servers are often implemented to improve security. For example, a web proxy is often used to filter access to the internet from a local network. They can also be used to improve performance, such as by caching pages that are being accessed by multiple clients.</p>
+              <p>To configure the proxy settings on a Windows client, their computer will need to be configured with the IP address and TCP port being used to forward traffic via the proxy. You can do this through <strong>Network & Internet</strong> settings.</p>
+              <p>That said, some proxies are auto-configuring, and some don’t need to be configured on the client side at all.</p>
+              <h3>Public vs. Private Networks</h3>
+              <p>A <em>public network</em> is accessible to everyone within the network’s range. Once a network is made public, Windows Firewall will automatically block all access to the host and make it undiscoverable. This makes it harder for people on the public network to gain access to system resources.</p>
+              <p>Access to a <em>private network</em> is limited to those who provide proper authentication. The firewall is set to allow host discovery and resource sharing, since it’s assumed that anyone on the network is trusted.</p>
+              <h3>File Explorer Network Paths</h3>
+              <p>Once network discovery is enabled via Network & Internet settings, other devices on the network will be accessible through File Explorer’s navigation pane.</p>
+              <p>Windows uses universal naming convention (UNC) syntax to address network hosts and resources. The syntax for a UNC network path is:</p>
+              <p>\\<em>Host</em>\<em>Path</em></p>
+              <p>“Host” refers to the host name, FQDN, or IP address of the server. “Path” is a shared folder or file path.</p>
+              <h3>Metered Connections and Limitations</h3>
+              <p>It’s common for cell providers to impose data limits (some of which are not made apparent to the user). Because of this, it’s important to make sure there aren’t any apps using up a lot of data. To prevent this, you can make the connection a metered network and set a monthly data limit. You can also modify whether the OS an apps can update automatically, or turn off OneDrive syncing.</p>
+            </article>
+          </div>
                       <!-- 	command line -->
           <div id="terminal-wrapper" class="tabcontent">
             <article>
@@ -489,7 +572,7 @@
                 <p><strong>netstat</strong> – shows listening & established TCP/IP connections</p>
             </article>
           </div>
-                                <!-- logical security -->
+          <!-- logical security -->
             <div id="logicsec-wrapper" class="tabcontent">
               <article>
                 <h2>some logical security measures</h2>
@@ -674,9 +757,13 @@
         </div>
       </main>
         
-      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      <footer>
+        <p>open since May 14, 2024</p>
+        <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
+      </footer>
       </div>
     </div>
+    <div class="outer"></div>
   </div>
   <script>
     // Get the button

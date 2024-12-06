@@ -3,14 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>&#10028; nekoweb ramble &#10028;</title>
-  <link rel="icon" type="image/x-icon" href="../img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
   <link rel="stylesheet" type="text/css" href="../style.css" />
   <link rel="stylesheet" type="text/css" href="blog_style.css" />
   <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
@@ -19,6 +12,11 @@
  <body>
    <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div id="container">
+   
+   <div class="logo">
+      <img src="../img/midsollogo2.png">
+   </div>
+
    <div id="box">
     <div id="contentboxes">
 	<div id="gridbg">
@@ -29,19 +27,12 @@
        <p class="blogdetail"><time datetime="2024-06-30">nov 18, 2024</time><span> &#x2022; word count: 2208</span></p>
 
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
-       <div class="selectdiv" style="display:inline;padding-bottom:10px;width:200px;">
-         <select title="font changer" onchange="changingFontStyle (this);">
-            <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-            <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-         </select>
-         </div>
-         <script>
-            var changingFontStyle = function (fontstyle) {
-               document.getElementById("box").style.fontFamily = fontstyle.value;
-            }
-         </script>
 
-       <hr style="margin-top:15px;"/>
+       <div style="display:inline;float:right;margin-bottom:10px;width:fit-content;">
+         <script src="../fontchanger.js"></script>
+       </div>
+
+       <hr />
        <article>
          <p>Check out that URL! If you’re reading this weblog around the time it was posted, it probably says “midnightsolarium.neocities.org”, but there’s a chance you’re viewing the <strong>nekoweb</strong> version instead!</p>
          <p>I maaaay have said there was gonna be an explanation for why I chose to mirror this site, so hooray for me holding myself to my word (and also for posting 2 weblogs within 1 month. truly my work ethic cannot be bested).</p>

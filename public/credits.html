@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; credits &#10028;</title>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
@@ -15,41 +11,25 @@
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
 
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" style="z-index:2;"><h1>
-          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
-      <!-- Font Changer -->
-      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-        <select title="font changer" onchange="changingFontStyle (this);">
-           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-        </select>
-      </div>
-        <script>
-           var changingFontStyle = function (fontstyle) {
-              document.getElementById("box").style.fontFamily = fontstyle.value;
-           }
-        </script>
-
-      <div class="sidebox" style="margin-top:0;">
-        <h2 class="subheader">navigate</h2>
-        <nav class="sidecontent">
-          <script src="nav.js"></script>
-        </nav>
-      </div>
-
-      <div class="sidebox">
-        <h2 class="subheader">external links</h2>
-        <nav class="sidecontent">
-          <script src="nav_ext.js"></script>
-        </nav>
-      </div>
+          <div class="sidebox" style="margin-top:20px;">
+            <h2 class="subheader">navigate</h2>
+            <nav class="sidecontent">
+              <script src="nav.js"></script>
+            </nav>
+          </div>
+          
       </div>
 
       <main>
@@ -92,9 +72,10 @@
                 <h2 class="subheader">fonts</h2>
                   <div class="maincontent" >
                     <section>
-                      <p><a href="https://www.cufonfonts.com/font/thegoodmonolith">TheGoodMonolith<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - the font used in the headers</p>
-                      <p><a href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - pretty much everything else</p>
+                      <p><a href="https://github.com/slavfox/Cozette">Cozette<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - the font used in the headers</p>
+                      <p><a href="https://github.com/tonsky/FiraCode">Fira Code<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - pretty much everything else</p>
                       <p><a href="https://opendyslexic.org/">OpenDyslexic<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - dyslexia-friendly alt font</p>
+                      <p>other alt fonts: Comic Sans, Lexend Exa & Mega,<br /> Papyrus, Verdana, and Windgings</p>
                     </section>
                   </div>
             </div>
@@ -126,7 +107,6 @@
               <h2 class="subheader">misc</h2>
                 <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                   <section>
-                    <p><a href="https://lunarlabs.itch.io/dither-machine">Dither Machine<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - name-your-own-price software that I use to make dithered gradients (like the one in the background)</p>
                     <p><a href="https://github.com/ai-robots-txt/ai.robots.txt">ai.robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> - <a href="https://coryd.dev/">Cory Dransfeldt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>'s list of AI web crawlers. usec as the base for midnight solarium's <a href="https://www.cyberciti.biz/web-developer/block-openai-bard-bing-ai-crawler-bots-using-robots-txt-file/">robots.txt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> file</p>
                   </section>
 
@@ -137,9 +117,13 @@
         </div>
       </main>
         
-      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      <footer>
+        <p>open since May 14, 2024</p>
+        <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
+      </footer>
       </div>
     </div>
+    <div class="outer"></div>
   </div>
   <script>
     // Get the button

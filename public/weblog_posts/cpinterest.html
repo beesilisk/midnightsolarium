@@ -3,14 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>&#10028; creepypastas &#10028;</title>
-  <link rel="icon" type="image/x-icon" href="../img/flowcan2.png">
-  <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
   <link rel="stylesheet" type="text/css" href="../style.css" />
   <link rel="stylesheet" type="text/css" href="blog_style.css" />
   <style>
@@ -45,7 +38,6 @@ background-size: 728px;
 }
 main {
     background-color: rgb(49, 19, 25);
-    background-image: url("blog_img/transparent-grid-overlay.png");
 }
 .code {
     border: 2px solid rgba(245, 142, 73, 0.8);border-radius:7px;
@@ -66,28 +58,27 @@ h3 {
  </head>
  <!-- Page template: https://repth.neocities.org/theme -->
  <body>
-   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
-  <div id="container">
-   <div id="box">
-    <div id="contentboxes">
-     <main>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+ <div id="container">
+
+  <div class="logo">
+     <img src="../img/midsollogo2.png">
+  </div>
+
+  <div id="box">
+   <div id="contentboxes">
+ <div id="gridbg">
+    <main>
       <!-- WEBLOG BOX -->
       <div>
        <h2>i find old creepypastas fascinating</h2>
        <p class="blogdetail"><time datetime="2024-06-30">oct 31, 2024</time><span> &#x2022; word count: 2535</span></p>
 
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
-       <div class="selectdiv" style="display:inline;padding-bottom:10px;width:200px;">
-         <select title="font changer" onchange="changingFontStyle (this);">
-            <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-            <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-         </select>
-         </div>
-         <script>
-            var changingFontStyle = function (fontstyle) {
-               document.getElementById("box").style.fontFamily = fontstyle.value;
-            }
-         </script>
+
+       <div style="display:inline;float:right;margin-bottom:10px;width:fit-content;">
+        <script src="../fontchanger.js"></script>
+      </div>
          
        <hr style="margin-top:15px;"/>
        <article>

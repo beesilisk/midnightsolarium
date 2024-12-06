@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; about webmaster &#10028;</title>
     <style>
@@ -49,7 +45,7 @@
   }
     .bee46 {
         width:170px;
-        margin-top:-40px;
+        margin-top:-60px;
     }
     b, strong {
         color:rgb(84, 228, 238);
@@ -70,10 +66,42 @@
         font-size:10px;
         font-weight:bolder;
     }
-    @media only screen and (max-width: 700px) {
-        .bee46 {
-        margin-top:-10px;
-    }
+    .facts {
+    background-image: linear-gradient(to right, #dfcb82,  #e2c472);
+    border-radius: 6px;
+    border: 2px outset rgba(146, 113, 40, 0.9);
+    margin:20px 10% 15px 10%;
+    color:rgb(1, 26, 21);
+    font-weight: 500;
+    font-size:14px;
+    line-height:1.2;
+
+    box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
+    -moz-box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
+}
+.facts section {
+  padding:8px 25px 10px 25px;
+}
+.facts h3 {
+    background-image: linear-gradient(to top, rgba(83, 59, 37, 0.6) 40%,  rgba(110, 78, 31, 0.5) 90%);
+    width: 100%;
+    padding: 4px 7px;
+    margin:0px;
+    border-radius: 3px 3px 0px 0px;
+    border-bottom: 2px outset rgba(36, 27, 4, 0.9);
+    font-family: "Cozette";
+    font-size: 20px;
+    font-weight:500;
+    color: white;
+    text-shadow: none;
+    text-align: left;
+}
+.orange:hover {
+  color:rgb(255, 215, 141);
+  > .orangestrong {
+  color:orange;
+}
 }
     </style>
     
@@ -82,41 +110,25 @@
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
 
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" style="z-index:2;"><h1>
-          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
-      <!-- Font Changer -->
-      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-        <select title="font changer" onchange="changingFontStyle (this);">
-           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-        </select>
-      </div>
-        <script>
-           var changingFontStyle = function (fontstyle) {
-              document.getElementById("box").style.fontFamily = fontstyle.value;
-           }
-        </script>
+          <div class="sidebox" style="margin-top:20px;">
+            <h2 class="subheader">navigate</h2>
+            <nav class="sidecontent">
+              <script src="nav.js"></script>
+            </nav>
+          </div>
 
-      <div class="sidebox" style="margin-top:0;">
-        <h2 class="subheader">navigate</h2>
-        <nav class="sidecontent">
-          <script src="nav.js"></script>
-        </nav>
-      </div>
-
-      <div class="sidebox">
-        <h2 class="subheader">external links</h2>
-        <nav class="sidecontent">
-          <script src="nav_ext.js"></script>
-        </nav>
-      </div>
       </div>
 
       <main>
@@ -133,18 +145,18 @@
               <h2 class="subheader">about</h2>
                 <div class="maincontent" >
                   <section>
-                      <p><strong>name &gt;</strong>&nbsp;Bee</p>
-                      <p><strong>pronouns &gt;</strong>&nbsp;any</p>
-                      <p><strong>age &gt;</strong>&nbsp;20s</p>
-                      <p><strong>species &gt;</strong>&nbsp;<span class="tooltip"><i>Bombus terricola</i></span><span class="tooltiptext">the yellow-banded bumblebee</span></p>
-                      <p><strong>sexuality &gt;</strong><span style="background-image: linear-gradient(to right, #e98fc6,#c287f1,#89a8e0);-webkit-background-clip: text;background-clip:text;color: transparent;-webkit-text-fill-color: transparent;">&nbsp;bi&nbsp;&lt;3</span></p>
-                      <p><strong>neurotype &gt;</strong>&nbsp;divergent<span style="color: gold">&nbsp;&infin;</span></p>
-                      <p><strong>occupation &gt;</strong>&nbsp;IT&nbsp;cert&nbsp;chaser</p>
-                      <p><strong>biome &gt;</strong>&nbsp;temperate&nbsp;grassland</p>
-                      <p><strong>tarot card &gt;</strong>&nbsp;the&nbsp;hanged&nbsp;man</p>
-                      <p><strong>humour &gt;</strong>&nbsp;black&nbsp;bile</p>
-                      <p><strong>time&nbsp;of&nbsp;birth &gt;</strong>&nbsp;06:21</p>
-                      <p><strong>time&nbsp;of&nbsp;death &gt;</strong>&nbsp;TBD</p>
+                      <p><strong>name ❯❯</strong>&nbsp;Bee</p>
+                      <p><strong>pronouns ❯❯</strong>&nbsp;any</p>
+                      <p><strong>age ❯❯</strong>&nbsp;20s</p>
+                      <p><strong>species ❯❯</strong>&nbsp;<span class="tooltip"><i>Bombus terricola</i></span><span class="tooltiptext">the yellow-banded bumblebee</span></p>
+                      <p><strong>sexuality ❯❯</strong><span style="background-image: linear-gradient(to right, #e98fc6,#c287f1,#89a8e0);-webkit-background-clip: text;background-clip:text;color: transparent;-webkit-text-fill-color: transparent;">&nbsp;bi&nbsp;&lt;3</span></p>
+                      <p><strong>neurotype ❯❯</strong>&nbsp;divergent<span style="color: gold">&nbsp;&infin;</span></p>
+                      <p><strong>occupation ❯❯</strong>&nbsp;IT&nbsp;cert&nbsp;chaser</p>
+                      <p><strong>biome ❯❯</strong>&nbsp;temperate&nbsp;grassland</p>
+                      <p><strong>tarot card ❯❯</strong>&nbsp;the&nbsp;hanged&nbsp;man</p>
+                      <p><strong>humour ❯❯</strong>&nbsp;black&nbsp;bile</p>
+                      <p><strong>time&nbsp;of&nbsp;birth ❯❯</strong>&nbsp;06:21</p>
+                      <p><strong>time&nbsp;of&nbsp;death ❯❯</strong>&nbsp;TBD</p>
                   </section>
                 </div>
             </div>
@@ -196,25 +208,25 @@
 
           <div class="flexrow">
             <div class="mainbox" style="flex:1">
-                <h2 class="subheader">likes</h2>
-                  <div class="maincontent" id="pos">
-                    <section>
-                      <ul>
-                        <li>knitting</li>
-                        <li>writing simple ugly code</li>
-                        <li>sustainabile development</li>
-                        <li>soft springy moss</li>
-                        <li>watching normie anime</li>
-                        <li>visible mending</li>
-                        <li>coffee</li>
-                        <li>tea</li>
-                        <li>psychological horror films</li>
-                        <li>coelacanths</li>
-                        <li>fixating on random topics</li>
-                        <li>technology</li>
-                      </ul>
-                    </section>
-                  </div>
+              <h2 class="subheader">likes</h2>
+              <div class="maincontent" id="pos">
+                <section>
+                  <ul>
+                    <li>knitting</li>
+                    <li>writing simple ugly code</li>
+                    <li>sustainabile development</li>
+                    <li>soft springy moss</li>
+                    <li>watching normie anime</li>
+                    <li>visible mending</li>
+                    <li>coffee</li>
+                    <li>tea</li>
+                    <li>psychological horror films</li>
+                    <li>coelacanths</li>
+                    <li>fixating on random topics</li>
+                    <li>technology</li>
+                  </ul>
+                </section>
+              </div>
             </div>
 
             <div class="flexrow" style="flex:1;align-content: flex-start;margin-left:auto;margin-right:auto;" >
@@ -222,21 +234,30 @@
             <div><img src="img/bee 46.gif" class="bee46"></div>
 
             <div class="mainbox" style="margin-top:0;">
-                <h2 class="subheader">dislikes</h2>
-                  <div class="maincontent" id="neg">
-                    <section>
-                      <ul>
-                        <li>loud sudden noises</li>
-                        <li>shrill persistent noises</li>
-                        <li>waking up early in the morning</li>
-                        <li>cringe culture</li>
-                        <li>extreme competitiveness</li>
-                        <li>the rising cost of living</li>
-                        <li>technology</li>
-                      </ul>
-                    </section>
-                  </div>
+              <h2 class="subheader">dislikes</h2>
+              <div class="maincontent" id="neg">
+                <section>
+                  <ul>
+                    <li>loud sudden noises</li>
+                    <li>shrill persistent noises</li>
+                    <li>waking up early in the morning</li>
+                    <li>cringe culture</li>
+                    <li>extreme competitiveness</li>
+                    <li>the rising cost of living</li>
+                    <li>technology</li>
+                  </ul>
+                </section>
               </div>
+            </div>
+
+            <div class="facts" style="margin-left:0;margin-right:0;">
+              <h3>wanna know more?</h3>
+              <section style="display: flex;flex-direction: column;">
+                <p style="text-align: center;" id="message" >Wanna know more about Bee, your most favouritest webmaster? <strong style="color:rgb(175, 7, 125)">Click here</strong> for a random fact!</p>
+                <input style="margin-top:8px;  display: block;margin-left: auto;margin-right: auto;" 
+                    type="button" class="btn" value="Random Bee Fact" onclick="GetValue();" />
+              </section>
+            </div>
 
         </div>
 
@@ -244,21 +265,21 @@
                 <h2 class="subheader">favourites</h2>
                   <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                     <section>
-                        <p><strong>colour &gt;</strong> orange</p>
-                        <p><strong>animal &gt;</strong> dog</p>
-                        <p><strong>video game &gt;</strong> yoshi&apos;s island</p>
-                        <p><strong>video game series &gt;</strong> legend of zelda</p>
-                        <p><strong>console &gt;</strong> gamecube</p>
-                        <p><strong>movie &gt;</strong> hausu</p>
-                        <p><strong>yarn fibre &gt;</strong> alpaca wool</p>
-                        <p><strong>book &gt;</strong> le comte de monte-cristo</p>
-                        <p><strong>tv show &gt;</strong> the twilight zone (1959-1964)</p>
-                        <p><strong>podcast &gt;</strong> sawbones</p>
-                        <p><strong>flower &gt;</strong> sunflower</p>
-                        <p><strong>pastry &gt;</strong> chocolate chip banana muffin</p>
-                        <p><strong>landform &gt;</strong> cirque</p>
-                        <p><strong>ao3 tag &gt;</strong> canon-typical worms</p>
-                        <p><strong>windows OS &gt;</strong> XP</p>
+                        <p><span class="orange"><strong class="orangestrong">colour ❯❯</strong> orange</span></p>
+                        <p><strong>animal ❯❯</strong> dog</p>
+                        <p><strong>video game ❯❯</strong> yoshi&apos;s island</p>
+                        <p><strong>video game series ❯❯</strong> legend of zelda</p>
+                        <p><strong>console ❯❯</strong> gamecube</p>
+                        <p><strong>movie ❯❯</strong> hausu</p>
+                        <p><strong>yarn fibre ❯❯</strong> alpaca wool</p>
+                        <p><strong>book ❯❯</strong> le comte de monte-cristo</p>
+                        <p><strong>tv show ❯❯</strong> the twilight zone (1959-1964)</p>
+                        <p><strong>podcast ❯❯</strong> sawbones</p>
+                        <p><strong>flower ❯❯</strong> sunflower</p>
+                        <p><strong>pastry ❯❯</strong> chocolate chip banana muffin</p>
+                        <p><strong>landform ❯❯</strong> cirque</p>
+                        <p><strong>ao3 tag ❯❯</strong> canon-typical worms</p>
+                        <p><strong>windows OS ❯❯</strong> XP</p>
                     </section>
   
                   </div>
@@ -267,10 +288,57 @@
         </div>
       </main>
         
-      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      <footer>
+        <p>open since May 14, 2024</p>
+        <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
+      </footer>
       </div>
     </div>
+    <div class="outer"></div>
   </div>
+  <script>
+    	// random facts
+    function GetValue()
+{
+var myarray= new Array(
+"Bee sometimes goes out flying even when it's raining.","Bee can often be found in wooded areas.","Bee felt underrepresented by Bee Movie (2007) due to the film's focus on honey producers.",
+"Bee is a highly social creature.","Bee communicates through touch, dancing, and pheromones.",
+"The wax produced by Bee's body is often used in cosmetics.","Bee lives in an abandoned rodent hole.","When asked whether they were a Queen, Worker, or Drone, Bee's respose was: 'idk'",
+"Bee can smell flowers using her body hair.","Bee's wings can beat 130-200 times per second.","Bee vividly remembers that Mario Galaxy level with the Honey Queen. You know the one.",
+"Bee loves natural mulch! So please don’t rake your yard during winter!","Bee buzzes by vibrating his body.",
+"Bee actually has 5 eyes: 2 where you'd expect, and 3 on the top of their head.","Much like humans, Bee shivers when it’s cold out.",
+"Bee has great eyesight.","Bee does not produce honey, but can produce wax.","Bee isn’t great at travelling long distances.",
+"Bee loves all flowers, but especially local wildflowers","Bee’s favourite foods are nectar and pollen.","Bee produces a buzzing noise that sounds a bit like a didgeridoo.",
+"Bee has great personal hygiene.","Bee is a great pollinator, but far from the only important pollinator.",
+"Bee likes to hang out in shady areas.","Bee was not born in an animal carcass. That’s just a myth.","It's becoming harder to spot Bee in the wild these days.",
+"Bee is cold-blooded.","Bee can rotate and even dislocate her wings.","Bee is pretty much always hungry.","Bee can bee found in several Canadian provinces as well as the northern US.",
+"When visiting a flower, Bee will mark it with his scent.","Bee is an opportunistic feeder.","Bee lays more eggs when nectar is abundant.",
+"When Bee finds food, they come home and do a little dance.","Bee's tongue is very long and very hairy.",
+"The tip of Bee’s tongue acts like a suction cup.","Bee secretes wax from glands on her abdomen.","Lately Bee has had a hard time finding suitable nesting locations.",
+"Bee is an excellent flyer; he's very fast and agile!","Bee refuses to defecate inside their own home.","Bee would love it if humans stopped destroying her natural habitat.",
+"Bee loves to drink sugar water from hummingbird feeders.","Bee might be able to feel emotions, but nobody knows for sure.","Bee can be mainly seen thoughout the day, but sometimes also at dawn or dusk.",
+"Bee sometimes switches jobs to keep his mind sharp.","Bee may or may not be able to feel pain. Please do not test this.",
+"Bee sometimes shows symptoms of stress, anxiety, or depression.","Bee does not actually have ears. It’s unknown whether they can hear, or just feel vibrations.",
+"Bee is highly sensitive to vibrations.","Bee is very good at teamwork.","Despite being known as a hard worker, Bee can actually be quite lazy.",
+"Bee can count and even do basic math.","Bee is a social learner, which might be nice way of saying he copied his friends' homework back in school.",
+'Bee does not poop. Instead, she excretes a yellow substance called frass.',"Bee loves to hide within holes in trees and logs.",
+"Bee is a very accomplished agricultural worker.","Actually, Bee’s ability to fly does not contradict any laws of aerodynamics.",
+"Sylvia Plath’s father, Otto Plath, wrote a book about Bee in 1934.","In ancient Egypt, depictions of Bee were said to bring prosperity.",
+"Many plants rely on Bee for their survival.","Bee is sometimes associated with Aphrodite.","Although Bee does communicate using pheromones, their mating and social structure has not yet become a popular fanfic trope.",
+"Bee can cool off her nest by flapping her wings.","Bee lives in a nest, not a hive.","As a larva, Bee cannibalized some of his unhatched siblings. He has never been held accountable for this crime.",
+"Some people consider killing Bee to be bad luck. Bee very much agrees with this claim.","Bee’s nest is not built using hexagonal structures, but rather clumps of wax.",
+"Bee’s sperm can survive for months inside a Queen before fertilizing eggs.","Bee is actually quite friendly and unlikely to sting.",
+"Bee would make a poor pet on her own, but can be kept along with the rest of her colony.","You should cover your sweet drinks when outdoors, or else Bee might climb inside.",
+"Bee will not die after stinging you, and can sting you more than once.","Bee’s stinger is very smooth.",
+"Bee doesn't bite, but might lick you with their proboscis.","Bee is not a fan of pesticides and insecticides.","Bee has been depicted in human art for thousands of years.",
+"Bee is constantly covered in oil. It keeps him waterproof!","Bee likes to cover their whole body in pollen.","Bee was added to Minecraft on December 10th, 2019.",
+"To safely pick Bee up, scientists use a device called a pooter.","Bee spends their winters burrowed in soft soil or compost."
+);
+var random = myarray[Math.floor(Math.random() * myarray.length)];
+document.getElementById("message").innerHTML=random;
+}
+</script>
+
   <script>
 	// Get the button
 	let mybutton = document.getElementById("to_top");

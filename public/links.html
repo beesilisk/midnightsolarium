@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; links &#10028;</title>
     <style>
@@ -58,7 +54,7 @@ main a:focus {
       }
       #subheader1 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -106,7 +102,7 @@ main a:focus {
       }
       #subheader2 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -155,7 +151,7 @@ main a:focus {
       }
       #subheader3 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -204,7 +200,7 @@ main a:focus {
       }
       #subheader4 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -252,7 +248,7 @@ main a:focus {
       }
       #subheader5 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -301,7 +297,7 @@ main a:focus {
       }
       #subheader6 {
         background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "TheGoodMonolith";
+        font-family: "Cozette";
         filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
         padding: 3px;
         margin-left: 15px;
@@ -379,39 +375,24 @@ main a:focus {
     <button onclick="topFunction()" id="to_top" title="Go to top">
       <span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top </button>
     <div class="container">
+      <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
       <div id="box">
         <div class="grid">
-          <div id="header" class="header" style="z-index:2;">
-            <h1>
-              <img src="img/flowcan2.png" title="a white flower" alt="a white flower" /> &nbsp;midnight solarium
-            </h1>
-          </div>
+          <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
+            &nbsp;midnight solarium</h1></div>
           <div id="side">
-            <!-- Font Changer -->
-            <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-              <select title="font changer" onchange="changingFontStyle (this);">
-                <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-                <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-              </select>
-            </div>
-            <script>
-              var changingFontStyle = function(fontstyle) {
-                document.getElementById("box").style.fontFamily = fontstyle.value;
-              }
-            </script>
-            <div class="sidebox" style="margin-top:0;">
+            <div class="sidebox" style="margin-top:20px;">
               <h2 class="subheader">navigate</h2>
               <nav class="sidecontent">
                 <script src="nav.js"></script>
               </nav>
             </div>
-            <div class="sidebox">
-              <h2 class="subheader">external links</h2>
-              <nav class="sidecontent">
-                <script src="nav_ext.js"></script>
-              </nav>
-            </div>
+
           </div>
+          
           <main style="image-rendering: auto;">
             <div class="flexrow" style="flex-direction:row;">
               <div class="flexrow" style="flex-direction:column;flex:1;margin:10px 5px 15px 15px;">
@@ -456,14 +437,9 @@ main a:focus {
                       <a href="https://velvetblue.neocities.org/"><img src="img/othersitebtn/velvetblue.gif" title="VELVET BLUE"/></a>
                       <a href="https://visualculture.neocities.org/"><img src="img/othersitebtn/visualculture.gif" title="visualculture"/></a>
                     </div>
-                    <div style="padding-left:25px;padding-right:25px;">
-                      <p style="line-height:1.3,">(if anyone wants their button removed or added, feel free to contact me via <a href="mailto:basilbeeisk@proton.me?subject=site buttons">email</a> or <a href="https://neocities.org/site/midnightsolarium">neocities profile <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>) </p></div>
-                      <div class="mincontent" style="padding-left:10px;padding-right:10px;padding-bottom:10px;">
-                        <div class="freeze">
-                          <img src="img/misobuttons/misobutton.gif" style="image-rendering: auto;margin-top:15px;margin-bottom:10px;margin-left: auto;margin-right: auto; width: 88px; filter: drop-shadow(2px 4px 4px rgba(7, 13, 25, 0.8));" />
-                        </div>
-                        <p>midnight solarium now has its own button! take it if you wanna! no pressure tho!</p>
-                      </div>
+                    <div style="padding-left:25px;padding-right:25px;padding-top:10px;padding-bottom:10px;">
+                      <p style="line-height:1.3,">(if anyone wants their button removed or added, feel free to contact me via <a href="mailto:basilbeeisk@proton.me?subject=site buttons">email</a> or <a href="https://neocities.org/site/midnightsolarium">neocities profile <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>) </p>
+                    </div>
                     <!-- END CONTENT -->
                   </div>
                   <div style="display:flex">
@@ -479,31 +455,31 @@ main a:focus {
                   <div class="mainboxescontent2">
                     <table>
                       <tr>
-                        <td><a href="https://gifcities.org/">GifCities <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://gifcities.org/">GifCities<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>the Internet Archive's gif library</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.stickpng.com/">StickPNG <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.stickpng.com/">StickPNG<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>transparent PNGs that are actually transparent</td>
                       </tr>
                       <tr>
-                        <td><a href="https://app.dithermark.com/">Dithermark <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://app.dithermark.com/">Dithermark<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>image dithering tool</td>
                       </tr>
                       <tr>
-                        <td><a href="https://hekate2.github.io/buttonmaker/">Button Maker <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://hekate2.github.io/buttonmaker/">Button Maker<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>hekate's 88 x 31 button making tool</td>
                       </tr>
                       <tr>
-                        <td><a href="https://blinkies.cafe/">Blinkie Maker <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://blinkies.cafe/">Blinkie Maker<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>build a blinkie</td>
                       </tr>
                       <tr>
-                        <td><a href="http://www.dsg4.com/04/extra/bitmap/index.html">Bitmap Fonts <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="http://www.dsg4.com/04/extra/bitmap/index.html">Bitmap Fonts<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>great fonts for making pixel graphics</td>
                       </tr>
                       <tr>
-                        <td style="border-bottom:0px"><a href="https://tinypng.com/">TinyPNG <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td style="border-bottom:0px"><a href="https://tinypng.com/">TinyPNG<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td style="border-bottom:0px">compresses images</td>
                       </tr>
                     </table>
@@ -521,33 +497,33 @@ main a:focus {
                   <div class="mainboxescontent2">
                     <table>
                       <tr>
-                        <td><a href="https://www.windows93.net/#!flash">windows93 <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.windows93.net/#!flash">windows93<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a Windows 98-style website with loads of hidden goodies</td>
                       </tr>
                       <tr>
-                        <td><a href="https://sites.pitt.edu/~dash/folktexts.html#b">Folktexts <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://sites.pitt.edu/~dash/folktexts.html#b">Folktexts<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a giant repository of folklore and mythology</td>
                       </tr>
                       <tr>
-                        <td><a href="https://archive.org/details/discworld_202007">Discworld <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://archive.org/details/discworld_202007">Discworld<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>discworld audiobooks <img src="img/turt.png" style="image-rendering: pixelated;vertical-align: middle;opacity:0.1""></td>
 					  </tr>
 					  <tr>
-						<td><a href=" https://whatthefuckshouldilistentorightnow.com/">music recs <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+						<td><a href=" https://whatthefuckshouldilistentorightnow.com/">music recs<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>tells you what the fuck you should listen to right now</td>
                       </tr>
                       <tr>
-                        <td><a href="https://littlealchemy2.com/">Little Alchemy 2 <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://littlealchemy2.com/">Little Alchemy 2<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>Doodle God-like browser game</td>
                       </tr>
-                        <td><a href="https://thisissand.com/">thisissand <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://thisissand.com/">thisissand<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a relaxing game with falling sand</td>
                       </tr>
-                        <td><a href="https://www.howmanypeopleareinspacerightnow.com/">how many people are in space <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.howmanypeopleareinspacerightnow.com/">how many people are in space<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>tells you exactly what is says</td>
                       </tr>
                       <tr>
-                        <td style="border-bottom:0px"><a href="https://kaomoji.ru/en/">kaomoji <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td style="border-bottom:0px"><a href="https://kaomoji.ru/en/">kaomoji<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td style="border-bottom:0px">japanese emoticon collection</td>
                       </tr>
                     </table>
@@ -562,23 +538,23 @@ main a:focus {
                   <div class="mainboxescontent2">
                     <table>
                       <tr>
-                        <td><a href="https://www.antiquepatternlibrary.org/">Antique Pattern Library <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.antiquepatternlibrary.org/">Antique Pattern Library<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>antique patterns for a wide range of crafts &amp; hobbies</td>
                       </tr>
                       <tr>
-                        <td><a href="https://rsnstitchbank.org/">RSN Stitch Bank <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://rsnstitchbank.org/">RSN Stitch Bank<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>giant database of hand embroidery stitches</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.stitchfiddle.com/en">Stitch Fiddle <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.stitchfiddle.com/en">Stitch Fiddle<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>helps you design charts for knitting, cross-stitch, and more</td>
                       </tr>
                       <tr>
-                        <td><a href="https://calliope-violet.neocities.org/Web%20Toys/Cable%20Patterns/">Cable Pattern tool <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://calliope-violet.neocities.org/Web%20Toys/Cable%20Patterns/">Cable Pattern tool<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>Riley Shipman's tool for making written &amp; chart cable patterns</td>
                       </tr>
                       <tr>
-                        <td style="border-bottom:0px"><a href="https://artisans.coop/">Artisans Cooperative <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td style="border-bottom:0px"><a href="https://artisans.coop/">Artisans Cooperative<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td style="border-bottom:0px">a creator-friendly co-op alternative to Etsy</td>
                       </tr>
                     </table>
@@ -599,23 +575,23 @@ main a:focus {
                         <td>a great starting point for learning html &amp; css</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">freecodecamp <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/">freecodecamp<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>has a great responsive web design course</td>
                       </tr>
                       <tr>
-                        <td><a href="https://goblin-heart.net/sadgrl/learn/">sadgrl's webmaster guides <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://goblin-heart.net/sadgrl/learn/">sadgrl's webmaster guides<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>includes code snippets and neocities-specific guides</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.dragonflycave.com/html-guide">HTML Guide <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.dragonflycave.com/html-guide">HTML Guide<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>Dragonfly's step-by-step guide covering basic html</td>
                       </tr>
                       <tr>
-                        <td><a href="https://css-tricks.com/">CSS-Tricks <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://css-tricks.com/">CSS-Tricks<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>tons of guides &amp; articles on css</td>
                       </tr>
                       <tr>
-                        <td style="border-bottom:0px"><a href="https://flexboxfroggy.com/">Flexbox Froggy <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td style="border-bottom:0px"><a href="https://flexboxfroggy.com/">Flexbox Froggy<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td style="border-bottom:0px">a cute game that teaches you flexbox</td>
                       </tr>
                     </table>
@@ -633,27 +609,27 @@ main a:focus {
                   <div class="mainboxescontent2">
                     <table>
                       <tr>
-                        <td><a href="https://vscodium.com/">VSCodium <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://vscodium.com/">VSCodium<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>VSCode, but without Miscrosoft</td>
                       </tr>
                       <tr>
-                        <td><a href="https://htmlcheatsheet.com">htmlcheatsheet <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://htmlcheatsheet.com">htmlcheatsheet<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>has loads of useful little tools for generating html and css</td>
                       </tr>
                       <tr>
-                        <td><a href="https://webcode.tools/">webcode.tools <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://webcode.tools/">webcode.tools<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>code generators for front-end devs</td>
                       </tr>
                       <tr>
-                        <td><a href="https://codebeautify.org/">Code Beautify <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://codebeautify.org/">Code Beautify<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>clean your messy code</td>
                       </tr>
                       <tr>
-                        <td><a href="https://tinytools.directory/">tinytools <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://tinytools.directory/">tinytools<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a collection of experimental open-source dev tools</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.a11yproject.com/checklist/">The A11Y Checklist <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.a11yproject.com/checklist/">The A11Y Checklist<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a checklist for web accessibility</td>
                       </tr>
                       <tr>
@@ -676,7 +652,7 @@ main a:focus {
                         <td>the Palestine Masterlist</td>
                       </tr>
                       <tr>
-                        <td><a href="https://onlinebooks.library.upenn.edu/banned-books.html">Banned Books Online <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://onlinebooks.library.upenn.edu/banned-books.html">Banned Books Online<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>an exhibit of banned books, with links to the full texts</td>
                       </tr>
                       <tr>
@@ -701,43 +677,43 @@ main a:focus {
                   <div class="mainboxescontent2">
                     <table>
                       <tr>
-                        <td><a href="https://catbox.moe/">Catbox <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://catbox.moe/">Catbox<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a free file hosting service</td>
                       </tr>
                       <tr>
-                        <td><a href="https://cobalt.tools/">cobalt <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://cobalt.tools/">cobalt<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a tool for downloading pics, music &amp; videos from various websites</td>
                       </tr>
                       <tr>
-                        <td><a href="https://search.marginalia.nu/">Marginalia <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://search.marginalia.nu/">Marginalia<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a search engine for finding obscure websites</td>
                       </tr>
                       <tr>
-                        <td><a href="https://switching.software/">switching software <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://switching.software/">switching software<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>suggests open source alternatives to popular software</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.photopea.com/">photopea <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.photopea.com/">photopea<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>a free in-browser replica of adobe products</td>
                       </tr>
                       <tr>
-                        <td><a href="https://pretendo.network/">Pretendo <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://pretendo.network/">Pretendo<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>FOSS replacements for Nintendo's defunct servers</td>
                       </tr>
                       <tr>
-                        <td><a href="https://bugguide.net/node/view/15740">BugGuide <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://bugguide.net/node/view/15740">BugGuide<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>Canada &amp; US bug guide (cw:bugs)</td>
                       </tr>
                       <tr>
-                        <td><a href="https://www.springhole.net/index.html">springhole.net <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://www.springhole.net/index.html">springhole.net<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>kinda dead now, but still full of great creative writing tips</td>
                       </tr>
                       <tr>
-                        <td><a href="https://myfridgefood.com/">myfridgefood <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td><a href="https://myfridgefood.com/">myfridgefood<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>find recipes based on food you already have</td>
                       </tr>
                       <tr>
-                        <td style="border-bottom:0px"><a href="https://raddle.me/wiki/black_metal#s">black metal band list <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+                        <td style="border-bottom:0px"><a href="https://raddle.me/wiki/black_metal#s">black metal band list<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td style="border-bottom:0px">a list black metal bands - and whether or not they're nazis</td>
                       </tr>
                     </table>
@@ -750,12 +726,12 @@ main a:focus {
               <!-- END CONTENT -->
           </main>
           <footer>
-            <a href="credits.html" style="color: #fdf5e6">
-              <u>Credits</u>
-            </a>
+            <p>open since May 14, 2024</p>
+            <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
           </footer>
         </div>
       </div>
+      <div class="outer"></div>
     </div>
     <script>
       // Get the button

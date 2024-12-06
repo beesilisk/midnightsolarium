@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/flowcan2.png">
-    <link href="https://fonts.cdnfonts.com/css/thegoodmonolith" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; craft catalog &#10028;</title>
     <style>
@@ -22,7 +18,9 @@
          background-image:url("img/black-linen.png");
          font-size: 14px;
         }
-
+.tab_label {
+  font-weight: 400;
+}
         .pic {
             float:left;
             margin-right: 30px;
@@ -38,41 +36,25 @@
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
 
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" style="z-index:2;"><h1>
-          <img src="img/flowcan2.png" title="a white flower" alt="a white flower" />
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
-      <!-- Font Changer -->
-      <div class="selectdiv" style="margin-left:auto;margin-right:auto;padding:10px;">
-        <select title="font changer" onchange="changingFontStyle (this);">
-           <option value="Roboto Mono" elected="selected">Roboto Mono</option>
-           <option value="OpenDyslexic-Regular">OpenDyslexic</option>
-        </select>
-      </div>
-        <script>
-           var changingFontStyle = function (fontstyle) {
-              document.getElementById("box").style.fontFamily = fontstyle.value;
-           }
-        </script>
+          <div class="sidebox" style="margin-top:20px;">
+            <h2 class="subheader">navigate</h2>
+            <nav class="sidecontent">
+              <script src="nav.js"></script>
+            </nav>
+          </div>
 
-      <div class="sidebox" style="margin-top:0;">
-        <h2 class="subheader">navigate</h2>
-        <nav class="sidecontent">
-          <script src="nav.js"></script>
-        </nav>
-      </div>
-
-      <div class="sidebox">
-        <h2 class="subheader">external links</h2>
-        <nav class="sidecontent">
-          <script src="nav_ext.js"></script>
-        </nav>
-      </div>
       </div>
 
       <main>
@@ -163,9 +145,13 @@
         </div>
       </main>
         
-      <footer><a href="credits.html" style="color: #fdf5e6"><u>Credits</u></a></footer>
+      <footer>
+        <p>open since May 14, 2024</p>
+        <a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a>
+      </footer>
       </div>
     </div>
+    <div class="outer"></div>
   </div>
   <script>
     // Get the button
