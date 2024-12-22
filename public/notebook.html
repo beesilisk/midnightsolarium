@@ -113,7 +113,7 @@
        }
         }
         &:focus,
-        &.focused {
+        &:target {
           box-shadow: none;
           border-top: 2px solid rgb(158, 61, 85);
           border-bottom: 2px solid rgb(158, 61, 85);
@@ -255,7 +255,11 @@
                 <p><strong>shrink</strong> – reduce size of volume</p>
                 <p><strong>extend</strong> – add unallocated disk space to partition/volume</p>
               </details>
-              <p><strong>chkdsk</strong> – show info on hard disk</p>
+              <details>
+                <summary><strong>chkdsk</strong> – show info on hard disk</summary>
+                <p><strong>/f</strong> – fix logical file system</p>
+                <p><strong>/r</strong> – locate bad sectors & recover readable data</p>
+              </details>
               <p><strong>defrag</strong> – defragment partition</p>
               <h3>System & Process</h3>
               <p><strong>systeminfo</strong> – list system information</p>
