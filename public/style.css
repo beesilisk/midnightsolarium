@@ -254,6 +254,43 @@ nav {
     margin:-5px 0 -15px -10px;
     border: 10px outset rgba(15, 17, 17, 0.6);
     padding:5px;
+
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 main {
@@ -283,6 +320,7 @@ main:last-of-type {
     box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
     -webkit-box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
     -moz-box-shadow: 9px 9px 5px -7px rgba(0,0,0,0.3);
+    
 }
 .mainbox a {
     transition: 0.3s ease-in-out;
@@ -617,7 +655,7 @@ select {
     appearance: none;
     word-break: normal;
     &:not(:disabled) {
-        &:active, &.active {
+        &:active {
             box-shadow: none;
             background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(151, 186, 145, 1) 100% );
        }
@@ -625,7 +663,7 @@ select {
             box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #f2cf5c, inset -2px 2px #fbc761, inset 2px -2px #e8a4d0;
        }
    }
-    &:focus, &.focused {
+    &:focus {
         box-shadow: inset -1px 1px #c4e57e, inset 1px 2px #c4e57e, inset -2px 2px #bcd4f6, inset 1px -1px #626de0, inset 2px -2px #89ade4;
    }
     &::-moz-focus-inner {

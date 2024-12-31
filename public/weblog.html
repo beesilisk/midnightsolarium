@@ -16,39 +16,22 @@
         border-bottom: 1px solid #816d6d;
       }
 
-    .mincontent {
-      display: none;
-      padding:0;
-      margin:10px 0 5px 0;
-    }
+      .mincontent {
+        display: none;
+        padding:0;
+        margin:10px 0 5px 0;
 
-    .mincontent h3 {
-    width: 100%;
-    padding: 4px 15px;
-    margin:0px;
-    border-radius: 3px 3px 0px 0px;
-    font-size: 16px;
-    }
-    .mincontent section {
-      padding:0;
-    }
-    .mincontent a {
-      text-decoration: underline;
-      text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-      color: #ffffff;
-      margin-left:10px;
-    }
-    .mincontent a:hover {
-      transition:none;
-      filter: drop-shadow(0 0 7px rgba(213, 250, 255, 0.7));
-    }
-    .mincontent a:active {
-      color:rgb(241, 160, 38)
-    }
-    .mincontent a:focus {
-      border-bottom:1px dotted #e9e752;
-    }
-    .mincontent .tag {
+        h3 {
+          width: 100%;
+          padding: 4px 15px;
+          margin:0px;
+          border-radius: 3px 3px 0px 0px;
+          font-size: 16px;
+        }
+        section {
+          padding:0;
+        }
+        .tag {
       background:#38aaa1;
       color:white;
       font-family: Fira Code;
@@ -72,19 +55,38 @@
         border: 0;
    }
     }
-    .mincontent .blogdetail {
+    .blogdetail {
       font-size: 11px;
       padding:5px 25px 5px 25px;
     }
-    .mincontent section p {
+    section p {
       font-size: 14px;
       padding:7px 25px 5px 25px;
     }
-    .mincontent p {
+    p {
       margin-bottom:0;
       padding:0;
       margin:0;
     }
+      }
+
+    .mincontent a {
+      text-decoration: underline;
+      text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+      color: #ffffff;
+      margin-left:10px;
+    }
+    .mincontent a:hover {
+      transition:none;
+      filter: drop-shadow(0 0 7px rgba(213, 250, 255, 0.7));
+    }
+    .mincontent a:active {
+      color:rgb(241, 160, 38)
+    }
+    .mincontent a:focus {
+      border-bottom:1px dotted #e9e752;
+    }
+
     .show {
       display: block;
     }
@@ -142,16 +144,15 @@
               <button class="tag" onclick="filterSelection('opinion')">opinion</button>
               <button class="tag" onclick="filterSelection('tech')">tech</button>
             </div>
-            
-                <div class="mincontent internet opinion tech">
-                  <h3><a href="weblog_posts/nekoai.html">to nekoweb, or not to nekoweb, that is the question</a><sup class="new">NEW!</sup></h3>
+                <div class="mincontent fun">
+                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years holiday roundup extravaganza: 2024 edition</a><sup class="new">NEW!</sup></h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-11-23">nov 23, 2024</time> &#x2022; word count: 2208 &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
-                    <p>some thoughts on web hosting platforms, the AI infestation, and the future of this site</p>
+                    <p class="blogdetail"><time datetime="2024-11-23">dec 31, 2024</time> &#x2022; word count: 1416 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
+                    <p>me, five minutes before 2025: i should write an end-of-year weblog</p>
                   </section>
                 </div>
                 <div class="mincontent internet opinion tech">
-                  <h3><a href="weblog_posts/nekoai.html">to nekoweb, or not to nekoweb, that is the question</a><sup class="new">NEW!</sup></h3>
+                  <h3><a href="weblog_posts/nekoai.html">to nekoweb, or not to nekoweb, that is the question</a></h3>
                   <section>
                     <p class="blogdetail"><time datetime="2024-11-23">nov 23, 2024</time> &#x2022; word count: 2208 &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
                     <p>some thoughts on web hosting platforms, the AI infestation, and the future of this site</p>
@@ -179,8 +180,8 @@
                   </section>
                 </div>
                 <div class="hiddenlink" style="float: right;"><a href="https://notbyai.fyi/"><img src="img/Written-By-Human-black.png" alt="written by human, not by AI" title="this weblog is not written using generative AI"/></a></div>
-                </div>
-              </div>
+          </div>
+        </div>
 
       </main>
         
