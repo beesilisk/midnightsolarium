@@ -26,7 +26,7 @@
         color:rgb(203, 247, 101);
   }
     #feed-reader p{
-        margin-bottom:7px;
+        margin-bottom:5px;
   }
     #feed-reader a {
         text-decoration: none;
@@ -180,7 +180,7 @@
 
             <div class="pic" style="min-width:230px;">
                 <h2 class="subheader">status.log</h2>
-                <figure>
+                <figure loading="lazy">
                         <!-- STATUS BOX -->
                         <div id='feed-reader'></div>
                         <script>
@@ -219,7 +219,7 @@
                     <li>watching normie anime</li>
                     <li>visible mending</li>
                     <li>coffee</li>
-                    <li>tea</li>
+                    <li><a href="etc/teatime.html" onclick="positionedPopup(this.href,'myWindow','300','300','100','200','yes');return false" style="color: #fdf5e6; text-shadow: none">tea</a></li>
                     <li>psychological horror films</li>
                     <li>coelacanths</li>
                     <li>fixating on random topics</li>
@@ -228,6 +228,15 @@
                 </section>
               </div>
             </div>
+            <script language="javascript">
+              var popupWindow = null;
+              function positionedPopup(url,winName,w,h,t,l,scroll){
+              settings =
+              'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
+              popupWindow = window.open(url,winName,settings)
+              }
+            </script>
+              
 
             <div class="flexrow" style="flex:1;align-content: flex-start;margin-left:auto;margin-right:auto;" >
 

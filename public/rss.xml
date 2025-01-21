@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+		<title>midnight solarium</title>
+		<link>https://midnightsolarium.nekoweb.org</link>
+		<description>a website dedicated to all organisms, formations, and concepts that grow in the night</description>
+		<item>
+			<title>is this how you make an RSS feed?</title>
+			<pubDate>Mon, 20 Jan 2025 12:00:00 -0700</pubDate>
+			<link>https://midnightsolarium.nekoweb.org/home</link>
+			<description>finally slapped together an RSS feed (which you are reading right now! assuming i did it right!), retroactively added lazyloading to some image-heavy pages, added new slippers to craft catalog, added more notes to notebook, added one easter egg (good luck!)</description>
+		</item>
+	</channel>
+</rss>

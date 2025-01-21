@@ -325,16 +325,12 @@ main:last-of-type {
 .mainbox a {
     transition: 0.3s ease-in-out;
 }
-.mainbox a:hover {
-    transition: 0.3s ease-in-out;
-}
 .flexrow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .maincontent{
     margin: 0;
     padding: 10px 20px 10px 20px;

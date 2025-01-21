@@ -7,30 +7,49 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; craft catalog &#10028;</title>
     <style>
-        .tab_content:hover,
-        .tab input:checked~.tab_content {
-         border-left: 1px dashed rgba(255, 208, 0, 0.8);
-         border-bottom: 1px dashed rgba(255, 208, 0, 0.8);
-         border-right: 1px dashed rgba(255, 208, 0, 0.8);
-         padding: 10px 20px 10px 20px;
-         overflow: hidden;
-         background-color: rgba(25, 106, 116, 0.6);
-         background-image:url("img/black-linen.png");
-         font-size: 14px;
-        }
-.tab_label {
-  font-weight: 400;
-}
-        .pic {
-            float:left;
-            margin-right: 30px;
-        }
-        @media only screen and (max-width: 700px) {
-          .tab {
-         margin: 10px 0 10px 0;
-        }
-        }
-       </style>
+    .mborder {
+      b, strong {
+        font-weight:bold;	
+        color: #62d675;
+    }
+      i, em {
+        font-style:italic;	
+        color: rgb(253, 150, 150);
+    }
+    a {
+      font-size: 13px;
+    transition: 0.3s ease-in-out;
+    }
+      a:hover {
+        transition: 0.3s ease-in-out;
+    }
+  }
+    .tab_content:hover, .tab input:checked~.tab_content {
+      border-left: 1px dashed rgba(255, 208, 0, 0.8);
+      border-bottom: 1px dashed rgba(255, 208, 0, 0.8);
+      border-right: 1px dashed rgba(255, 208, 0, 0.8);
+      padding: 10px 20px 10px 20px;
+      overflow: hidden;
+      background-color: rgba(25, 106, 116, 0.6);
+      background-image:url("img/black-linen.png");
+      
+      p, li {
+        font-size: 13px;
+      }
+    }
+    .tab_label {
+      font-weight: 400;
+    }
+    .pic {
+      float:left;
+      margin-right: 30px;
+    }
+    @media only screen and (max-width: 700px) {
+      .tab {
+        margin: 10px 0 10px 0;
+      }
+    }
+    </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -64,11 +83,32 @@
 
                   <div class="tab">
                     <input type="radio" name="accordion" id="rd1" checked="checked">
-                    <label for="rd1" class="tab_label">10.31 - autumn mittens</label>
+                    <label for="rd1" class="tab_label">1.25 - red & black slippers</label>
+                    <div class="tab_content">
+                     <div class="pic" style="width:324px;float:left;">
+                         <h2 class="subheader">rbslippers.jpg</h2>
+                         <figure><img src="craft_img/rbslippers.jpg" title="a pair of red slippers with a black stripe on the back and embroidered X-shapped embellishments on the top" alt="a pair of red slippers with a black stripe on the back and embroidered X-shapped embellishments on the top" style="width:320px"></figure>
+                     </div>
+                     <ul>
+                      <li><strong>craft:</strong> knitting</li>
+                      <li><strong>pattern/reference:</strong><a href="https://www.ravelry.com/patterns/library/woolen-shoes"> Woolen Shoes</a> (free on Ravelry)</li>
+                      <li><strong>yarn:</strong> Pop'n Yarn Premier Quality (aran weight acrylic)</li>
+                     </ul>
+                     <hr />
+                     <p>this is a simple pattern that ive used before, i didnt run into any unexpected difficulties. which is a refreshing change of pace</p>
+                     <p>what IS interesting about this project is that it's a gift for my mom. more specifically, they're based on her description of <em>the slippers her grandmother used to make</em>. this informed my decision on the type of yarn i used, the general shape, and its construction. it's definitely not a 1:1 recreation, but it certainly looks like something <em>my</em> grandma would make. it's like poetic or something</p>
+                     <p>the black embellishment were my own idea though. i thought the plain bright red was a bit boring</p>
+
+                    </div>
+                  </div>
+
+                  <div class="tab">
+                    <input type="radio" name="accordion" id="rd4">
+                    <label for="rd4" class="tab_label">10.24 - autumn mittens</label>
                     <div class="tab_content">
                      <div class="pic" style="width:234px;float:left;">
                          <h2 class="subheader">orangemitts.jpg</h2>
-                         <figure><img src="craft_img/orangemitts.jpg" title="a dog outside wearing a collar, leash, and fuzzy blue scarf" alt="a dog outside wearing a collar, leash, and fuzzy blue scarf" style="width:230px"></figure>
+                         <figure><img src="craft_img/orangemitts.jpg" title="a pair of orange mittens with a white tip" alt="a pair of orange mittens with a white tip" style="width:230px"></figure>
                      </div>
                      <ul>
                       <li><strong>craft:</strong> knitting</li>
@@ -86,11 +126,11 @@
                      <p>i've already started knitting a new pair of mittens. hopefully i will redeem myself</p>
 
                     </div>
-                   </div>
+                  </div>
 
                   <div class="tab">
-                   <input type="radio" name="accordion" id="rd2"">
-                   <label for="rd2" class="tab_label">08.24 - aster's camping scarf</label>
+                   <input type="radio" name="accordion" id="rd3"">
+                   <label for="rd3" class="tab_label">08.24 - aster's camping scarf</label>
                    <div class="tab_content">
                     <div class="pic" style="width:234px;float:left;">
                         <h2 class="subheader">dogscarrf.png</h2>
@@ -121,8 +161,8 @@
                   </div>
 
                   <div class="tab">
-                   <input type="radio" name="accordion" id="rd3">
-                   <label for="rd3" class="tab_label">07.24 - dithered toque &amp; mittens</label>
+                   <input type="radio" name="accordion" id="rd2">
+                   <label for="rd2" class="tab_label">07.24 - dithered toque &amp; mittens</label>
                    <div class="tab_content">
                     <div class="pic" style="width:324px;float:left;">
                         <h2 class="subheader">ditherknit.png</h2>

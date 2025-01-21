@@ -186,7 +186,7 @@
             <div class="btntype">
               <button class="tablinks" onclick="openTab('cmd-wrapper')">cmd cheat sheet</button>
               <button class="tablinks" onclick="openTab('winmgmt')">windows mgmt tools</button>
-              <button class="tablinks" onclick="openTab('wincnet') "style="display:inline;float:center;">windows client networking<sup class="new">NEW!</sup></button>
+              <button class="tablinks" onclick="openTab('wincnet')">windows client networking</button>
               <button class="tablinks" onclick="openTab('terminal-wrapper')">terminal cheat sheet</button>
             </div>
             <div class="btntype">
@@ -196,6 +196,7 @@
             </div>
             <div class="btntype">
               <button class="tablinks" onclick="openTab('backups-wrapper')">backups</button>
+              <button class="tablinks" onclick="openTab('remote-wrapper')"style="display:inline;float:center;">remote desktop tools<sup class="new">NEW!</sup></button>
             </div>
           </div>
 
@@ -742,6 +743,38 @@
                   <p>The end result is that you have 3 backups at all times: a daily backup, a weekly backup, and a monthly backup. As time goes on, the <strong>most recent of each gets promoted</strong> into the next category.</p>
                   <p>To be clear, this isn’t mutually exclusive to the 3-2-1 backup rule, though you might see businesses using one backup scheme being used but not the other, or they could have their own system that suits their specific needs. But these are considered best practice for a reason: they keep backups available and well-archived.</p>
                 </article>
+            </div>
+            <!-- remote -->
+            <div id="remote-wrapper" class="tabcontent">
+              <article>
+                <h2>remote desktop tools</h2>
+                <p>For as long computers have existed, people have been trying to use computers in order to gain control over other peoples’ computers. Most people are highly resistent to letting outsiders control their computer, which is why some especially cunning individuals decided to make remote desktop services ubiquitous within IT. I’m calling it now: it’s all part of one elaborate heist. I’m not sure how all these remote tools are gonna come together (especially since I’m barely scratching the surface in these notes) but I’m excited to see how they pull it off.</p>
+                <h3>RDP</h3>
+                <p><strong>Remote Desktop Protocol</strong> is <em>used within Windows</em> to remotely access other Windows computers and servers. It provides the user with a graphical interface to connect to another computer within a local network or over the internet. The RDP server isn’t enabled by default; you need to go into the Settings app to enable it.</p>
+                <p>The person remoting in will be able to interact with the desktop environment as if they were there physically. RDP lets you copy and paste text and files between the remote desktop and the local computer.The administrator can configure settings like session timeouts.</p>
+                <p>RDP requires an authentication process and allows for encryption, but its credentials are relatively weak. It’s also a well known fact that it uses  TCP 3389 by default. If this isn’t changed manually, the system will be vulnerable to on-path attacks.</p>
+                <h3>MSRA</h3>
+                <p><strong>Microsoft Remote Assistance</strong> is a Windows program that allows for remote connection to compatible devices. In order for a connection to be established, <em>RDP needs to be allowed and active</em>. The connection will be initiated by the user when they send a passcode invitation to the tech. From that point on you can see the issue along with the user. It even includes a built-in chat feature! Technology sure is incredible.</p>
+                <p>Instead of using a default port, MSRA assigns a port dynamically from within a set range. This is really cool in theory (port isn’t common knowledge = more secure!) but the randomness makes it hard to configure firewalls in a way that always allows access.</p>
+                <p>MSRA is most easily accessed through the Run dialog box on Windows. Notably, it’s not configured to connect via internet.</p>
+                <h3>VNC</h3>
+                <p>A <strong>Virtual Network Computer</strong> provides a desktop sharing function similar to RDP, with the main difference being that it’s <em>open source</em>. VNC usually only allows use of one console on an OS at a time, but it does let you see the issue along with the user.</p>
+                <p>VNC generally doesn’t come natively with any OS, so it’ll need to be installed on both machines before you can remote in. VNC software itself isn’t natively encrypted, but you can add encryption using a plugin.</p>
+                <p>To establish a connection, the user will need to open a program and retrieve a temporary, randomly generated password. To allow someone else control of the computer, the user will need to give that password to whoever’s remoting in.</p>
+                <h3>SSH</h3>
+                <p><strong>Secure Shell</strong> creates a 2-way communication connection over a network that lets the you execute shell commands on a remote server (or other device, but SSH is usually used for servers). This tool is <em>terminal-based</em> and does not come with a GUI. </p>
+                <p>SSH can use port forwarding to connect to other networks, which isn’t incredibly dangerous but does come with a certain amount of risk. It’s known to use port 22, which may be exploited if not changed. SSH requires some form of authentication before connecting, and you can choose a few different authentication methods with varying levels of security.</p>
+                <h3>Telnet</h3>
+                <p><strong>Telnet</strong> is basically the old version of SSH. Like SSH, it can send commands to a remote device, but the main difference between protocols is that Telnet sends everything as <em>unencrypted plaintext</em>.</p>
+                <p>That’s pretty awful if you care at all about security. I’m gonna be honest, I’m not sure why you’d use Telnet unless you were on an extremely outdated system that cannot be upgraded. Or if you wanna test some ports. Or if you’re really into retro tech. Point is, you’ll be using SSH over Telnet in the vast majority of scenarios. </p>
+                <h3>VPN</h3>
+                <p><strong>Virtual Private Networks</strong>! You’ve heard about these! They’re meant to create an <em>encrypted tunnel</em> in order to transmit data between one machine and another. Most people think of it as a security feature for internet connections – after all, that’s how most youtube ads describe them. But don’t be fooled! VPNs aren’t exactly dangerous, but they can be at risk of weak encryption, leaks, and malware transmission. </p>
+                <p>I don’t personally know of many people or organizations that do this, but you could also set up a local VPN to make local network resources accessible to those outside the local network’s range. You could also use a VPN to secure a RDP connection over the internet.</p>
+                <p>You might be wondering if VPNs are actually good for securing your data. Unfortunately, I cannot answer that without a lawyer present. Possibly bodyguard as well.</p>
+                <h3>RMM</h3>
+                <p><strong>Remote Monitoring and Management</strong> is used by companies in order to <em>monitor and manage multiple devices</em> over many locations via a single interface. It requires placing an agent on each connected device that will report back to the primary agent or managed service provider (MSP).</p>
+                <p>To be clear, the monitoring typically refers to gathering analytics about the device’s health and performance. It can also keep track of the software installed on the system, automate maintenance tasks, and alert the IT department to any issues. It wouldn’t be used specifically to spy on users, though it would probably be obvious if you started mining crypto on the company desktop.</p>
+              </article>
             </div>
             <script>
               function openTab(tabName) {
