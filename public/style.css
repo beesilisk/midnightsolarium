@@ -118,7 +118,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
-    
+
 }
 .outer {
     width:14%;
@@ -211,6 +211,7 @@ body {
     color: white;
     text-align: left;
 }
+
 .sidecontent {
     padding: 0 0 5px 5px;
     background-image: linear-gradient(to right, rgba(144, 224, 224, 0.9),  rgba(131, 223, 215, 0.9));
@@ -627,9 +628,7 @@ figcaption {
     }
 }
 .img_zoom {
-
     transition: transform .2s; /* Animation */
-
   }
 .img_zoom:hover {
     transform: scale(1.15);
@@ -784,6 +783,7 @@ footer {
     .container {
         padding: 5px;
         flex-direction: column;
+        margin:0 25px 0 25px;
     }
     .outer {
         margin-left:85%;
@@ -803,6 +803,7 @@ footer {
     }
     .container {
         padding: 0;
+        margin:0 5px 0 5px;
     }
     .outer {
         margin-top:5px;

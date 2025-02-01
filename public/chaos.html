@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>&#10028; chaos garden &#10028;</title>
+  <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .mborder a {
+    display:inline-block;
+    color: #fdf5e6;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000000;
+    max-height:90px;
+  }
+  .iconbox {
+    display:flex;
+  }
+  .icon {
+    width:90px;
+    height:90px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover > p{
+      background-color:rgba(228, 150, 167, 0.5);
+  }
+    &:active {
+      border: 1px dotted #fdf5e6;
+    }
+  }
+  .icon_img {
+    width:60px;
+    margin-bottom:5px;
+
+  filter: drop-shadow(1px 1px rgba(253, 245, 230, 0.2))
+  drop-shadow(-1px 1px rgba(253, 245, 230, 0.2)) 
+  drop-shadow(1px -1px rgba(253, 245, 230, 0.2)) 
+  drop-shadow(-1px -1px rgba(253, 245, 230, 0.2));
+  }
+</style>
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div class="container">
+    <!-- Font Changer -->
+    <div class="outer">
+      <script src="fontchanger.js"></script>
+    </div>
+
+    <div id="box">
+      <div class="grid">
+        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>&nbsp;midnight solarium</h1></div>
+        <div id="side">
+          <div class="sidebox" style="margin-top:20px;">
+            <h2 class="subheader">navigate</h2>
+            <nav class="sidecontent">
+              <script src="nav.js"></script>
+            </nav>
+          </div>
+        </div>
+
+        <main>
+          <div class="mborder">
+            <div class="mainbox" style="flex:1">
+              <h2 class="subheader">chaos garden</h2>
+              <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                <p>The seeds of this garden have been planted without extensive planning or forethought. Some ideas will grow while others wither. Not everything that sprouts here will be to the liking of all visitors - this is the unfortunate consequence of creating a more naturalistic ecosphere.</p>
+              </div>
+            </div>
+
+            <div class="iconbox">
+              <div class="pic" style="display:inline-block;width:304px;margin-right:10px;">
+                <h2 class="subheader">mygarden.png</h2>
+                <figure><img src="img/chaosgarden2.png" title="a broken computer monitor with plants growing out of it" alt="a broken computer monitor with plants growing out of it"></figure>
+              </div>
+
+              <a href="garden/ruminations.html" alt="ruminations"><div class="icon"><img class=icon_img src="img/gate.png"><p>ruminations</p></div></a>
+            </div>
+        </main>
+        
+      <footer><p>open since May 14, 2024</p><a href="credits.html" style="color: #fdf5e6">&#10028; Credits &#10028;</a></footer>
+      </div>
+    </div>
+    <div class="outer"></div>
+  </div>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("to_top");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+      } else {
+      mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</body>
+</html>
