@@ -10,6 +10,7 @@
       #tagContainer, #tagContainer p{
         display:inline;
         padding-bottom:10px;
+        padding-left: 5%;
       }
       .blogdetail {
         box-shadow: inset -1px -4px 4px -4px #705858;
@@ -19,7 +20,7 @@
       .mincontent {
         display: none;
         padding:0;
-        margin:10px 0 5px 0;
+        margin:10px 10% 5px 10%;
 
         h3 {
           width: 100%;
@@ -38,6 +39,7 @@
       font-size: 11px;
       text-decoration: none;
       border:none;
+      padding:0 3px;
       &:not(:disabled) {
         &:active, &.active {
             box-shadow: none;
@@ -57,7 +59,7 @@
     }
     .blogdetail {
       font-size: 11px;
-      padding:5px 25px 5px 25px;
+      padding:2px 25px 3px 25px;
     }
     section p {
       font-size: 14px;
@@ -126,26 +128,31 @@
 
       <main>
         <div class="mborder">
-          <div class="mainbox" >
-            <h2 class="subheader">about the weblog</h2>
+            <h2 class="subheader"><img src="img/mycomputer2.png"> weblog</h2>
               <div class="maincontent" >
                 <section>
                   <p><em>web·​log</em>: a website that contains online personal reflections, comments, and often hyperlinks, videos, and photographs provided by the writer. it does not necessarily require consistency or thematic cohesion. a weblog can just be a loose collection of writing that didn't fit elsewhere on the site and anyone who says otherwise is wrong and mean</p>
                 </section>
-              </div>
           </div>
           <div class="mainbox">
-          <h2 class="subheader">posts</h2>
-          <div class="maincontent">
-            <div id="tagContainer"><p><strong>filters</strong>: </p>
+            <div id="tagContainer">
+              <p><strong>filters</strong>: </p>
               <button class="tag active" onclick="filterSelection('all')">all</button>
               <button class="tag" onclick="filterSelection('fun')"> fun</button>
+              <button class="tag" onclick="filterSelection('infodump')"> infodump</button>
               <button class="tag" onclick="filterSelection('internet')"> internet</button>
               <button class="tag" onclick="filterSelection('opinion')">opinion</button>
               <button class="tag" onclick="filterSelection('tech')">tech</button>
             </div>
+                <div class="mincontent infodump internet opinion tech">
+                  <h3><a href="weblog_posts/realworld.html">realworld graphics (aka a resource for custom cursors and old desktop graphics)</a><sup class="new">NEW!</sup></h3>
+                  <section>
+                    <p class="blogdetail"><time datetime="2025-02-12">feb 12, 2025</time> &#x2022; word count: 701 &#x2022; <button class="tag" onclick="filterSelection('infodump')"> infodump</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
+                    <p>i just want to talk about this neat website i found</p>
+                  </section>
+                </div>
                 <div class="mincontent fun">
-                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years holiday roundup extravaganza: 2024 edition</a><sup class="new">NEW!</sup></h3>
+                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years holiday roundup extravaganza: 2024 edition</a></h3>
                   <section>
                     <p class="blogdetail"><time datetime="2024-11-23">dec 31, 2024</time> &#x2022; word count: 1416 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
                     <p>me, five minutes before 2025: i should write an end-of-year weblog</p>
@@ -180,8 +187,8 @@
                   </section>
                 </div>
                 <div class="hiddenlink" style="float: right;"><a href="https://notbyai.fyi/"><img src="img/Written-By-Human-black.png" alt="written by human, not by AI" title="this weblog is not written using generative AI"/></a></div>
-          </div>
-        </div>
+
+
 
       </main>
         

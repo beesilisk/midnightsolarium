@@ -13,16 +13,31 @@
     #more {
       display: none;
     }
-    .rsslink i{
-      text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+    #myBtn {
+      margin:15px 0 20px 0;
+    }
+
+    #wcb_p {
+      filter: drop-shadow(0 0 8px #67aa98);
+      border-radius:14px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .carbonbadge {
+      margin-bottom: -10px;
+    }
+    .rsslink {
+      float:right;
+      margin-top:2px;
+      i {
+        text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
       color: #e9e752;
-      transition: .3s ease-in-out; /* Animation */
       &:hover {
         filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
-        transition: 0.3s ease-in-out;
       }
       &:active {
         color:rgb(241, 160, 38)
+      }
       }
     }
     </style>
@@ -67,75 +82,72 @@
       </div>
 
       <main>
-        <div class="mborder">
-
-          <div class="flexrow">
-            <div class="mainbox" style="flex:2;">
-              <h2 class="subheader">welcome!</h2>
-                <div class="maincontent" >
-                  <section>
-                    <p>You&apos;ve reached a website dedicated to all <em>organisms</em>, <em>formations</em>, and <em>concepts</em> that grow in the night. Visitors are invited to look around, unwind, ground themselves in loamy soil, or just take a quick breather before continuing down their own path. </p>
-                    <p>This website is the ongoing project of run by an easily overstimulated insect. In the face of an increasingly rapid-paced landscape both within the web and beyond, the solarium exists as a space for chilling out, sharing interests, and learning new things.</p>
-                  </section>
-                  <div class="mincontent">
-                    <h3>getting the most out of your visit</h3>
-                    <section>
-                      <ul>
-                        <li>As of October 2024, midnight solarium has adopted a (somewhat) <strong>mobile-friendly layout</strong>! Thank you for your continued support as the site continues to evolve and improve &lt;3 </li>
-                        <li>If something appears weird or missing, make sure you have <strong>javascript enabled</strong>. If the problem persists, the webmaster probably left something broken or unfinished. My bad! (&#62;_&lt;")&#62; </li>
-                      </ul>
-                    </section>
-                  </div>
-
-                </div>
-            </div>
-
-            <div class="pic" style="width:204px;">
-              <h2 class="subheader">WARNING.png</h2>
-              <figure><img src="img/bug_hotel.png" title="a bug hotel" alt="a bug hotel made of wood, sticks, rocks, and pinecones"></figure>
-              <figcaption style="width:200px;">this website is home to various types of <em>bugs</em></figcaption>
-            </div>
+        <h2 class="subheader"><img src="img/mycomputer2.png"> welcome!</h2>
+        <div class="flexrow">
+          <div style="flex:1;">
+              <p>You&apos;ve reached a website dedicated to all <em>organisms</em>, <em>formations</em>, and <em>concepts</em> that grow in the night. Visitors are invited to look around, unwind, ground themselves in loamy soil, or just take a quick breather before continuing down their own path. </p>
+              <p>This website is the ongoing project of run by an easily overstimulated insect. In the face of an increasingly rapid-paced landscape both within the web and beyond, the solarium exists as a space for chilling out, sharing interests, and learning new things.</p>
+              
+              <div class="mincontent">
+                <h3>getting the most out of your visit</h3>
+                  <ul>
+                    <li>As of October 2024, midnight solarium has adopted a (somewhat) <strong>mobile-friendly layout</strong>! Thank you for your continued support as the site continues to evolve and improve &lt;3 </li>
+                    <li>If something appears weird or missing, make sure you have <strong>javascript enabled</strong>. If the problem persists, the webmaster probably left something broken or unfinished. My bad! (&#62;_&lt;")&#62; </li>
+                  </ul>
+              </div>
           </div>
+
+            <div class="pic" style="width:184px;">
+              <h2 class="subheader">WARNING.png</h2>
+              <figure><img src="img/bug_hotel.png" title="a bug hotel" alt="a bug hotel made of wood, sticks, rocks, and pinecones" style="width:180px;"></figure>
+              <figcaption >this website is home to various types of <em>bugs</em></figcaption>
+            </div>
+        </div>
 
           <div class="flexrow" style="justify-content: center; align-items: center;">
             
             <div class="pic">
               <h2 class="subheader">piclog_new.jpg</h2>
-              <figure><a href="https://piclog.blue/profile.php?id=636" class="hiddenlink"><img src="https://piclog.blue/latest.php?id=636" alt="most recent picture from piclog.blue" title="check out midnight solarium's piclog!" loading="lazy" style="width: 300px;"></a></figure>
+              <figure><a href="https://piclog.blue/profile.php?id=636" style="filter:none;"><img src="https://piclog.blue/latest.php?id=636" alt="most recent picture from piclog.blue" title="check out midnight solarium's piclog!" loading="lazy" style="width: 300px;"></a></figure>
             </div>
 
-              <div style="flex-direction:column;">
-                <div class="mainbox" style="flex:1;">
-                <h2 class="subheader">question of the hour:</h2>
-                <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+            <div class=mainbox; style="flex-direction:column;">
+              <div style="flex:1;">
+              <h3>question of the hour:</h3>
+              <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                   <img class="img_zoom" src="img/trs80.png" title="Tandy TRS-80 Model I" alt="A Tandy TRS-80 Model I. It's an old computer with an attached keyboard and floppy disk drive.">
                   <section>
-                    <form method="post" action="https://poll.pollcode.com/79841233"><div style="background-color:#0F4249;padding:2px;font-size:small;color:#FDF5E6;"><div style="padding:2px 0px 8px 2px;"><strong>do you know what a tandy computer is?</strong><br /><br /></div><input type="radio" name="answer" value="1" id="answer798412331" style="float:left;" /><label for="answer798412331" style="float:left;">yes, i have seen / used one irl</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer798412332" style="float:left;" /><label for="answer798412332" style="float:left;">yes, i know what they are</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer798412333" style="float:left;" /><label for="answer798412333" style="float:left;">maybe??? sounds vaguely familiar</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer798412334" style="float:left;" /><label for="answer798412334" style="float:left;">nope</label><div style="clear:both;height:2px;"></div><div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div><div align="right" style="font-size:10px">pollcode.com <a href="https://pollcode.com/">free polls</a></div></div></form>
+                    <form method="post" action="https://poll.pollcode.com/79841233"><div style="background-color:rgb(5, 27, 31);padding:2px;font-size:small;color:#FDF5E6;"><div style="padding:2px 0px 8px 2px;"><strong>do you know what a tandy computer is?</strong><br /><br /></div><input type="radio" name="answer" value="1" id="answer798412331" style="float:left;" /><label for="answer798412331" style="float:left;">yes, i have seen / used one irl</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer798412332" style="float:left;" /><label for="answer798412332" style="float:left;">yes, i know what they are</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer798412333" style="float:left;" /><label for="answer798412333" style="float:left;">maybe??? sounds vaguely familiar</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer798412334" style="float:left;" /><label for="answer798412334" style="float:left;">nope</label><div style="clear:both;height:2px;"></div><div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div><div align="right" style="font-size:10px">pollcode.com <a href="https://pollcode.com/">free polls</a></div></div></form>
                   </section>
                 </div>
                 </div>
               </div>
 
-              <div class="mincontent" style="flex:1;margin:0;">
+              <div style="flex:1;">
+              
+                <div class="mincontent">
                 <h3>enjoying your stay?</h3>
                 <section style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-                  <p style="padding:0;">wanna let other people know about the solarium? need a new addition to you link and graphic hoard? feel free to click 'Save Image As' and spread our buttons across the web!</p>
+                  <p style="padding:0;">wanna let other people know about the solarium? need a new addition to you link and graphic hoard? feel free to click 'Save Image As' and spread the button across the web!</p>
                   <div style="display:flex;flex-direction:row;gap:20px;">
-                  <img src="img/misobuttons/misobutton.gif" style="image-rendering: auto;margin-top:5px;margin-bottom:20px; width: 88px; filter: drop-shadow(4px 4px 2px rgba(7, 13, 25, 0.8));" />
-                  <img src="img/misobuttons/misobutton.png" style="image-rendering: auto;margin-top:5px;margin-bottom:20px; width: 88px; filter: drop-shadow(4px 4px 2px rgba(7, 13, 25, 0.8));" />
+                  <img src="img/misobuttons/misor.png" style="image-rendering: auto;margin-top:5px;margin-bottom:20px; width: 88px; filter: drop-shadow(4px 4px 2px rgba(7, 13, 25, 0.8));" />
                   </div>
                   <p style="padding:0;">if you have a site hosted on nekoweb, you can click follow and see when we update!</p>
                   <iframe id="follow-button" style="margin-left:auto;margin-right:auto;margin-bottom:10px;" src="https://nekoweb.org/frame/follow"
                   frameborder="0" width="170" height="28"></iframe>
                 </section>
               </div>
+              </div>
 
           </div>
 
-          <div class="mainbox">
-            <h2 class="subheader">changelog <a href="rss.xml" class="rsslink"><i class="fa-solid fa-rss" style="float:right;margin-top:2px;"></i></a></h2>
+            <h2 class="subheader"><img src="img/mycomputer2.png"> changelog <a href="rss.xml" class="rsslink"><i class="fa-solid fa-rss" ></i></a></h2>
               <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                 <section>
+                  <p>
+                    <time datetime="2025-02-12"><strong>12.02.25</strong></time>
+                - tweaked layout to require less <em>&lt;div&gt;</em>s and look a bit less visually cluttered, made a new button, wrote more ruminations, wrote a brief weblog about a graphics resource i found
+                  </p>
                   <p>
                     <time datetime="2025-01-31"><strong>31.01.25</strong></time>
                 - created <a href="chaos.html" alt="chaos garden" title="chaos garden">chaos garden</a> (meant to be a hub for misc. webpages that don't fit anywhere else), made ruminations page, tweaked rss so hopefully it'll show up on nekoweb's built-in feed, tweaked layout to be a bit friendlier to smaller and medium-sized screens
@@ -152,11 +164,11 @@
                     <time datetime="2024-12-21"><strong>21.12.24</strong></time>
                 - reorganized the homepage, gave weblog posts filterable tags, made minor additions to old notes
                   </p>
+                  <span id="dots"><br /></span><span id="more">
                   <p>
                     <time datetime="2024-12-05"><strong>05.12.24</strong></time>
                 - added a <a href="https://midnightsolarium.atabook.org/" alt="guestbook" title="guestbook">guestbook</a>, made a <a href="index.html" alt="landing page" title="landing page">landing page</a>, added more notes to notebook, made notebook look less wonky on smaller screens, realized i forgot to add the new font changer to the weblogs so whoops i finally fixed that, revamped some assets & css
                   </p>
-                  <span id="dots"><br /></span><span id="more">
                   <p>
                     <time datetime="2024-11-29"><strong>29.11.24</strong></time>
                 - added <a href="about.html" alt="fun facts" title="fun facts">fun facts</a> about myself, added more recipes (and hopefully made them easier to read), made a custom <a href="not_found.html" alt="404 page" title="404 page">404 page</a>, switched from Google Fonts to self-hosted fonts, added new fonts to the to font changer, kicked font changer outside so it wouldn't cover up the nav bar, fixed some z-index weirdness
@@ -236,9 +248,7 @@
               }
             }
             </script>
-              </div>
           </div>
-        </div>
       </main>
         
       <footer>

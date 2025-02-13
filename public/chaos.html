@@ -15,6 +15,13 @@
     text-decoration: none;
     text-shadow: 1px 1px 2px #000000;
     max-height:90px;
+    &:hover {
+      filter:none;
+    }
+    &:focus {
+      border:none;
+      color:#fdf5e6;
+    }
   }
   .iconbox {
     display:flex;
@@ -27,6 +34,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top:15px;
+    p {
+      padding:0 2px;
+      font-size: 12px;
+    }
 
     &:hover > p{
       background-color:rgba(228, 150, 167, 0.5);
@@ -67,12 +79,10 @@
 
         <main>
           <div class="mborder">
-            <div class="mainbox" style="flex:1">
-              <h2 class="subheader">chaos garden</h2>
+            <h2 class="subheader"><img src="img/mycomputer2.png"> chaos garden</h2>
               <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                 <p>The seeds of this garden have been planted without extensive planning or forethought. Some ideas will grow while others wither. Not everything that sprouts here will be to the liking of all visitors - this is the unfortunate consequence of creating a more naturalistic ecosphere.</p>
               </div>
-            </div>
 
             <div class="iconbox">
               <div class="pic" style="display:inline-block;width:304px;margin-right:10px;">
@@ -81,6 +91,7 @@
               </div>
 
               <a href="garden/ruminations.html" alt="ruminations"><div class="icon"><img class=icon_img src="img/gate.png"><p>ruminations</p></div></a>
+            </div>
             </div>
         </main>
         

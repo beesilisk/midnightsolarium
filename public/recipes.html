@@ -48,7 +48,7 @@
     }
     li{
       list-style-type: "–  ";
-      margin-left:2.5rem;
+      margin-left:10px;
     }
      aside {
     font-size: 11px;
@@ -60,26 +60,26 @@
     position: absolute;
     top: 0; bottom: 0; left: 0;
     width: 60px;
-    background: radial-gradient(rgb(20, 46, 54) 6px, transparent 7px) repeat-y;
+    background: radial-gradient(rgb(14, 27, 32) 6px, transparent 7px) repeat-y;
     background-size: 30px 30px;
     border-right: 2px solid rgba(212, 65, 71, 0.3);
     box-sizing: border-box;
 }
 .ingredients {
-    margin:0 22px 8px 16px;
+    margin:0 0 8px 16px;
     width: 40%;
     min-width: 170px;
-    padding-right:10px;
 
     p, aside, h4 {
       margin-left:56px;
     }
+    ul {
+      padding-right:0;
+    }
     aside {
       margin-left:38px;
     }
-    p {
-      margin-left: 30px;
-    }
+
 }
 .instructions {
   text-align: center;
@@ -101,10 +101,14 @@ br {
     flex-direction: column;
     margin-right:0;
     margin-left:0;
+
+    p, aside {
+      padding:0;
+    }
 }
 .ingredients {
   min-width:calc(100% - 10px);
-  margin-left:46px;
+  margin-left:26px;
 }
     .instructions {
       margin-right:0;
@@ -144,11 +148,10 @@ br {
       </div>
 
       <main>
+        <h2 class="subheader"><img src="img/mycomputer2.png"> recipes</h2>
         <div class="mborder">
 
           <div class="flexrow">
-            <div class="mainbox" style="flex:2">
-              <h2 class="subheader">recipe cards</h2>
                 <div class="maincontent">
                   <p>this is a digital copy of my recipe collection. expect new additions to be added sporadically, and old recipes to be modified without warning</p>
                   <p><span class="star">&#9733;</span> = webmaster's family recipes</p>
@@ -1033,8 +1036,8 @@ br {
                       </details>
 
                     </details>
+                    <br><br>
   
-                </div>
             </div>
 
           </div>
