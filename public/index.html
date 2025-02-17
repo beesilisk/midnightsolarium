@@ -69,18 +69,37 @@ html {
   background-color: #051b1f;
   color:#fff;
   padding:20px 30px 20px 30px;
+  font-size: 14px;;
 
     p, ul {
     padding-bottom:7px;
 }
+    strong {
+      font-weight:bold;	
+        color: #62d675;
+    }
 }
 
 sup {
   color:white;
   font-weight:400;
 }
-.maincontent a:hover {
-    transition: none;
+.maincontent a {
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+  color: #e9e752;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
+    transition: 0.3s;
+    }
+  &:active {
+    color:rgb(241, 160, 38)
+    }
+  &:focus {
+    border-bottom:1px dotted #e9e752;
+    }
 }
 .maincontent .btn {
     color:black;
@@ -105,7 +124,7 @@ sup {
     <div class="maincontent">
     <p>Midnight Solarium is a carefully controlled ecosystem that uses JavaScript to maintain homeostasis. Please <em>enable JavaScript</em> on your web browser before entering. </p>
     <p>The solarium gladly welcomes mobile users! That being said, guests using desktop and laptop screens will receive the most optimized viewing experience.</p>
-    <div style="text-align: center; margin-top:10px;margin-bottom:30px;"><a href="https://midnightsolarium.nekoweb.org/home" class="btn" style="font-size: 24px; height: 100%;">Enter the Solarium</a></div>
+    <div style="text-align: center; margin-top:20px;margin-bottom:30px;"><a href="https://midnightsolarium.nekoweb.org/home" class="btn" style="font-size: 24px; height: 100%; text-decoration: none;">Enter the Solarium</a></div>
     <p>The local flora may cause negative effects for some visitors. Proceed with caution if you have a strong sensitivity to:</p>
     <div style="padding-left:30px;">
     <strong><ul>
