@@ -53,6 +53,17 @@ html {
         background-position: 0 0;
     }
 }
+.lights {
+  z-index:-1;
+  position: absolute;
+  top:0%;
+}
+.leftlight img{
+  width:560px;
+}
+.rightlight img{
+  width:500px;
+}
 .container
   {
   max-width: 700px;
@@ -111,11 +122,34 @@ sup {
 .maincontent .btn:focus {
     text-decoration: none;
 }
+@media only screen and (max-width: 1281px) {
+    .leftlight img{
+    width:360px;
+  }
+  .rightlight img{
+    width:300px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .leftlight img{
+  width:130px;
+}
+.rightlight img{
+  width:100px;
+}
+    .logo {
+      margin-bottom:15px;
+    }
+}
+
   </style>
   </head>
   <body>
+    
+  <div class="lights leftlight"><img src="img/colorlights2.png"></div>
+  <div class="lights rightlight" style="right:0%;"><img src="img/colorlights1.png"></div>
 
-<div class="container" style="margin-top:15px;">
+<div class="container logo" style="margin-top:15px;">
 <img src="img/midsollogo2.png">
 </div>
 

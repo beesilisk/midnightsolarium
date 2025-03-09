@@ -30,38 +30,47 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 @font-face {
     font-family:"Comic Sans";
     src: url("fonts/ComicSansMS.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family:"Cozette";
     src: url("fonts/CozetteVector.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
-    font-family: Fira Code;
+    font-family: Fira Code, Arial;
     src: url("fonts/FiraCode-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: Lexend Exa;
     src: url("fonts/LexendExa-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: Lexend Mega;
     src: url("fonts/LexendMega-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: OpenDyslexic-Regular;
     src: url("fonts/OpenDyslexic-Regular.otf") format('opentype');
+    font-display: swap;
 }
 @font-face {
     font-family: Papyrus;
     src: url("fonts/papyrus.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: Verdana;
     src: url("fonts/verdana.ttf") format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: Wingdings;
     src: url("fonts/wingding.ttf") format('truetype');
+    font-display: swap;
 }
 
 /* Scrollbar CSS ---> https://codepen.io/stephenpaton-tech/full/JjRvGmY/ */
@@ -83,11 +92,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border-radius: 0;
     border: 0 ridge #fff;
 }
+
 ::selection {
-    background: rgba(201, 219, 97, 0.6); /* WebKit/Blink Browsers */
+    background: rgb(205, 219, 123); /* WebKit/Blink Browsers */
+    color:#dd4444;
   }
   ::-moz-selection {
-    background: rgba(201, 219, 97, 0.6); /* Gecko Browsers */
+    background: rgb(205, 219, 123); /* Gecko Browsers */
+    color:#dd4444;
   }
 html:before {
     content: " ";
@@ -128,7 +140,6 @@ body {
     box-shadow : 0 0 0 3px rgba(244, 128, 128, 1),
     0 0 0 5px #f5e8ea,
     0 0 0 15px rgba(255, 255, 255, 0);
-
   }
 .grid {
     display: grid;
@@ -459,15 +470,16 @@ sup {
     text-decoration: none;
     text-shadow: 0 0 10px rgba(0, 174, 255, 0.4);
     color: #3528e6;
-}
-.mincontent a:hover {
-    filter: brightness(1.6);
-}
-.mincontent a:active {
-    color:rgb(86, 10, 180)
-}
-.mincontent a:focus {
-    border-bottom:1px dotted #3528e6;
+
+    &:hover {
+        filter: brightness(1.6);
+    }
+    &:active {
+        color:rgb(86, 10, 180)
+    }
+    &:focus {
+        border-bottom:1px dotted #3528e6;
+    }
 }
 
 .tab {

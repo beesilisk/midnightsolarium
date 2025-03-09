@@ -5,10 +5,17 @@
 		<link>https://midnightsolarium.nekoweb.org</link>
 		<description>a website dedicated to all organisms, formations, and concepts that grow in the night</description>
 		<item>
+			<title>09.03.25</title>
+			<pubDate>Sun, 09 Mar 2025 12:00:00 -0700</pubDate>
+			<guid isPermaLink="false">wilde.ai and starpants</guid>
+			<link>https://midnightsolarium.nekoweb.org/garden/wildeai</link>
+			<description>launched poetry generator wilde.AI (which is a totally real AI! source: trust me), added ☆.⋆~star pants~⋆.☆ to craft catalog, hung decorative lights on landing page </description>
+		</item>
+		<item>
 			<title>16.02.25</title>
 			<pubDate>Sun, 16 Feb 2025 12:00:00 -0700</pubDate>
 			<guid isPermaLink="false">baby blankets and anti-love letters</guid>
-			<link>https://midnightsolarium.nekoweb.org/weblog_posts/i_dont_want_to_fall_in_love.html</link>
+			<link>https://midnightsolarium.nekoweb.org/weblog_posts/i_dont_want_to_fall_in_love</link>
 			<description>wrote a somewhat off-the-cuff weblog about my messy relationship with Valentine's Day, edited some links on previous weblog, added baby blanket to craft catalog, removed carbon counter because it wasn't working properly, fixed css on landing page</description>
 		</item>
 		<item>
@@ -22,7 +29,7 @@
 			<title>31.01.25</title>
 			<pubDate>Fri, 31 Jan 2025 12:00:00 -0700</pubDate>
 			<guid isPermaLink="false">stackoverflow did not come through for me so i had to write my own javascript for once</guid>
-			<link>https://midnightsolarium.nekoweb.org/garden/ruminations.html</link>
+			<link>https://midnightsolarium.nekoweb.org/garden/ruminations</link>
 			<description>created chaos garden (meant to be a hub for misc. webpages that don't fit anywhere else), made ruminations page, tweaked rss so hopefully it'll show up on nekoweb's built-in feed, tweaked layout to be a bit friendlier to smaller and medium-sized screens</description>
 		</item>
 		<item>

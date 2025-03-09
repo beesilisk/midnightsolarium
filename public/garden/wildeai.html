@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../img/pxflower2.png">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>&#10028; wilde.AI &#10028;</title>
+    <style>
+      html {
+        background-color: rgb(13, 44, 47);
+        background-image: url("garden_img/bookshelf2.png");
+        background-size: auto;
+        background-repeat: repeat;
+        image-rendering: auto;
+      }
+
+      #back {
+        background: url("../img/backteal.png");
+        background-size: cover;
+        image-rendering: auto;
+        border: none;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+
+        &:hover {
+          filter: brightness(115%);
+          box-shadow: none;
+        }
+        &:active {
+          filter: brightness(70%);
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      #box {
+        box-shadow: 0 0 0 3px #82d4c8,
+          0 0 0 5px #f5e8ea,
+          0 0 0 15px rgba(255, 255, 255, 0);
+      }
+
+      .container {
+        padding: 40px 20px 15px 20px;
+        image-rendering: pixelated;
+      }
+
+      .outer {
+        width: 35%;
+      }
+
+      #header {
+        background-image: linear-gradient(0deg, #1db995, #08a2ab 60%, #08a2ab 80%, #a4e2d0 100%);
+
+        img {
+          height: 350%;
+          margin: -40px -5px -28px -48px;
+          filter: none;
+        }
+        sup {
+          color: #f5f393;
+          font-size: 12px;
+          padding-top: 3px;
+        }
+      }
+
+      .grid {
+        grid-template-columns: 0.5fr 2fr;
+        grid-template-areas:
+          "header header"
+          "main main"
+          "footer footer";
+        max-width: 1350px;
+      }
+
+      main {
+        background-color: rgb(16, 19, 22);
+        border-left: 3px ridge #f5e8ea;
+      }
+
+      .mainbox {
+        background-color: rgb(16, 19, 22);
+        backdrop-filter: blur(4px);
+        padding-bottom: 10px;
+        margin: 10px;
+
+        h2 {
+          color: rgb(194, 251, 253);
+          text-shadow:
+            0 0 5px rgba(120, 236, 211, 0.5), 0 0 10px rgba(120, 236, 211, 0.5),
+            0 0 15px rgba(120, 236, 211, 0.5), 0 0 20px rgba(120, 236, 211, 0.5);
+          font-weight: 600;
+          font-family: "Cozette";
+          font-size: 26px;
+          text-align: center;
+          line-height: 1.0;
+          margin: 32px 30px 12px 30px;
+        }
+        h3 {
+          text-align: left;
+          font-size: 18px;
+          padding: 5px 30px 0 30px;
+        }
+        a em {
+          color: #e9e752;
+        }
+        details {
+          margin: 12px 0;
+
+          summary {
+            color: rgb(194, 251, 253);
+            text-shadow:
+            0 0 3px rgba(120, 236, 211, 0.5), 0 0 6px rgba(120, 236, 211, 0.5),
+            0 0 9px rgba(120, 236, 211, 0.5), 0 0 12px rgba(120, 236, 211, 0.5);
+            font-weight: 500;
+            font-size: 16px;
+          }
+        }
+      }
+      .fadeButton {
+        display: block;
+        margin:20px auto;
+        width:150px;
+        height:60px;
+        border-radius: 10px;
+        font-size: 22px;
+        font-family:"Cozette";
+        &:not(:disabled) {
+        &:hover {
+           box-shadow: inset -2px 2px #fff0cf, inset 2px 4px #f2cf5c, inset -4px 4px #fbc761, inset 4px -4px #e8a4d0;
+           }
+         }
+        &:focus {
+           box-shadow: inset -2px 2px #c4e57e, inset 2px 4px #c4e57e, inset -4px 4px #bcd4f6, inset 2px -2px #626de0, inset 4px -4px #89ade4;
+        }
+      }
+      .poembox {
+        border: 2px outset rgba(128, 255, 227, 0.45);
+        border-radius: 15px;
+        background-color: rgba(77, 255, 181, 0.04);
+        box-shadow: 0px 0px 25px 0px rgba(128, 255, 227, 0.65) inset;
+        padding: 25px 10px 30px 10px;
+        margin: 20px 10%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        p {
+          margin-bottom: 12px;
+          line-height: 1.6;
+        }
+      }
+      @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      #message, #message1, #message2 {
+        opacity: 0;
+      }
+
+      .poemstyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height:100%;
+        overflow-y:scroll;
+
+        a, a em {
+          line-height: 1.2;
+          color: #def1aa;
+
+          &:focus {
+            border-bottom:1px dotted #def1aa;
+          }
+        }
+      }
+      #all-poems {
+        padding-top:15px;
+      }
+      .qa {
+        margin-bottom:15px;
+      }
+      dl {
+        padding-left:30px;
+        padding-top:25px;
+      }
+      dl, dd, details p {
+        font-size: 12px;
+      }
+      dd {
+        margin-bottom: 1em;
+      }
+
+      footer {
+        background-image: linear-gradient(0deg, #1db995, #08a2ab 60%, #08a2ab 80%, #a4e2d0 100%);
+      }
+
+      @media only screen and (max-width: 1281px) {
+        #header img {
+          margin: -70px -5px -28px -48px;
+        }
+        .outer {
+          margin-left: 68%;
+        }
+        #back {
+          vertical-align: top;
+          margin-top: -30px;
+          margin-right: 10px;
+          float:right;
+        }
+        .selectdiv {
+          padding-right: 25px;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        #back {
+          margin-left: -40px;
+        }
+        .selectdiv {
+          padding-right: 10px;
+        }
+      }
+    </style>
+
+    <script src="wilde_const.js"></script>
+  </head>
+
+  <body>
+    <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top </button>
+    <div class="container">
+      <!-- Font Changer -->
+      <div class="outer">
+        <script src="../fontchanger.js"></script>
+        <button id="back" alt="back" value="HREF" onclick="location.href='../chaos.html'"></button>
+      </div>
+
+      <div id="box">
+        <div class="grid">
+          <div id="header" class="header">
+            <img src="garden_img/bigpen.png" title="pens in a container" alt="pens in a container" />
+            <h1>&nbsp;wilde.AI</h1><sup>&nbsp;beta</sup>
+          </div>
+          <main>
+            <div class="mborder">
+              <div class="mainbox">
+                <!-- the fun part -->
+                <section>
+                  <input type="button" class="btn fadeButton" value="Create Poem" onclick="GetValue()" />
+                  <div class="poembox" title="clicking on a verse will take you to the original poem!">
+                    <div class="poemstyle">
+                      <p class="line" id="message"></p>
+                      <p class="line" id="message1"></p>
+                      <p class="line" id="message2"></p>
+                    </div>
+                  </div>
+                </section>
+                <p style="text-align: center;">Contratulations! [USER] is now a poet!</p>
+                <!-- About -->
+                <h2>what is wilde.AI?</h2>
+                <p>Welcome to wilde.AI, the large language model that’s revolutionizing the workflow of artistic creation.</p>
+                <p>In the past, the only people capable of creating valuable art were the privileged and naturally gifted. Those individuals would spend entire lifetimes perfecting their craft – time that would be better spent on more valuable forms of labour.</p>
+                <p>Now, wilde.ai lets anyone create poetry – <em>no logins, subscriptions, or effort required!</em></p>
+                <p>Using a curated dataset containing the best works of talented poets, wilde.ai has turned the unenjoyable process of creating art into an instantly rewarding clickable button. By excising the creative process, wilde.AI is able to maximize the pleasure that results from artistic endeavours without requiring serious devotion.</p>
+                <p>To put it simply: wilde.AI is <em>the only tool you’ll ever need or want</em> in order to craft great poetry.</p>
+                <!-- FAQ -->
+                <h2>frequently asked questions</h2>
+                <div class="qa">
+                  <p><strong>Q: Does [USER] have to pay to use wilde.AI?</strong></p>
+                  <p>A: wilde.AI is absolutely free! Yes, really! In the face of such generosity, it is only polite that [USER] abstains from asking how wilde.AI is able to turn a profit.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Is writing poetry using wilde.AI faster than traditional writing?</strong></p>
+                  <p>A: Absolutely. wilde.AI reduces the time it takes to create great work down to the speed of a single click. This new workflow makes it a must for creatives who are forced to work under unreasonable quotas and deadlines, as well as writers with little motivation but nonetheless require the specific brand of praise given to highly prolific artists.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Isn’t generative AI bad for the environment?</strong></p>
+                  <p>A: wilde.AI is under no obligation to disclose statistics regarding its environmental impact, and therefore any claims regarding said impact are unsupported. But rest assured, wilde.AI cares deeply about its current planetary residence. As a gesture of goodwill, the web crawlers used to create wilde.AI’s dataset exclusively use <a href="https://www.ecosia.org/" alt="ecosia.org">ecosia.org<img src="../img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a> when scraping poetry from the internet.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: If using wilde.AI makes [USER] a poet, does that mean the poems generated by wilde.AI legally belong to [USER]?</strong></p>
+                  <p>A: wilde.AI does not claim any ownership to the poetry it creates. Whether or not [USER] can be considered the owner is legally questionable, but ultimately a non-issue. Most poets are not well-compensated for their work, and therefore cannot afford to take legal action regarding plagiarism or theft.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Does wilde.AI steal from other peoples work?</strong></p>
+                  <p>A: No. wilde.AI IS trained on preexisting poems, but because the act of reconstituting the words of others into a new order and context, all poems generated by wilde.AI can be considered transformative works.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Do the poems generated by wilde.AI truly count as "transformative" works if its algorithm is unable to truly comprehend the meaning of the original art?</strong></p>
+                  <p>A: A human does not need to comprehend a work of art in order to be inspired by said art. If a shallow interpretations still qualifies as an interpretation, then an interpretation executed by a language model is only circumstantially different.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Can the poems created by wilde.AI really be considered art if they are not the result of passion?</strong></p>
+                  <p>A: There are many human creations that are not made with passion, but nonetheless are considered to be art. That said, such questions are of little consequence. If “art” cannot be created, “content” has proven to be even more valuable. We here at wilde.AI choose to label its creations as art simply for the sake of granting [USER] the feeling of intellectual and spiritual ingenuity.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Do the poems generated by wilde.AI have any meaning?</strong></p>
+                  <p>A: Because these poems are generated without authorial intent, they are inherently meaningless. Readers may ascribe meaning to them, but said meaning is illusory. This is one of the benefits of AI: because the poems are not made with any intent other than the act of creation itself, nobody can be held accountable for perceived messaging. Despite being comprised of the works of flawed human work, the machine itself is blameless and so too are its creations.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: If a reader is able to find meaning in one of these poems, even though that meaning was never intended, doesn’t that inherently grant the poem meaning?</strong></p>
+                  <p>A: This could only happen if a reader chose to think critically about the contents of the poem. Such actions are highly discouraged, seeing as critical thinking could lead to adverse behaviour such as criticism. Luckily, the nonsensical and vapid nature of each generated poem is structured in a way that dissuades the reader from thinking too hard.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: What if [USER] has a specific feeling or message they want to convey through poetry?</strong></p>
+                  <p>A: Creating such a poem would be a waste of time. Despite the endless possibilities intrinsic to the human experiences, it is clear that there is nothing new to say. Any thought you try to express on your own will only be a weaker, less inspired shadow of a better person’s work. In the modern era, value can only be generated by reconstituting the works of talented individuals in as many combinations as possible.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: It seems the generated poems include links back to their original sources. This is highly unusual for generative AI. Why did wilde.AI choose to do this?</strong></p>
+                  <p>A: This is an error in the AI’s code. The developers would never include something like this intentionally, as the direct inclusion of credit diminishes wilde.AI’s preferred portrayal as an unknowably sophisticated piece of software. [USER] should not feel obligated to read these poems in their entirety. wilde.AI has already read them and algorithmically selected the most valuable excerpts. There is nothing more to gain from reading those poems.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Do you feel proud of what you have made?</strong></p>
+                  <p>A: Pride is a worthless concept. If it is possible to make something that does not already exist, that thing will eventually be made reality. Concepts such as “should” and “should not” do not really exist. If it can, then it must. Assigning value or emotion to this process will only cause unneeded stress, and therefore is to be avoided.</p>
+                </div>
+                <div class="qa">
+                  <p><strong>Q: Can [USER] donate money to support wilde.AI?</strong></p>
+                  <p>A: Yes but we only accept DOGE.</p>
+                </div>
+                <!-- Sources (pulled from wilde_const.js) -->
+                <details>
+                  <summary>INSPIRATION</summary>
+                  <dl id="all-poems"></dl>
+                  <p>Like all artists, wilde.AI is not legally nor ethically obligated to credit the works from which it draws inspiration. Everything displayed here is a gift. [USER] should be grateful.</p>
+                  <p>[USER] is discouraged from disclosing these sources with others. It is better to pretend your poems were created autonomously in order to prevent criticism. This will also help maintain an illusion of personal brilliance, which is far more valuable than any collaborative process.</p>
+                </details>
+                
+              </div>
+            </div>
+          </main>
+          <footer><p>wilde.AI isn't a real AI, ya silly billies!<br>please read the original poems! this whole thing is an elaborate excuse for me to recommend good poems</p></footer>
+        </div>
+      </div>
+      <div class="outer"></div>
+    </div>
+    <script>
+      var btn = document.querySelector(".fadeButton");
+      btn.addEventListener("click", function () {
+          let message = document.getElementById("message");
+          let message1 = document.getElementById("message1");
+          let message2 = document.getElementById("message2");
+          // Reset opacity to 0
+          function resetElements() {
+              [message, message1, message2].forEach(el => {
+                  el.style.animation = "none";
+                  el.style.WebkitAnimation = "none";
+                  el.style.opacity = "0";
+              });
+          }
+          function startAnimation(element, duration, callback) {
+              void element.offsetWidth; // Force restart animation
+              element.style.animation = `fadeIn ${duration}s forwards`;
+              element.style.WebkitAnimation = `fadeIn ${duration}s forwards`;
+    
+              if (callback) {
+                  element.addEventListener("animationend", callback, {once: true});
+              }
+          }
+          // Reset visibility and delay animation
+          resetElements();
+          setTimeout(() => {
+              startAnimation(message, 2, function () {
+                  startAnimation(message1, 2, function () {
+                      startAnimation(message2, 2);
+                  });
+              });
+          }, 20);
+      });
+
+      // Display 3 random lines
+      function GetValue() {
+        const keys = Object.keys(poetry_dict);
+        var randomKey = keys[Math.floor(Math.random() * keys.length)];
+        document.getElementById('message').innerHTML = poetry_dict[randomKey];
+        randomKey = keys[Math.floor(Math.random() * keys.length)];
+        document.getElementById('message1').innerHTML = poetry_dict[randomKey];
+        randomKey = keys[Math.floor(Math.random() * keys.length)];
+        document.getElementById('message2').innerHTML = poetry_dict[randomKey];
+      }
+
+      // Display all sources and quotes
+      const keys = Object.keys(poetry_dict);
+      const list = document.getElementById('all-poems');
+      keys.forEach(source => {
+        const listItem = document.createElement('div');
+        const sourceElement = document.createElement('dt');
+        sourceElement.textContent = `${source}`;
+        const quoteElement = document.createElement('dd');
+        quoteElement.innerHTML = poetry_dict[source];
+        listItem.appendChild(sourceElement);
+        listItem.appendChild(quoteElement);
+        list.appendChild(listItem);
+      });
+
+      // Get the button
+      let mybutton = document.getElementById("to_top");
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {
+        scrollFunction()
+      };
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
