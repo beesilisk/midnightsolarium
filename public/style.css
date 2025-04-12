@@ -38,7 +38,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-display: swap;
 }
 @font-face {
-    font-family: Fira Code, Arial;
+    font-family: Fira Code;
     src: url("fonts/FiraCode-VariableFont_wght.ttf") format('truetype');
     font-display: swap;
 }
@@ -113,6 +113,24 @@ html:before {
     z-index: 4;
     background-size: 100% 2px,4px 100%;
     pointer-events: none;
+    
+} 
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: url("garden/garden_img/RGBpattern.png");
+    mix-blend-mode: overlay;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.1;
 }
 html {
     background-color: rgb(13, 44, 47);
@@ -170,11 +188,11 @@ body {
     z-index:2;
 
     img {
-        height: 200%;
+        size: 200%;
         margin: -26px -5px -28px -48px;
         vertical-align: middle;
         filter: drop-shadow(0 0 15px rgba(159, 255, 230, 0.6)) brightness(1.05);
-        image-rendering: auto;
+        image-rendering: pixelated;
     }
 }
 
@@ -306,7 +324,8 @@ main {
     border-right:3px ridge #f5e8ea;
     margin: 0;
     padding: 0;
-    background-color: rgb(5, 27, 31);
+    background-color:rgb(1, 23, 27);
+   
 
     animation: fadein 0.5s;
     -moz-animation: fadein 0.5s; /* Firefox */
@@ -346,6 +365,9 @@ main {
         &:focus {
             border-bottom:1px dotted #e9e752;
         }
+    }
+    .hiddenlink:hover {
+        filter:none;
     }
     p, ul {
         font-size:14px;
@@ -408,13 +430,19 @@ details details, details p, details ul, details h3 {
 .code {
     border: 2px solid rgba(168,215,101,0.8);border-radius:7px;
      box-shadow: 0 0px 10px rgba(200,224,166,0.4);
-     background-color: rgba(4, 11, 12, 0.76);margin-left: auto;
+     background-color: rgb(4, 11, 12);
+     margin-left: auto;
      margin-right:auto;
      padding:10px;
      margin-top:20px;
      margin-bottom:20px;
      width:fit-content;
      backdrop-filter: blur(3px);
+
+     p {
+        font-size:12px;
+     }
+
 }
 sup {
     font-size:10px;
@@ -620,6 +648,12 @@ figcaption {
   }
 .img_zoom:hover {
     transform: scale(1.15);
+}
+.img_twist {
+    transition: transform .2s; /* Animation */
+    &:hover {
+    transform: scale(1.15) rotate(-5deg)
+}
 }
 select {
     box-sizing: border-box;

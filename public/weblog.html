@@ -3,102 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
+    <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; weblog &#10028;</title>
     <style>
-      #tagContainer, #tagContainer p{
-        display:inline;
-        padding-bottom:10px;
-        padding-left: 5%;
-      }
-      .blogdetail {
-        box-shadow: inset -1px -4px 4px -4px #705858;
-        border-bottom: 1px solid #816d6d;
-      }
+#tagContainer {
+  margin-left:25px;
+  margin-right:25px;
+  p {
+	  display:inline;
+    padding-right:0;
+  }
+}
+.postbox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top:10px;
+}
+.blogdetail {
+	box-shadow: inset -1px -4px 4px -4px #705858;
+	border-bottom: 1px solid #816d6d;
+}
+.mincontent {
+  display: none;
+	padding:0;
+	margin:10px;
+  width:45%;
+	h3 {
+		padding: 4px 25px;
+		margin:0px;
+	}
 
-      .mincontent {
-        display: none;
-        padding:0;
-        margin:10px 10% 5px 10%;
+  a {
+	text-decoration: underline;
+	text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
+	color: #ffffff;
+    &:hover {
+	  filter: drop-shadow(0 0 7px rgba(213, 250, 255, 0.7));
+    }
+    &:active {
+	    color:rgb(241, 160, 38)
+    }
+    &:focus {
+	    border-bottom:1px dotted #e9e752;
+    }
+  }
 
-        h3 {
-          width: 100%;
-          padding: 4px 15px;
-          margin:0px;
-          border-radius: 3px 3px 0px 0px;
-          font-size: 16px;
-        }
-        section {
-          padding:0;
-        }
-        .tag {
-      background:#38aaa1;
-      color:white;
-      font-family: Fira Code;
-      font-size: 11px;
-      text-decoration: none;
-      border:none;
-      padding:0 3px;
-      &:not(:disabled) {
-        &:active, &.active {
-            box-shadow: none;
-            background:#1d6d66;
-       }
-       &:hover {
-           box-shadow: none;
-           filter:brightness(1.2)
-           }
-         }
-         &:focus, &.focused {
-           box-shadow: none;
-   }
-    &::-moz-focus-inner {
-        border: 0;
-   }
-    }
-    .blogdetail {
-      font-size: 11px;
-      padding:2px 25px 3px 25px;
-    }
-    section p {
-      font-size: 14px;
-      padding:7px 25px 5px 25px;
-    }
+	section {
+		padding:0;
+    
     p {
-      margin-bottom:0;
-      padding:0;
-      margin:0;
-    }
+		font-size: 12px;
+		padding:7px 25px 8px 25px;
+	  }
+	}
+	.tag {
+		background:#2ea399;
+		color:white;
+		font-family: Fira Code;
+		font-size: 11px;
+		text-decoration: none;
+		border:none;
+		padding:0 3px;
+    margin-top:2px;
+		&:not(:disabled) {
+			&:active, &.active {
+				box-shadow: none;
+				background:#24857d;
+			}
+			&:hover {
+				box-shadow: none;
+				filter:brightness(1.2)
       }
-
-    .mincontent a {
-      text-decoration: underline;
-      text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-      color: #ffffff;
-      margin-left:10px;
-    }
-    .mincontent a:hover {
-      transition:none;
-      filter: drop-shadow(0 0 7px rgba(213, 250, 255, 0.7));
-    }
-    .mincontent a:active {
-      color:rgb(241, 160, 38)
-    }
-    .mincontent a:focus {
-      border-bottom:1px dotted #e9e752;
-    }
-
-    .show {
-      display: block;
-    }
-    .new {
-      vertical-align: top;
-      font-size: 10px;
-      margin-left: 4px;
-      font-weight: 500;
-      color: rgb(231, 201, 103);
-    }
+		}
+		&:focus, &.focused {
+			box-shadow: none;
+		}
+		&::-moz-focus-inner {
+			border: 0;
+		}
+	}
+	.blogdetail {
+		font-size: 11px;
+		padding:2px 25px 3px 25px;
+		background-color: #d1beb0;
+	}
+}
+.show {
+	display: block;
+}
+.new {
+	vertical-align: top;
+	font-size: 10px;
+	margin-left: 4px;
+	font-weight: 500;
+	color: rgb(231, 222, 103);
+}
+@media only screen and (max-width: 700px) {
+  .mincontent {
+  width:90%;
+  }
+}
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
@@ -113,7 +120,7 @@
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
+        <div id="header"class="header" ><img src="img/pxflower3.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
@@ -130,14 +137,15 @@
         <div class="mborder">
             <h2 class="subheader"><img src="img/mycomputer2.png"> weblog</h2>
               <div class="maincontent" >
-                <section>
+                <section style="margin-bottom: 20px;;">
                   <p><em>web·​log</em>: a website that contains online personal reflections, comments, and often hyperlinks, videos, and photographs provided by the writer. it does not necessarily require consistency or thematic cohesion. a weblog can just be a loose collection of writing that didn't fit elsewhere on the site and anyone who says otherwise is wrong and mean</p>
                 </section>
-          </div>
+              </div>
           <div class="mainbox">
             <div id="tagContainer">
               <p><strong>filters</strong>: </p>
               <button class="tag active" onclick="filterSelection('all')">all</button>
+              <button class="tag" onclick="filterSelection('community')"> community</button>
               <button class="tag" onclick="filterSelection('fun')"> fun</button>
               <button class="tag" onclick="filterSelection('infodump')"> infodump</button>
               <button class="tag" onclick="filterSelection('internet')"> internet</button>
@@ -146,8 +154,16 @@
               <button class="tag" onclick="filterSelection('personal')">personal</button>
               <button class="tag" onclick="filterSelection('tech')">tech</button>
             </div>
+            <div class="postbox">
+                <div class="mincontent community internet opinion">
+                  <h3><a href="weblog_posts/eternalsep.html">it will always be september 1993</a><sup class="new">NEW!</sup></h3>
+                  <section >
+                    <p class="blogdetail"><time datetime="2025-03-27">sep 11546, 1993</time> &#x2022; word count: 1948 &#x2022; <button class="tag" onclick="filterSelection('community')"> community</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button></p>
+                    <p>how can we avoid the nazi-ridden time vortex?</p>
+                  </section>
+                </div>
                 <div class="mincontent lgbt personal">
-                  <h3><a href="weblog_posts/i_dont_want_to_fall_in_love.html">i don't want to fall in love</a><sup class="new">NEW!</sup></h3>
+                  <h3><a href="weblog_posts/i_dont_want_to_fall_in_love.html">i don't want to fall in love</a></h3>
                   <section>
                     <p class="blogdetail"><time datetime="2025-02-12">feb 16, 2025</time> &#x2022; word count: 777 &#x2022; <button class="tag" onclick="filterSelection('lgbt')"> lgbt</button> <button class="tag" onclick="filterSelection('personal')"> personal</button>
                     <p>Valentine’s Day, and other things I’ll never fully enjoy</p>
@@ -161,7 +177,7 @@
                   </section>
                 </div>
                 <div class="mincontent fun">
-                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years holiday roundup extravaganza: 2024 edition</a></h3>
+                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years extravaganza: 2024 edition</a></h3>
                   <section>
                     <p class="blogdetail"><time datetime="2024-11-23">dec 31, 2024</time> &#x2022; word count: 1416 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
                     <p>me, five minutes before 2025: i should write an end-of-year weblog</p>
@@ -195,9 +211,8 @@
                     <p>i put a blog on my website and i have mixed feelings about it</p>
                   </section>
                 </div>
-                <div class="hiddenlink" style="float: right;"><a href="https://notbyai.fyi/"><img src="img/Written-By-Human-black.png" alt="written by human, not by AI" title="this weblog is not written using generative AI"/></a></div>
-
-
+            </div>
+            <div style="float: right; padding-right:5px;"><a href="https://notbyai.fyi/" class="hiddenlink"><img src="img/Written-By-Human-black.png" alt="written by human, not by AI" title="the contents of this weblog are not written using generative AI"/></a></div>
 
       </main>
         
@@ -253,9 +268,7 @@
         this.className += " active";
       });
     }
-    </script>
-    
-  <script>
+
     // Get the button
     let mybutton = document.getElementById("to_top");
     

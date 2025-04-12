@@ -1,11 +1,11 @@
 var rumArray = [
-    'i know i shouldnt miss you<br>but whenever i think about you<br><br>it pisses me off<br><br>maybe i just miss having someone<br>who could make me feel so strongly',
+    'i know i shouldnt miss you<br>but whenever i think about you<br><br>██ ██████ ██ ███<br><br>maybe i just miss having someone<br>who could make me feel so strongly',
     'not every gift is given through an act of kindness<br><br>do i still need to be grateful?',
     'i want to rip your heart out of your chest<br>feel it beating against my clenched fist<br>before i swallow it whole',
     'do you feel breathtaken by everyday spectacles?',
     'are you lost?<br>&emsp;are you in danger?<br>&emsp;&emsp;are you hiding?<br>&emsp;&emsp;&emsp;are you scared?',
     'i think ive been left behind again',
-    'this used to be a happy place<br>in a way, that hasnt changed<br>i know its cold and dark and lonely now<br><br>but i find it refreshing<br><br>just try not to get lost here<br>try not to make it your home',
+    'this used to be a happy place<br>in a way, that hasnt changed<br>i know its cold and dark and lonely now<br><br>i find it refreshing<br><br>i try not to get lost here<br>i try not to make it your home',
     'i keep having dreams where im being chased<br>do you think thats why i always wake up tired?',
     'look! look! up in the sky!<br><br><br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;winter writhing shuddered sighs are sloughing off their cheap disguise to cry into the night<br><br><br><br>dont ask me why! dont ask me why!',
     'i spent so much time trying to become healthy<br>that i never learned how to be alive',
@@ -30,8 +30,15 @@ var rumArray = [
     'its been a long time since i last heard from you<br>i hope you escaped<br>i hope you found the place we were looking for',
     'am i less anxious than i used to be?<br><br>or did i just learn how to stay productive without ever feeling safe?',
     'i will never be okay again<br><br>i will continue anyway',
-    'youll never make it to heaven<br>but congrats on getting this far',
-    'the past is not a happy place<br><br>why do i keep going back?<br>am i trying to find something i missed before?'
+    'YOU WILL NEVER MAKE IT TO HEAVEN<br>&emsp;&emsp;&emsp;&emsp;BUT CONGRATS ON GETTING THIS FAR',
+    'the past is not a happy place<br><br>why do i keep going back?<br>am i trying to find something i missed before?',
+
+    'does an<br><br>imperfect<br>saviour<br><br>have the right to<br><br>&emsp;&emsp;&emsp;&emsp;demand<br>&emsp;&emsp;&emsp;&emsp;worship<br>&emsp;&emsp;&emsp;&emsp;?',
+    'EVERYTHING ABOUT YOU<br><br><br><br>&emsp;&emsp;&emsp;&emsp;IS<br><br><br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;NAUSEATING',
+    'im tired of waking up<br><br><br>&emsp;&emsp;&emsp;&emsp;in the same place i fall asleep',
+    'whats wrong?<br><br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;why are you looking at me like that?',
+    'your doctor has never treated anyone like you before<br><br>why do you have to be such a difficult patient?',
+    'i can feel the edges of the world<br>peeling paint and chipped drywall<br>there is nowhere other than here'
     ];
 var randomIndex = Math.floor(Math.random() * rumArray.length);
 document.write("<span id='output' style='top:" + get_random_height() + ";left:" + get_random_width() + ";'>")

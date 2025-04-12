@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
+    <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; about webmaster &#10028;</title>
     <style>
@@ -58,21 +58,36 @@
       .mincontent li {
         padding: 0;
       }
-      #pos ul li {
-        list-style-type: "∧  ";
+      #pos ul {
+        display: flex;
+        flex-direction:column;
       }
-      #pos li::marker {
-        color: #208831;
-        font-size: 10px;
-        font-weight: bolder;
+      #pos ul li, #neg ul li{
+        list-style-type:none;
       }
-      #neg ul li {
-        list-style-type: "∨  ";
+      #pos ul li:before {
+        content: '';
+        display: inline-block;
+        height: 12px;
+        width: 13px;
+        background-image: url('img/bulletg.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -20px;
+        margin-right:3px;
+        list-style-type:none;
       }
-      #neg li::marker {
-        color: #882025;
-        font-size: 10px;
-        font-weight: bolder;
+      #neg ul li:before {
+        content: '';
+        display: inline-block;
+        height: 12px;
+        width: 13px;
+        background-image: url('img/bulletr.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -20px;
+        margin-right:3px;
+        list-style-type:none;
       }
       .facts {
         background-image: linear-gradient(to right, #f0da8b, #ecd378);
@@ -86,11 +101,8 @@
         box-shadow: 9px 9px 5px -7px rgba(0, 0, 0, 0.3);
         -webkit-box-shadow: 9px 9px 5px -7px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 9px 9px 5px -7px rgba(0, 0, 0, 0.3);
-      }
-      .facts section {
-        padding: 8px 25px 10px 25px;
-      }
-      .facts h3 {
+
+        h3 {
         background-image: linear-gradient(to top, rgba(83, 59, 37, 0.6) 40%, rgba(110, 78, 31, 0.5) 90%);
         width: 100%;
         padding: 4px 7px;
@@ -103,6 +115,10 @@
         color: white;
         text-shadow: none;
         text-align: left;
+        }
+        section {
+          padding: 8px 25px 10px 25px;
+        }
       }
       .orange:hover {
         color: rgb(255, 215, 141);
@@ -124,7 +140,7 @@
       <div id="box">
         <div class="grid">
           <div id="header" class="header">
-            <img src="img/pxflower2.png" title="a white flower" alt="a white flower" />
+            <img src="img/pxflower3.png" title="a white flower" alt="a white flower" />
             <h1> &nbsp;midnight solarium</h1>
           </div>
           <div id="side">
@@ -221,7 +237,7 @@
                     <li>bees</li>
                     <li>knitting</li>
                     <li>writing simple ugly code</li>
-                    <li>sustainabile development</li>
+                    <li>sustainable development</li>
                     <li>soft springy moss</li>
                     <li>standing on big rocks</li>
                     <li>watching normie anime</li>
@@ -266,7 +282,7 @@
                   <h3>wanna know more?</h3>
                   <section>
                     <p style="text-align: center; padding:0;" id="message">Wanna know more about Bee, your most favouritest webmaster? <strong style="color:rgb(175, 7, 125)">Click here</strong> for a random fact! </p>
-                    <input style="margin-top:8px;  display: block;margin-left: auto;margin-right: auto;" type="button" class="btn" value="Random Bee Fact" onclick="GetValue();" />
+                    <input style="margin-top:8px;  display: block;margin-left: auto;margin-right: auto;" type="button" class="btn" value="Random Fact" onclick="GetValue();" />
                   </section>
                 </div>
 

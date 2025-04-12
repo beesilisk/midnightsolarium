@@ -6,7 +6,7 @@
     <meta name="description" content="bee's personal website">
     <meta name="keywords" content="beesilisk, indie web, midnight, midnight solarium, old web, personal, solarium, weblog,">
     <meta name="author" content="beesilisk">
-    <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
+    <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>★ midnight solarium ★</title>
     <style>
@@ -17,14 +17,10 @@
       margin:15px 0 20px 0;
     }
 
-    #wcb_p {
-      filter: drop-shadow(0 0 8px #67aa98);
-      border-radius:14px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .carbonbadge {
-      margin-bottom: -10px;
+    .flexrow_middle {
+      justify-content: center; 
+      align-items: center; 
+      padding-bottom: 10px;
     }
     .rsslink {
       float:right;
@@ -32,14 +28,16 @@
       i {
         text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
       color: #e9e752;
-      &:hover {
-        filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
-      }
       &:active {
         color:rgb(241, 160, 38)
       }
       }
     }
+    @media screen and (min-width: 1281px) {
+      .flexrow_middle {
+      margin-top:-50px;
+    }
+}
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
@@ -54,7 +52,7 @@
     <div id="box">
       <div class="grid">
         
-        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>
+        <div id="header"class="header" ><img src="img/pxflower3.png" title="a white flower" alt="a white flower"/><h1>
           &nbsp;midnight solarium</h1></div>
         <div id="side">
 
@@ -104,7 +102,7 @@
             </div>
         </div>
 
-          <div class="flexrow" style="justify-content: center; align-items: center;">
+          <div class="flexrow flexrow_middle">
             
             <div class="pic">
               <h2 class="subheader">piclog_new.jpg</h2>
@@ -117,7 +115,7 @@
               <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                   <img class="img_zoom" src="img/trs80.png" title="Tandy TRS-80 Model I" alt="A Tandy TRS-80 Model I. It's an old computer with an attached keyboard and floppy disk drive.">
                   <section>
-                    <form method="post" action="https://poll.pollcode.com/79841233"><div style="background-color:rgb(5, 27, 31);padding:2px;font-size:small;color:#FDF5E6;"><div style="padding:2px 0px 8px 2px;"><strong>do you know what a tandy computer is?</strong><br /><br /></div><input type="radio" name="answer" value="1" id="answer798412331" style="float:left;" /><label for="answer798412331" style="float:left;">yes, i have seen / used one irl</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer798412332" style="float:left;" /><label for="answer798412332" style="float:left;">yes, i know what they are</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer798412333" style="float:left;" /><label for="answer798412333" style="float:left;">maybe??? sounds vaguely familiar</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer798412334" style="float:left;" /><label for="answer798412334" style="float:left;">nope</label><div style="clear:both;height:2px;"></div><div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div><div align="right" style="font-size:10px">pollcode.com <a href="https://pollcode.com/">free polls</a></div></div></form>
+                    <form method="post" action="https://poll.pollcode.com/79841233"><div style="background-color:rgba(0, 0, 0, 0);padding:2px;font-size:small;color:#FDF5E6;"><div style="padding:2px 0px 8px 2px;"><strong>do you know what a tandy computer is?</strong><br /><br /></div><input type="radio" name="answer" value="1" id="answer798412331" style="float:left;" /><label for="answer798412331" style="float:left;">yes, i have seen / used one irl</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="2" id="answer798412332" style="float:left;" /><label for="answer798412332" style="float:left;">yes, i know what they are</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="3" id="answer798412333" style="float:left;" /><label for="answer798412333" style="float:left;">maybe??? sounds vaguely familiar</label><div style="clear:both;height:2px;"></div><input type="radio" name="answer" value="4" id="answer798412334" style="float:left;" /><label for="answer798412334" style="float:left;">nope</label><div style="clear:both;height:2px;"></div><div align="center" style="padding:3px;"><input type="submit" value=" Vote ">&nbsp;<input type="submit" name="view" value=" View "></div><div align="right" style="font-size:10px">pollcode.com <a href="https://pollcode.com/">free polls</a></div></div></form>
                   </section>
                 </div>
                 </div>
@@ -145,6 +143,10 @@
               <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                 <section>
                   <p>
+                    <time datetime="2025-04-11"><strong>11.04.25</strong></time>
+                - wrote <a href="weblog_posts/eternalsep.html">a weblog post</a> about Usenet and maybe some other stuff too, added more buttons to links page (this was long overdue; sorry y'all!), changed the flower icon and index page logo, made wilde.AI more cartoonishly evil, tweaked some recipes, changed the weblog page layout, made minor css changes to homepage, made index page more succinct
+                  </p>
+                  <p>
                     <time datetime="2025-03-09"><strong>09.03.25</strong></time>
                 - launched poetry generator <a href="garden/wildeai.html" alt="wilde.AI">wilde.AI</a> (which is a totally real AI! source: trust me), added <em alt="star pants">☆.⋆~star pants~⋆.☆</em> to craft catalog, hung decorative lights on landing page
                   </p>
@@ -160,11 +162,11 @@
                     <time datetime="2025-01-31"><strong>31.01.25</strong></time>
                 - created <a href="chaos.html" alt="chaos garden" title="chaos garden">chaos garden</a> (meant to be a hub for misc. webpages that don't fit anywhere else), made ruminations page, tweaked rss so hopefully it'll show up on nekoweb's built-in feed, tweaked layout to be a bit friendlier to smaller and medium-sized screens
                   </p>
+                  <span id="dots"><br /></span><span id="more">
                   <p>
                     <time datetime="2025-01-20"><strong>20.01.25</strong></time>
                 - finally slapped together an <a href="rss.xml" alt="RSS feed" title="RSS feed">RSS feed</a>, retroactively added lazyloading to some image-heavy pages, added new slippers to craft catalog, added more notes to notebook, added one easter egg (good luck!)
                   </p>
-                  <span id="dots"><br /></span><span id="more">
                   <p>
                     <time datetime="2024-12-31"><strong>31.12.24</strong></time>
                 - wrote a quick <a href="weblog_posts/2024.html" alt="end-of-year weblog" title="end-of-year weblog">end-of-year weblog</a>, added spacehey link cause i guess im on there now, used nesting to tidy up css, added a page transition that may or may not stick around

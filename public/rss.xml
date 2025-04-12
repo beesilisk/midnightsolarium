@@ -5,11 +5,18 @@
 		<link>https://midnightsolarium.nekoweb.org</link>
 		<description>a website dedicated to all organisms, formations, and concepts that grow in the night</description>
 		<item>
+			<title>11.04.25</title>
+			<pubDate>Fri, 11 Apr 2025 12:00:00 -0700</pubDate>
+			<guid isPermaLink="false">imadeitworse</guid>
+			<link>https://midnightsolarium.nekoweb.org/weblog</link>
+			<description>wrote a weblog post about Usenet and maybe some other stuff too, added more buttons to links page (this was long overdue; sorry y'all!), changed the flower icon and index page logo, made wilde.AI more cartoonishly evil, tweaked some recipes, changed the weblog page layout, made minor css changes to homepage, made index page more succinct</description>
+		</item>
+		<item>
 			<title>09.03.25</title>
 			<pubDate>Sun, 09 Mar 2025 12:00:00 -0700</pubDate>
 			<guid isPermaLink="false">wilde.ai and starpants</guid>
 			<link>https://midnightsolarium.nekoweb.org/garden/wildeai</link>
-			<description>launched poetry generator wilde.AI (which is a totally real AI! source: trust me), added ☆.⋆~star pants~⋆.☆ to craft catalog, hung decorative lights on landing page </description>
+			<description>launched poetry generator wilde.AI (which is a totally real AI! source: trust me), added ☆.⋆~star pants~⋆.☆ to craft catalog, hung decorative lights on landing page</description>
 		</item>
 		<item>
 			<title>16.02.25</title>

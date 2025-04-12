@@ -1,0 +1,245 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body p{
+    margin: 0;
+    padding: 7px 0;
+    line-height: 1.4em;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+@font-face {
+    font-family:"Comic Sans";
+    src: url("fonts/ComicSansMS.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family:"Cozette";
+    src: url("fonts/CozetteVector.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Fira Code;
+    src: url("fonts/FiraCode-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Lexend Exa;
+    src: url("fonts/LexendExa-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Lexend Mega;
+    src: url("fonts/LexendMega-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: OpenDyslexic-Regular;
+    src: url("fonts/OpenDyslexic-Regular.otf") format('opentype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Papyrus;
+    src: url("fonts/papyrus.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Verdana;
+    src: url("fonts/verdana.ttf") format('truetype');
+    font-display: swap;
+}
+@font-face {
+    font-family: Wingdings;
+    src: url("fonts/wingding.ttf") format('truetype');
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    background-color: #08031A;
+    background-size: 65px;
+    color: #fff5e0;
+    font-weight: 500;
+    background-image: url("img/eyes2.png");
+    background-size: 80px;
+    font-family: Fira Code;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#box {
+    max-width: 950px;
+    margin: 5px auto;
+    border-radius: 15px;
+    background-image: url("img/paper_background.jpg");
+
+    a {
+        color: #70d1b7;
+        font-weight: bold;
+    }
+}
+
+#header {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-image: url("img/999.png");
+    height:150px;
+    padding: 50px;
+    border-radius: 15px 15px 0 0;
+}
+
+#flex {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    padding: 10px;
+    font-size: smaller;
+
+    h2 {
+        color: #0d8b6a;
+    }
+}
+#sidebar {
+    order: 3;
+    margin: 20px 20px 20px 0;
+
+    h2 {
+        font-size: 18px;
+    }
+}
+.sidebox {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #7c4942;
+    border-radius: 15px;
+    color: #fff5e0;
+    margin: 10px 0;
+    padding: 10px;
+
+    box-shadow: 0px 1px 5px 1px rgba(10, 1, 27, 0.8), ;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(10, 1, 27,0.8);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(10, 1, 27,0.8);
+}
+
+.selectdiv {
+    font-family:Fira Code;
+}
+
+select {
+    box-sizing: border-box;
+    border: 1px solid #003c74;
+    border-radius: 4px;
+    text-align:center;
+    font-size: 13px;
+    background: linear-gradient( 180deg, rgba(255, 255, 255, 1) 0%, rgba(241, 220, 242, 1) 86%, rgba(151, 186, 145, 1) 100% );
+    cursor: pointer;
+    width: fit-content;
+    font-family: inherit;
+    -ms-word-break: normal;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    word-break: normal;
+    &:not(:disabled) {
+        &:active {
+            box-shadow: none;
+            background: linear-gradient(180deg, rgba(205, 202, 195, 1) 0%, rgba(227, 227, 219, 1) 8%, rgba(229, 229, 222, 1) 94%, rgba(151, 186, 145, 1) 100% );
+       }
+        &:hover {
+            box-shadow: inset -1px 1px #fff0cf, inset 1px 2px #f2cf5c, inset -2px 2px #fbc761, inset 2px -2px #e8a4d0;
+       }
+   }
+    &:focus {
+        box-shadow: inset -1px 1px #c4e57e, inset 1px 2px #c4e57e, inset -2px 2px #bcd4f6, inset 1px -1px #626de0, inset 2px -2px #89ade4;
+   }
+    &::-moz-focus-inner {
+        border: 0;
+   }
+}
+main {
+    background-color: #7c4942;
+    flex: 1;
+    padding: 20px;
+    margin:20px;
+    order: 2;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px 0px rgba(10, 1, 27, 0.9), ;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(10, 1, 27,0.9);
+    -moz-box-shadow: 0px 4px 10px 0px rgba(10, 1, 27,0.9);
+}
+footer {
+    color:#08031A;
+    background-color: rgba(196, 127, 106, 0.2);
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #70d1b7;
+    font-weight: 700;
+    font-size: 25px;
+}
+h1 {
+    font-size: 38px;
+    font-family: "Cozette";
+    color: #fdf5e6;
+    text-align: center;
+}
+
+strong {
+    color: #70d1b7;
+}
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    main {
+        order: 1;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}

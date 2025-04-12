@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="img/pxflower2.png">
+  <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>&#10028; chaos garden &#10028;</title>
   <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
@@ -27,6 +27,7 @@
     display:flex;
   }
   .icon {
+
     width:90px;
     height:90px;
     font-size: 12px;
@@ -56,6 +57,19 @@
   drop-shadow(1px -1px rgba(253, 245, 230, 0.2)) 
   drop-shadow(-1px -1px rgba(253, 245, 230, 0.2));
   }
+
+  @media only screen and (max-width: 700px) {
+    .pic {
+      margin-left:10px;
+    }
+    .iconbox {
+    display:inline-block;
+  }
+  .icon {
+    padding-bottom:30px;
+  }
+}
+
 </style>
 <body>
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
@@ -68,7 +82,7 @@
 
     <div id="box">
       <div class="grid">
-        <div id="header"class="header" ><img src="img/pxflower2.png" title="a white flower" alt="a white flower"/><h1>&nbsp;midnight solarium</h1></div>
+        <div id="header"class="header" ><img src="img/pxflower3.png" title="a white flower" alt="a white flower"/><h1>&nbsp;midnight solarium</h1></div>
         <div id="side">
           <div class="sidebox" style="margin-top:20px;">
             <h2 class="subheader">navigate</h2>
