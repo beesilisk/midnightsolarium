@@ -115,25 +115,8 @@ html:before {
     pointer-events: none;
     
 } 
-body:before {
-    content: "";
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-image: url("garden/garden_img/RGBpattern.png");
-    mix-blend-mode: overlay;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-position: center;
-    z-index: 4;
-    pointer-events: none;
-    opacity: 0.1;
-}
 html {
-    background-color: rgb(13, 44, 47);
+    background-color: #0d2c2f;
     background-image: url("img/forestdithbg.png");
     background-size: cover;
     image-rendering: pixelated;
@@ -155,8 +138,8 @@ body {
 }
 #box {
     border-radius: 13px 13px 0 0;
-    box-shadow : 0 0 0 3px rgba(244, 128, 128, 1),
-    0 0 0 5px #f5e8ea,
+    box-shadow : 0 0 0 4px rgba(244, 128, 128, 1),
+    0 0 0 7px #f5e8ea,
     0 0 0 15px rgba(255, 255, 255, 0);
   }
 .grid {
@@ -178,7 +161,7 @@ body {
     height: 60px;
     padding-top:6px;
     margin: 0;
-    border-bottom: 3px ridge #f5e8ea;
+    border-bottom: 3px solid #f5e8ea;
     border-radius: 9px 9px 0 0;
     background-image: linear-gradient(0deg, #f37474, #dd4444 60%, rgba(221, 68, 68, 1) 80%, rgba(244, 128, 128, 1) 100%);
     color: #fff;
@@ -203,12 +186,12 @@ body {
     gap: 0;
     background-color: rgba(15, 9, 31, 0.3);
     backdrop-filter: blur(2.8px);
-    border-left: 3px ridge #f5e8ea;
-    border-right:3px ridge #f5e8ea;
+    border-left: 3px solid #f5e8ea;
+    border-right:3px solid #f5e8ea;
     z-index:1;
 }
 .sidebox {
-    border:2px ridge #f5e8ea;
+    border:2px solid #f5e8ea;
     border-radius: 6px 6px 0 0;
     height:fit-content;
     padding: 0;
@@ -222,7 +205,7 @@ body {
         image-rendering:auto;
         background-image: linear-gradient(0deg, rgb(243, 116, 116), rgba(221, 68, 68, 1) 60%, rgba(221, 68, 68, 1) 80%, rgba(244, 128, 128, 1) 100%);
         border-radius: 4px 4px 0 0;
-        border-bottom: 2px ridge #f5e8ea;
+        border-bottom: 2px solid #f5e8ea;
         font-size: 18px;
     }
 }
@@ -321,17 +304,12 @@ main {
     position: relative;
 
     backdrop-filter: blur(2.6px);
-    border-right:3px ridge #f5e8ea;
+    border-right:3px solid #f5e8ea;
     margin: 0;
     padding: 0;
     background-color:rgb(1, 23, 27);
    
 
-    animation: fadein 0.5s;
-    -moz-animation: fadein 0.5s; /* Firefox */
-    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
-    -o-animation: fadein 0.5s; /* Opera */
-    
     h3 {
         text-align: center;
         color: rgb(234, 240, 161);
@@ -429,26 +407,26 @@ details details, details p, details ul, details h3 {
 }
 .code {
     border: 2px solid rgba(168,215,101,0.8);border-radius:7px;
-     box-shadow: 0 0px 10px rgba(200,224,166,0.4);
-     background-color: rgb(4, 11, 12);
-     margin-left: auto;
-     margin-right:auto;
-     padding:10px;
-     margin-top:20px;
-     margin-bottom:20px;
-     width:fit-content;
-     backdrop-filter: blur(3px);
+    box-shadow: 0 0px 10px rgba(200,224,166,0.4);
+    background-color: rgb(4, 11, 12);
+    margin-left: auto;
+    margin-right:auto;
+    padding:10px;
+    margin-top:20px;
+    margin-bottom:20px;
+    width:fit-content;
+    backdrop-filter: blur(3px);
 
-     p {
+    p {
         font-size:12px;
-     }
+    }
 
 }
 sup {
     font-size:10px;
 }
 .mincontent {
-    background-color: rgb(236, 216, 201);
+    background-color: #fddad1;
     border-radius: 6px 6px 0 0;
     margin:20px 10% 10px 10%;
     color:rgb(1, 26, 21);
@@ -606,7 +584,7 @@ border-bottom:1px dotted #e9e752;
     padding: 0;
    }
 .pic {
-    border:2px ridge #f5e8ea;
+    border:2px solid #f5e8ea;
     border-radius: 6px 6px 0 0;
     height:fit-content;
     padding: 0;
@@ -619,7 +597,7 @@ border-bottom:1px dotted #e9e752;
     .subheader{
         background-image: linear-gradient(0deg, rgb(243, 116, 116), rgba(221, 68, 68, 1) 60%, rgba(221, 68, 68, 1) 80%, rgba(244, 128, 128, 1) 100%);
         border-radius: 4px 4px 0 0;
-        border-bottom: 2px ridge #f5e8ea;
+        border-bottom: 2px solid #f5e8ea;
     }
 }
 
@@ -630,7 +608,7 @@ figure {
     }
 }
 figcaption {
-    border-top: 2px ridge #cfc5c6;
+    border-top: 2px solid #cfc5c6;
     padding:2px 5px 5px 5px;
     font-size:12px;
     font-weight:500;
@@ -690,6 +668,7 @@ select {
 .selectdiv {
     padding-bottom:10px;
     font-family:Fira Code;
+    margin-bottom:3px;
 }
 button, .btn {
     font-size: 15px;
@@ -791,7 +770,7 @@ footer {
     width: 100%;
     padding-top: 5px;
     padding: 3px;
-    border-top: 2px ridge #f5e8ea;
+    border-top: 3px solid #f5e8ea;
     background-image: linear-gradient(0deg, rgb(243, 116, 116), rgba(221, 68, 68, 1) 60%, rgba(221, 68, 68, 1) 80%, rgba(244, 128, 128, 1) 100%);
     font-size:12px;
     text-align:center;
@@ -825,7 +804,7 @@ footer {
     }
     .container {
         padding: 0;
-        margin:0 5px 0 5px;
+        margin:0 10px 5px 10px;
     }
     .outer {
         margin-top:5px;
@@ -853,8 +832,7 @@ footer {
         padding-bottom: 2px;
     }
     main {
-        border-top:3px ridge #f5e8ea;
-        border-right:none;
+        border:3px solid #f5e8ea;
     }
     .mainbox {
         margin:0;
@@ -865,5 +843,8 @@ footer {
     .pic {
         margin-left:auto;
         margin-right:auto;
+    }
+    footer {
+        border:none;
     }
 }

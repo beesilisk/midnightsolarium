@@ -33,10 +33,10 @@ html {
     margin-bottom:20px;
     margin-top:20px;
 
-    animation: fadein 0.8s;
-    -moz-animation: fadein 0.8s; /* Firefox */
-    -webkit-animation: fadein 0.8s; /* Safari and Chrome */
-    -o-animation: fadein 0.8s; /* Opera */
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
     &::before,
     &::after {
         content: '';
@@ -195,5 +195,9 @@ main hr {
         p {
             padding-right:0;
         }
+    }
+    #container {
+        margin-left:20px;
+        margin-right:20px;
     }
 }

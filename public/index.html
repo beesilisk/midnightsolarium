@@ -80,17 +80,70 @@ html {
 .maincontent {
   background-color: #051b1f;
   color:#fff;
-  padding:20px 30px 20px 30px;
+  padding:20px 25px 20px 25px;
   font-size: 14px;;
 
     p, ul {
     padding-bottom:7px;
+    text-align: center;
+    position: relative;
 }
     strong {
       font-weight:bold;	
         color: #62d675;
     }
+    i, em {
+        font-style:italic;	
+        color: rgb(253, 150, 150);
+    }
 }
+ul li{
+    list-style-type: none;
+    text-align: center;
+    height:20px;
+    margin-left:0;
+}
+
+#swearing span:after {
+  content: 'swearing'
+}
+#swearing:hover span:after, #swearing:active span:after {
+  content: '⮞ swearing ⮜';
+  font-size: 16px;
+}
+
+#insects span:after {
+  content: 'insects'
+}
+#insects:hover span:after, #insects:active span:after {
+  content: '⮞ insects ⮜';
+  font-size: 16px;
+}
+
+#moving span:after {
+  content: 'moving images'
+}
+#moving:hover span:after, #moving:active span:after {
+  content: '⮞ moving images ⮜';
+  font-size: 16px;
+}
+
+#unreality span:after {
+  content: 'unreality'
+}
+#unreality:hover span:after, #unreality:active span:after {
+  content: '⮞ swearing ⮜';
+  font-size: 16px;
+}
+
+#pollen span:after {
+  content: 'pollen'
+}
+#pollen:hover span:after, #pollen:active span:after {
+  content: '⮞ pollen ⮜';
+  font-size: 16px;
+}
+
 .maincontent a {
   text-decoration: none;
   text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
@@ -112,6 +165,7 @@ html {
     color:black;
     padding:9px;
     transition: none;
+    margin:-10px;
 }
 .maincontent .btn:hover {
     filter:none;
@@ -134,6 +188,9 @@ html {
 .rightlight img{
   width:100px;
 }
+.container {
+  margin: 0 20px;
+}
     .logo {
       margin-bottom:15px;
     }
@@ -153,33 +210,23 @@ html {
 <div class="container">
   <div class="wrapper">
     <div class="maincontent">
-      <div style="text-align: center; margin-top:20px;margin-bottom:30px;"><a href="https://midnightsolarium.nekoweb.org/home" class="btn" style="font-size: 24px; height: 100%; text-decoration: none;">Enter the Solarium</a></div>
+      <div style="text-align: center; margin-top:20px;margin-bottom:35px;"><a href="https://midnightsolarium.nekoweb.org/home" class="btn" style="font-size: 24px; height: 100%; text-decoration: none;">Enter the Solarium</a></div>
     <p>midnight solarium is a carefully controlled ecosystem that uses JavaScript to maintain homeostasis. Please <em>enable JavaScript</em> on your web browser before entering. </p>
     
-    <p>The local flora may cause negative effects for some visitors. Proceed with caution if you have a strong sensitivity to:</p>
-    <div style="padding-left:30px;">
+    <p>The local flora may cause negative effects for some visitors. Proceed with caution if you have any aversion to:</p>
     <strong><ul>
-      <li>swearing</li>
-      <li>insects</li>
-      <li>moving images</li>
-      <li>unreality</li>
-      <li>pollen</li>
+      <li id="swearing"><span aria-label="swearing"></span></li>
+      <li id="insects"><span aria-label="insects"></span></li>
+      <li id="moving"><span aria-label="moving images"></span></li>
+      <li id="unreality"><span aria-label="unreality"></span></li>
+      <li id="pollen"><span aria-label="pollen"></span></li>
     </ul></strong>
-  </div>
-    <p>Pages with additional sensitive content will come with their own warning.</p>
+    <p>Pages with additional sensitive content will include their own warning.</p>
     
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="wrapper">
-    <div class="maincontent">
-      <p>midnight solarium has moved to a new location! The <a href="https://midnightsolarium.neocities.org/home">old site</a> is still viewable, but is no longer being maintained by the webmaster. Some features will no longer work as intended.</p>
-    </div>
-  </div>
-</div>
-  
 </div>
 </body>
 </html>
