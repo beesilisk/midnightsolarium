@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/pxflower3.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>&#10028; vault &#10028;</title>
+    <style>
+      html {
+        background-image: url("img/ditherdoubley2.png");
+        background-color: rgb(4, 17, 19);
+        background-repeat: repeat;
+        background-size: auto;
+        image-rendering: pixelated;
+        background-attachment: fixed;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .numpad {
+        display: grid;
+        grid-template-columns: repeat(3, 60px);
+        grid-gap: 10px;
+      }
+
+      .numpad button {
+        padding: 20px;
+        font-size: 18px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        border: 1px solid #21ebff;
+        color: #21ebff;
+        box-shadow: 0 0 5px #21ebff, 0 0 5px #21ebff inset;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:not(:disabled) {
+          &:active {
+            box-shadow: 0 0 5px #21ebff, 0 0 5px #21ebff inset;
+            background: rgba(0, 0, 0, 0.6);
+          }
+          &:hover {
+            box-shadow: 0 0 5px #21ebff, 0 0 5px #21ebff inset;
+          }
+          &:focus {
+            box-shadow: 0 0 5px #21ebff, 0 0 5px #21ebff inset;
+          }
+          &::-moz-focus-inner {
+            border: 0;
+          }
+        }
+      }
+
+      .numpad button:hover {
+        text-shadow: 0 0 20px #21ebff, 0 0 50px rgba(33, 235, 255, 0.9), 0 0 75px rgba(33, 235, 255, 0.8), 0 0 76px rgba(33, 235, 255, 0.7), 0 0 77px rgba(33, 235, 255, 0.6), 0 0 78px rgba(33, 235, 255, 0.5),
+          0 0 79px rgba(33, 235, 255, 0.4), 0 0 80px rgba(33, 235, 255, 0.3), 0 0 85px rgba(33, 235, 255, 0.2), 0 0 99px rgba(33, 235, 255, 0.1);
+      }
+
+      #display {
+        margin-bottom: 10px;
+        font-size: 24px;
+        text-align: center;
+        background: #000000;
+        padding: 10px;
+        border: 2px solid #aaa;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      #image-container img {
+        max-width: 200px;
+        display: none;
+        border-radius: 10px;
+      }
+
+      #sticky {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        z-index: 9;
+        height: 120px;
+        width: 120px;
+        text-align: center;
+        transform: rotate(-10deg);
+      }
+
+      #note {
+        padding: 10px;
+        font-family: "Papyrus";
+        cursor: move;
+        z-index: 10;
+        height: 100%;
+        background-color: #f9eeae;
+        color: #000000;
+      }
+    </style>
+    <script src="vault.js"></script>
+  </head>
+  <body>
+    <div id="sticky"><div id="note">2 3 1, Twenty-three is number one!</div></div>
+    <div class="container">
+      <div>
+        <div id="display">000000000</div>
+        <div class="numpad">
+          <button onclick="press(1)">1</button>
+          <button onclick="press(2)">2</button>
+          <button onclick="press(3)">3</button>
+          <button onclick="press(4)">4</button>
+          <button onclick="press(5)">5</button>
+          <button onclick="press(6)">6</button>
+          <button onclick="press(7)">7</button>
+          <button onclick="press(8)">8</button>
+          <button onclick="press(9)">9</button>
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="press(0)">0</button>
+          <button onclick="submitCode()">⏎</button>
+        </div>
+      </div>
+      <div id="image-container"></div>
+    </div>
+
+    <script>
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("sticky"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+    </script>
+  </body>
+</html>

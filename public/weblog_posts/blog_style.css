@@ -26,7 +26,7 @@ html {
     padding-bottom:10px;
 }
 #box {
-    color: #fdf5e6;
+    color: #73ffd5;
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
     position: relative;
     overflow: unset;
@@ -100,7 +100,7 @@ html {
     }
 }
 main {
-    background-color: #051b1f;
+    background-color:rgb(1, 15, 17);
 	image-rendering: auto;
     background-size: 300px;
 	z-index:3;
@@ -113,11 +113,11 @@ main {
        }
        b, strong {
         font-weight:bold;	
-        color: #62d675;
+        text-shadow: none;
     }
     i, em {
         font-style:italic;	
-        color: rgb(253, 150, 150);
+        color: #ff95bc;
     }
    }
    .blogdetail {
@@ -126,7 +126,7 @@ main {
    }
 
 h2 {
-    color: rgb(152, 238, 219);
+    color: #c4e57e;
         text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
         font-weight: 700;
         font-family:'Cozette';
