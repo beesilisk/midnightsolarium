@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <!--
+Created with Squiffy 5.1.5
+https://github.com/textadventures/squiffy
+-->
+  <head>
+    <title>&#10028; cold storage &#10028;</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="csstyle.css" />
+    <script src="jquery.min.js"></script>
+    <script src="story.js" charset="UTF-8"></script>
+    <script>
+      jQuery(function($) {
+        $('#squiffy').squiffy();
+        var restart = function() {
+          $('#squiffy').squiffy('restart');
+        };
+        $('#restart').click(restart);
+        $('#restart').keypress(function(e) {
+          if (e.which !== 13) return;
+          restart();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="squiffy-container">
+      <div id="squiffy-header">
+		<a class="squiffy-header-link" href="../../chaos.html" class="back" id="back" tabindex="0">Back to main site</a>
+        <a class="squiffy-header-link" id="restart" tabindex="1">Restart</a>
+      </div>
+      <div id="squiffy"></div>
+    </div>
+  </body>
+</html>

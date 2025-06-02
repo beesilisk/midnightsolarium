@@ -15,13 +15,13 @@ You didn't come here to cheat, did you?
 let input = "";
 
 const passphrases = {
-  "1234": {
-    src: "img/secret_image1.png",
+  "231": {
+    src: "garden_img/deku_scrub_brother.png",
     alt: "Secret 1",
     id: "secretImage1"
   },
   "420": {
-    src: "img/secret_image2.png",
+    src: "garden_img/secret_image2.png",
     alt: "Secret 2",
     id: "secretImage2"
   },
@@ -58,7 +58,7 @@ function submitCode() {
     img.style.display = "block";
     container.appendChild(img);
   } else {
-    alert("PASSPHRASE NOT RECOGNIZED!");
+    alert("PASSPHRASE NOT RECOGNIZED");
   }
 
   clearDisplay();

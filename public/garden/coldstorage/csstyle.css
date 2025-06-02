@@ -1,0 +1,97 @@
+@font-face {
+    font-family: Fira Code;
+    src: url("../../fonts/FiraCode-VariableFont_wght.ttf") format('truetype');
+    font-display: swap;
+}
+html:before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient( rgba(201, 221, 230, 0) 50%, rgba(13, 6, 37, 0.22) 50% );
+    z-index: 4;
+    background-size: 100% 2px,4px 100%;
+    pointer-events: none;
+}
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: url("../garden_img/RGBpattern.png");
+    mix-blend-mode: overlay;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 4;
+    pointer-events: none;
+    opacity: 0.2;
+  } 
+body {
+    background-color: black;
+}
+
+a.squiffy-link
+{
+    text-shadow: 0 0 14px rgba(204, 255, 109, 0.6);
+    color: rgb(236, 252, 148);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+    &:hover {
+        filter: drop-shadow(0 0 3px rgba(204, 255, 109, 0.6)) brightness(1.5);
+        transition: 0.3s;
+    }
+}
+a.squiffy-link.disabled
+{
+    text-decoration: inherit;
+    color: inherit !important;
+    cursor: inherit;
+    &:hover {
+        filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0)) brightness(1.0);
+        transition: 0.3s;
+    }
+}
+a.squiffy-header-link, a.squiffy-header-link:hover
+{
+    text-decoration: underline;
+    text-shadow: 0 0 14px rgba(204, 255, 109, 0.6);
+    color: rgb(236, 252, 148);
+    cursor: pointer;
+    &:hover {
+        filter: drop-shadow(0 0 3px rgba(204, 255, 109, 0.6)) brightness(1.5);
+        transition: 0.3s;
+    }
+}
+div#squiffy-container
+{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(115, 255, 255);
+    font-family: "Fira Code", monospace;
+}
+div#squiffy-header
+{
+    font-size: 14px;
+    text-align: right;
+}
+div#squiffy
+{
+    font-size: 16px;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(115, 255, 255, 1);
+    box-shadow: 0px 0px 12px 3px rgba(45, 248, 255, 0.6);
+    margin-top: 25px; margin-bottom: 25px;
+}

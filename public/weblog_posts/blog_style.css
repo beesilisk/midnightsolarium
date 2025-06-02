@@ -127,7 +127,7 @@ main {
 
 h2 {
     color: #c4e57e;
-        text-shadow: 0 0 10px rgba(160, 240, 233, 0.5);
+        text-shadow: 0 0 10px rgba(160, 240, 207, 0.5);
         font-weight: 700;
         font-family:'Cozette';
         font-size: 24px;
@@ -195,6 +195,9 @@ main hr {
         p {
             padding-right:0;
         }
+    }
+    .pic {
+        display:block;
     }
     #container {
         margin-left:20px;

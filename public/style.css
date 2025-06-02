@@ -633,7 +633,7 @@ select {
 }
 .selectdiv {
     padding-bottom:10px;
-    font-family:Fira Code;
+    font-family:Fira Code, monospace;
     margin-bottom:3px;
 }
 button, .btn {
