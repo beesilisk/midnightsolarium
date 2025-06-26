@@ -90,7 +90,7 @@ html {
 }
     strong {
       font-weight:bold;	
-        color: #3cd355;
+        color: rgb(179, 247, 101);
     }
     i, em {
         font-style:italic;	
@@ -117,6 +117,14 @@ ul li{
 }
 #insects:hover span:after, #insects:active span:after {
   content: '⮞ insects ⮜';
+  font-size: 16px;
+}
+
+#jank span:after {
+  content: 'jank'
+}
+#jank:hover span:after, #jank:active span:after {
+  content: '⮞ jank ⮜';
   font-size: 16px;
 }
 
@@ -217,6 +225,7 @@ ul li{
     <strong><ul>
       <li id="swearing"><span aria-label="swearing"></span></li>
       <li id="insects"><span aria-label="insects"></span></li>
+      <li id="jank"><span aria-label="jank"></span></li>
       <li id="moving"><span aria-label="moving images"></span></li>
       <li id="unreality"><span aria-label="unreality"></span></li>
       <li id="pollen"><span aria-label="pollen"></span></li>

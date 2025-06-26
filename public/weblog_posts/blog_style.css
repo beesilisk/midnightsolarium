@@ -184,6 +184,16 @@ main hr {
     filter: drop-shadow(0 0 5px rgb(21, 177, 177));
 }
 
+.left {
+    float: left;
+    margin-right:20px;
+}
+
+.right {
+    float: right;
+    margin-left:20px;
+}
+
 #to_top {
     z-index: 4;
   }
@@ -196,11 +206,14 @@ main hr {
             padding-right:0;
         }
     }
-    .pic {
-        display:block;
-    }
     #container {
         margin-left:20px;
         margin-right:20px;
+    }
+    .left, .right {
+        display:block;
+        float:none;
+        margin-left:auto;
+        margin-right:auto;
     }
 }

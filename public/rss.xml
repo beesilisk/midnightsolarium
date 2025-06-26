@@ -5,6 +5,13 @@
 		<link>https://midnightsolarium.nekoweb.org</link>
 		<description>a website dedicated to all organisms, formations, and concepts that grow in the night</description>
 		<item>
+			<title>25.06.25</title>
+			<pubDate>Wed 25 Jun 2025, 12:00:00 -0700</pubDate>
+			<guid isPermaLink="false">planetembroidery</guid>
+			<link>https://midnightsolarium.nekoweb.org/crafts</link>
+			<description>added recent embroidery practice to craft catalog, changed weblog and craft image formatting to use less inline css (the text-wrapping jank on smaller screens should be gone now too!), organized navbar and made its links more satisfying to click, updated credits page</description>
+		</item>
+		<item>
 			<title>you dont have to read this one</title>
 			<pubDate>Sun 01 Jun 2025, 12:00:00 -0700</pubDate>
 			<guid isPermaLink="false">itsnotactuallythatbaddontworry</guid>
