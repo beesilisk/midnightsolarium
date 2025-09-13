@@ -4,6 +4,13 @@
 		<title>midnight solarium</title>
 		<link>https://midnightsolarium.nekoweb.org</link>
 		<description>a website dedicated to all organisms, formations, and concepts that grow in the night</description>
+				<item>
+			<title>12.09.25</title>
+			<pubDate>Fri 12 Sep 2025, 12:00:00 -0700</pubDate>
+			<guid isPermaLink="false">backfromthedeadtopostrecipes</guid>
+			<link>https://midnightsolarium.nekoweb.org/recipes</link>
+			<description>im alive! and i finally cleaned up code on links page (about 25% fewer lines of code!), made recipe page slightly more navigable on mobile (still not great, but getting better), added more recipes, added more ruminations</description>
+		</item>
 		<item>
 			<title>25.06.25</title>
 			<pubDate>Wed 25 Jun 2025, 12:00:00 -0700</pubDate>

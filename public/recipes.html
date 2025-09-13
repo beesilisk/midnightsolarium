@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>&#10028; recipe cards &#10028;</title>
     <style>
+      hr {
+        margin:13px 0;
+      }
       .rectype {
     color: #d1e967;
     text-shadow: 0 0 10px rgba(243, 247, 118, 0.6);
@@ -22,23 +25,20 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    padding:10px;
-    margin-right:50px;
-    margin-left:30px;
+    padding:15px;
     margin-top:10px;
     color: #190644;
-    background: #ebdd90; /*f2ebde*/
-    background-image: url("img/lined-paper-4.png");
+    background: #fae276; /*f2ebde*/
+    background-image: url("img/lined-paper3.png");
+    background-size: 500px;
     border-radius: 10px;
     font-weight: 500;
-
     box-shadow: 0 4px 12px rgba(20, 27, 33, .8);
     overflow: hidden;
     h4 {
       text-decoration: underline;
       color: #190644;
       text-shadow:none;
-      margin-bottom:5px;
     }
     i, em {
       color: rgb(145, 27, 76);
@@ -46,24 +46,29 @@
     p, li, h4 {
       font-size:14px;
     }
+    p, h3 {
+      margin-top:10px;
+      margin-bottom:10px;
+    }
+      p {
+    padding-top:0;
+
+  }
     li{
-      list-style-type: "–  ";
-      margin-left:10px;
+      list-style-type: "– ";
     }
      aside {
-    font-size: 11px;
-    margin-bottom:4px;
+      font-size: 11px;
+      margin-bottom:4px;
     }
-}
-.recipe:before {
-    content: '';
-    position: absolute;
-    top: 0; bottom: 0; left: 0;
-    width: 60px;
-    background: radial-gradient(rgb(14, 27, 32) 6px, transparent 7px) repeat-y;
-    background-size: 30px 30px;
-    border-right: 2px solid rgba(212, 65, 71, 0.3);
-    box-sizing: border-box;
+    ::selection {
+      background: #dd4444;
+      color:#ffffff;
+    }
+    ::-moz-selection {
+      background: #dd4444;
+      color:#ffffff;
+    }
 }
 .ingredients {
     margin:0 0 8px 16px;
@@ -74,7 +79,7 @@
       margin-left:56px;
     }
     ul {
-      padding-right:0;
+      padding:0;
     }
     aside {
       margin-left:38px;
@@ -112,12 +117,12 @@ br {
 }
     .instructions {
       margin-right:0;
-      margin-left:36px;
-
-      aside {
-        margin-left:26px;
-      }
+      text-align: left;
+      width:90%;
     }
+}
+details .recname {
+  padding: 3px 10px;
 }
     </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
@@ -152,7 +157,7 @@ br {
 
           <div class="flexrow">
                 <div class="maincontent">
-                  <p>this is a digital copy of my recipe collection. expect new additions to be added sporadically, and old recipes to be modified without warning</p>
+                  <p>an online digital copy of my recipe collection. expect new additions to be added sporadically, and old recipes to be modified without warning</p>
                   <p><span class="star">&#9733;</span> = webmaster's family recipes</p>
                   <p><span class="heart">&#9829;</span> = webmaster's personal favourites</p>
 
@@ -560,6 +565,38 @@ br {
 
                     <details><summary class="rectype">main dishes</summary>
 
+                      <details class="recname"><summary>CHICKEN LETTUCE WRAPS</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 small package ground chicken</li>
+                              <br /><br />
+                              <li>2 celery sticks, diced</li>
+                              <li>1 bell pepper, diced</li>
+                              <li>a dozen grape tomatoes, halved</li>
+                              <br /><br />
+                              <li>1/4 cup mayo</li>
+                              <li>1 tbsp ranch dressing</li>
+                              <li>1/4 cup garlic powder</li>
+                              <li>a pinch of salt</li>
+                              <br /><br />
+                              <li>1/4 cup parmesan, grated</li>
+                              <li>1 head butter lettuce</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>In frying pan, cook ground chicken until no longer pink, stirring and breaking occasionally. Transfer ground chicken to a large bowl.</p>
+                            <p>Cut the celery, pepper, and tomatoes. Add to the same bowl as the ground chicken.</p>
+                            <p>In a dish or small bowl, combine mayo, ranch, garlic powder, and salt. Add mixture to ground chicken & veggies. Add grated parmesan and stir to combine.</p>
+                            <p>Separate lettuce into leaves. Fill leaves with chicken salad, topped with more parmesan if desired.</p>
+                            <aside>Makes 2 servings.</aside>
+                          </div>
+                        </div>
+                      </details>
+
+
                       <details class="recname"><summary>CROCKPOT ORANGE CHICKEN</summary>
                         <div class="recipe">
                           <div class="ingredients">
@@ -651,6 +688,65 @@ br {
                             <aside>Makes about 13 jars.</aside>
                           </div>
                           </div>
+                      </details>
+
+                      <details class="recname"><summary>SALMON & CAULIFLOWER RICE</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 large cauliflower head</li>
+                              <li>2 tsp olive oil</li>
+                              <li>1/2 tsp italian seasoning</li>
+                              <br />
+                              <li>1 salmon fillet</li>
+                              <li>Salt & pepper, to taste</li>
+                              <br />
+                              <li>1/2 small package Grape tomatoes</li>
+                              <li>1/2 cup Vegetable broth</li>
+                              <li>1/2 cup milk</li>
+                              <li>1/2 tsp garlic powder</li>
+                              <li>1/2 package baby spinach</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>Preheat oven to 425F</p>
+                            <p>Grate cauliflower with box grater into medium bowl. Add olive oil, italian seasoning, and salt & pepper (to taste). Transfer and spread over half a baking sheet lined with parchment paper.</p>
+                            <p>On other half of baking sheet, place salmon skin-down. Coat top with olive oil and season with salt & pepper (to taste). Place sheet in oven for <em>15 minutes</em>.</p>
+                            <p>While salmon & cauliflower is cooking, heat skillet coated w/ oil at medium-high heat. Add tomatoes and cook, stirring occasionally until tomatoes start to burst.</p>
+                            <p>Add broth, milk, and garlic powder to skillet and simmer, stirring regularly until sauce thickens. Then add spinach and allow to wilt slightly.</p>
+                            <p>When done, plate up salmon & cauliflower. Pour sauce over both.</p>
+                          </div>
+                          </div>
+                      </details>
+
+                      <details class="recname"><summary>SLOW COOKER HONEY CHICKEN</summary>
+                        <div class="recipe">
+                          <div class="ingredients">
+                            <h4>INGREDIENTS</h4>
+                            <ul>
+                              <li>1 small onion, diced</li>
+                              <li>1/2 cup soy sauce</li>
+                              <li>1/2 cup honey</li>
+                              <li>1/4 cup ketchup</li>
+                              <li>2 tbsp cooking oil</li>
+                              <li>3 cloves garlic, minced</li>
+                              <li>1 tbsp ginger</li>
+                              <li>1/4 tsp red pepper flakes</li>
+                              <li>2 lbs boneless skinless chicken thighs/breasts</li>
+                              <li>2 green onions, thinly sliced (optional)</li>
+                              <li>1 tsp sesame seeds (optional)</li>
+                            </ul>
+                          </div>
+                          <div class="instructions">
+                            <h4>INSTRUCTIONS</h4>
+                            <p>In a large bowl, combine first 8 ingredients (small onion - red pepper flakes).</p>
+                            <p>Season chicken thighs with salt and pepper. Place chicken thighs into slow cooker. Add soy sauce mixture and toss to combine. Cover and cook on low heat for <em>3.5 hours</em>.</p>
+                            <p>Remove chicken thighs, shred them, then return them to pot. Cover and keep warm for another <em>30 mins</em>.</p>
+                            <p>Serve garnished with green onions and sesame seeds.</p>
+                          </div>
+                        </div>
                       </details>
 
                     </details>

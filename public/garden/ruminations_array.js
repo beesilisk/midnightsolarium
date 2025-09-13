@@ -38,7 +38,11 @@ var rumArray = [
     'im tired of waking up<br><br><br>&emsp;&emsp;&emsp;&emsp;in the same place i fall asleep',
     'whats wrong?<br><br><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;why are you looking at me like that?',
     'your doctor has never treated anyone like you before<br><br>why do you have to be such a difficult patient?',
-    'i can feel the edges of the world<br>peeling paint and chipped drywall<br>there is nowhere other than here'
+    'i can feel the edges of the world<br>peeling paint and chipped drywall<br>there is nowhere other than here',
+
+    "i love you more when you're gone",
+    "& i dont know if we'll survive this",
+    "its been a blur<br><br>but i know i dont regret a single second"
     ];
 var randomIndex = Math.floor(Math.random() * rumArray.length);
 document.write("<span id='output' style='top:" + get_random_height() + ";left:" + get_random_width() + ";'>")

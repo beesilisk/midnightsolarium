@@ -5,362 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="links_style.css">
     <title>&#10028; links &#10028;</title>
-    <style>
-      /* note to self: clean up this garbage */
-      main h3 {
-        color:white;
-        text-shadow: none;
-        margin: 0;
-      }
-      main a:hover {
-        transform: scale(0);
-      }
-      main a img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.15);
-      }
-      main a {
-    text-decoration: none;
-    text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-    color: #e9e752;
-}
-main a:hover {
-    filter: drop-shadow(0 0 5px rgba(243, 240, 171, 0.4)) brightness(1.2);
-}
-main a:active {
-    color:rgb(241, 160, 38)
-}
-main a:focus {
-    border-bottom:1px dotted #e9e752;
-}
-      #neighbourbtn img {
-        display: inline;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #neighbourbtn a {
-        padding: 0;
-      }
-      /* net neighbours */
-      #mainboxes1 {
-        padding: 0;
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(180deg, rgba(20, 109, 102, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 13px;
-      }
-      #sh_wrapper1 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        border-radius: 4px;
-      }
-      #subheader1 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper1:hover>#subheader1 {
-        background-image: linear-gradient(180deg, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper1:hover~#mainboxes1 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper1:active>#subheader1 {
-        background-image: linear-gradient(180deg, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper1:active~#mainboxes1 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      /* graphics */
-      #mainboxes2 {
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(rgba(20, 81, 109, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 13px;
-      }
-      #sh_wrapper2 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        filter: hue-rotate(30deg);
-        border-radius: 4px;
-      }
-      #subheader2 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper2:hover>#subheader2 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper2:hover~#mainboxes2 {
-        background-image: linear-gradient(rgba(20, 81, 109, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper2:active>#subheader2 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper2:active~#mainboxes2 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      /* fun stuff */
-      #mainboxes3 {
-        padding: 0;
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(rgba(20, 91, 109, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 13px;
-      }
-      #sh_wrapper3 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        filter: hue-rotate(15deg);
-        border-radius: 4px;
-      }
-      #subheader3 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper3:hover>#subheader3 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper3:hover~#mainboxes3 {
-        background-image: linear-gradient(rgba(20, 91, 109, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper3:active>#subheader3 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper3:active~#mainboxes3 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      /* learn 2 code */
-      #mainboxes4 {
-        padding: 0;
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(rgba(20, 91, 109, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 12px;
-      }
-      #sh_wrapper4 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        filter: hue-rotate(15deg);
-        border-radius: 4px;
-      }
-      #subheader4 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper4:hover>#subheader4 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper4:hover~#mainboxes4 {
-        background-image: linear-gradient(rgba(20, 91, 109, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper4:active>#subheader4 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper4:active~#mainboxes4 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      /* webmaster tools */
-      #mainboxes5 {
-        padding: 0;
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(rgba(20, 109, 102, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 13px;
-      }
-      #sh_wrapper5 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        border-radius: 4px;
-      }
-      #subheader5 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper5:hover>#subheader5 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper5:hover~#mainboxes5 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper5:active>#subheader5 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper5:active~#mainboxes5 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      /* hall of fame */
-      #mainboxes6 {
-        padding: 0;
-        margin: 5px 5px 10px 5px;
-        -webkit-clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        clip-path: polygon(4% 0, 96% 0, 100% 1000px, 0% 1000px);
-        background-image: linear-gradient(rgba(20, 81, 109, 0.6), rgba(13, 86, 88, 0.0));
-        backdrop-filter: blur(2px);
-        font-size: 12px;
-      }
-      #sh_wrapper6 {
-        padding: 3px;
-        background-color: #0b0d0f;
-        filter: hue-rotate(30deg);
-        border-radius: 4px;
-      }
-      #subheader6 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.9), rgba(0, 255, 213, 0.2) 40% 60%, rgba(167, 238, 242, 0.9));
-        font-family: "Cozette";
-        filter: drop-shadow(0 5px 10px rgb(179, 255, 242));
-        padding: 3px;
-        margin-left: 15px;
-        margin-right: 15px;
-        color: #fff;
-        letter-spacing: 3px;
-        font-size: 20px;
-        text-align: center;
-        transition: 0.5s;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      #sh_wrapper6:hover>#subheader6 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.55), rgba(0, 255, 213, 0.1) 40% 60%, rgba(167, 238, 242, 0.55));
-        filter: drop-shadow(0 2px 5px rgb(179, 255, 242));
-      }
-      #sh_wrapper6:hover~#mainboxes6 {
-        background-image: linear-gradient(rgba(20, 81, 109, 0.25), rgba(13, 86, 88, 0));
-      }
-      #sh_wrapper6:active>#subheader6 {
-        background-image: linear-gradient(to top, rgba(167, 238, 242, 0.17), rgba(0, 255, 213, 0.01) 40% 60%, rgba(167, 238, 242, 0.17));
-        filter: drop-shadow(none);
-      }
-      #sh_wrapper6:active~#mainboxes6 {
-        background-image: linear-gradient(rgba(20, 109, 102, 0), rgba(13, 86, 88, 0.0));
-      }
-      .mainboxescontent2 {
-        padding: 5px 35px 5px 35px;
-        overflow: auto;
-        font-size: 13px;
-      }
-      .mainboxescontent2 b,
-      .mainboxes strong {
-        color: #c2b6ea;
-        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-      }
-      .mainboxescontent2 i,
-      .mainboxescontent em {
-        color: #e8a4d0;
-        text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-      }
-      td {
-        border-bottom: 1px dashed #d87d8c;
-        padding: 5px 5px 5px 10px;
-        line-height: 1.4;
-        vertical-align: middle;
-      }
-      td:nth-last-child(2) {
-        border-right: 1px dashed #d87d8c;
-        text-align: center;
-      }
-    </style>
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
-    <script>
+    <script >
       function freezegifs() {
         var x = document.querySelectorAll('.freeze img, img.freeze');
         for (var i = 0; i < x.length; i++) {
@@ -395,22 +43,20 @@ main a:focus {
                 <script src="nav.js"></script>
               </nav>
             </div>
-
           </div>
           
           <main style="image-rendering: auto;">
             <div class="mborder">
               <h2 class="subheader"><img src="img/MyComputer.png"> link hoard</h2>
-            <div class="flexrow" style="flex-direction:row;">
-              <div class="flexrow" style="flex-direction:column;flex:1;margin:10px 5px 15px 15px;">
-
-                <div id="sh_wrapper1">
-                  <div id="subheader1">
-                    <h3>net neighbours</h3>
+              <div class="flexrow" style="flex-direction:row;">
+                <div class="flexrow" style="flex-direction:column;flex:1;margin:10px 5px 15px 15px;">
+                  <div id="sh_wrapper1">
+                    <div id="subheader1">
+                      <h3>net neighbours</h3>
+                    </div>
                   </div>
-                </div>
                 <div id="mainboxes1" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2" id="neighbourbtn" style="text-align:center;padding:10px 10px 0 10px;">
+                  <div class="mainboxescontent" id="neighbourbtn" style="text-align:center;padding:10px 10px 0 10px;">
                     <!-- NEIGHBOURS -->
                     <button onclick="freezegifs()" style="margin-bottom:15px;margin-right:5px;">pause gifs</button>
                     <button onclick="resumegifs()" style="margin-bottom:15px;margin-right:5px;">play gifs</button>
@@ -434,7 +80,6 @@ main a:focus {
                       <a href="https://gremlin.neocities.org/"><img src="img/othersitebtn/gremlin.gif" title="gremlin"/></a>
                       <a href="https://hellstarares.neocities.org/"><img src="img/othersitebtn/hellstarares.gif" title="HELLSTAR ARES"/></a>
                       <a href="https://indubitablyjacksin.neocities.org/"><img src="img/othersitebtn/indubitablyjacksin.gif" title="indubitablyjacks_n"/></a>
-                      <a href="https://lynx.fail/"><img src="img/othersitebtn/lynxfail.gif" title="LYNX.FAIL"/></a>
                       <a href="https://mycozone.neocities.org/"><img src="img/othersitebtn/mycozone.gif" title="Mycozone"/></a>
                       <a href="https://owthehedge.nekoweb.org/"><img src="img/othersitebtn/owthehedge.gif" title="owthehedge"/></a>
                       <a href="https://philia995.neocities.org/"><img src="img/othersitebtn/philia995.gif" title="philia995.com"/></a>
@@ -450,7 +95,7 @@ main a:focus {
                       <a href="https://visualculture.neocities.org/"><img src="img/othersitebtn/visualculture.gif" title="visualculture"/></a>
                     </div>
                     <div style="padding-left:25px;padding-right:25px;padding-top:10px;padding-bottom:10px;">
-                      <p style="line-height:1.3,">(if anyone wants their button removed or added, feel free to contact me via <a href="mailto:basilbeeisk@proton.me?subject=site buttons">email</a> or <a href="https://neocities.org/site/midnightsolarium">neocities profile <img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a>) </p>
+                      <p style="line-height:1.3,">(if anyone wants their button removed or added, feel free to <a href="mailto:basilbeeisk@proton.me?subject=site buttons">contact me</a></p>
                     </div>
                     <!-- END CONTENT -->
                   </div>
@@ -464,7 +109,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes2" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://gifcities.org/">GifCities<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
@@ -506,7 +151,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes3" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://www.windows93.net/#!flash">windows93<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
@@ -519,9 +164,9 @@ main a:focus {
                       <tr>
                         <td><a href="https://archive.org/details/discworld_202007">Discworld<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>discworld audiobooks <img src="img/turt.png" style="image-rendering: pixelated;vertical-align: middle;opacity:0.1""></td>
-					  </tr>
-					  <tr>
-						<td><a href=" https://whatthefuckshouldilistentorightnow.com/">music recs<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
+					            </tr>
+					            <tr>
+						            <td><a href=" https://whatthefuckshouldilistentorightnow.com/">music recs<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
                         <td>tells you what the fuck you should listen to right now</td>
                       </tr>
                       <tr>
@@ -547,7 +192,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes5" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://www.antiquepatternlibrary.org/">Antique Pattern Library<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
@@ -580,7 +225,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes4" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://www.w3schools.com/"><img src="img/genbuttons/w3schools.gif" alt="w3schools" /></a></td>
@@ -618,7 +263,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes5" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://vscodium.com/">VSCodium<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
@@ -657,7 +302,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes6" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://www.tumblr.com/palipunk/698216767541133313/palestine-masterlist-introduction-to-palestine"><img src="img/genbuttons/standwith.png" alt="Palestine masterlist" /></a></td>
@@ -686,7 +331,7 @@ main a:focus {
                   </div>
                 </div>
                 <div id="mainboxes3" style="margin:-2px 0 0 0;">
-                  <div class="mainboxescontent2">
+                  <div class="mainboxescontent">
                     <table>
                       <tr>
                         <td><a href="https://catbox.moe/">Catbox<img src="img/outlink2.png" style="padding-left:3px;opacity:0.6;vertical-align:top;"></a></td>
