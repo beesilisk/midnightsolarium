@@ -42,7 +42,9 @@ var rumArray = [
 
     "i love you more when you're gone",
     "& i dont know if we'll survive this",
-    "its been a blur<br><br>but i know i dont regret a single second"
+    "its been a blur<br><br>but i know i dont regret a single second",
+
+    "lets take a break<br><br>lets never go back home"
     ];
 var randomIndex = Math.floor(Math.random() * rumArray.length);
 document.write("<span id='output' style='top:" + get_random_height() + ";left:" + get_random_width() + ";'>")

@@ -123,6 +123,8 @@ main {
    .blogdetail {
     font-size: 12px;
     position: relative; 
+    padding-top: 0;
+    padding-bottom: 30px;
    }
 
 h2 {
@@ -131,7 +133,7 @@ h2 {
         font-weight: 700;
         font-family:'Cozette';
         font-size: 24px;
-	padding:20px 0 15px 0;
+	padding:20px 0 0px 0;
    }
 main h3 {
     font-size: 18px;
@@ -178,8 +180,8 @@ ul li{
     margin: 10px 0;
 }
 main hr {
-    margin-top:15px;
-    margin-bottom:15px;
+    margin-top:25px;
+    margin-bottom:25px;
     color:rgb(27, 223, 207);
     filter: drop-shadow(0 0 5px rgb(21, 177, 177));
 }
