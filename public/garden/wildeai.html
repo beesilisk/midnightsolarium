@@ -20,7 +20,14 @@
         background-repeat: repeat;
         image-rendering: auto;
       }
-
+      .outer .selectdiv{
+    border-radius: 3px 3px 1px 1px;
+    box-shadow: 0 0 0 2px rgb(63, 185, 184), 
+    0px -7px 0px 2px rgb(63, 185, 184),
+    0 0 0 4px #f5e8ea,
+    0px -7px 0px 4px #f5e8ea,
+    inset 0 0 0 4px rgb(63, 185, 184);
+}
       #back {
         background: url("../img/backteal.png");
         background-size: cover;
@@ -29,6 +36,7 @@
         cursor: pointer;
         width: 50px;
         height: 50px;
+        margin-top:30px;
 
         &:hover {
           filter: brightness(115%);
@@ -216,6 +224,9 @@
         .outer {
           margin-left: 68%;
         }
+        .outer .selectdiv{
+    box-shadow: none;
+}
         #back {
           vertical-align: top;
           margin-top: -30px;

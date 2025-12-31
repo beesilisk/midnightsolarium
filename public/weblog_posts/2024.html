@@ -2,6 +2,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="wordcount" content="1416">
+    <meta name="postdate" content="2024-12-31">
     <title>&#10028; 2024 &#10028;</title>
     <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
     <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -97,7 +99,7 @@ details {
       <!-- WEBLOG BOX -->
       <div>
         <h2>midnight solarium’s new years holiday roundup extravaganza: 2024 edition</h2>
-        <p class="blogdetail"><time datetime="2024-06-30">dec 31, 2024</time><span> &#x2022; word count: 1416</span></p>
+        <p class="blogdetail"><time datetime=""></time><span id="wordcount"> • word count: ...</span></p>
 
         <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
 
@@ -110,7 +112,6 @@ details {
         <p>I couldn’t decide on a single cohesive premise for this final weblog of the year, so I decided to mash 5 New Years themed blog post premises into a single mismatched potpourri of ideas. I doubt this will make for good SEO, but I’m sure the excellent title will make up for any losses.</p>
         <h3>Annual Award Show Pre-Show Awards</h3>
         <sup>(because we all know the most interesting awards are given out during the pre-show)</sup>
-        <br/><br/>
         <div class="pic right" style="width:264px;">
           <h2 class="subheader">bisexual.png</h2>
           <figure><img src="blog_img/hades2.png" title="Melinoë" alt="Melinoë"style="width:260px"></figure>
@@ -141,7 +142,7 @@ details {
         <img src="blog_img/Coelacanth.png" style="float:left;margin-right:20px;filter: drop-shadow(2px 0 0 rgb(152, 238, 219)) 
         drop-shadow(0 2px 0 rgb(152, 238, 219))
         drop-shadow(-2px 0 0 rgb(152, 238, 219)) 
-        drop-shadow(0 -2px 0 rgb(152, 238, 219));"">
+        drop-shadow(0 -2px 0 rgb(152, 238, 219));">
         <h4>Coelacanth of the Year: the ones in Webfishing</h4>
         <p>Did you see it? I can’t!</p>
         <h4>Found Media of the Year: Subways of Your Mind by Fex</h4>
@@ -232,7 +233,7 @@ details {
         <li>maybe brush up on my ASL (I’ve gotten rusty)</li>
         <li>add more stuff to this website. preferably weird niche stuff made to appeal to myself and no one else. this weblog is probably a good example</li>
       </ul>
-
+      <hr />
       </article>
       <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);padding-bottom:30px;"></i> go back </a>
       </div>
@@ -262,5 +263,34 @@ details {
         document.documentElement.scrollTop = 0;
       }
     </script>
+<script>
+  (function() {
+    // --- Word count ---
+    const wcMeta = document.querySelector('meta[name="wordcount"]');
+    const wcSpan = document.getElementById('wordcount');
+    if (wcMeta && wcSpan) {
+      wcSpan.textContent = ` • word count: ${wcMeta.content}`;
+    }
+
+    // --- Post date ---
+    const dateMeta = document.querySelector('meta[name="postdate"]');
+    const timeEl = document.querySelector('time[datetime]');
+
+    if (dateMeta && timeEl) {
+      timeEl.setAttribute('datetime', dateMeta.content);
+
+      const [year, month, day] = dateMeta.content.split('-').map(Number);
+
+      const dateObj = new Date(year, month - 1, day);
+
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      let formatted = dateObj.toLocaleDateString('en-US', options);
+
+      formatted = formatted.replace(/^[A-Z][a-z]{2}/, match => match.toLowerCase());
+
+      timeEl.textContent = formatted;
+    }
+  })();
+</script>
 </body>
 </html>

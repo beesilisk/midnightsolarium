@@ -2,6 +2,8 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="wordcount" content="2208">
+  <meta name="postdate" content="2024-11-23">
   <title>&#10028; nekoweb ramble &#10028;</title>
   <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
   <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -24,7 +26,7 @@
       <!-- WEBLOG BOX -->
       <div>
        <h2>to nekoweb, or not to nekoweb, that is the question</h2>
-       <p class="blogdetail"><time datetime="2024-06-30">nov 18, 2024</time><span> &#x2022; word count: 2208</span></p>
+       <p class="blogdetail"><time datetime=""></time><span id="wordcount"> • word count: ...</span></p>
 
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
 
@@ -81,7 +83,7 @@
          <h3>tl;dr</h3>
          <p>the guy who runs neocities is offputting and nekoweb offers more features for cheaper, so midnight solarium is moving to nekoweb within the next few months. for now both versions of the site will be updated in tandem, but eventually the neocities site will have a landing page that redirects to the nekoweb-hosted site. this shouldn’t affect anyone on neocities, aside from the fact that updates will eventually start showing up on your activity feed. sorry about that. someday i hope to switch to self-hosting, but that would be a huge undertaking and I’m not in a position to deal with that right now</p>
          <p>Or, if even my summaries are too long-winded: <strong>midnight solarium is moving to nekoweb!</strong></p>
-
+         <hr />
         </article>
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);padding-bottom:30px;"></i> go back </a>
       </div>
@@ -111,5 +113,34 @@
         document.documentElement.scrollTop = 0;
       }
       </script>
+<script>
+  (function() {
+    // --- Word count ---
+    const wcMeta = document.querySelector('meta[name="wordcount"]');
+    const wcSpan = document.getElementById('wordcount');
+    if (wcMeta && wcSpan) {
+      wcSpan.textContent = ` • word count: ${wcMeta.content}`;
+    }
+
+    // --- Post date ---
+    const dateMeta = document.querySelector('meta[name="postdate"]');
+    const timeEl = document.querySelector('time[datetime]');
+
+    if (dateMeta && timeEl) {
+      timeEl.setAttribute('datetime', dateMeta.content);
+
+      const [year, month, day] = dateMeta.content.split('-').map(Number);
+
+      const dateObj = new Date(year, month - 1, day);
+
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      let formatted = dateObj.toLocaleDateString('en-US', options);
+
+      formatted = formatted.replace(/^[A-Z][a-z]{2}/, match => match.toLowerCase());
+
+      timeEl.textContent = formatted;
+    }
+  })();
+</script>
  </body>
 </html>

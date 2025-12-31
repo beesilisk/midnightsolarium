@@ -127,6 +127,34 @@ body {
     color: #73ffd5;
     font-family: "Fira Code";
 }
+
+#boot-overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    font-family: monospace, "Courier New";
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  
+    z-index: 9999;
+  }
+  
+  #boot-overlay.fade-out {
+    opacity: 0;
+  }
+  
+  #boot-text {
+    color: #73ffd5;
+    text-shadow: 0 0 5px #73ffd5;
+    text-align: center;
+  }
+
 .container {
     padding:20px 20px 15px 20px;
     position: relative;
@@ -136,6 +164,15 @@ body {
 }
 .outer {
     width:14%;
+}
+.outer .selectdiv{
+    border-radius: 2px 2px 1px 1px;
+    box-shadow: 0 0 0 1px black, 
+    0 0 0 3px rgb(222, 75, 111), 
+    0px -7px 0px 3px rgb(222, 75, 111),
+    0px 0 10px 3px rgba(248, 141, 173, 0.6),
+    0px -7px 10px 3px rgba(248, 141, 173, 0.6),
+    inset 0 0 0 4px black;
 }
 #box {
     border-radius: 13px 13px 0 0;
@@ -300,7 +337,7 @@ main {
         text-shadow:
         0 0 5px rgba(231, 68, 90, 0.8), 0 0 10px rgba(231, 68, 90, 0.8),
         0 0 15px rgba(231, 68, 90, 0.8), 0 0 20px rgba(231, 68, 90, 0.8);
-        margin-bottom:5px;
+        margin-top:5px;
         font-size:16px;
     }
     a {
@@ -641,10 +678,11 @@ select {
    }
 }
 .selectdiv {
-    padding-bottom:10px;
     font-family:Fira Code, monospace;
-    margin-bottom:3px;
+    width:min-content;
+    height:min-content;
 }
+
 button, .btn {
     font-size: 15px;
     box-sizing: border-box;
@@ -766,8 +804,14 @@ footer {
         margin-left:85%;
         margin-right:auto;
     }
+    .outer .selectdiv{
+        border-radius: 3px 3px 1px 1px;
+        box-shadow: none;
+    }
     .selectdiv {
         float:right;
+        padding-bottom:10px;
+        margin-bottom:3px;
     }
 }
 @media only screen and (max-width: 700px) {

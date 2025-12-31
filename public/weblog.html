@@ -28,25 +28,12 @@
 	padding:0;
 	margin:10px;
   width:45%;
+  cursor: pointer;
 	h3 {
 		padding: 4px 25px;
 		margin:0px;
+    color: #ffffff;
 	}
-
-  a {
-	text-decoration: underline;
-	text-shadow: 0 0 10px rgba(247, 225, 118, 0.4);
-	color: #ffffff;
-    &:hover {
-	  filter: drop-shadow(0 0 7px rgba(213, 250, 255, 0.7));
-    }
-    &:active {
-	    color:rgb(241, 160, 38)
-    }
-    &:focus {
-	    border-bottom:1px dotted #e9e752;
-    }
-  }
 
 	section {
 		padding:0;
@@ -152,73 +139,80 @@
               <button class="tag" onclick="filterSelection('tech')">tech</button>
             </div>
             <div class="postbox">
-              <div class="mincontent fun internet">
-                <h3><a href="weblog_posts/eyelessjack.html">eyeless jack: an unnecessary autopsy</a></h3>
+              <div class="mincontent fun" data-href="weblog_posts/2025.html">
+                <h3>midnight solarium’s new years extravaganza: 2025 edition</h3>
+                <section>
+                  <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
+                  <p>me, four minutes before 2026: oh shit i need to make another new years blog or else my streak will be broken</p>
+                </section>
+              </div>
+              <div class="mincontent fun internet" data-href="weblog_posts/eyelessjack.html">
+                <h3>eyeless jack: an unnecessary autopsy</h3>
                 <section >
-                  <p class="blogdetail"><time datetime="2025-03-27">oct 31, 2025</time> &#x2022; word count: 2180 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('internet')"> internet</button></p>
+                  <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('internet')"> internet</button></p>
                   <p>i guess overanalyzing cringe creepypasta is part of my brand now. i suppose there are worse legacies</p>
                 </section>
               </div>
-              <div class="mincontent fun lgbt opinion">
-                <h3><a href="weblog_posts/acqueer.html">assigning queer identities to animal crossing characters while the antihistamines kick in</a></h3>
+              <div class="mincontent fun lgbt opinion" data-href="weblog_posts/acqueer.html">
+                <h3>assigning queer identities to animal crossing characters while the antihistamines kick in</h3>
                 <section >
-                  <p class="blogdetail"><time datetime="2025-03-27">jun 1, 2025</time> &#x2022; word count: 1414 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('lgbt')"> lgbt</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button></p>
+                  <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('lgbt')"> lgbt</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button></p>
                   <p>i got sick at the start of pride month so im doing something silly to distract myself</p>
                 </section>
               </div>
-              <div class="mincontent community internet opinion">
-                <h3><a href="weblog_posts/eternalsep.html">it will always be september 1993</a></h3>
+              <div class="mincontent community internet opinion" data-href="weblog_posts/eternalsep.html">
+                <h3>it will always be september 1993</h3>
                 <section >
-                  <p class="blogdetail"><time datetime="2025-03-27">sep 11546, 1993</time> &#x2022; word count: 1948 &#x2022; <button class="tag" onclick="filterSelection('community')"> community</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button></p>
+                  <p class="blogdetail"><time>sep 11546, 1993</time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('community')"> community</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button></p>
                   <p>how can we avoid the nazi-ridden time vortex?</p>
                 </section>
               </div>
-                <div class="mincontent lgbt personal">
-                  <h3><a href="weblog_posts/i_dont_want_to_fall_in_love.html">i don't want to fall in love</a></h3>
+                <div class="mincontent lgbt personal" data-href="weblog_posts/i_dont_want_to_fall_in_love.html">
+                  <h3>i don't want to fall in love</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2025-02-12">feb 16, 2025</time> &#x2022; word count: 777 &#x2022; <button class="tag" onclick="filterSelection('lgbt')"> lgbt</button> <button class="tag" onclick="filterSelection('personal')"> personal</button>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('lgbt')"> lgbt</button> <button class="tag" onclick="filterSelection('personal')"> personal</button>
                     <p>Valentine’s Day, and other things I’ll never fully enjoy</p>
                   </section>
                 </div>
-                <div class="mincontent infodump internet opinion tech">
-                  <h3><a href="weblog_posts/realworld.html">realworld graphics (aka a resource for custom cursors and old desktop graphics)</a></h3>
+                <div class="mincontent infodump internet opinion tech" data-href="weblog_posts/realworld.html">
+                  <h3>realworld graphics (aka a resource for custom cursors and old desktop graphics)</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2025-02-12">feb 12, 2025</time> &#x2022; word count: 701 &#x2022; <button class="tag" onclick="filterSelection('infodump')"> infodump</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('infodump')"> infodump</button> <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
                     <p>i just want to talk about this neat website i found</p>
                   </section>
                 </div>
-                <div class="mincontent fun">
-                  <h3><a href="weblog_posts/2024.html">midnight solarium’s new years extravaganza: 2024 edition</a></h3>
+                <div class="mincontent fun" data-href="weblog_posts/2024.html">
+                  <h3>midnight solarium’s new years extravaganza: 2024 edition</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-11-23">dec 31, 2024</time> &#x2022; word count: 1416 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button></p>
                     <p>me, five minutes before 2025: i should write an end-of-year weblog</p>
                   </section>
                 </div>
-                <div class="mincontent internet opinion tech">
-                  <h3><a href="weblog_posts/nekoai.html">to nekoweb, or not to nekoweb, that is the question</a></h3>
+                <div class="mincontent internet opinion tech" data-href="weblog_posts/nekoai.html">
+                  <h3>to nekoweb, or not to nekoweb, that is the question</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-11-23">nov 23, 2024</time> &#x2022; word count: 2208 &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
                     <p>some thoughts on web hosting platforms, the AI infestation, and the future of this site</p>
                   </section>
                 </div>
-                <div class="mincontent internet fun">
-                  <h3><a href="weblog_posts/cpinterest.html">i find old creepypastas fascinating</a></h3>
+                <div class="mincontent internet fun" data-href="weblog_posts/cpinterest.html">
+                  <h3>i find old creepypastas fascinating</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-10-31">oct 31, 2024</time> &#x2022; word count: 2535 &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('internet')"> internet</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('fun')"> fun</button> <button class="tag" onclick="filterSelection('internet')"> internet</button></p>
                     <p>i decided to reread some old creepypastas. here are 6 of them.</p>
                   </section>
                 </div>
-                <div class="mincontent tech">
-                  <h3><a href="weblog_posts/backups.html">my quick & dirty backup automation</a></h3>
+                <div class="mincontent tech" data-href="weblog_posts/backups.html">
+                  <h3>my quick & dirty backup automation</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-09-28">sep 28, 2024</time> &#x2022; word count: 1180 &#x2022; <button class="tag" onclick="filterSelection('tech')">tech</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('tech')">tech</button></p>
                     <p>microsoft onedrive doesn't want you to know about this one easy trick (task scheduler)</p>
                   </section>
                 </div>
-                <div class="mincontent internet opinion tech">
-                  <h3><a href="weblog_posts/why_did_i_make_this_blog.html">why did i make this blog</a></h3>
+                <div class="mincontent internet opinion tech" data-href="weblog_posts/why_did_i_make_this_blog.html">
+                  <h3>why did i make this blog</h3>
                   <section>
-                    <p class="blogdetail"><time datetime="2024-06-30">jun 30, 2024</time> &#x2022; word count: 2618 &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
+                    <p class="blogdetail"><time datetime=""></time> <span>word count: ...</span> &#x2022; <button class="tag" onclick="filterSelection('internet')"> internet</button> <button class="tag" onclick="filterSelection('opinion')">opinion</button> <button class="tag" onclick="filterSelection('tech')">tech</button></p>
                     <p>i put a blog on my website and i have mixed feelings about it</p>
                   </section>
                 </div>
@@ -299,6 +293,55 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+    
+     // makes entire mincontent a clickable link
+    document.addEventListener("click", function (e) {
+    const card = e.target.closest(".mincontent");
+    if (!card) return;
+
+    if (e.target.closest("a, button")) return;
+
+    const url = card.getAttribute("data-href");
+    if (url) {
+      window.location.href = url;
+    }
+  });
+  </script>
+<script>
+  document.querySelectorAll(".mincontent[data-href]").forEach(card => {
+    const url = card.dataset.href;
+  
+    fetch(url)
+      .then(r => r.text())
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, "text/html");
+  
+        // --- Word count ---
+        const wcMeta = doc.querySelector('meta[name="wordcount"]');
+        const wcSpan = card.querySelector(".blogdetail span");
+        if (wcMeta && wcSpan) {
+          wcSpan.textContent = ` • word count: ${wcMeta.content}`;
+        }
+  
+        // --- Post date ---
+        const dateMeta = doc.querySelector('meta[name="postdate"]');
+        const timeEl = card.querySelector('time[datetime]');
+        if (dateMeta && timeEl) {
+          const [year, month, day] = dateMeta.content.split('-').map(Number);
+          const dateObj = new Date(year, month - 1, day);
+  
+          const options = { year: 'numeric', month: 'short', day: 'numeric' };
+          let formatted = dateObj.toLocaleDateString('en-US', options);
+  
+          // lowercase the month
+          formatted = formatted.replace(/^[A-Z][a-z]{2}/, match => match.toLowerCase());
+  
+          timeEl.setAttribute('datetime', dateMeta.content);
+          timeEl.textContent = formatted;
+        }
+      })
+      .catch(err => console.log("Fetch failed for", url, err));
+  });
   </script>
 </body>
 </html>

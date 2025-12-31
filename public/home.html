@@ -42,6 +42,34 @@
     <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <div id="boot-overlay">
+    <pre id="boot-text">
+  Initializing...
+  Loading assets...
+  Please wait...
+    </pre>
+  </div>
+  
+  <script>
+  const BOOT_KEY = "bootShown";
+  const boot = document.getElementById("boot-overlay");
+  
+  if (sessionStorage.getItem(BOOT_KEY)) {
+    boot.remove();
+  } else {
+    sessionStorage.setItem(BOOT_KEY, "true");
+  
+    setTimeout(() => {
+      boot.classList.add("fade-out");
+  
+      setTimeout(() => {
+        boot.remove();
+      }, 400);
+    }, 1800);
+  }
+  </script>
+
   <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
   <div class="container">
           <!-- Font Changer -->
@@ -144,6 +172,10 @@
             <h2 class="subheader"><img src="img/MyComputer.png"> changelog <a href="rss.xml" class="rsslink"><i class="fa-solid fa-rss" ></i></a></h2>
               <div class="maincontent" style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                 <section>
+                  <p>
+                    <time datetime="2025-12-31"><strong>31.12.25</strong></time>
+                - added loading splash screen to homepage, added meta tags to blog posts (now i dont have to manually add the date & word count on both the post and index!), wrote 2025 end-of-year weblog
+                  </p>
                   <p>
                     <time datetime="2025-10-31"><strong>31.10.25</strong></time>
                 - wrote a <a href="weblog_posts/eyelessjack.html" alt="new weblog">new weblog</a> about a classic creepypasta and coming to terms with "bad art" being popular
@@ -294,7 +326,8 @@
       </div>
     </div>
     
-    <div class="outer"></div>
+    <div class="outer">
+    </div>
 
   </div>
   <script>

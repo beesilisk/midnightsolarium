@@ -2,6 +2,8 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="wordcount" content="1948">
+  <meta name="postdate" content="2025-04-11">
   <title>&#10028; it is still september 1993 &#10028;</title>
   <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
   <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -23,7 +25,7 @@
       <!-- WEBLOG BOX -->
       <div>
        <h2>it will always be september 1993</h2>
-       <p class="blogdetail"><time datetime="2024-06-30">sep 11546, 1993</time><span> &#x2022; word count: 1948</span></p>
+       <p class="blogdetail"><time datetime="2024-06-30">sep 11546, 1993</time><span id="wordcount"> • word count: ...</span></p>
 
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
 
@@ -114,5 +116,14 @@
         document.documentElement.scrollTop = 0;
       }
    </script>
+      <script>
+        // updating word count
+        const meta = document.querySelector('meta[name="wordcount"]');
+        const wcSpan = document.getElementById('wordcount');
+      
+        if (meta && wcSpan) {
+          wcSpan.textContent = ` • word count: ${meta.content}`;
+        }
+      </script>
  </body>
 </html>

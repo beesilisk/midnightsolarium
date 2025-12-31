@@ -2,6 +2,8 @@
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="wordcount" content="701">
+  <meta name="postdate" content="2025-02-12">
   <title>&#10028; realworld graphics &#10028;</title>
   <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
   <link rel="stylesheet" type="text/css" href="../style.css" />
@@ -24,7 +26,7 @@
       <!-- WEBLOG BOX -->
       <div>
        <h2>Realworld Graphics (aka a resource for custom cursors and old desktop graphics)</h2>
-       <p class="blogdetail"><time datetime="2024-06-30">feb 12, 2025</time><span> &#x2022; word count: 701</span></p>
+       <p class="blogdetail"><time datetime=""></time><span id="wordcount"> • word count: ...</span></p>
 
        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
 
@@ -103,5 +105,34 @@
         document.documentElement.scrollTop = 0;
       }
       </script>
+<script>
+  (function() {
+    // --- Word count ---
+    const wcMeta = document.querySelector('meta[name="wordcount"]');
+    const wcSpan = document.getElementById('wordcount');
+    if (wcMeta && wcSpan) {
+      wcSpan.textContent = ` • word count: ${wcMeta.content}`;
+    }
+
+    // --- Post date ---
+    const dateMeta = document.querySelector('meta[name="postdate"]');
+    const timeEl = document.querySelector('time[datetime]');
+
+    if (dateMeta && timeEl) {
+      timeEl.setAttribute('datetime', dateMeta.content);
+
+      const [year, month, day] = dateMeta.content.split('-').map(Number);
+
+      const dateObj = new Date(year, month - 1, day);
+
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      let formatted = dateObj.toLocaleDateString('en-US', options);
+
+      formatted = formatted.replace(/^[A-Z][a-z]{2}/, match => match.toLowerCase());
+
+      timeEl.textContent = formatted;
+    }
+  })();
+</script>
  </body>
 </html>
