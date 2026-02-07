@@ -1,0 +1,109 @@
+<html lang="en"></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="wordcount" content="583">
+    <meta name="postdate" content="2026-02-07">
+    <title>&#10028; the cockpit &#10028;</title>
+    <link rel="icon" type="image/x-icon" href="img/pxflower3.png">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <link rel="stylesheet" type="text/css" href="blog_style.css" />
+    <script src="https://kit.fontawesome.com/85bfb0bd19.js" crossorigin="anonymous"></script>
+  </head>
+ <!-- Page template: https://repth.neocities.org/theme -->
+<body>
+  <button onclick="topFunction()" id="to_top" title="Go to top"><span style="font-size:24px;">&#8593;</span>&nbsp;&nbsp;to top</button>
+  <div id="container">
+   
+    <div class="logo">
+      <img src="../img/midsollogo3.png">
+    </div>
+
+    <div id="box">
+    <div id="contentboxes">
+	  <div id="gridbg">
+    <main>
+      <!-- WEBLOG BOX -->
+      <div>
+        <h2>the cockpit</h2>
+        <p class="blogdetail"><time datetime=""></time><span id="wordcount"> • word count: ...</span></p>
+
+        <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);"></i> go back </a>
+
+        <div style="display:inline;float:right;width:fit-content;">
+        <script src="../fontchanger.js"></script>
+      </div>
+
+      <hr />
+      <article>
+        <p>Sometimes I imagine I'm in the cockpit of a plane. There's no copilot, no radio, no one else in the plane but me. </p>
+        <p>I'm staring at the controls - this massive chaotic dashboard covered in sprawling dials and buttons and levers and meters. Nobody has ever told me how to fly a plane. There's no radio to Air Traffic Control, or if there is then it's well hidden. I don't have a phone on me, so I can't ask Reddit how to pilot a plane. Reddit would probably know, and call me an idiot for not knowing, but at the moment I'd rather be called an idiot than be called an idiot who died in a plane crash.</p>
+        <p>Despite everything, the plane isn't crashing. Or rather, there isn't some blaring alarm or flashing red lights, which I've been led to believe by movies and TV is what happens when a plane does anything inadvisable. It turns out that airplanes don't need constant vigilance in order to stay airborne, and my learners license paired with the one or two times I've driven on back roads and parking lots have granted me a surprising amount of transferable skills. It's a shame I never fully learned how to drive. In my defense, taking public transit is so much easier than overcoming my fear of crashing.</p>
+        <p>As is, I'm not a driver, and I'm especially not a pilot, and there's really no way for me to become a pilot before the plane runs out of fuel and needs to land. I haven't figured out what 90% of the whatsits and whosits on the control panel are for, and I'm pretty sure they're all important. They wouldn't be there if they didn't need to be touched at least once.</p>
+        <p>I try to recall anything useful information from the old train simulator game my stepbrother played on the family computer. I never played the game myself, always too intimidated by the hyperrealistic graphics of 2001 PC gaming, but I sometimes lingered in the living room and peered over my stepbrother's shoulder as he navigated the ambiguous low-resolution controls with complete ease. One time I asked him what all the different levers and meters were for, but I barely understood his explanation then, and I certainly don't remember now.</p>
+        <p>But I'm being childish. A half-remembered train game isn't going to help me fly this plane alone. It's smarter to search for the manual hidden in the cockpit. I spend several minutes looking for the manual before realizing that they don't make manuals for flying a plane. I'm probably recalling the punchline to some slapstick cartoon. I'm pretty sure the joke was about a spaceship, so that won't be any help either.</p>
+        <p>If only I had gone to pilot school. I have never once in my life considered becoming a pilot, but that's hardly my fault. My parents were the ones to choose my college and my major for me, so I can't be held accountable for what I did or didn't learn.</p>
+        <p>Experimentally, I pull a lever close to me. I'm not sure what that did. The plane still seems to be flying smoothly, but something in my gut twists recklessly. I move the lever back to its earlier position. Everything was going fine before, so changing it doesn't seem worth the risk.</p>
+        <p>The plane still isn't crashing. I stay away from the controls, hoping that staying the course will count as the first responsible decision I've ever made.</p>
+        <p>It doesn't.</p>
+        <hr />
+      </article>
+      <a href="../weblog.html"><i class="fa-solid fa-circle-arrow-left" style="color:#f2cf5c;text-shadow:0 0 10px rgba(243, 247, 118, 0.2);padding-bottom:30px;"></i> go back </a>
+      </div>
+      <!-- END CONTENT -->
+    </main>
+	  </div>
+    </div>
+    </div>
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("to_top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+<script>
+  (function() {
+    // --- Word count ---
+    const wcMeta = document.querySelector('meta[name="wordcount"]');
+    const wcSpan = document.getElementById('wordcount');
+    if (wcMeta && wcSpan) {
+      wcSpan.textContent = ` • word count: ${wcMeta.content}`;
+    }
+
+    // --- Post date ---
+    const dateMeta = document.querySelector('meta[name="postdate"]');
+    const timeEl = document.querySelector('time[datetime]');
+
+    if (dateMeta && timeEl) {
+      timeEl.setAttribute('datetime', dateMeta.content);
+
+      const [year, month, day] = dateMeta.content.split('-').map(Number);
+
+      const dateObj = new Date(year, month - 1, day);
+
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      let formatted = dateObj.toLocaleDateString('en-US', options);
+
+      formatted = formatted.replace(/^[A-Z][a-z]{2}/, match => match.toLowerCase());
+
+      timeEl.textContent = formatted;
+    }
+  })();
+</script>
+</body>
+</html>
